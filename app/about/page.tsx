@@ -146,14 +146,15 @@ export default function AboutPage() {
         </section>
 
         {/* ── Stats ── */}
-        <section className="py-12 md:py-16 bg-white">
-          <div className="mx-auto max-w-7xl px-6 lg:px-12">
+        <section className="py-12 md:py-16 bg-white overflow-hidden relative">
+          <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: "radial-gradient(circle, #3B3969 1px, transparent 1px)", backgroundSize: "50px 50px" }} />
+          <div className="mx-auto max-w-7xl px-6 lg:px-12 relative z-10">
             <div className="text-center mb-10">
-              <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#3B3969]/8 text-[#3B3969] text-sm font-semibold mb-4">
+              <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#3B3969]/8 text-[#3B3969] text-sm font-semibold mb-4 fade-in-reveal">
                 <span className="w-2 h-2 rounded-full bg-[#3B3969]" />
                 Our Impact
               </span>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#333333] tracking-tight">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#333333] tracking-tight fade-in-reveal">
                 Trusted Across Australia
               </h2>
             </div>
@@ -161,28 +162,36 @@ export default function AboutPage() {
               {([Clock, Users, Building2, Heart] as const).map((Icon, i) => (
                 <div
                   key={stats[i].label}
-                  className="group relative bg-gradient-to-br from-[#F5F5F5] to-[#EEEEEE] rounded-3xl p-8 text-center overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border border-gray-100"
+                  className={`group relative bg-gradient-to-br from-white via-[#F9F9FC] to-[#F5F5F5] rounded-2xl p-8 text-center overflow-hidden hover:shadow-xl hover:-translate-y-2 transition-all duration-500 border border-gray-100 card-shimmer cursor-pointer stagger-item`}
+                  style={{ animationDelay: `${i * 100}ms` }}
                 >
+                  {/* Top accent line */}
+                  <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${i % 2 === 0 ? "from-[#3B3969] to-transparent" : "from-[#CB154E] to-transparent"}`} />
+                  
                   {/* Watermark value in background */}
-                  <div className="absolute -bottom-3 -right-2 text-[5.5rem] font-black opacity-[0.04] select-none pointer-events-none leading-none text-[#333333]">
+                  <div className="absolute -bottom-2 -right-1 text-6xl font-black opacity-[0.03] select-none pointer-events-none leading-none text-[#333333]">
                     {stats[i].value}
                   </div>
+
+                  {/* Corner decorative element */}
+                  <div className={`absolute -top-2 -right-2 w-16 h-16 rounded-full ${i % 2 === 0 ? "bg-[#3B3969]/5" : "bg-[#CB154E]/5"}`} />
+                  
                   <div className="relative z-10">
                     <div
-                      className={`w-14 h-14 mx-auto rounded-2xl flex items-center justify-center mb-5 ${
+                      className={`w-16 h-16 mx-auto rounded-2xl flex items-center justify-center mb-6 ${
                         i % 2 === 0 ? "bg-[#3B3969]/10" : "bg-[#CB154E]/10"
-                      } transition-all duration-300 group-hover:scale-110`}
+                      } transition-all duration-300 group-hover:scale-110 group-hover:rotate-6 icon-bounce`}
                     >
-                      <Icon className={`w-7 h-7 ${i % 2 === 0 ? "text-[#3B3969]" : "text-[#CB154E]"}`} />
+                      <Icon className={`w-8 h-8 ${i % 2 === 0 ? "text-[#3B3969]" : "text-[#CB154E]"}`} />
                     </div>
                     <p
-                      className={`text-4xl md:text-5xl font-black mb-2 tracking-tight ${
+                      className={`text-5xl md:text-6xl font-black mb-2 tracking-tight transition-all duration-300 group-hover:scale-110 ${
                         i % 2 === 0 ? "text-[#3B3969]" : "text-[#CB154E]"
                       }`}
                     >
                       {stats[i].value}
                     </p>
-                    <p className="text-xs font-semibold text-[#666666] uppercase tracking-wider">{stats[i].label}</p>
+                    <p className="text-xs font-semibold text-[#666666] uppercase tracking-wider group-hover:text-[#333333] transition-colors">{stats[i].label}</p>
                   </div>
                 </div>
               ))}
@@ -196,29 +205,32 @@ export default function AboutPage() {
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-[#CB154E]/3 to-transparent rounded-full blur-3xl pointer-events-none -z-1" />
           <div className="mx-auto max-w-7xl px-6 lg:px-12 relative z-10">
             <div className="text-center mb-10 md:mb-14">
-              <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#3B3969]/8 text-[#3B3969] text-sm font-semibold mb-4">
+              <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#3B3969]/8 text-[#3B3969] text-sm font-semibold mb-4 fade-in-reveal">
                 <span className="w-2 h-2 rounded-full bg-[#3B3969]" />
                 Our Values
               </span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#333333] tracking-tight leading-tight">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#333333] tracking-tight leading-tight fade-in-reveal">
                 What Drives Us
               </h2>
             </div>
 
             <div className="grid md:grid-cols-2 gap-6">
-              {values.map((value) => (
+              {values.map((value, idx) => (
                 <div
                   key={value.title}
-                  className={`group bg-white rounded-2xl p-7 md:p-8 border-t-4 ${value.borderColor} shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 overflow-hidden relative`}
+                  className={`group bg-white rounded-2xl p-7 md:p-8 border-l-4 ${value.borderColor} shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 overflow-hidden relative card-shimmer stagger-item cursor-pointer`}
+                  style={{ animationDelay: `${idx * 100}ms` }}
                 >
-                  <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#3B3969]/5 to-transparent rounded-full -z-1" />
+                  {/* Top right decorative element */}
+                  <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-[#3B3969]/3 to-transparent rounded-full -z-1" />
+                  
                   <div
-                    className={`w-12 h-12 md:w-14 md:h-14 rounded-2xl ${value.accentBg} flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300`}
+                    className={`w-14 h-14 md:w-16 md:h-16 rounded-2xl ${value.accentBg} flex items-center justify-center mb-5 group-hover:scale-125 group-hover:-rotate-6 transition-transform duration-400 icon-bounce`}
                   >
-                    <value.icon className={`w-6 h-6 md:w-7 md:h-7 ${value.accentIcon}`} />
+                    <value.icon className={`w-7 h-7 md:w-8 md:h-8 ${value.accentIcon}`} />
                   </div>
-                  <h3 className="text-lg md:text-xl font-bold text-[#333333] mb-3 tracking-tight">{value.title}</h3>
-                  <p className="text-sm md:text-base text-[#666666] leading-relaxed">{value.description}</p>
+                  <h3 className="text-lg md:text-xl font-bold text-[#333333] mb-3 tracking-tight group-hover:text-[#3B3969] transition-colors duration-300">{value.title}</h3>
+                  <p className="text-sm md:text-base text-[#666666] leading-relaxed group-hover:text-[#555555] transition-colors duration-300">{value.description}</p>
                 </div>
               ))}
             </div>
@@ -402,17 +414,18 @@ export default function AboutPage() {
         </section>
 
         {/* ── Who We Work With ── */}
-        <section className="py-16 md:py-24 bg-white">
-          <div className="mx-auto max-w-7xl px-6 lg:px-12">
+        <section className="py-16 md:py-24 bg-white relative overflow-hidden">
+          <div className="absolute inset-0 opacity-[0.015]" style={{ backgroundImage: "radial-gradient(circle, #3B3969 1px, transparent 1px)", backgroundSize: "40px 40px" }} />
+          <div className="mx-auto max-w-7xl px-6 lg:px-12 relative z-10">
             <div className="text-center mb-14">
-              <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#CB154E]/8 text-[#CB154E] text-sm font-semibold mb-6">
+              <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#CB154E]/8 text-[#CB154E] text-sm font-semibold mb-6 fade-in-reveal">
                 <span className="w-2 h-2 rounded-full bg-[#CB154E]" />
                 Our Clients
               </span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#333333] tracking-tight leading-tight">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#333333] tracking-tight leading-tight fade-in-reveal">
                 Who We Work With
               </h2>
-              <p className="mt-4 text-lg text-[#666666] max-w-2xl mx-auto">
+              <p className="mt-4 text-lg text-[#666666] max-w-2xl mx-auto fade-in-reveal">
                 We deliver first aid training and event medical services across a wide range of industries and communities.
               </p>
             </div>
@@ -448,30 +461,37 @@ export default function AboutPage() {
                   description: "Clinical refresher training aligned with the latest Australian Resuscitation Council guidelines.",
                   primary: true,
                 },
-              ] as { icon: ComponentType<{ className?: string }>; label: string; description: string; primary: boolean }[]).map((item) => (
+              ] as { icon: ComponentType<{ className?: string }>; label: string; description: string; primary: boolean }[]).map((item, idx) => (
                 <div
                   key={item.label}
-                  className={`group bg-white rounded-2xl p-8 border border-gray-100 border-l-4 ${
+                  className={`group relative bg-gradient-to-br from-white via-[#F9F9FC] to-white rounded-2xl p-8 border-l-4 ${
                     item.primary ? "border-l-[#3B3969]" : "border-l-[#CB154E]"
-                  } shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300`}
+                  } shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 card-shimmer stagger-item cursor-pointer overflow-hidden`}
+                  style={{ animationDelay: `${idx * 100}ms` }}
                 >
+                  {/* Top accent bar */}
+                  <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${item.primary ? "from-[#3B3969] to-transparent" : "from-[#CB154E] to-transparent"}`} />
+                  
+                  {/* Corner decorative element */}
+                  <div className={`absolute -top-8 -right-8 w-32 h-32 rounded-full ${item.primary ? "bg-[#3B3969]/5" : "bg-[#CB154E]/5"}`} />
+
                   <div
-                    className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 ${
-                      item.primary ? "bg-[#3B3969]/8" : "bg-[#CB154E]/8"
-                    }`}
+                    className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500 ${
+                      item.primary ? "bg-[#3B3969]/10" : "bg-[#CB154E]/10"
+                    } icon-bounce`}
                   >
                     <item.icon
-                      className={`w-7 h-7 ${item.primary ? "text-[#3B3969]" : "text-[#CB154E]"}`}
+                      className={`w-8 h-8 ${item.primary ? "text-[#3B3969]" : "text-[#CB154E]"}`}
                     />
                   </div>
                   <h3
-                    className={`text-xl font-bold mb-3 tracking-tight ${
+                    className={`text-xl font-bold mb-3 tracking-tight transition-colors duration-300 group-hover:scale-105 inline-block ${
                       item.primary ? "text-[#3B3969]" : "text-[#CB154E]"
                     }`}
                   >
                     {item.label}
                   </h3>
-                  <p className="text-base text-[#666666] leading-relaxed">{item.description}</p>
+                  <p className="text-base text-[#666666] leading-relaxed group-hover:text-[#555555] transition-colors duration-300">{item.description}</p>
                 </div>
               ))}
             </div>

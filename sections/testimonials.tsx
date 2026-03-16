@@ -73,11 +73,12 @@ export function TestimonialsSection() {
                 <button
                   key={t.author}
                   onClick={() => setActiveIndex(i)}
-                  className={`group w-full flex items-center gap-4 p-4 rounded-2xl text-left transition-all duration-300 ${
+                  className={`group w-full flex items-center gap-4 p-4 rounded-2xl text-left transition-all duration-300 stagger-item card-shimmer ${
                     isActive
                       ? "bg-[#3B3969] shadow-lg"
                       : "bg-white border border-gray-100 hover:border-[#CB154E]/40 hover:shadow-md"
                   }`}
+                  style={{ animationDelay: `${i * 100}ms` }}
                 >
                   {/* Avatar */}
                   <div
