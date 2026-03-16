@@ -108,7 +108,7 @@ export function Navbar() {
           <button
             type="button"
             className="-m-2.5 inline-flex items-center justify-center rounded-full p-2.5 text-[#333333] hover:bg-[#3B3969]/5 transition-colors"
-            onClick={() => setMobileMenuOpen(true)}
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             <span className="sr-only">Open main menu</span>
             <Menu className="h-6 w-6" />

@@ -50,8 +50,13 @@ export function TrainersSection() {
   }, [])
 
   return (
-    <section className="py-[60px] md:py-[80px] bg-[#F5F5F5]">
-      <div className="mx-auto max-w-7xl px-4 lg:px-8">
+    <section className="py-[44px] md:py-[56px] bg-[#F5F5F5] relative overflow-hidden">
+      {/* Subtle animated background elements */}
+      <div className="absolute inset-0 pointer-events-none" style={{
+        background: 'radial-gradient(circle at 70% 30%, rgba(203,21,78,0.04) 0%, transparent 50%), radial-gradient(circle at 30% 70%, rgba(59,57,105,0.04) 0%, transparent 50%)',
+        animation: 'subtleFloat 12s ease-in-out infinite'
+      }} />
+      <div className="mx-auto max-w-7xl px-4 lg:px-8 relative z-10">
         <div ref={ref} className="reveal-section grid lg:grid-cols-2 gap-14 items-center">
 
           {/* ── LEFT: trainer photo grid ── */}
