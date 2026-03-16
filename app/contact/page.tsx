@@ -95,9 +95,9 @@ export default function ContactPage() {
               </p>
 
               <div className="space-y-10">
-                {contactMethods.map((method) => (
-                  <div key={method.title} className="flex items-start gap-6 group">
-                    <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center flex-shrink-0 group-hover:bg-[#CB154E] group-hover:scale-110 transition-all duration-500 border border-white/10">
+                {contactMethods.map((method, idx) => (
+                  <div key={method.title} className="flex items-start gap-6 group stagger-item" style={{ animationDelay: `${idx * 100}ms` }}>
+                    <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center flex-shrink-0 group-hover:bg-[#CB154E] group-hover:scale-110 transition-all duration-500 border border-white/10 icon-bounce">
                       <method.icon className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -156,7 +156,8 @@ export default function ContactPage() {
                 <AccordionItem
                   key={index}
                   value={`item-${index}`}
-                  className="border border-gray-100 rounded-2xl px-6 bg-white shadow-sm data-[state=open]:shadow-md transition-shadow"
+                  className="border border-gray-100 rounded-2xl px-6 bg-white shadow-sm data-[state=open]:shadow-md transition-shadow stagger-item card-shimmer"
+                  style={{ animationDelay: `${index * 80}ms` }}
                 >
                   <AccordionTrigger className="text-left font-semibold text-[#333333] hover:text-[#3B3969] py-5 text-base [&[data-state=open]>svg]:rotate-180">
                     {faq.question}
