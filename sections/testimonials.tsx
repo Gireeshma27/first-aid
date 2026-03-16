@@ -67,7 +67,7 @@ export function TestimonialsSection() {
 
           {/* ── Left: person selector ── */}
           <div className="flex flex-col gap-3">
-            {testimonials.map((t, i) => {
+                 {testimonials.map((t, i) => {
               const isActive = i === activeIndex
               return (
                 <button
