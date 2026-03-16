@@ -108,7 +108,7 @@ export function Navbar() {
           <button
             type="button"
             className="-m-2.5 inline-flex items-center justify-center rounded-full p-2.5 text-[#333333] hover:bg-[#3B3969]/5 transition-colors"
-            onClick={() => setMobileMenuOpen(true)}
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             <span className="sr-only">Open main menu</span>
             <Menu className="h-6 w-6" />
@@ -166,73 +166,75 @@ export function Navbar() {
       </nav>
 
       {/* ── Mobile menu ── */}
-      <div className={`lg:hidden ${mobileMenuOpen ? "fixed inset-0 z-50" : "hidden"}`}>
-        <div
-          className="fixed inset-0 bg-black/30 backdrop-blur-sm"
-          onClick={() => setMobileMenuOpen(false)}
-        />
-        <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-200 animate-slide-in">
-          <div className="flex items-center justify-between">
-            <Link href="/" className="-m-1.5 p-1.5" onClick={() => setMobileMenuOpen(false)}>
-              <Image src={logo} alt="First Aid Network Australia" className="h-[40px] w-auto" width={200} height={40} />
-            </Link>
-            <button
-              type="button"
-              className="-m-2.5 rounded-lg p-2.5 text-[#333333] hover:bg-[#F5F5F5] transition-colors"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              <span className="sr-only">Close menu</span>
-              <X className="h-6 w-6" />
-            </button>
-          </div>
-          <div className="mt-8 flow-root">
-            <div className="space-y-1">
-              {navigation.map((item) => (
-                <div key={item.name}>
-                  {item.dropdown ? (
-                    <>
-                      <button
-                        onClick={() => setMobileAccordion(mobileAccordion === item.name ? null : item.name)}
-                        className="flex w-full items-center justify-between rounded-lg px-4 py-3 text-base font-medium text-[#333333] hover:bg-[#F5F5F5] transition-colors"
+      {mobileMenuOpen && (
+        <div className="lg:hidden">
+          <div
+            className="fixed inset-0 z-40 bg-black/30 backdrop-blur-sm"
+            onClick={() => setMobileMenuOpen(false)}
+          />
+          <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-200 animate-slide-in">
+            <div className="flex items-center justify-between">
+              <Link href="/" className="-m-1.5 p-1.5" onClick={() => setMobileMenuOpen(false)}>
+                <Image src={logo} alt="First Aid Network Australia" className="h-[40px] w-auto" width={200} height={40} />
+              </Link>
+              <button
+                type="button"
+                className="-m-2.5 rounded-lg p-2.5 text-[#333333] hover:bg-[#F5F5F5] transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <span className="sr-only">Close menu</span>
+                <X className="h-6 w-6" />
+              </button>
+            </div>
+            <div className="mt-8 flow-root">
+              <div className="space-y-1">
+                {navigation.map((item) => (
+                  <div key={item.name}>
+                    {item.dropdown ? (
+                      <>
+                        <button
+                          onClick={() => setMobileAccordion(mobileAccordion === item.name ? null : item.name)}
+                          className="flex w-full items-center justify-between rounded-lg px-4 py-3 text-base font-medium text-[#333333] hover:bg-[#F5F5F5] transition-colors"
+                        >
+                          {item.name}
+                          <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileAccordion === item.name ? "rotate-180" : ""}`} />
+                        </button>
+                        {mobileAccordion === item.name && (
+                          <div className="ml-4 space-y-1 animate-slide-down">
+                            {item.dropdown.map((subItem) => (
+                              <Link
+                                key={subItem.name}
+                                href={subItem.href}
+                                className="block rounded-lg px-4 py-2.5 text-sm text-[#666666] hover:bg-[#F5F5F5] hover:text-[#3B3969] transition-colors"
+                                onClick={() => setMobileMenuOpen(false)}
+                              >
+                                {subItem.name}
+                              </Link>
+                            ))}
+                          </div>
+                        )}
+                      </>
+                    ) : (
+                      <Link
+                        href={item.href}
+                        className="block rounded-lg px-4 py-3 text-base font-medium text-[#333333] hover:bg-[#F5F5F5] hover:text-[#3B3969] transition-colors"
+                        onClick={() => setMobileMenuOpen(false)}
                       >
                         {item.name}
-                        <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileAccordion === item.name ? "rotate-180" : ""}`} />
-                      </button>
-                      {mobileAccordion === item.name && (
-                        <div className="ml-4 space-y-1 animate-slide-down">
-                          {item.dropdown.map((subItem) => (
-                            <Link
-                              key={subItem.name}
-                              href={subItem.href}
-                              className="block rounded-lg px-4 py-2.5 text-sm text-[#666666] hover:bg-[#F5F5F5] hover:text-[#3B3969] transition-colors"
-                              onClick={() => setMobileMenuOpen(false)}
-                            >
-                              {subItem.name}
-                            </Link>
-                          ))}
-                        </div>
-                      )}
-                    </>
-                  ) : (
-                    <Link
-                      href={item.href}
-                      className="block rounded-lg px-4 py-3 text-base font-medium text-[#333333] hover:bg-[#F5F5F5] hover:text-[#3B3969] transition-colors"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      {item.name}
-                    </Link>
-                  )}
-                </div>
-              ))}
-            </div>
-            <div className="mt-8 pt-6 border-t border-gray-200">
-              <Button asChild className="w-full bg-[#CB154E] hover:bg-[#a50f3d] text-white font-semibold rounded-full py-6 text-base">
-                <Link href="/book-training" onClick={() => setMobileMenuOpen(false)}>Book Training</Link>
-              </Button>
+                      </Link>
+                    )}
+                  </div>
+                ))}
+              </div>
+              <div className="mt-8 pt-6 border-t border-gray-200">
+                <Button asChild className="w-full bg-[#CB154E] hover:bg-[#a50f3d] text-white font-semibold rounded-full py-6 text-base">
+                  <Link href="/book-training" onClick={() => setMobileMenuOpen(false)}>Book Training</Link>
+                </Button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      )}
     </header>
   )
 }

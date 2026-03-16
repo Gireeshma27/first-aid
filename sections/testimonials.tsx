@@ -55,15 +55,20 @@ export function TestimonialsSection() {
   const active = testimonials[activeIndex]
 
   return (
-    <section className="py-[60px] md:py-[80px] bg-[#F5F5F5]">
-      <div className="mx-auto max-w-7xl px-4 lg:px-8">
+    <section className="py-[44px] md:py-[56px] bg-[#F5F5F5] relative overflow-hidden">
+      {/* Subtle animated background elements */}
+      <div className="absolute inset-0 pointer-events-none" style={{
+        background: 'radial-gradient(circle at 15% 80%, rgba(203,21,78,0.04) 0%, transparent 50%), radial-gradient(circle at 85% 20%, rgba(59,57,105,0.04) 0%, transparent 50%)',
+        animation: 'subtleFloat 9s ease-in-out infinite'
+      }} />
+      <div className="mx-auto max-w-7xl px-4 lg:px-8 relative z-10">
         <SectionHeader
           badge="Testimonials"
           title="What Our Clients Say"
           description="Hear from organisations and individuals who have completed our training programs."
         />
 
-        <   div className="mt-10 grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
+        <div className="mt-10 grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch relative z-10">
 
           {/* ── Left: person selector ── */}
           <div className="flex flex-col gap-3">

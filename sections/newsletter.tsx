@@ -18,7 +18,7 @@ export function NewsletterSection() {
   }
 
   return (
-    <section className="py-[60px] md:py-[80px] bg-gradient-to-br from-[#3B3969] to-[#2E2C5A] relative overflow-hidden">
+    <section className="py-[44px] md:py-[56px] bg-gradient-to-br from-[#3B3969] to-[#2E2C5A] relative overflow-hidden">
       {/* Subtle Pattern overlay */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '32px 32px' }}></div>
       

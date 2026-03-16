@@ -35,9 +35,14 @@ export function EventsSection() {
   }, [])
 
   return (
-    <section className="py-[60px] md:py-[80px] bg-white">
-      <div className="mx-auto max-w-7xl px-4 lg:px-8">
-        <div ref={ref} className="reveal-section grid lg:grid-cols-2 gap-14 items-center">
+    <section className="py-[44px] md:py-[56px] bg-white relative overflow-hidden">
+      {/* Subtle animated background */}
+      <div className="absolute inset-0 pointer-events-none" style={{
+        background: 'radial-gradient(circle at 90% 10%, rgba(203,21,78,0.03) 0%, transparent 40%), radial-gradient(circle at 10% 90%, rgba(59,57,105,0.03) 0%, transparent 40%)',
+        animation: 'subtleFloat 10s ease-in-out infinite'
+      }} />
+      <div className="mx-auto max-w-7xl px-4 lg:px-8 relative z-10">
+        <div ref={ref} className="reveal-section grid lg:grid-cols-2 gap-12 items-center">
           {/* Left - Image */}
           <div className="relative">
             <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl">

@@ -97,7 +97,12 @@ export function StatisticsSection() {
   }, [])
 
   return (
-    <section className="relative py-[60px] md:py-[80px] bg-[#F5F5F5]">
+    <section className="relative py-[44px] md:py-[56px] bg-[#F5F5F5] overflow-hidden">
+      {/* Subtle animated background elements */}
+      <div className="absolute inset-0 pointer-events-none" style={{
+        background: 'radial-gradient(circle at 20% 50%, rgba(203,21,78,0.04) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(59,57,105,0.04) 0%, transparent 50%)',
+        animation: 'subtleFloat 8s ease-in-out infinite'
+      }} />
       <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
         
         {/* Section Header */}

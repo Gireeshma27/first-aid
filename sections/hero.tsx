@@ -247,7 +247,7 @@ export function Hero() {
         ))}
 
         {/* ── Main grid ── */}
-        <div className="relative mx-auto max-w-7xl px-5 lg:px-10 py-[60px] md:py-[80px]" style={{ zIndex: 3 }}>
+        <div className="relative mx-auto max-w-7xl px-5 lg:px-10 py-[44px] md:py-[56px]" style={{ zIndex: 3 }}>
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
             {/* ── LEFT ── */}
@@ -268,14 +268,14 @@ export function Hero() {
               <div className="anim-up d2">
                 <span className="h-accent" />
                 <h1 className="text-[2.55rem] md:text-[2.9rem] lg:text-[3.2rem] font-extrabold text-white leading-[1.1] tracking-tight">
-                  Professional First Aid<br />Training{" "}
+                  First aid network{" "}
                   <span style={{
                     background: "linear-gradient(130deg, #CB154E 20%, #f7395e 100%)",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                     backgroundClip: "text",
                   }}>
-                    Across Australia
+                    Australia
                   </span>
                 </h1>
               </div>

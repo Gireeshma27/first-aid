@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useState, useEffect, useRef } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
@@ -81,7 +81,7 @@ const servicesData = [
   }
 ]
 
-function ServiceCard({ title, description, image, link, overlayColor, buttonTextColor, index }: {
+function ServiceCard({ title, description, image, link, overlayColor, buttonTextColor, index, isActive, onCardToggle }: {
   title: string;
   description: string;
   image: string;
@@ -89,6 +89,8 @@ function ServiceCard({ title, description, image, link, overlayColor, buttonText
   overlayColor: string;
   buttonTextColor: string;
   index: number;
+  isActive: boolean;
+  onCardToggle: () => void;
 }) {
   const ref = useRef<HTMLDivElement>(null)
 
@@ -111,7 +113,8 @@ function ServiceCard({ title, description, image, link, overlayColor, buttonText
   return (
     <div
       ref={ref}
-      className="group relative rounded-2xl overflow-hidden bg-white shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.12)] transition-all duration-500 border border-gray-100 flex flex-col h-full reveal-section stagger-item card-shimmer"
+      onClick={onCardToggle}
+      className="group relative rounded-2xl overflow-hidden bg-white shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.12)] transition-all duration-500 border border-gray-100 flex flex-col h-full reveal-section stagger-item card-shimmer cursor-pointer md:cursor-default"
       style={{ animationDelay: `${index * 100}ms` }}
     >
       {/* Image Container */}
@@ -123,10 +126,10 @@ function ServiceCard({ title, description, image, link, overlayColor, buttonText
           className="object-cover transition-transform duration-700 group-hover:scale-110"
         />
 
-        {/* Hover Overlay */}
-        <div className={`absolute inset-0 ${overlayColor} opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col items-center justify-center p-6 sm:p-8 text-center overflow-hidden`}>
+        {/* Hover/Active Overlay */}
+        <div className={`absolute inset-0 ${overlayColor} opacity-0 group-hover:opacity-100 md:group-hover:opacity-100 transition-opacity duration-500 flex flex-col items-center justify-center p-6 sm:p-8 text-center overflow-hidden ${isActive ? "!opacity-100" : ""}`}>
           {/* Overlay Content with slide-up effect */}
-          <div className="translate-y-8 group-hover:translate-y-0 transition-transform duration-500 ease-out flex flex-col justify-center items-center w-full h-full max-h-full">
+          <div className={`transition-transform duration-500 ease-out flex flex-col justify-center items-center w-full h-full max-h-full ${isActive ? "translate-y-0" : "translate-y-8 group-hover:translate-y-0"}`}>
             <p className="text-white text-sm sm:text-base leading-relaxed mb-4 font-medium">
               {description}
             </p>
@@ -134,6 +137,7 @@ function ServiceCard({ title, description, image, link, overlayColor, buttonText
               href={link}
               className="inline-flex items-center gap-2 bg-white px-6 py-3 rounded-full font-semibold text-sm transition-transform duration-300 hover:scale-105 active:scale-95 shadow-lg flex-shrink-0"
               aria-label={`Learn more about ${title}`}
+              onClick={(e) => e.stopPropagation()}
             >
               <span className={buttonTextColor}>Learn More</span>
               <ArrowRight className={`w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1 ${buttonTextColor}`} />
@@ -153,8 +157,15 @@ function ServiceCard({ title, description, image, link, overlayColor, buttonText
 }
 
 export function ServicesSection() {
+  const [activeCard, setActiveCard] = useState<number | null>(null)
+
+  const handleCardToggle = (index: number) => {
+    // On mobile/tablet, toggle the card. On desktop (md+), let hover work
+    setActiveCard(activeCard === index ? null : index)
+  }
+
   return (
-    <section className="py-16 md:py-24 bg-[#F5F5F5] relative overflow-hidden">
+    <section className="py-12 md:py-16 bg-[#F5F5F5] relative overflow-hidden">
       {/* Background patterns */}
       <div className="medical-pattern-bg opacity-30" />
       <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-gradient-radial from-[#3B3969]/5 to-transparent blur-3xl rounded-full pointer-events-none" />
@@ -167,9 +178,9 @@ export function ServicesSection() {
           centered={true}
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mt-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
           {servicesData.map((service, index) => (
-            <ServiceCard key={service.title} {...service} index={index} />
+            <ServiceCard key={service.title} {...service} index={index} isActive={activeCard === index} onCardToggle={() => handleCardToggle(index)} />
           ))}
         </div>
       </div>
