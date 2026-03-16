@@ -171,9 +171,6 @@ export default function ContactPage() {
           </div>
         </section>
 
-        {/* â”€â”€ CTA â”€â”€ */}
-          </div>
-        </section>
 
         <NewsletterSection />
       </main>
