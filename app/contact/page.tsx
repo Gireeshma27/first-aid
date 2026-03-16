@@ -172,32 +172,6 @@ export default function ContactPage() {
         </section>
 
         {/* â”€â”€ CTA â”€â”€ */}
-        <section
-          className="py-16 md:py-20 relative overflow-hidden"
-          style={{ background: "linear-gradient(135deg, #3B3969 0%, #1e1c3d 100%)" }}
-        >
-          <div className="absolute top-0 right-0 w-80 h-80 rounded-full bg-[#CB154E]/8 blur-3xl" />
-          <div className="relative mx-auto max-w-7xl px-6 lg:px-12 text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
-            <p className="text-lg text-white/60 max-w-2xl mx-auto mb-8">
-              Whether you need workplace first aid training, event medical services, or customised training solutions, we&apos;re here to help.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:1300347782"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#CB154E] hover:bg-[#CB154E]/90 text-white font-semibold transition-colors shadow-lg"
-              >
-                <Phone className="w-5 h-5" />
-                Call 1300 FIRST AID
-              </a>
-              <a
-                href="mailto:info@firstaidnetwork.com.au"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold transition-colors"
-              >
-                <Mail className="w-5 h-5" />
-                Email Us
-              </a>
-            </div>
           </div>
         </section>
 
