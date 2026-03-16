@@ -111,7 +111,7 @@ export function StatisticsSection() {
         </div>
 
         {/* Stats Cards Grid */}
-        <div ref={ref} className="reveal-section grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div ref={ref} className="reveal-section grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {statistics.map((stat, index) => {
             const Icon = stat.icon
             return (
@@ -133,6 +133,17 @@ export function StatisticsSection() {
               </div>
             )
           })}
+        </div>
+
+        {/* View Statistics Button */}
+        <div className="flex justify-center">
+          <a
+            href="/statistics"
+            className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-[#CB154E] hover:bg-[#CB154E]/90 text-white font-semibold transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+          >
+            View Statistics
+            <ArrowRight className="w-5 h-5" />
+          </a>
         </div>
       </div>
     </section>
