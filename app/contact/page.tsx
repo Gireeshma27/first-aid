@@ -95,9 +95,9 @@ export default function ContactPage() {
               </p>
 
               <div className="space-y-10">
-                {contactMethods.map((method) => (
-                  <div key={method.title} className="flex items-start gap-6 group">
-                    <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center flex-shrink-0 group-hover:bg-[#CB154E] group-hover:scale-110 transition-all duration-500 border border-white/10">
+                {contactMethods.map((method, idx) => (
+                  <div key={method.title} className="flex items-start gap-6 group stagger-item" style={{ animationDelay: `${idx * 100}ms` }}>
+                    <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center flex-shrink-0 group-hover:bg-[#CB154E] group-hover:scale-110 transition-all duration-500 border border-white/10 icon-bounce">
                       <method.icon className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -156,7 +156,8 @@ export default function ContactPage() {
                 <AccordionItem
                   key={index}
                   value={`item-${index}`}
-                  className="border border-gray-100 rounded-2xl px-6 bg-white shadow-sm data-[state=open]:shadow-md transition-shadow"
+                  className="border border-gray-100 rounded-2xl px-6 bg-white shadow-sm data-[state=open]:shadow-md transition-shadow stagger-item card-shimmer"
+                  style={{ animationDelay: `${index * 80}ms` }}
                 >
                   <AccordionTrigger className="text-left font-semibold text-[#333333] hover:text-[#3B3969] py-5 text-base [&[data-state=open]>svg]:rotate-180">
                     {faq.question}
@@ -170,35 +171,6 @@ export default function ContactPage() {
           </div>
         </section>
 
-        {/* â”€â”€ CTA â”€â”€ */}
-        <section
-          className="py-16 md:py-20 relative overflow-hidden"
-          style={{ background: "linear-gradient(135deg, #3B3969 0%, #1e1c3d 100%)" }}
-        >
-          <div className="absolute top-0 right-0 w-80 h-80 rounded-full bg-[#CB154E]/8 blur-3xl" />
-          <div className="relative mx-auto max-w-7xl px-6 lg:px-12 text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
-            <p className="text-lg text-white/60 max-w-2xl mx-auto mb-8">
-              Whether you need workplace first aid training, event medical services, or customised training solutions, we&apos;re here to help.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:1300347782"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#CB154E] hover:bg-[#CB154E]/90 text-white font-semibold transition-colors shadow-lg"
-              >
-                <Phone className="w-5 h-5" />
-                Call 1300 FIRST AID
-              </a>
-              <a
-                href="mailto:info@firstaidnetwork.com.au"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold transition-colors"
-              >
-                <Mail className="w-5 h-5" />
-                Email Us
-              </a>
-            </div>
-          </div>
-        </section>
 
         <NewsletterSection />
       </main>

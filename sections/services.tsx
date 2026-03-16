@@ -111,7 +111,7 @@ function ServiceCard({ title, description, image, link, overlayColor, buttonText
   return (
     <div
       ref={ref}
-      className="group relative rounded-2xl overflow-hidden bg-white shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.12)] transition-all duration-500 border border-gray-100 flex flex-col h-full reveal-section"
+      className="group relative rounded-2xl overflow-hidden bg-white shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.12)] transition-all duration-500 border border-gray-100 flex flex-col h-full reveal-section stagger-item card-shimmer"
       style={{ animationDelay: `${index * 100}ms` }}
     >
       {/* Image Container */}
@@ -124,15 +124,15 @@ function ServiceCard({ title, description, image, link, overlayColor, buttonText
         />
 
         {/* Hover Overlay */}
-        <div className={`absolute inset-0 ${overlayColor} opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col items-center justify-center p-6 sm:p-8 text-center`}>
+        <div className={`absolute inset-0 ${overlayColor} opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col items-center justify-center p-6 sm:p-8 text-center overflow-hidden`}>
           {/* Overlay Content with slide-up effect */}
-          <div className="translate-y-8 group-hover:translate-y-0 transition-transform duration-500 ease-out flex flex-col h-full justify-center items-center w-full">
-            <p className="text-white text-sm sm:text-base leading-relaxed mb-6 font-medium">
+          <div className="translate-y-8 group-hover:translate-y-0 transition-transform duration-500 ease-out flex flex-col justify-center items-center w-full h-full max-h-full">
+            <p className="text-white text-sm sm:text-base leading-relaxed mb-4 font-medium">
               {description}
             </p>
             <Link
               href={link}
-              className="mt-6 inline-flex items-center gap-2 bg-white px-6 py-3 rounded-full font-semibold text-sm transition-transform duration-300 hover:scale-105 active:scale-95 shadow-lg"
+              className="inline-flex items-center gap-2 bg-white px-6 py-3 rounded-full font-semibold text-sm transition-transform duration-300 hover:scale-105 active:scale-95 shadow-lg flex-shrink-0"
               aria-label={`Learn more about ${title}`}
             >
               <span className={buttonTextColor}>Learn More</span>

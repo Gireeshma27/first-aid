@@ -453,3 +453,294 @@ img {
   transform: scale(1.1);
   transition: transform 0.2s ease;
 }
+
+/* ===== ANIMATED BACKGROUND GRADIENTS ===== */
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradient-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes blob-float {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(20px, -30px) scale(1.1);
+  }
+  50% {
+    transform: translate(-20px, 30px) scale(0.9);
+  }
+  75% {
+    transform: translate(30px, 20px) scale(1.05);
+  }
+}
+
+@keyframes blob-float-slow {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(-30px, 20px) scale(1.05);
+  }
+  66% {
+    transform: translate(30px, -25px) scale(0.95);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+/* Animated gradient background */
+.animated-gradient-bg {
+  background: linear-gradient(-45deg, #3B3969, #CB154E, #4A4880, #3B3969);
+  background-size: 400% 400%;
+  animation: gradient-shift 15s ease infinite;
+}
+
+/* Floating blob animation */
+.blob-animate {
+  animation: blob-float 8s ease-in-out infinite;
+}
+
+.blob-animate-slow {
+  animation: blob-float-slow 12s ease-in-out infinite;
+}
+
+/* Page background animation wrapper */
+.page-background-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #1e1c3d 0%, #3B3969 50%, #4A4880 100%);
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.page-background-animation::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 20% 50%, rgba(203, 21, 78, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 80% 80%, rgba(59, 57, 105, 0.1) 0%, transparent 50%);
+  animation: blob-float 15s ease-in-out infinite;
+}
+
+.page-background-animation::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 40% 60%, rgba(203, 21, 78, 0.05) 0%, transparent 40%),
+              radial-gradient(circle at 60% 40%, rgba(59, 57, 105, 0.05) 0%, transparent 40%);
+  animation: blob-float-slow 20s ease-in-out infinite;
+}
+
+/* Subtle animated background pattern */
+.animated-pattern-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.animated-pattern-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 1px 1px, rgba(203, 21, 78, 0.03) 1px, transparent 1px),
+    radial-gradient(circle at 2px 2px, rgba(59, 57, 105, 0.02) 1px, transparent 1px);
+  background-size: 50px 50px, 80px 80px;
+  animation: float-bg 20s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* Floating particles effect */
+.floating-particles {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.particle-small {
+  width: 4px;
+  height: 4px;
+  background: rgba(203, 21, 78, 0.3);
+  animation: float-bg 6s ease-in-out infinite;
+}
+
+.particle-medium {
+  width: 8px;
+  height: 8px;
+  background: rgba(59, 57, 105, 0.2);
+  animation: float-bg 8s ease-in-out infinite;
+}
+
+.particle-large {
+  width: 12px;
+  height: 12px;
+  background: rgba(74, 72, 128, 0.15);
+  animation: float-bg 10s ease-in-out infinite;
+}
+
+/* ===== STAGGERED ANIMATIONS FOR CARDS ===== */
+@keyframes stagger-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.stagger-item {
+  animation: stagger-fade-in 0.6s ease-out forwards;
+}
+
+.stagger-0 { animation-delay: 0ms; }
+.stagger-1 { animation-delay: 100ms; }
+.stagger-2 { animation-delay: 200ms; }
+.stagger-3 { animation-delay: 300ms; }
+.stagger-4 { animation-delay: 400ms; }
+.stagger-5 { animation-delay: 500ms; }
+.stagger-6 { animation-delay: 600ms; }
+.stagger-7 { animation-delay: 700ms; }
+.stagger-8 { animation-delay: 800ms; }
+
+/* ===== SUBTLE GLOW ON HOVER ===== */
+.glow-hover:hover {
+  box-shadow: 0 0 30px rgba(203, 21, 78, 0.2);
+}
+
+/* ===== SMOOTH BACKDROP BLUR ===== */
+.backdrop-blur-animation {
+  transition: backdrop-filter 0.3s ease;
+}
+
+.backdrop-blur-animation:hover {
+  backdrop-filter: blur(8px);
+}
+
+/* ===== SCALE AND LIFT ON HOVER ===== */
+.scale-lift-hover:hover {
+  transform: translateY(-6px) scale(1.02);
+}
+
+/* ===== ROTATE HOVER EFFECT ===== */
+.rotate-hover:hover {
+  transform: rotate(2deg) translateY(-4px);
+}
+
+/* ===== UNDERLINE ANIMATION ===== */
+@keyframes underline-expand {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.underline-animate {
+  position: relative;
+}
+
+.underline-animate::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #3B3969, #CB154E);
+  animation: underline-expand 0.3s ease-out;
+}
+
+/* ===== ENHANCED CARD STYLES ===== */
+.card-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-shimmer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  animation: shimmer-slide 2s infinite;
+}
+
+@keyframes shimmer-slide {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* ===== ICON ANIMATION ===== */
+@keyframes icon-bounce {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.icon-bounce:hover {
+  animation: icon-bounce 0.4s ease-in-out;
+}
+
+/* ===== FADE IN WITH REVEAL ===== */
+.fade-in-reveal {
+  opacity: 0;
+  animation: fade-in-up 0.8s ease-out forwards;
+}
+
+.fade-in-reveal.visible {
+  opacity: 1;
+}

@@ -197,10 +197,11 @@ export default function BookTrainingPage() {
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {benefits.map(({ icon: Icon, title, desc }) => (
+                  {benefits.map(({ icon: Icon, title, desc }, idx) => (
                     <div
                       key={title}
-                      className="group flex items-start gap-4 bg-white rounded-2xl border border-gray-100 p-5 shadow-sm hover:shadow-md hover:border-[#3B3969]/20 transition-all duration-200"
+                      className="group flex items-start gap-4 bg-white rounded-2xl border border-gray-100 p-5 shadow-sm hover:shadow-md hover:border-[#3B3969]/20 transition-all duration-200 stagger-item card-shimmer"
+                      style={{ animationDelay: `${idx * 80}ms` }}
                     >
                       <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-[#3B3969]/8 flex items-center justify-center group-hover:bg-[#CB154E]/10 transition-colors">
                         <Icon className="w-5 h-5 text-[#3B3969] group-hover:text-[#CB154E] transition-colors" />

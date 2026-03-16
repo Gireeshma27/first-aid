@@ -63,7 +63,7 @@ export function TestimonialsSection() {
           description="Hear from organisations and individuals who have completed our training programs."
         />
 
-        <div className="mt-10 grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
+        <   div className="mt-10 grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
 
           {/* ── Left: person selector ── */}
           <div className="flex flex-col gap-3">
@@ -73,11 +73,12 @@ export function TestimonialsSection() {
                 <button
                   key={t.author}
                   onClick={() => setActiveIndex(i)}
-                  className={`group w-full flex items-center gap-4 p-4 rounded-2xl text-left transition-all duration-300 ${
+                  className={`group w-full flex items-center gap-4 p-4 rounded-2xl text-left transition-all duration-300 stagger-item card-shimmer ${
                     isActive
                       ? "bg-[#3B3969] shadow-lg"
                       : "bg-white border border-gray-100 hover:border-[#CB154E]/40 hover:shadow-md"
                   }`}
+                  style={{ animationDelay: `${i * 100}ms` }}
                 >
                   {/* Avatar */}
                   <div

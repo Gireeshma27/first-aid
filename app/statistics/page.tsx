@@ -627,29 +627,25 @@ export default function StatisticsPage() {
         ══════════════════════════════════════ */}
         <section
           className="relative py-20 md:py-28 overflow-hidden"
-          style={{ background: "linear-gradient(135deg, #1e1c3d 0%, #3B3969 60%, #4A4880 100%)" }}
+          style={{ background: "linear-gradient(135deg, #F9F9FC 0%, #F0F0F6 100%)" }}
         >
-          <div className="absolute -top-24 -right-24 w-[500px] h-[500px] rounded-full bg-[#CB154E]/10 blur-3xl pointer-events-none" />
-          <div className="absolute bottom-0 -left-20 w-[400px] h-[400px] rounded-full bg-white/[0.02] blur-3xl pointer-events-none" />
-          <div
-            className="absolute inset-0 opacity-[0.03]"
-            style={{ backgroundImage: "radial-gradient(circle, #ffffff 1px, transparent 1px)", backgroundSize: "28px 28px" }}
-          />
+          <div className="absolute -top-24 -right-24 w-[500px] h-[500px] rounded-full bg-[#CB154E]/5 blur-3xl pointer-events-none" />
+          <div className="absolute bottom-0 -left-20 w-[400px] h-[400px] rounded-full bg-[#3B3969]/3 blur-3xl pointer-events-none" />
 
           <div className="relative mx-auto max-w-5xl px-6 lg:px-12 z-10">
 
             {/* Centred heading */}
             <div className="text-center mb-12">
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white/75 text-xs font-bold uppercase tracking-widest border border-white/15 mb-7">
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#CB154E]/8 text-[#CB154E] text-xs font-bold uppercase tracking-widest border border-[#CB154E]/20 mb-7">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#CB154E]" />
                 Why Training Matters
               </span>
-              <h2 className="text-3xl md:text-4xl lg:text-[44px] font-bold text-white leading-tight tracking-tight mb-5">
+              <h2 className="text-3xl md:text-4xl lg:text-[44px] font-bold text-[#1e1c3d] leading-tight tracking-tight mb-5">
                 Be the Person Who
                 <br />
                 <span className="text-[#CB154E]">Makes the Difference</span>
               </h2>
-              <p className="text-white/55 text-base leading-relaxed max-w-2xl mx-auto">
+              <p className="text-[#666] text-base leading-relaxed max-w-2xl mx-auto">
                 Learning CPR gives you the skills and confidence to act in those critical first minutes before
                 emergency services arrive. The facts below show exactly why it matters.
               </p>
@@ -667,18 +663,18 @@ export default function StatisticsPage() {
               ].map((item) => (
                 <div
                   key={item.text}
-                  className="flex items-start gap-4 p-5 rounded-2xl bg-white/6 border border-white/10 hover:bg-white/10 transition-colors duration-200"
+                  className="flex items-start gap-4 p-5 rounded-2xl bg-white border border-gray-100 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200"
                 >
-                  <div className="w-9 h-9 rounded-xl bg-[#CB154E]/20 border border-[#CB154E]/30 flex items-center justify-center shrink-0 mt-0.5">
+                  <div className="w-9 h-9 rounded-xl bg-[#CB154E]/10 border border-[#CB154E]/20 flex items-center justify-center shrink-0 mt-0.5">
                     <item.icon className="w-4.5 h-4.5 text-[#CB154E]" style={{ width: "18px", height: "18px" }} />
                   </div>
-                  <p className="text-white/70 text-sm leading-relaxed font-medium">{item.text}</p>
+                  <p className="text-[#555] text-sm leading-relaxed font-medium">{item.text}</p>
                 </div>
               ))}
             </div>
 
             {/* ── CTA bar ── */}
-            <div className="rounded-3xl bg-white/6 border border-white/10 px-8 py-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="rounded-3xl bg-gradient-to-r from-[#3B3969] to-[#4A4880] border border-[#3B3969]/20 px-8 py-8 flex flex-col md:flex-row items-center justify-between gap-6">
               <p className="text-white/80 text-base font-medium leading-relaxed max-w-xl text-center md:text-left">
                 Don&rsquo;t wait until it&rsquo;s too late. Getting trained takes just a few hours — and it
                 could save a life.
