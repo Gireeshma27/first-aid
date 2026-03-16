@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { SectionHeader } from "@/components/section-header"
-import { Star, Quote, ChevronRight } from "lucide-react"
+import    { Star, Quote, ChevronRight } from "lucide-react"
 
 const testimonials = [
   {
