@@ -290,12 +290,12 @@ export function Hero() {
 
               {/* CTAs */}
               <div className="anim-up d4 flex flex-wrap gap-3 items-center">
-                <Link href="/contact" className="btn-cta">
+                <Link href="/book-training" className="btn-cta">
                   Book Training <ArrowRight className="w-4 h-4" />
                 </Link>
-                <Link href="/courses" className="btn-ghost">
+                <Link href="/services" className="btn-ghost">
                   <PlayCircle className="w-4 h-4" style={{ color: "#CB154E" }} />
-                  Explore Courses
+                  Explore Services
                 </Link>
               </div>
 

@@ -1,4 +1,4 @@
-﻿"use client"
+"use client"
 
 import { useEffect, useRef, useState } from "react"
 import { Navbar } from "@/components/navbar"
@@ -170,8 +170,8 @@ export default function StatisticsPage() {
                     asChild
                     className="bg-[#CB154E] hover:bg-[#a50f3d] text-white font-semibold rounded-full shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 px-8 h-12 text-sm"
                   >
-                    <Link href="/courses">
-                      View CPR Courses
+                    <Link href="/services">
+                      Explore Services
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Link>
                   </Button>
@@ -180,7 +180,7 @@ export default function StatisticsPage() {
                     variant="outline"
                     className="border-white/25 text-white bg-white/8 hover:bg-white/15 font-semibold rounded-full px-8 h-12 text-sm transition-all duration-300"
                   >
-                    <Link href="/contact">Book Training</Link>
+                    <Link href="/book-training">Book Training</Link>
                   </Button>
                 </div>
               </div>
@@ -590,7 +590,7 @@ export default function StatisticsPage() {
                   asChild
                   className="bg-[#CB154E] hover:bg-[#a50f3d] text-white font-semibold rounded-full shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 px-8 h-12 text-sm"
                 >
-                  <Link href="/courses/hltaid009">
+                  <Link href="/book-training">
                     Get CPR Trained Today
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
@@ -663,10 +663,10 @@ export default function StatisticsPage() {
           <div className="absolute -top-24 -right-24 w-[500px] h-[500px] rounded-full bg-[#CB154E]/5 blur-3xl pointer-events-none" />
           <div className="absolute bottom-0 -left-20 w-[400px] h-[400px] rounded-full bg-[#3B3969]/3 blur-3xl pointer-events-none" />
 
-          <div className="relative mx-auto max-w-5xl px-6 lg:px-12 z-10">
+          <div className="relative mx-auto max-w-6xl px-6 lg:px-12 z-10">
 
             {/* Centred heading */}
-            <div className="text-center mb-12">
+            <div className="text-center mb-14">
             <Reveal>
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#CB154E]/8 text-[#CB154E] text-xs font-bold uppercase tracking-widest border border-[#CB154E]/20 mb-7">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#CB154E]" />
@@ -677,41 +677,106 @@ export default function StatisticsPage() {
                 <br />
                 <span className="text-[#CB154E]">Makes the Difference</span>
               </h2>
-              <p className="text-[#666] text-base leading-relaxed max-w-2xl mx-auto">
+              <p className="text-[#666] text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
                 Learning CPR gives you the skills and confidence to act in those critical first minutes before
                 emergency services arrive. The facts below show exactly why it matters.
               </p>
             </Reveal>
             </div>
 
-            {/* â”€â”€ 3-col fact grid â”€â”€ */}
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
-            <Reveal delay={100}>
+            {/* ── Modern stat highlight cards ── */}
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-12">
               {[
-                { icon: Heart,       text: "Over 32,000 Australians suffer cardiac arrest every year." },
-                { icon: AlertCircle, text: "Only 1 in 10 survive â€” often because help didn't arrive in time." },
-                { icon: Activity,    text: "Immediate CPR can double or triple survival chances." },
-                { icon: Clock,       text: "Every minute without CPR reduces survival by up to 10%." },
-                { icon: Home,        text: "80% of cardiac arrests occur at home â€” it could be someone you love." },
-                { icon: BookOpen,    text: "Only 22% of Australians have current CPR training." },
+                {
+                  icon: Heart,
+                  stat: "32,000+",
+                  label: "Cardiac Arrests",
+                  desc: "Australians experience cardiac arrest outside hospital each year.",
+                  accent: "#CB154E",
+                  accentBg: "rgba(203,21,78,0.08)",
+                  accentBorder: "rgba(203,21,78,0.18)",
+                },
+                {
+                  icon: Activity,
+                  stat: "2\u20133\u00d7",
+                  label: "Survival Increase",
+                  desc: "Immediate CPR can double or triple a victim\u2019s chance of survival.",
+                  accent: "#3B3969",
+                  accentBg: "rgba(59,57,105,0.08)",
+                  accentBorder: "rgba(59,57,105,0.18)",
+                },
+                {
+                  icon: Clock,
+                  stat: "10%",
+                  label: "Per Minute Lost",
+                  desc: "Every minute without CPR reduces survival by up to 10 percent.",
+                  accent: "#CB154E",
+                  accentBg: "rgba(203,21,78,0.08)",
+                  accentBorder: "rgba(203,21,78,0.18)",
+                },
+                {
+                  icon: Home,
+                  stat: "80%",
+                  label: "Happen at Home",
+                  desc: "Most cardiac arrests occur at home \u2014 it could be someone you love.",
+                  accent: "#3B3969",
+                  accentBg: "rgba(59,57,105,0.08)",
+                  accentBorder: "rgba(59,57,105,0.18)",
+                },
+              ].map((card, idx) => (
+                <Reveal key={card.label} delay={idx * 80}>
+                <div
+                  className="group relative bg-white rounded-3xl border border-gray-100 p-7 flex flex-col items-start gap-4 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                >
+                  <div
+                    className="w-12 h-12 rounded-2xl flex items-center justify-center transition-colors duration-300"
+                    style={{ background: card.accentBg, border: `1px solid ${card.accentBorder}` }}
+                  >
+                    <card.icon className="w-5 h-5" style={{ color: card.accent }} />
+                  </div>
+                  <p className="text-3xl md:text-[2.2rem] font-extrabold tracking-tight leading-none" style={{ color: card.accent }}>
+                    {card.stat}
+                  </p>
+                  <p className="text-sm font-bold text-[#1e1c3d] uppercase tracking-wide leading-snug">
+                    {card.label}
+                  </p>
+                  <p className="text-[#666] text-sm leading-relaxed">
+                    {card.desc}
+                  </p>
+                  <div
+                    className="absolute top-0 left-8 right-8 h-[3px] rounded-b-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    style={{ background: card.accent }}
+                  />
+                </div>
+                </Reveal>
+              ))}
+            </div>
+
+            {/* ── Supporting fact strip ── */}
+            <Reveal delay={100}>
+            <div className="grid sm:grid-cols-2 gap-4 mb-12">
+              {[
+                { icon: AlertCircle, text: "Only 1 in 10 cardiac arrest victims survive \u2014 often because help didn\u2019t arrive in time." },
+                { icon: BookOpen,    text: "Only 22% of Australians have current CPR training \u2014 the gap is critical." },
               ].map((item) => (
                 <div
                   key={item.text}
                   className="flex items-start gap-4 p-5 rounded-2xl bg-white border border-gray-100 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200"
                 >
-                  <div className="w-9 h-9 rounded-xl bg-[#CB154E]/10 border border-[#CB154E]/20 flex items-center justify-center shrink-0 mt-0.5">
-                    <item.icon className="w-4.5 h-4.5 text-[#CB154E]" style={{ width: "18px", height: "18px" }} />
+                  <div className="w-10 h-10 rounded-xl bg-[#CB154E]/10 border border-[#CB154E]/20 flex items-center justify-center shrink-0 mt-0.5">
+                    <item.icon className="w-5 h-5 text-[#CB154E]" />
                   </div>
                   <p className="text-[#555] text-sm leading-relaxed font-medium">{item.text}</p>
                 </div>
               ))}
-            </Reveal>
             </div>
+            </Reveal>
 
-            {/* â”€â”€ CTA bar â”€â”€ */}
+            {/* ── CTA bar ── */}
+            <Reveal delay={120}>
             <div className="rounded-3xl bg-gradient-to-r from-[#3B3969] to-[#4A4880] border border-[#3B3969]/20 px-8 py-8 flex flex-col md:flex-row items-center justify-between gap-6">
               <p className="text-white/80 text-base font-medium leading-relaxed max-w-xl text-center md:text-left">
-                Don&rsquo;t wait until it&rsquo;s too late. Getting trained takes just a few hours â€” and it
+                Don&rsquo;t wait until it&rsquo;s too late. Getting trained takes just a few hours &mdash; and it
                 could save a life.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 shrink-0">
@@ -719,8 +784,8 @@ export default function StatisticsPage() {
                   asChild
                   className="bg-[#CB154E] hover:bg-[#a50f3d] text-white font-semibold rounded-full shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 px-8 h-12 text-sm"
                 >
-                  <Link href="/courses">
-                    View Our Courses
+                  <Link href="/services">
+                    Explore Services
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                 </Button>
@@ -729,10 +794,11 @@ export default function StatisticsPage() {
                   variant="outline"
                   className="border-white/25 text-white bg-white/8 hover:bg-white/15 font-semibold rounded-full px-8 h-12 text-sm transition-all duration-300"
                 >
-                  <Link href="/contact">Book Team Training</Link>
+                  <Link href="/book-training">Book Team Training</Link>
                 </Button>
               </div>
             </div>
+            </Reveal>
 
           </div>
         </section>
