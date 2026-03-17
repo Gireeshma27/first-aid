@@ -78,7 +78,18 @@ export function Navbar() {
     return () => document.removeEventListener("mousedown", handleClickOutside)
   }, [])
 
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = "hidden"
+    } else {
+      document.body.style.overflow = ""
+    }
+    return () => { document.body.style.overflow = "" }
+  }, [mobileMenuOpen])
+
   return (
+    <>
     <header
       className={`sticky top-0 z-50 w-full transition-all duration-300 ${scrolled
           ? "bg-white/90 backdrop-blur-lg shadow-sm border-b border-gray-100"
@@ -164,15 +175,17 @@ export function Navbar() {
           </Button>
         </div>
       </nav>
+    </header>
 
-      {/* ── Mobile menu ── */}
+      {/* ── Mobile menu — rendered outside <header> to avoid backdrop-filter
+           creating a new containing block that breaks position:fixed children ── */}
       {mobileMenuOpen && (
         <div className="lg:hidden">
           <div
-            className="fixed inset-0 z-40 bg-black/30 backdrop-blur-sm"
+            className="fixed inset-0 z-[60] bg-black/30 backdrop-blur-sm"
             onClick={() => setMobileMenuOpen(false)}
           />
-          <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-200 animate-slide-in">
+          <div className="fixed inset-y-0 right-0 z-[70] w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-200 animate-slide-in">
             <div className="flex items-center justify-between">
               <Link href="/" className="-m-1.5 p-1.5" onClick={() => setMobileMenuOpen(false)}>
                 <Image src={logo} alt="First Aid Network Australia" className="h-[40px] w-auto" width={200} height={40} />
@@ -235,6 +248,6 @@ export function Navbar() {
           </div>
         </div>
       )}
-    </header>
+    </>
   )
 }

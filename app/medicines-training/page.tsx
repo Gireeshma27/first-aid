@@ -6,6 +6,7 @@ import { CheckCircle2, Shield, Syringe, Wind, Heart, AlertTriangle, Users } from
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import { Reveal } from "@/components/reveal"
 
 const trainingPrograms = [
   {
@@ -146,6 +147,7 @@ export default function MedicinesTrainingPage() {
         {/* Introduction */}
         <section className="py-16 md:py-24 bg-white">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
+            <Reveal>
             <div className="max-w-3xl mx-auto text-center space-y-6">
               <div className="w-16 h-16 rounded-full bg-[#CB154E]/[0.06] flex items-center justify-center mx-auto">
                 <AlertTriangle className="w-8 h-8 text-[#CB154E]" />
@@ -157,6 +159,7 @@ export default function MedicinesTrainingPage() {
                 Our specialised training programs address specific health conditions and clinical scenarios that require targeted knowledge and skills. These programs complement our nationally recognised first aid courses and can be customised to meet your organisation&apos;s needs.
               </p>
             </div>
+            </Reveal>
           </div>
         </section>
 
@@ -167,6 +170,7 @@ export default function MedicinesTrainingPage() {
             className={`py-16 md:py-24 ${index % 2 === 0 ? 'bg-[#F7F7FA]' : 'bg-white'}`}
           >
             <div className="mx-auto max-w-7xl px-6 lg:px-12">
+              <Reveal>
               <div className="grid lg:grid-cols-2 gap-12 items-start">
                 <div className={`space-y-6 ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
                   <div className="w-16 h-16 rounded-xl bg-[#3B3969]/[0.07] flex items-center justify-center">
@@ -211,6 +215,7 @@ export default function MedicinesTrainingPage() {
                   </div>
                 </div>
               </div>
+              </Reveal>
             </div>
           </section>
         ))}

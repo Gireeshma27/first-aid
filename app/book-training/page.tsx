@@ -8,6 +8,7 @@ import {
   Building2, MessageSquare, User, ShieldCheck, Clock, Award,
   MapPin, Star, HeartPulse, CalendarCheck, Headphones,
 } from "lucide-react"
+import { Reveal } from "@/components/reveal"
 
 interface FormData {
   fullName: string
@@ -182,6 +183,7 @@ export default function BookTrainingPage() {
             <div className="grid grid-cols-1 lg:grid-cols-[1fr_480px] gap-10 xl:gap-16 items-start">
 
               {/* ── Left: Info Panel ── */}
+              <Reveal>
               <div className="space-y-8">
                 {/* Why book with us */}
                 <div>
@@ -272,6 +274,8 @@ export default function BookTrainingPage() {
               </div>
 
               {/* ── Right: Form Card ── */}
+              </Reveal>
+              <Reveal delay={100}>
               <div className="lg:sticky lg:top-24">
                 {isSubmitted ? (
                   <div className="bg-white rounded-3xl shadow-xl border border-gray-100 p-10 text-center">
@@ -492,6 +496,7 @@ export default function BookTrainingPage() {
                   </div>
                 )}
               </div>
+              </Reveal>
             </div>
           </div>
         </section>

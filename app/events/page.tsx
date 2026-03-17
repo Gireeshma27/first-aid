@@ -1,9 +1,10 @@
-import { Navbar } from "@/components/navbar"
+﻿import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { NewsletterSection } from "@/sections/newsletter"
 import { CheckCircle2, Shield, Clock, Stethoscope, ArrowRight, Zap, Award, Heart } from "lucide-react"
 import Image from "next/image"
 import type { Metadata } from "next"
+import { Reveal } from "@/components/reveal"
 
 export const metadata: Metadata = {
   title: "Event Medical Services | First Aid Network Australia",
@@ -33,9 +34,9 @@ export default function EventsPage() {
     <>
       <Navbar />
       <main>
-        {/* ── Hero ── */}
+        {/* â”€â”€ Hero â”€â”€ */}
         <section
-          className="relative py-24 md:py-32 overflow-hidden"
+          className="relative py-16 md:py-20 overflow-hidden"
           style={{ background: "linear-gradient(135deg, #1e1c3d 0%, #3B3969 60%, #4A4880 100%)" }}
         >
           {/* Decorative blobs */}
@@ -50,7 +51,7 @@ export default function EventsPage() {
           <div className="relative mx-auto max-w-7xl px-6 lg:px-12">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
-              {/* Left — Text + CTA */}
+              {/* Left â€” Text + CTA */}
               <div className="space-y-8">
                 <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 text-white/90 text-sm font-semibold border border-white/20">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#CB154E]" />
@@ -95,13 +96,15 @@ export default function EventsPage() {
                 </div>
               </div>
 
-              {/* Right — Image */}
+              {/* Right â€” Image */}
               <div className="relative">
                 <div className="relative aspect-[4/3] rounded-[2rem] overflow-hidden shadow-2xl ring-1 ring-white/10">
                   <Image
                     src="/images/event-medical.png"
                     alt="Event medic team providing first aid support at a community event"
                     fill
+                    priority
+                    sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#1e1c3d]/40 via-transparent to-transparent" />
@@ -116,10 +119,11 @@ export default function EventsPage() {
           </div>
         </section>
 
-        {/* ── Overview — alternating (image right) ── */}
-        <section id="event-services" className="py-20 md:py-32 bg-white relative">
+        {/* â”€â”€ Overview â€” alternating (image right) â”€â”€ */}
+        <section id="event-services" className="py-12 md:py-16 bg-white relative">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+              <Reveal>
               <div className="space-y-8">
                 <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#CB154E]/8 text-[#CB154E] text-sm font-bold tracking-wide uppercase">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#CB154E]" />
@@ -153,12 +157,16 @@ export default function EventsPage() {
                   ))}
                 </div>
               </div>
+              </Reveal>
+              <Reveal delay={100}>
               <div className="relative lg:ml-10">
                 <div className="relative aspect-[4/5] md:aspect-square rounded-[2rem] overflow-hidden shadow-2xl">
                   <Image
                     src="/images/event-medical.png"
                     alt="Event medical team providing first aid support at a community event"
                     fill
+                    loading="eager"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-tr from-[#3B3969]/30 via-transparent to-transparent" />
@@ -173,14 +181,14 @@ export default function EventsPage() {
                     <p className="text-sm font-medium text-[#666666]">Event Support</p>
                   </div>
                 </div>
-              </div>
-            </div>
+              </div>              </Reveal>            </div>
           </div>
         </section>
 
-        {/* ── Types of Events ── */}
-        <section id="types" className="py-20 md:py-32 bg-[#F5F5F5]">
+        {/* â”€â”€ Types of Events â”€â”€ */}
+        <section id="types" className="py-12 md:py-16 bg-[#F5F5F5]">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
+            <Reveal>
             <div className="text-center mb-16">
               <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-[#3B3969]/8 text-[#3B3969] text-sm font-semibold mb-5">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#3B3969]" />
@@ -193,7 +201,9 @@ export default function EventsPage() {
                 Our event medical services are available for a wide range of events across Australia.
               </p>
             </div>
+            </Reveal>
             
+            <Reveal delay={100}>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
               {eventTypes.map((event) => (
                 <div
@@ -206,6 +216,8 @@ export default function EventsPage() {
                       src={event.image}
                       alt={event.title}
                       fill
+                      loading="eager"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       className="object-cover group-hover:scale-105 transition-transform duration-700"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#1e1c3d]/90 via-[#1e1c3d]/30 to-transparent" />
@@ -219,13 +231,13 @@ export default function EventsPage() {
                   </div>
                 </div>
               ))}
-            </div>
-          </div>
+            </div>            </Reveal>          </div>
         </section>
 
-        {/* ── Why Professional Event Medics ── */}
-        <section className="py-20 md:py-32 bg-white">
+        {/* â”€â”€ Why Professional Event Medics â”€â”€ */}
+        <section className="py-12 md:py-16 bg-white">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
+            <Reveal>
             <div className="text-center mb-16">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#3B3969]/8 text-[#3B3969] text-sm font-bold tracking-wide uppercase">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#3B3969]" />
@@ -238,7 +250,9 @@ export default function EventsPage() {
                 Having qualified medical personnel at events ensures that any medical incidents are handled swiftly and professionally, providing peace of mind for organisers and participants alike.
               </p>
             </div>
+            </Reveal>
 
+            <Reveal delay={100}>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {whyCards.map((card, i) => (
                 <div
@@ -258,13 +272,15 @@ export default function EventsPage() {
                 </div>
               ))}
             </div>
+            </Reveal>
           </div>
         </section>
 
-        {/* ── CTA ── */}
+        {/* â”€â”€ CTA â”€â”€ */}
         <NewsletterSection />
       </main>
       <Footer />
     </>
   )
 }
+

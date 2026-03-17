@@ -2,10 +2,12 @@ import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { NewsletterSection } from "@/sections/newsletter"
 import { CheckCircle2, Phone, ShieldPlus, ArrowRight, Users, Clock, BookOpen, AlertTriangle } from "lucide-react"
+import { FiDroplet, FiZap, FiActivity, FiWind, FiAlertOctagon, FiAlertCircle, FiHeart, FiUser } from "react-icons/fi"
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import type { Metadata } from "next"
+import { Reveal } from "@/components/reveal"
 
 export const metadata: Metadata = {
   title: "HLTAID011 – Provide First Aid | First Aid Network Australia",
@@ -14,14 +16,14 @@ export const metadata: Metadata = {
 
 export default function ProvideFirstAidPage() {
   const emergencies = [
-    { icon: "🩸", label: "Severe Bleeding" },
-    { icon: "🔥", label: "Burns & Scalds" },
-    { icon: "🦴", label: "Fractures" },
-    { icon: "💨", label: "Asthma Attack" },
-    { icon: "🧠", label: "Stroke" },
-    { icon: "⚡", label: "Anaphylaxis" },
-    { icon: "🫀", label: "Heart Attack" },
-    { icon: "😵", label: "Seizures" },
+    { icon: FiDroplet, label: "Severe Bleeding" },
+    { icon: FiZap, label: "Burns & Scalds" },
+    { icon: FiActivity, label: "Fractures" },
+    { icon: FiWind, label: "Asthma Attack" },
+    { icon: FiAlertOctagon, label: "Stroke" },
+    { icon: FiAlertCircle, label: "Anaphylaxis" },
+    { icon: FiHeart, label: "Heart Attack" },
+    { icon: FiUser, label: "Seizures" },
   ]
 
   return (
@@ -30,11 +32,11 @@ export default function ProvideFirstAidPage() {
       <main>
         {/* Hero */}
         <section className="relative min-h-[520px] flex items-center overflow-hidden" style={{ background: "linear-gradient(135deg, #3B3969 0%, #2d2b5e 50%, #1a1a2e 100%)" }}>
-          <div className="absolute inset-0">
-            <Image src="/images/course-first-aid.png" alt="" fill className="object-cover opacity-10" />
-          </div>
+          <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-[#CB154E]/20 blur-3xl animate-blob" />
+          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-[#3B3969]/30 blur-3xl animate-blob-delay" />
+          <div className="absolute top-1/2 left-1/3 w-[300px] h-[300px] rounded-full bg-white/5 blur-3xl animate-blob-delay-2" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#3B3969]/80 via-transparent to-transparent" />
-          <div className="relative mx-auto max-w-7xl px-6 lg:px-12 py-20 pb-24">
+          <div className="relative mx-auto max-w-7xl px-6 lg:px-12 py-16 pb-20">
             <div className="flex flex-col lg:flex-row gap-12 items-center">
               <div className="flex-1 min-w-0">
                 <div className="flex flex-wrap items-center gap-3 mb-6">
@@ -67,7 +69,7 @@ export default function ProvideFirstAidPage() {
               </div>
               <div className="flex-shrink-0 w-full lg:w-[420px]">
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-black/40 aspect-[4/3]">
-                  <Image src="/images/cpr-classroom.png" alt="First aid training session" fill className="object-cover" />
+                  <Image src="/images/cpr-classroom.png" alt="First aid training session" fill priority sizes="(max-width: 1024px) 100vw, 420px" className="object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#3B3969]/70 via-transparent to-transparent" />
                   <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-sm rounded-xl p-4 flex items-center gap-3 shadow-lg">
                     <div className="w-10 h-10 rounded-lg bg-[#CB154E] flex-shrink-0 flex items-center justify-center">
@@ -97,30 +99,39 @@ export default function ProvideFirstAidPage() {
         {/* Emergency tiles */}
         <section className="py-14 bg-white">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
+            <Reveal>
             <div className="text-center mb-10">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#CB154E]/[0.06] text-[#CB154E] text-sm font-semibold mb-4">
                 <AlertTriangle className="w-4 h-4" />What You&apos;ll Be Ready For
               </span>
               <h2 className="text-2xl md:text-3xl font-bold text-[#1a1a2e]">Medical Emergencies Covered</h2>
             </div>
+            </Reveal>
+            <Reveal delay={100}>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-              {emergencies.map((e) => (
-                <div key={e.label} className="flex flex-col items-center gap-3 p-5 rounded-2xl bg-[#F7F7FA] border border-[#E8E8F0] hover:border-[#CB154E]/30 hover:bg-[#CB154E]/[0.03] transition-colors">
-                  <span className="text-3xl">{e.icon}</span>
-                  <span className="text-sm font-semibold text-[#1a1a2e] text-center">{e.label}</span>
+              {emergencies.map(({ icon: Icon, label }) => (
+                <div key={label} className="flex flex-col items-center gap-3 p-5 rounded-2xl bg-[#F7F7FA] border border-[#E8E8F0] hover:border-[#CB154E]/30 hover:bg-[#CB154E]/[0.03] transition-colors">
+                  <div className="w-10 h-10 rounded-xl bg-[#CB154E]/10 flex items-center justify-center">
+                    <Icon className="w-5 h-5 text-[#CB154E]" />
+                  </div>
+                  <span className="text-sm font-semibold text-[#1a1a2e] text-center">{label}</span>
                 </div>
               ))}
             </div>
+            </Reveal>
           </div>
         </section>
 
         {/* Skills grid */}
-        <section className="py-16 md:py-20 bg-[#F7F7FA]">
+        <section className="py-12 md:py-16 bg-[#F7F7FA]">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
+            <Reveal>
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#3B3969]/[0.07] text-[#3B3969] text-sm font-semibold mb-5">
               <span className="w-1.5 h-1.5 rounded-full bg-[#3B3969]" />Key Learning Outcomes
             </span>
             <h2 className="text-2xl md:text-3xl font-bold text-[#1a1a2e] mb-10">What You Will Learn</h2>
+            </Reveal>
+            <Reveal delay={100}>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="bg-white rounded-2xl p-7 border border-[#E8E8F0] shadow-sm">
                 <div className="w-10 h-10 rounded-xl bg-[#3B3969]/10 flex items-center justify-center mb-5">
@@ -165,72 +176,79 @@ export default function ProvideFirstAidPage() {
                 </ul>
               </div>
             </div>
+            </Reveal>
           </div>
         </section>
 
         {/* Delivery */}
-        <section className="py-16 md:py-20 bg-[#1a1a2e] relative overflow-hidden">
-          <div className="absolute inset-0">
-            <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#3B3969]/20 blur-3xl" />
-            <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#CB154E]/10 blur-3xl" />
-          </div>
+        <section className="py-12 md:py-16 bg-gradient-to-b from-white to-[#F5F5F5] relative overflow-hidden">
+          <div className="absolute inset-0 opacity-[0.02] pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, #333333 1px, transparent 0)', backgroundSize: '32px 32px' }} />
+          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#CB154E]/5 blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-[#3B3969]/5 blur-3xl" />
           <div className="relative mx-auto max-w-7xl px-6 lg:px-12">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <Reveal>
               <div>
-                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white/80 text-sm font-semibold mb-5 border border-white/15">
-                  <span className="w-1.5 h-1.5 rounded-full bg-white/60" />Delivery Method
+                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#CB154E]/10 text-[#CB154E] text-sm font-semibold mb-5 border border-[#CB154E]/20">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#CB154E]" />Delivery Method
                 </span>
-                <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">How This Training Is Delivered</h2>
-                <p className="text-white/60 text-base leading-relaxed mb-8">We deliver HLTAID011 in formats that work for your situation — whether you need a full day at your workplace or the flexibility of online theory with in-person assessment.</p>
+                <h2 className="text-2xl md:text-3xl font-bold text-[#1a1a2e] mb-4">How This Training Is Delivered</h2>
+                <p className="text-[#64648c] text-base leading-relaxed mb-8">We deliver HLTAID011 in formats that work for your situation — whether you need a full day at your workplace or the flexibility of online theory with in-person assessment.</p>
                 <div className="grid sm:grid-cols-2 gap-4">
-                  <div className="bg-white/[0.07] rounded-2xl p-6 border border-white/10">
-                    <div className="w-8 h-8 rounded-lg bg-[#3B3969] flex items-center justify-center mb-4">
+                  <div className="bg-white rounded-2xl p-6 border border-gray-200 hover:shadow-lg hover:border-[#CB154E]/40 transition-all duration-300">
+                    <div className="w-8 h-8 rounded-lg bg-[#3B3969] flex items-center justify-center mb-4 hover:bg-[#CB154E] transition-colors duration-300">
                       <Users className="w-4 h-4 text-white" />
                     </div>
-                    <h3 className="text-white font-semibold mb-2">Face-to-face</h3>
-                    <p className="text-white/60 text-sm leading-relaxed">Full day practical training at your workplace or our training facility.</p>
+                    <h3 className="text-[#1a1a2e] font-semibold mb-2">Face-to-face</h3>
+                    <p className="text-[#64648c] text-sm leading-relaxed">Full day practical training at your workplace or our training facility.</p>
                   </div>
-                  <div className="bg-white/[0.07] rounded-2xl p-6 border border-white/10">
+                  <div className="bg-white rounded-2xl p-6 border border-gray-200 hover:shadow-lg hover:border-[#CB154E]/40 transition-all duration-300">
                     <div className="w-8 h-8 rounded-lg bg-[#CB154E] flex items-center justify-center mb-4">
                       <BookOpen className="w-4 h-4 text-white" />
                     </div>
-                    <h3 className="text-white font-semibold mb-2">Blended Learning</h3>
-                    <p className="text-white/60 text-sm leading-relaxed">Online theory combined with in-person practical assessment.</p>
+                    <h3 className="text-[#1a1a2e] font-semibold mb-2">Blended Learning</h3>
+                    <p className="text-[#64648c] text-sm leading-relaxed">Online theory combined with in-person practical assessment.</p>
                   </div>
                 </div>
               </div>
-              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
-                <Image src="/images/cpr-classroom.png" alt="First aid training delivery" fill className="object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a2e]/60 via-transparent to-transparent" />
+              </Reveal>
+              <Reveal delay={100}>
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
+                <Image src="/images/cpr-classroom.png" alt="First aid training delivery" fill loading="eager" sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a2e]/40 via-transparent to-transparent" />
               </div>
+              </Reveal>
             </div>
           </div>
         </section>
 
         {/* Who should attend */}
-        <section className="py-16 md:py-20 bg-white">
+        <section className="py-12 md:py-16 bg-white relative overflow-hidden">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
+            <Reveal>
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#3B3969]/[0.07] text-[#3B3969] text-sm font-semibold mb-5">
               <span className="w-1.5 h-1.5 rounded-full bg-[#3B3969]" />Who Should Attend
             </span>
             <h2 className="text-2xl md:text-3xl font-bold text-[#1a1a2e] mb-8">Who Is This Training For?</h2>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            </Reveal>
+            <Reveal delay={100}>
+            <div className="flex flex-wrap gap-2.5">
               {["All workplace employees", "Support workers and carers", "Healthcare assistants", "Community group members", "Teachers and educators", "Childcare workers", "Fitness instructors", "Anyone seeking first aid certification"].map((item) => (
-                <div key={item} className="flex items-center gap-3 rounded-2xl p-4 bg-[#F7F7FA] border border-[#E8E8F0] hover:border-[#3B3969]/20 transition-colors">
-                  <div className="w-7 h-7 rounded-full bg-[#3B3969]/10 flex items-center justify-center flex-shrink-0">
-                    <CheckCircle2 className="w-4 h-4 text-[#3B3969]" />
-                  </div>
-                  <span className="text-[#1a1a2e] font-medium text-sm">{item}</span>
-                </div>
+                <span key={item} className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-[#F7F7FA] border border-[#E8E8F0] text-[#333333] font-medium text-sm hover:bg-[#3B3969]/[0.05] hover:border-[#3B3969]/20 transition-colors">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#CB154E] flex-shrink-0" />
+                  {item}
+                </span>
               ))}
             </div>
+            </Reveal>
           </div>
         </section>
 
         {/* CTA */}
-        <section className="py-16 md:py-20" style={{ background: "linear-gradient(135deg, #3B3969 0%, #2d2b5e 60%, #1a1a2e 100%)" }}>
+        <section className="py-12 md:py-16" style={{ background: "linear-gradient(135deg, #3B3969 0%, #2d2b5e 60%, #1a1a2e 100%)" }}>
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <div className="grid lg:grid-cols-2 gap-10 items-center">
+              <Reveal>
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Book First Aid Training?</h2>
                 <p className="text-white/70 text-lg leading-relaxed mb-8">Equip your team with Australia&apos;s most comprehensive general first aid qualification. Delivered on-site or at our training facility.</p>
@@ -243,6 +261,8 @@ export default function ProvideFirstAidPage() {
                   </Button>
                 </div>
               </div>
+              </Reveal>
+              <Reveal delay={100}>
               <div className="grid grid-cols-2 gap-4">
                 {[{ label: "Nationally Recognised", sub: "HLTAID011 qualification" }, { label: "RTO Partner", sub: "Healthcorp (RTO 91222)" }, { label: "All Formats", sub: "F2F & Blended options" }, { label: "All Industries", sub: "Workplaces & community" }].map((s) => (
                   <div key={s.label} className="bg-white/[0.08] rounded-2xl p-5 border border-white/10">
@@ -251,6 +271,7 @@ export default function ProvideFirstAidPage() {
                   </div>
                 ))}
               </div>
+              </Reveal>
             </div>
           </div>
         </section>

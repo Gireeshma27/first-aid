@@ -1,7 +1,10 @@
+"use client"
+
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { SectionHeader } from "@/components/section-header"
 import { NewsletterSection } from "@/sections/newsletter"
+import { Reveal } from "@/components/reveal"
 import Image from "next/image"
 import type { ComponentType } from "react"
 import { CheckCircle2, Heart, Target, Users, Award, Shield, Clock, Building2, BookOpen, Baby, Stethoscope } from "lucide-react"
@@ -68,7 +71,7 @@ export default function AboutPage() {
       <main>
         {/* ── Hero & Story ── */}
         <section
-          className="relative pt-24 pb-20 md:pt-32 md:pb-28 overflow-hidden"
+          className="relative pt-16 pb-14 md:pt-20 md:pb-18 overflow-hidden"
           style={{ background: "linear-gradient(135deg, #1e1c3d 0%, #3B3969 55%, #4A4880 100%)" }}
         >
           {/* Decorative blobs */}
@@ -125,6 +128,8 @@ export default function AboutPage() {
                     src="/images/trainer.png"
                     alt="First Aid Network Australia training session"
                     fill
+                    priority
+                    sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#1e1c3d]/50 via-transparent to-transparent" />
@@ -150,52 +155,35 @@ export default function AboutPage() {
           <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: "radial-gradient(circle, #3B3969 1px, transparent 1px)", backgroundSize: "50px 50px" }} />
           <div className="mx-auto max-w-7xl px-6 lg:px-12 relative z-10">
             <div className="text-center mb-10">
-              <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#3B3969]/8 text-[#3B3969] text-sm font-semibold mb-4 fade-in-reveal">
+              <Reveal>
+              <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#3B3969]/8 text-[#3B3969] text-sm font-semibold mb-4">
                 <span className="w-2 h-2 rounded-full bg-[#3B3969]" />
                 Our Impact
               </span>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#333333] tracking-tight fade-in-reveal">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#333333] tracking-tight">
                 Trusted Across Australia
               </h2>
+              </Reveal>
             </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <Reveal>
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-[#E5E5E5] border border-[#E5E5E5] rounded-2xl overflow-hidden">
               {([Clock, Users, Building2, Heart] as const).map((Icon, i) => (
-                <div
-                  key={stats[i].label}
-                  className={`group relative bg-gradient-to-br from-white via-[#F9F9FC] to-[#F5F5F5] rounded-2xl p-8 text-center overflow-hidden hover:shadow-xl hover:-translate-y-2 transition-all duration-500 border border-gray-100 card-shimmer cursor-pointer stagger-item`}
-                  style={{ animationDelay: `${i * 100}ms` }}
-                >
-                  {/* Top accent line */}
-                  <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${i % 2 === 0 ? "from-[#3B3969] to-transparent" : "from-[#CB154E] to-transparent"}`} />
-                  
-                  {/* Watermark value in background */}
-                  <div className="absolute -bottom-2 -right-1 text-6xl font-black opacity-[0.03] select-none pointer-events-none leading-none text-[#333333]">
+                <div key={stats[i].label} className="bg-white flex flex-col items-center text-center px-6 py-8">
+                  <div className={`w-10 h-10 rounded-xl flex items-center justify-center mb-4 ${
+                    i % 2 === 0 ? "bg-[#3B3969]/10" : "bg-[#CB154E]/10"
+                  }`}>
+                    <Icon className={`w-5 h-5 ${i % 2 === 0 ? "text-[#3B3969]" : "text-[#CB154E]"}`} />
+                  </div>
+                  <p className={`text-3xl md:text-4xl font-bold tracking-tight mb-1 ${
+                    i % 2 === 0 ? "text-[#3B3969]" : "text-[#CB154E]"
+                  }`}>
                     {stats[i].value}
-                  </div>
-
-                  {/* Corner decorative element */}
-                  <div className={`absolute -top-2 -right-2 w-16 h-16 rounded-full ${i % 2 === 0 ? "bg-[#3B3969]/5" : "bg-[#CB154E]/5"}`} />
-                  
-                  <div className="relative z-10">
-                    <div
-                      className={`w-16 h-16 mx-auto rounded-2xl flex items-center justify-center mb-6 ${
-                        i % 2 === 0 ? "bg-[#3B3969]/10" : "bg-[#CB154E]/10"
-                      } transition-all duration-300 group-hover:scale-110 group-hover:rotate-6 icon-bounce`}
-                    >
-                      <Icon className={`w-8 h-8 ${i % 2 === 0 ? "text-[#3B3969]" : "text-[#CB154E]"}`} />
-                    </div>
-                    <p
-                      className={`text-5xl md:text-6xl font-black mb-2 tracking-tight transition-all duration-300 group-hover:scale-110 ${
-                        i % 2 === 0 ? "text-[#3B3969]" : "text-[#CB154E]"
-                      }`}
-                    >
-                      {stats[i].value}
-                    </p>
-                    <p className="text-xs font-semibold text-[#666666] uppercase tracking-wider group-hover:text-[#333333] transition-colors">{stats[i].label}</p>
-                  </div>
+                  </p>
+                  <p className="text-sm text-[#666666] leading-snug">{stats[i].label}</p>
                 </div>
               ))}
             </div>
+            </Reveal>
           </div>
         </section>
 
@@ -205,35 +193,32 @@ export default function AboutPage() {
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-[#CB154E]/3 to-transparent rounded-full blur-3xl pointer-events-none -z-1" />
           <div className="mx-auto max-w-7xl px-6 lg:px-12 relative z-10">
             <div className="text-center mb-10 md:mb-14">
-              <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#3B3969]/8 text-[#3B3969] text-sm font-semibold mb-4 fade-in-reveal">
+              <Reveal>
+              <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#3B3969]/8 text-[#3B3969] text-sm font-semibold mb-4">
                 <span className="w-2 h-2 rounded-full bg-[#3B3969]" />
                 Our Values
               </span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#333333] tracking-tight leading-tight fade-in-reveal">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#333333] tracking-tight leading-tight">
                 What Drives Us
               </h2>
+              </Reveal>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-6">
-              {values.map((value, idx) => (
-                <div
-                  key={value.title}
-                  className={`group bg-white rounded-2xl p-7 md:p-8 border-l-4 ${value.borderColor} shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 overflow-hidden relative card-shimmer stagger-item cursor-pointer`}
-                  style={{ animationDelay: `${idx * 100}ms` }}
-                >
-                  {/* Top right decorative element */}
-                  <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-[#3B3969]/3 to-transparent rounded-full -z-1" />
-                  
-                  <div
-                    className={`w-14 h-14 md:w-16 md:h-16 rounded-2xl ${value.accentBg} flex items-center justify-center mb-5 group-hover:scale-125 group-hover:-rotate-6 transition-transform duration-400 icon-bounce`}
-                  >
-                    <value.icon className={`w-7 h-7 md:w-8 md:h-8 ${value.accentIcon}`} />
+            <Reveal delay={100}>
+            <div className="grid md:grid-cols-2 gap-x-12 gap-y-8">
+              {values.map((value) => (
+                <div key={value.title} className="flex items-start gap-4">
+                  <div className={`w-12 h-12 rounded-xl ${value.accentBg} flex items-center justify-center flex-shrink-0 mt-0.5`}>
+                    <value.icon className={`w-6 h-6 ${value.accentIcon}`} />
                   </div>
-                  <h3 className="text-lg md:text-xl font-bold text-[#333333] mb-3 tracking-tight group-hover:text-[#3B3969] transition-colors duration-300">{value.title}</h3>
-                  <p className="text-sm md:text-base text-[#666666] leading-relaxed group-hover:text-[#555555] transition-colors duration-300">{value.description}</p>
+                  <div>
+                    <h3 className="text-base md:text-lg font-bold text-[#333333] mb-1.5">{value.title}</h3>
+                    <p className="text-sm text-[#666666] leading-relaxed">{value.description}</p>
+                  </div>
                 </div>
               ))}
             </div>
+            </Reveal>
           </div>
         </section>
 
@@ -242,6 +227,7 @@ export default function AboutPage() {
           <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: "radial-gradient(circle, #3B3969 1px, transparent 1px)", backgroundSize: "40px 40px" }} />
           <div className="mx-auto max-w-7xl px-6 lg:px-12 relative z-10">
             <div className="text-center mb-12 md:mb-16">
+              <Reveal>
               <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#CB154E]/8 text-[#CB154E] text-sm font-semibold mb-4">
                 <span className="w-2 h-2 rounded-full bg-[#CB154E]" />
                 Our History
@@ -252,9 +238,11 @@ export default function AboutPage() {
               <p className="mt-3 text-base md:text-lg text-[#666666] max-w-2xl mx-auto">
                 A decade and a half of building safer communities across Australia.
               </p>
+              </Reveal>
             </div>
 
             {/* Timeline */}
+            <Reveal delay={100}>
             <div className="relative">
               {/* Mobile — vertical connector line */}
               <div className="absolute left-7 top-7 bottom-0 w-0.5 bg-gradient-to-b from-[#3B3969]/40 via-[#CB154E]/30 to-transparent lg:hidden" />
@@ -291,6 +279,7 @@ export default function AboutPage() {
                 ))}
               </div>
             </div>
+            </Reveal>
           </div>
         </section>
 
@@ -300,6 +289,7 @@ export default function AboutPage() {
             <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
               {/* Left — RTO visual block */}
+              <Reveal>
               <div className="relative">
                 <div
                   className="relative rounded-2xl overflow-hidden"
@@ -327,8 +317,10 @@ export default function AboutPage() {
                   </div>
                 </div>
               </div>
+              </Reveal>
 
               {/* Right — Text content */}
+              <Reveal delay={100}>
               <div className="space-y-8">
                 <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#CB154E]/8 text-[#CB154E] text-sm font-semibold border border-[#CB154E]/10">
                   <Award className="w-4 h-4" />
@@ -361,6 +353,7 @@ export default function AboutPage() {
                   ))}
                 </div>
               </div>
+              </Reveal>
 
             </div>
           </div>
@@ -369,11 +362,14 @@ export default function AboutPage() {
         {/* ── Trainer Expertise ── */}
         <section className="py-12 md:py-16 bg-[#F5F5F5]">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
+            <Reveal>
             <SectionHeader
               badge="Our Team"
               title="Experienced Healthcare Professionals"
               description="Our trainers bring real-world emergency response experience to every session, ensuring you receive practical, applicable knowledge."
             />
+            </Reveal>
+            <Reveal delay={100}>
             <div className="grid md:grid-cols-3 gap-6">
               {[
                 {
@@ -410,26 +406,30 @@ export default function AboutPage() {
                 </div>
               ))}
             </div>
+            </Reveal>
           </div>
         </section>
 
         {/* ── Who We Work With ── */}
-        <section className="py-16 md:py-24 bg-white relative overflow-hidden">
+        <section className="py-12 md:py-16 bg-white relative overflow-hidden">
           <div className="absolute inset-0 opacity-[0.015]" style={{ backgroundImage: "radial-gradient(circle, #3B3969 1px, transparent 1px)", backgroundSize: "40px 40px" }} />
           <div className="mx-auto max-w-7xl px-6 lg:px-12 relative z-10">
-            <div className="text-center mb-14">
-              <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#CB154E]/8 text-[#CB154E] text-sm font-semibold mb-6 fade-in-reveal">
+            <div className="text-center mb-10">
+              <Reveal>
+              <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#CB154E]/8 text-[#CB154E] text-sm font-semibold mb-4">
                 <span className="w-2 h-2 rounded-full bg-[#CB154E]" />
                 Our Clients
               </span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#333333] tracking-tight leading-tight fade-in-reveal">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#333333] tracking-tight leading-tight">
                 Who We Work With
               </h2>
-              <p className="mt-4 text-lg text-[#666666] max-w-2xl mx-auto fade-in-reveal">
+              <p className="mt-3 text-base md:text-lg text-[#666666] max-w-2xl mx-auto">
                 We deliver first aid training and event medical services across a wide range of industries and communities.
               </p>
+              </Reveal>
             </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Reveal delay={100}>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {([
                 {
                   icon: Building2,
@@ -461,40 +461,24 @@ export default function AboutPage() {
                   description: "Clinical refresher training aligned with the latest Australian Resuscitation Council guidelines.",
                   primary: true,
                 },
-              ] as { icon: ComponentType<{ className?: string }>; label: string; description: string; primary: boolean }[]).map((item, idx) => (
+              ] as { icon: ComponentType<{ className?: string }>; label: string; description: string; primary: boolean }[]).map((item) => (
                 <div
                   key={item.label}
-                  className={`group relative bg-gradient-to-br from-white via-[#F9F9FC] to-white rounded-2xl p-8 border-l-4 ${
-                    item.primary ? "border-l-[#3B3969]" : "border-l-[#CB154E]"
-                  } shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 card-shimmer stagger-item cursor-pointer overflow-hidden`}
-                  style={{ animationDelay: `${idx * 100}ms` }}
+                  className="flex items-start gap-4 p-5 rounded-2xl bg-[#F7F7FA] border border-[#E8E8F0] hover:border-[#3B3969]/20 hover:bg-white hover:shadow-md transition-all duration-300"
                 >
-                  {/* Top accent bar */}
-                  <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${item.primary ? "from-[#3B3969] to-transparent" : "from-[#CB154E] to-transparent"}`} />
-                  
-                  {/* Corner decorative element */}
-                  <div className={`absolute -top-8 -right-8 w-32 h-32 rounded-full ${item.primary ? "bg-[#3B3969]/5" : "bg-[#CB154E]/5"}`} />
-
-                  <div
-                    className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500 ${
-                      item.primary ? "bg-[#3B3969]/10" : "bg-[#CB154E]/10"
-                    } icon-bounce`}
-                  >
-                    <item.icon
-                      className={`w-8 h-8 ${item.primary ? "text-[#3B3969]" : "text-[#CB154E]"}`}
-                    />
+                  <div className={`w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 ${
+                    item.primary ? "bg-[#3B3969]/10" : "bg-[#CB154E]/10"
+                  }`}>
+                    <item.icon className={`w-5 h-5 ${item.primary ? "text-[#3B3969]" : "text-[#CB154E]"}`} />
                   </div>
-                  <h3
-                    className={`text-xl font-bold mb-3 tracking-tight transition-colors duration-300 group-hover:scale-105 inline-block ${
-                      item.primary ? "text-[#3B3969]" : "text-[#CB154E]"
-                    }`}
-                  >
-                    {item.label}
-                  </h3>
-                  <p className="text-base text-[#666666] leading-relaxed group-hover:text-[#555555] transition-colors duration-300">{item.description}</p>
+                  <div>
+                    <h3 className="text-base font-bold text-[#333333] mb-1">{item.label}</h3>
+                    <p className="text-sm text-[#666666] leading-relaxed">{item.description}</p>
+                  </div>
                 </div>
               ))}
             </div>
+            </Reveal>
           </div>
         </section>
 

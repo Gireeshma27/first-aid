@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react"
 import { Heart, Activity, Home, ArrowRight, type LucideIcon } from "lucide-react"
+import { Reveal } from "@/components/reveal"
 
 interface Statistic {
   icon: LucideIcon
@@ -106,6 +107,7 @@ export function StatisticsSection() {
       <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
         
         {/* Section Header */}
+        <Reveal>
         <div className="text-center mb-[32px] max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-[#3B3969] mb-[12px] tracking-tight">
             Why First Aid Matters
@@ -114,6 +116,7 @@ export function StatisticsSection() {
             Learning CPR and first aid empowers individuals to take action during critical moments when every second counts.
           </p>
         </div>
+        </Reveal>
 
         {/* Stats Cards Grid */}
         <div ref={ref} className="reveal-section grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
@@ -141,6 +144,7 @@ export function StatisticsSection() {
         </div>
 
         {/* View Statistics Button */}
+        <Reveal delay={100}>
         <div className="flex justify-center">
           <a
             href="/statistics"
@@ -150,6 +154,7 @@ export function StatisticsSection() {
             <ArrowRight className="w-5 h-5" />
           </a>
         </div>
+        </Reveal>
       </div>
     </section>
   )
