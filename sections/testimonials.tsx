@@ -127,7 +127,7 @@ export function TestimonialsSection() {
                 key={activeIndex}
                 className="text-white text-lg md:text-xl leading-relaxed font-medium"
               >
-                &ldquo;{active.content}&rdquo;
+                   &ldquo;{active.content}&rdquo;
               </p>
             </div>
 
