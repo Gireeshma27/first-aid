@@ -102,7 +102,7 @@ export function Navbar() {
       >
         {/* Logo */}
         <div className="flex lg:flex-1">
-          <Link href="/" className="-m-1.5 p-1.5">
+          <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-3">
             <Image
               src={logo}
               alt="First Aid Network Australia"
@@ -111,6 +111,9 @@ export function Navbar() {
               height={55}
               priority
             />
+            <span className="text-[#3B3969] font-bold text-sm sm:text-base lg:text-lg leading-tight tracking-tight">
+              First Aid Network<br />Australia
+            </span>
           </Link>
         </div>
 
