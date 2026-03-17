@@ -290,7 +290,7 @@ export function Hero() {
 
               {/* CTAs */}
               <div className="anim-up d4 flex flex-wrap gap-3 items-center">
-                <Link href="/book-training" className="btn-cta">
+                <Link href="/contact" className="btn-cta">
                   Book Training <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link href="/courses" className="btn-ghost">

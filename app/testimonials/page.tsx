@@ -114,29 +114,29 @@ export default function TestimonialsPage() {
         {/* Testimonials Grid */}
         <section className="py-16 md:py-24 bg-[#F7F7FA]">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
-            <Reveal>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {testimonials.map((testimonial, index) => (
-                <div key={index} className="bg-white rounded-xl p-7 shadow-sm hover:shadow-lg transition-all duration-300 border border-[#E8E8F0] group">
-                  <Quote className="w-10 h-10 text-[#CB154E]/20 mb-4 group-hover:text-[#CB154E]/40 transition-colors" />
+                <Reveal key={index} delay={index * 80}>
+                <div className="bg-white rounded-xl p-7 shadow-sm hover:shadow-lg transition-all duration-300 border border-[#E8E8F0] group flex flex-col h-full">
+                  <Quote className="w-10 h-10 text-[#CB154E]/20 mb-4 group-hover:text-[#CB154E]/40 transition-colors shrink-0" />
                   <div className="flex gap-1 mb-4">
                     {Array.from({ length: testimonial.rating }).map((_, i) => (
                       <Star key={i} className="w-4 h-4 fill-[#CB154E] text-[#CB154E]" />
                     ))}
                   </div>
-                  <blockquote className="text-[#64648c] leading-relaxed mb-6">
+                  <blockquote className="text-[#64648c] leading-relaxed mb-6 flex-1">
                     &ldquo;{testimonial.content}&rdquo;
                   </blockquote>
-                  <div className="pt-4 border-t border-[#E8E8F0]">
+                  <div className="pt-4 border-t border-[#E8E8F0] mt-auto">
                     <p className="font-semibold text-[#1a1a2e]">{testimonial.author}</p>
                     <p className="text-sm text-[#64648c]">
                       {testimonial.role}, {testimonial.organisation}
                     </p>
                   </div>
                 </div>
+                </Reveal>
               ))}
             </div>
-            </Reveal>
           </div>
         </section>
 
