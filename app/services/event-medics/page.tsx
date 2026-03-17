@@ -2,10 +2,11 @@ import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { NewsletterSection } from "@/sections/newsletter"
 import { CheckCircle2, Phone, ArrowRight, MapPin, Calendar, Shield, Zap, Users, Heart } from "lucide-react"
-import Image from "next/image"
+import { FiCalendar, FiBriefcase, FiActivity, FiMusic, FiSun, FiUsers, FiMapPin, FiAward } from "react-icons/fi"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import type { Metadata } from "next"
+import { Reveal } from "@/components/reveal"
 
 export const metadata: Metadata = {
   title: "Event Medics & On-Site Medical Support | First Aid Network Australia",
@@ -14,14 +15,14 @@ export const metadata: Metadata = {
 
 export default function EventMedicsPage() {
   const eventTypes = [
-    { icon: "🎫", label: "School Carnivals" },
-    { icon: "🏢", label: "Corporate Events" },
-    { icon: "🏅", label: "Sporting Events" },
-    { icon: "🎵", label: "Concerts & Festivals" },
-    { icon: "🚌", label: "Excursions & Camps" },
-    { icon: "🌏", label: "Community Gatherings" },
-    { icon: "🏙️", label: "Council Events" },
-    { icon: "💼", label: "Public Events" },
+    { icon: FiCalendar, label: "School Carnivals" },
+    { icon: FiBriefcase, label: "Corporate Events" },
+    { icon: FiActivity, label: "Sporting Events" },
+    { icon: FiMusic, label: "Concerts & Festivals" },
+    { icon: FiSun, label: "Excursions & Camps" },
+    { icon: FiUsers, label: "Community Gatherings" },
+    { icon: FiMapPin, label: "Council Events" },
+    { icon: FiAward, label: "Public Events" },
   ]
 
   return (
@@ -30,9 +31,9 @@ export default function EventMedicsPage() {
       <main>
         {/* Hero */}
         <section className="relative min-h-[560px] flex items-center overflow-hidden bg-[#1a1a2e]">
-          <div className="absolute inset-0">
-            <Image src="/images/event-medical.png" alt="" fill className="object-cover opacity-20" />
-          </div>
+          <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-[#CB154E]/20 blur-3xl animate-blob" />
+          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-[#3B3969]/30 blur-3xl animate-blob-delay" />
+          <div className="absolute top-1/2 right-1/4 w-[350px] h-[350px] rounded-full bg-white/5 blur-3xl animate-blob-delay-2" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#1a1a2e]/90 via-[#1a1a2e]/60 to-transparent" />
           <div className="relative mx-auto max-w-7xl px-6 lg:px-12 py-20">
             <div className="max-w-3xl">
@@ -72,8 +73,9 @@ export default function EventMedicsPage() {
         </section>
 
         {/* Event type tiles */}
-        <section className="py-14 bg-white">
+        <section className="py-12 md:py-14 bg-white">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
+            <Reveal>
             <div className="text-center mb-10">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#CB154E]/[0.06] text-[#CB154E] text-sm font-semibold mb-4">
                 <Calendar className="w-4 h-4" />Events We Cover
@@ -81,19 +83,23 @@ export default function EventMedicsPage() {
               <h2 className="text-2xl md:text-3xl font-bold text-[#1a1a2e]">Every Event, Every Size</h2>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-              {eventTypes.map((e) => (
-                <div key={e.label} className="flex flex-col items-center gap-3 p-5 rounded-2xl bg-[#F7F7FA] border border-[#E8E8F0] hover:border-[#CB154E]/30 hover:bg-[#CB154E]/[0.02] transition-colors">
-                  <span className="text-3xl">{e.icon}</span>
-                  <span className="text-sm font-semibold text-[#1a1a2e] text-center">{e.label}</span>
+              {eventTypes.map(({ icon: Icon, label }) => (
+                <div key={label} className="flex flex-col items-center gap-3 p-5 rounded-2xl bg-[#F7F7FA] border border-[#E8E8F0] hover:border-[#CB154E]/30 hover:bg-[#CB154E]/[0.02] transition-colors">
+                  <div className="w-10 h-10 rounded-xl bg-[#CB154E]/10 flex items-center justify-center">
+                    <Icon className="w-5 h-5 text-[#CB154E]" />
+                  </div>
+                  <span className="text-sm font-semibold text-[#1a1a2e] text-center">{label}</span>
                 </div>
               ))}
             </div>
+            </Reveal>
           </div>
         </section>
 
         {/* What's included */}
-        <section className="py-16 md:py-20 bg-[#F7F7FA]">
+        <section className="py-12 md:py-16 bg-[#F7F7FA]">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
+            <Reveal>
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#3B3969]/[0.07] text-[#3B3969] text-sm font-semibold mb-5">
               <span className="w-1.5 h-1.5 rounded-full bg-[#3B3969]" />What&apos;s Included
             </span>
@@ -128,16 +134,18 @@ export default function EventMedicsPage() {
                 </ul>
               </div>
             </div>
+            </Reveal>
           </div>
         </section>
 
         {/* Key benefits */}
-        <section className="py-16 md:py-20 bg-[#1a1a2e] relative overflow-hidden">
+        <section className="py-12 md:py-16 bg-gradient-to-br from-[#3B3969] to-[#2d2b5e] relative overflow-hidden">
           <div className="absolute inset-0">
-            <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#CB154E]/10 blur-3xl" />
-            <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#3B3969]/20 blur-3xl" />
+            <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#CB154E]/10 blur-3xl animate-blob" />
+            <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#3B3969]/20 blur-3xl animate-blob-delay" />
           </div>
           <div className="relative mx-auto max-w-7xl px-6 lg:px-12">
+            <Reveal>
             <div className="grid md:grid-cols-3 gap-6">
               {[
                 { icon: <Zap className="w-6 h-6" />, title: "Immediate Response", desc: "A medic on-site can respond in seconds. Early intervention in medical emergencies significantly improves outcomes." },
@@ -153,35 +161,38 @@ export default function EventMedicsPage() {
                 </div>
               ))}
             </div>
+            </Reveal>
           </div>
         </section>
 
         {/* Who should use */}
-        <section className="py-16 md:py-20 bg-white">
+        <section className="py-12 md:py-16 bg-white">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
+            <Reveal>
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#3B3969]/[0.07] text-[#3B3969] text-sm font-semibold mb-5">
               <span className="w-1.5 h-1.5 rounded-full bg-[#3B3969]" />Who Should Use This Service
             </span>
-            <h2 className="text-2xl md:text-3xl font-bold text-[#1a1a2e] mb-8">Who Should Book Event Medical Coverage?</h2>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#1a1a2e] mb-6">Who Should Book Event Medical Coverage?</h2>
+            <div className="flex flex-wrap gap-2.5">
               {["Schools and education providers", "Corporations and businesses", "Sports clubs and associations", "Community event organisers", "Festival and concert promoters", "Councils and local government", "Charities and non-profits", "Anyone organising a public event"].map((item) => (
-                <div key={item} className="flex items-center gap-3 rounded-2xl p-4 bg-[#F7F7FA] border border-[#E8E8F0] hover:border-[#CB154E]/20 transition-colors">
-                  <div className="w-7 h-7 rounded-full bg-[#CB154E]/10 flex items-center justify-center flex-shrink-0">
-                    <CheckCircle2 className="w-4 h-4 text-[#CB154E]" />
-                  </div>
-                  <span className="text-[#1a1a2e] font-medium text-sm">{item}</span>
-                </div>
+                <span key={item} className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-[#F7F7FA] border border-[#E8E8F0] text-[#333333] font-medium text-sm hover:bg-[#CB154E]/[0.04] hover:border-[#CB154E]/30 transition-colors">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#CB154E] flex-shrink-0" />
+                  {item}
+                </span>
               ))}
             </div>
+            </Reveal>
           </div>
         </section>
 
         {/* CTA */}
-        <section className="py-16 md:py-20 bg-[#1a1a2e] relative overflow-hidden">
+        <section className="py-12 md:py-16 bg-gradient-to-br from-[#3B3969] to-[#2d2b5e] relative overflow-hidden">
           <div className="absolute inset-0">
-            <Image src="/images/event-medical.png" alt="" fill className="object-cover opacity-5" />
+            <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#CB154E]/10 blur-3xl animate-blob" />
+            <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#3B3969]/20 blur-3xl animate-blob-delay" />
           </div>
           <div className="relative mx-auto max-w-7xl px-6 lg:px-12 text-center">
+            <Reveal>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Book Event Medical Coverage</h2>
             <p className="text-white/70 text-lg mb-8 max-w-2xl mx-auto">Ensure your event has qualified medical support on-site. Contact us to discuss your event requirements and get a quote.</p>
             <div className="flex flex-wrap gap-4 justify-center">
@@ -192,6 +203,7 @@ export default function EventMedicsPage() {
                 <Link href="/contact"><Phone className="w-4 h-4 mr-2" />Contact Us</Link>
               </Button>
             </div>
+            </Reveal>
           </div>
         </section>
 

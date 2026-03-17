@@ -6,6 +6,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import type { Metadata } from "next"
+import { Reveal } from "@/components/reveal"
 
 export const metadata: Metadata = {
   title: "RAMOAP Training for NSW Teachers | First Aid Network Australia",
@@ -26,9 +27,9 @@ export default function RamoapTrainingPage() {
       <main>
         {/* Hero */}
         <section className="relative min-h-[520px] flex items-center overflow-hidden" style={{ background: "linear-gradient(135deg, #3B3969 0%, #2d2b5e 50%, #1a1a2e 100%)" }}>
-          <div className="absolute inset-0">
-            <Image src="/images/course-childcare.png" alt="" fill className="object-cover opacity-10" />
-          </div>
+          <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-[#CB154E]/20 blur-3xl animate-blob" />
+          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-[#3B3969]/30 blur-3xl animate-blob-delay" />
+          <div className="absolute top-1/2 left-1/3 w-[300px] h-[300px] rounded-full bg-white/5 blur-3xl animate-blob-delay-2" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#3B3969]/70 via-transparent to-transparent" />
           <div className="relative mx-auto max-w-7xl px-6 lg:px-12 py-20 pb-24">
             <div className="flex flex-col lg:flex-row gap-12 items-center">
@@ -63,7 +64,7 @@ export default function RamoapTrainingPage() {
               </div>
               <div className="flex-shrink-0 w-full lg:w-[420px]">
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-black/40 aspect-[4/3]">
-                  <Image src="/images/course-first-aid.png" alt="RAMOAP anaphylaxis training" fill className="object-cover" />
+                  <Image src="/images/anaphylaxis.png" alt="RAMOAP anaphylaxis training" fill priority sizes="(max-width: 1024px) 100vw, 420px" className="object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#3B3969]/70 via-transparent to-transparent" />
                   <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-sm rounded-xl p-4 flex items-center gap-3 shadow-lg">
                     <div className="w-10 h-10 rounded-lg bg-[#CB154E] flex-shrink-0 flex items-center justify-center">
@@ -88,8 +89,9 @@ export default function RamoapTrainingPage() {
         </section>
 
         {/* Response steps */}
-        <section className="py-16 md:py-20 bg-white">
+        <section className="py-12 md:py-16 bg-white">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
+            <Reveal>
             <div className="text-center mb-12">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#CB154E]/[0.06] text-[#CB154E] text-sm font-semibold mb-4">
                 Emergency Response Steps
@@ -109,12 +111,14 @@ export default function RamoapTrainingPage() {
                 </div>
               ))}
             </div>
+            </Reveal>
           </div>
         </section>
 
         {/* Course content */}
-        <section className="py-16 md:py-20 bg-[#F7F7FA]">
+        <section className="py-12 md:py-16 bg-[#F7F7FA]">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
+            <Reveal>
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#3B3969]/[0.07] text-[#3B3969] text-sm font-semibold mb-5">
               <span className="w-1.5 h-1.5 rounded-full bg-[#3B3969]" />Key Learning Outcomes
             </span>
@@ -177,15 +181,17 @@ export default function RamoapTrainingPage() {
                 </ul>
               </div>
             </div>
+            </Reveal>
           </div>
         </section>
 
         {/* Delivery */}
-        <section className="py-16 md:py-20 bg-[#1a1a2e] relative overflow-hidden">
+        <section className="py-12 md:py-16 bg-gradient-to-br from-[#3B3969] to-[#2d2b5e] relative overflow-hidden">
           <div className="absolute inset-0">
-            <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#3B3969]/20 blur-3xl" />
+            <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#3B3969]/20 blur-3xl animate-blob" />
           </div>
           <div className="relative mx-auto max-w-7xl px-6 lg:px-12">
+            <Reveal>
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white/80 text-sm font-semibold mb-5 border border-white/15">
               <span className="w-1.5 h-1.5 rounded-full bg-white/60" />Delivery Method
             </span>
@@ -207,33 +213,35 @@ export default function RamoapTrainingPage() {
                 <p className="text-white/60 text-sm leading-relaxed">Online theory with a practical session, designed to fit around school schedules.</p>
               </div>
             </div>
+            </Reveal>
           </div>
         </section>
 
         {/* Who should attend */}
-        <section className="py-16 md:py-20 bg-white">
+        <section className="py-12 md:py-16 bg-white">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
+            <Reveal>
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#3B3969]/[0.07] text-[#3B3969] text-sm font-semibold mb-5">
               <span className="w-1.5 h-1.5 rounded-full bg-[#3B3969]" />Who Should Attend
             </span>
             <h2 className="text-2xl md:text-3xl font-bold text-[#1a1a2e] mb-3">Who Is This Training For?</h2>
-            <p className="text-[#64648c] mb-8">RAMOAP training is suitable for NSW school-based staff who may need to respond to anaphylaxis emergencies involving children, including:</p>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <p className="text-[#64648c] mb-6">RAMOAP training is suitable for NSW school-based staff who may need to respond to anaphylaxis emergencies involving children, including:</p>
+            <div className="flex flex-wrap gap-2.5">
               {["Teachers", "School support staff", "Administrative staff", "Teacher aides", "Playground duty staff", "Excursion supervisors", "School canteen staff", "Other education staff"].map((item) => (
-                <div key={item} className="flex items-center gap-3 rounded-2xl p-4 bg-[#F7F7FA] border border-[#E8E8F0] hover:border-[#CB154E]/30 transition-colors">
-                  <div className="w-7 h-7 rounded-full bg-[#3B3969]/10 flex items-center justify-center flex-shrink-0">
-                    <CheckCircle2 className="w-4 h-4 text-[#3B3969]" />
-                  </div>
-                  <span className="text-[#1a1a2e] font-medium text-sm">{item}</span>
-                </div>
+                <span key={item} className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-[#F7F7FA] border border-[#E8E8F0] text-[#333333] font-medium text-sm hover:bg-[#CB154E]/[0.04] hover:border-[#CB154E]/30 transition-colors">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#CB154E] flex-shrink-0" />
+                  {item}
+                </span>
               ))}
             </div>
+            </Reveal>
           </div>
         </section>
 
         {/* CTA */}
-        <section className="py-16 md:py-20" style={{ background: "linear-gradient(135deg, #3B3969 0%, #2d2b5e 60%, #1a1a2e 100%)" }}>
+        <section className="py-12 md:py-16" style={{ background: "linear-gradient(135deg, #3B3969 0%, #2d2b5e 60%, #1a1a2e 100%)" }}>
           <div className="mx-auto max-w-7xl px-6 lg:px-12 text-center">
+            <Reveal>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Book RAMOAP Training for Your School</h2>
             <p className="text-white/70 text-lg mb-8 max-w-2xl mx-auto">Ensure your school staff are confident and prepared to respond to anaphylaxis emergencies.</p>
             <div className="flex flex-wrap gap-4 justify-center">
@@ -244,6 +252,7 @@ export default function RamoapTrainingPage() {
                 <Link href="/contact"><Phone className="w-4 h-4 mr-2" />Contact Us</Link>
               </Button>
             </div>
+            </Reveal>
           </div>
         </section>
 

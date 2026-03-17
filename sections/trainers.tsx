@@ -62,11 +62,13 @@ export function TrainersSection() {
           {/* ── LEFT: trainer photo grid ── */}
           <div className="flex flex-col gap-5 md:gap-6">
             {/* Lead Trainer */}
-            <div className="group relative overflow-hidden rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-500 aspect-[4/3]">
+            <div className="group relative overflow-hidden rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-500 aspect-[4/3] bg-gray-100">
               <Image
                 src={trainers[0].image}
                 alt={trainers[0].name}
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                loading="eager"
                 className="object-cover object-[center_15%] group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#1e1c3d]/90 via-[#1e1c3d]/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500" />
@@ -89,11 +91,13 @@ export function TrainersSection() {
             {/* Supporting Trainers */}
             <div className="grid grid-cols-2 gap-5 md:gap-6">
               {trainers.slice(1).map((trainer, index) => (
-                <div key={trainer.name} className="group relative overflow-hidden rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-500 aspect-[4/5] md:aspect-square">
+                <div key={trainer.name} className="group relative overflow-hidden rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-500 aspect-[4/5] md:aspect-square bg-gray-100">
                   <Image
                     src={trainer.image}
                     alt={trainer.name}
                     fill
+                    sizes="(max-width: 1024px) 50vw, 25vw"
+                    loading="eager"
                     className={`object-cover group-hover:scale-105 transition-transform duration-700 ${index === 1 ? "object-top" : "object-[center_15%]"}`}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#1e1c3d]/90 via-[#1e1c3d]/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500" />

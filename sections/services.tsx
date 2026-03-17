@@ -5,6 +5,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import { SectionHeader } from "@/components/section-header"
+import { Reveal } from "@/components/reveal"
 
 const servicesData = [
   {
@@ -18,7 +19,7 @@ const servicesData = [
   {
     title: "HLTAID011 – Provide First Aid (Including CPR)",
     description: "This comprehensive course includes all elements of HLTAID009 plus additional first aid skills. Participants will learn to manage a range of common emergencies including bleeding, burns, fractures, and medical conditions like asthma or anaphylaxis.",
-    image: "/images/course-first-aid.png",
+    image: "/images/compensive first aid.png",
     link: "/services/provide-first-aid",
     overlayColor: "bg-[#CB154E]/90", // Secondary Rose
     buttonTextColor: "text-[#CB154E]"
@@ -26,23 +27,23 @@ const servicesData = [
   {
     title: "HLTAID012 – Provide First Aid in an Education and Care Setting",
     description: "This course is tailored for those working in childcare, early education, and school settings. It covers first aid response to infants and children, including asthma, anaphylaxis, and other childhood-specific emergencies.",
-    image: "/images/course-childcare.png",
+    image: "/images/education.png",
     link: "/services/first-aid-education-care",
-    overlayColor: "bg-[#2A284D]/90", // Darker Indigo
-    buttonTextColor: "text-[#2A284D]"
+    overlayColor: "bg-[#3B3969]/90",
+    buttonTextColor: "text-[#3B3969]"
   },
   {
     title: "Anaphylaxis and Asthma Management Training",
     description: "This training focuses on the prevention, recognition, and emergency management of anaphylaxis and asthma incidents. It is particularly useful for schools and childcare settings to ensure staff are equipped to respond to allergic and asthmatic emergencies.",
-    image: "/images/trainer-1.png",
+    image: "/images/anaphylaxis.png",
     link: "/services/anaphylaxis-asthma-training",
-    overlayColor: "bg-[#A3103E]/90", // Darker Rose
-    buttonTextColor: "text-[#A3103E]"
+    overlayColor: "bg-[#CB154E]/90",
+    buttonTextColor: "text-[#CB154E]"
   },
   {
     title: "RAMOAP Training for NSW Teachers",
     description: "A specialised course designed for New South Wales school teachers. It focuses on recognizing and managing medical emergencies in a school environment, ensuring staff can respond effectively to student health crises.",
-    image: "/images/trainer-2.png",
+    image: "/images/infection.png",
     link: "/services/ramoap-training",
     overlayColor: "bg-[#3B3969]/90", // Primary Indigo
     buttonTextColor: "text-[#3B3969]"
@@ -50,7 +51,7 @@ const servicesData = [
   {
     title: "Community Clinical Awareness Training",
     description: "A non-accredited course aimed at community support workers. It includes training on recognizing clinical signs of conditions like stroke, heart attack, sepsis, and diabetes-related complications. It also covers practical skills like checking blood pressure and blood glucose levels.",
-    image: "/images/cpr-classroom.png",
+    image: "/images/community.png",
     link: "/services/community-clinical-awareness",
     overlayColor: "bg-[#CB154E]/90", // Secondary Rose
     buttonTextColor: "text-[#CB154E]"
@@ -58,23 +59,23 @@ const servicesData = [
   {
     title: "Drug and Alcohol Testing",
     description: "We offer on-site saliva-based drug and alcohol testing to help organisations maintain a safe workplace. This service can be integrated into training schedules as we move through different regions.",
-    image: "/images/trainer.png",
+    image: "/images/drug.png",
     link: "/services/drug-alcohol-testing",
-    overlayColor: "bg-[#2A284D]/90", // Darker Indigo
-    buttonTextColor: "text-[#2A284D]"
+    overlayColor: "bg-[#3B3969]/90",
+    buttonTextColor: "text-[#3B3969]"
   },
   {
     title: "Event Medics and On-Site Medical Support",
     description: "In addition to training, we provide qualified medics for events such as school carnivals, excursions, corporate functions, and community gatherings. Our event medics are equipped to handle on-site medical situations and ensure participant safety.",
-    image: "/images/event-medical.png",
+    image: "/images/event medical services.png",
     link: "/services/event-medics",
-    overlayColor: "bg-[#A3103E]/90", // Darker Rose
-    buttonTextColor: "text-[#A3103E]"
+    overlayColor: "bg-[#CB154E]/90",
+    buttonTextColor: "text-[#CB154E]"
   },
   {
     title: "Custom and Tailored Training Solutions",
     description: "We understand that every organisation has unique needs. Therefore, we offer the flexibility to create tailored training modules, including non-accredited mental health strategies, additional infection control topics, or any other area of focus your team requires.",
-    image: "/images/trainer-3.png",
+    image: "/images/custom and tailored.png",
     link: "/services/custom-training",
     overlayColor: "bg-[#3B3969]/90", // Primary Indigo
     buttonTextColor: "text-[#3B3969]"
@@ -123,6 +124,8 @@ function ServiceCard({ title, description, image, link, overlayColor, buttonText
           src={image}
           alt={title}
           fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          loading="eager"
           className="object-cover transition-transform duration-700 group-hover:scale-110"
         />
 
@@ -172,11 +175,13 @@ export function ServicesSection() {
       <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-gradient-radial from-[#CB154E]/5 to-transparent blur-3xl rounded-full pointer-events-none" />
 
       <div className="relative mx-auto max-w-7xl px-4 lg:px-8">
+        <Reveal>
         <SectionHeader
           title="Our Services"
           description="We deliver practical first aid training and healthcare support services for workplaces, schools and community organisations across Australia."
           centered={true}
         />
+        </Reveal>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
           {servicesData.map((service, index) => (

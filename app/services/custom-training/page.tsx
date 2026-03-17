@@ -6,6 +6,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import type { Metadata } from "next"
+import { Reveal } from "@/components/reveal"
 
 export const metadata: Metadata = {
   title: "Custom Training Programs | First Aid Network Australia",
@@ -26,9 +27,9 @@ export default function CustomTrainingPage() {
       <main>
         {/* Hero */}
         <section className="relative min-h-[480px] flex items-center overflow-hidden" style={{ background: "linear-gradient(135deg, #3B3969 0%, #2d2b5e 40%, #CB154E 100%)" }}>
-          <div className="absolute inset-0">
-            <Image src="/images/cpr-classroom.png" alt="" fill className="object-cover opacity-10" />
-          </div>
+          <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-[#CB154E]/25 blur-3xl animate-blob" />
+          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-[#3B3969]/30 blur-3xl animate-blob-delay" />
+          <div className="absolute top-1/2 left-1/2 w-[300px] h-[300px] rounded-full bg-white/5 blur-3xl animate-blob-delay-2" />
           <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, rgba(59,57,105,0.85) 0%, rgba(45,43,94,0.75) 50%, rgba(203,21,78,0.4) 100%)" }} />
           <div className="relative mx-auto max-w-7xl px-6 lg:px-12 py-20">
             <div className="flex flex-col lg:flex-row gap-12 items-center">
@@ -60,7 +61,7 @@ export default function CustomTrainingPage() {
               </div>
               <div className="flex-shrink-0 w-full lg:w-[420px]">
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-black/40 aspect-[4/3]">
-                  <Image src="/images/hero-training.jpg" alt="Custom training programs" fill className="object-cover" />
+                  <Image src="/images/custom and tailored.png" alt="Custom training programs" fill priority sizes="(max-width: 1024px) 100vw, 420px" className="object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#3B3969]/70 via-transparent to-transparent" />
                   <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-sm rounded-xl p-4 flex items-center gap-3 shadow-lg">
                     <div className="w-10 h-10 rounded-lg bg-[#CB154E] flex-shrink-0 flex items-center justify-center">
@@ -78,8 +79,9 @@ export default function CustomTrainingPage() {
         </section>
 
         {/* Training modules */}
-        <section className="py-16 md:py-20 bg-white">
+        <section className="py-12 md:py-16 bg-white">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
+            <Reveal>
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#3B3969]/[0.07] text-[#3B3969] text-sm font-semibold mb-5">
               <span className="w-1.5 h-1.5 rounded-full bg-[#3B3969]" />Training Options
             </span>
@@ -98,12 +100,14 @@ export default function CustomTrainingPage() {
                 </div>
               ))}
             </div>
+            </Reveal>
           </div>
         </section>
 
         {/* Our approach */}
-        <section className="py-16 md:py-20" style={{ background: "linear-gradient(135deg, #3B3969 0%, #2d2b5e 50%, #1a1a2e 100%)" }}>
+        <section className="py-12 md:py-16" style={{ background: "linear-gradient(135deg, #3B3969 0%, #2d2b5e 50%, #1a1a2e 100%)" }}>
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
+            <Reveal>
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white/80 text-sm font-semibold mb-5 border border-white/15">
@@ -121,36 +125,38 @@ export default function CustomTrainingPage() {
                 </ul>
               </div>
               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
-                <Image src="/images/cpr-classroom.png" alt="Custom training session" fill className="object-cover" />
+                <Image src="/images/cpr-classroom.png" alt="Custom training session" fill loading="eager" sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#3B3969]/60 via-transparent to-transparent" />
               </div>
             </div>
+            </Reveal>
           </div>
         </section>
 
         {/* Who we work with */}
-        <section className="py-16 md:py-20 bg-white">
+        <section className="py-12 md:py-16 bg-white">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
+            <Reveal>
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#3B3969]/[0.07] text-[#3B3969] text-sm font-semibold mb-5">
               <span className="w-1.5 h-1.5 rounded-full bg-[#3B3969]" />Who We Work With
             </span>
             <h2 className="text-2xl md:text-3xl font-bold text-[#1a1a2e] mb-8">Organisations We Build Custom Programs For</h2>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="flex flex-wrap gap-2.5">
               {["Corporations and businesses", "Schools and education providers", "Healthcare providers", "NDIS and disability services", "Mining and resource companies", "Construction and trade", "Hospitality and events", "Any organisation with unique training needs"].map((item) => (
-                <div key={item} className="flex items-center gap-3 rounded-2xl p-4 bg-[#F7F7FA] border border-[#E8E8F0] hover:border-[#3B3969]/20 transition-colors">
-                  <div className="w-7 h-7 rounded-full bg-[#3B3969]/10 flex items-center justify-center flex-shrink-0">
-                    <CheckCircle2 className="w-4 h-4 text-[#3B3969]" />
-                  </div>
-                  <span className="text-[#1a1a2e] font-medium text-sm">{item}</span>
-                </div>
+                <span key={item} className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-[#F7F7FA] border border-[#E8E8F0] text-[#333333] font-medium text-sm hover:bg-[#3B3969]/[0.05] hover:border-[#3B3969]/20 transition-colors">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#3B3969] flex-shrink-0" />
+                  {item}
+                </span>
               ))}
             </div>
+            </Reveal>
           </div>
         </section>
 
         {/* CTA */}
-        <section className="py-16 md:py-20" style={{ background: "linear-gradient(135deg, #CB154E 0%, #a01040 50%, #3B3969 100%)" }}>
+        <section className="py-12 md:py-16" style={{ background: "linear-gradient(135deg, #CB154E 0%, #a01040 50%, #3B3969 100%)" }}>
           <div className="mx-auto max-w-7xl px-6 lg:px-12 text-center">
+            <Reveal>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Let&apos;s Build Your Custom Program</h2>
             <p className="text-white/70 text-lg mb-8 max-w-2xl mx-auto">Tell us about your organisation and we&apos;ll design a training solution that fits your team perfectly.</p>
             <div className="flex flex-wrap gap-4 justify-center">
@@ -161,6 +167,7 @@ export default function CustomTrainingPage() {
                 <Link href="/contact"><Phone className="w-4 h-4 mr-2" />Contact Us</Link>
               </Button>
             </div>
+            </Reveal>
           </div>
         </section>
 

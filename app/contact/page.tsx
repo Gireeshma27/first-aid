@@ -9,6 +9,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
+import { Reveal } from "@/components/reveal"
 
 const contactMethods = [
   {
@@ -139,6 +140,7 @@ export default function ContactPage() {
         {/* ── FAQs ── */}
         <section className="py-16 md:py-24 bg-white">
           <div className="mx-auto max-w-3xl px-6 lg:px-12">
+            <Reveal>
             <div className="text-center mb-12">
               <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-[#3B3969]/8 text-[#3B3969] text-sm font-semibold mb-5">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#CB154E]" />
@@ -151,6 +153,8 @@ export default function ContactPage() {
                 Find answers to common questions about our training and services.
               </p>
             </div>
+            </Reveal>
+            <Reveal delay={100}>
             <Accordion type="single" collapsible className="w-full space-y-3">
               {faqs.map((faq, index) => (
                 <AccordionItem
@@ -168,6 +172,7 @@ export default function ContactPage() {
                 </AccordionItem>
               ))}
             </Accordion>
+            </Reveal>
           </div>
         </section>
 

@@ -324,7 +324,7 @@ export function Hero() {
                 <div className="img-frame-inner">
                   <div className="relative aspect-[4/3]">
                     <Image
-                      src="/images/hero-training.png"
+                      src="/images/hero aid.png"
                       alt="CPR training session with first aid instructor teaching students"
                       fill
                       className="object-cover"

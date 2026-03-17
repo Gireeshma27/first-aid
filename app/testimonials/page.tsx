@@ -4,6 +4,7 @@ import { SectionHeader } from "@/components/section-header"
 import { NewsletterSection } from "@/sections/newsletter"
 import { Quote, Star } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
+import { Reveal } from "@/components/reveal"
 
 const testimonials = [
   {
@@ -113,6 +114,7 @@ export default function TestimonialsPage() {
         {/* Testimonials Grid */}
         <section className="py-16 md:py-24 bg-[#F7F7FA]">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
+            <Reveal>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-white rounded-xl p-7 shadow-sm hover:shadow-lg transition-all duration-300 border border-[#E8E8F0] group">
@@ -134,16 +136,19 @@ export default function TestimonialsPage() {
                 </div>
               ))}
             </div>
+            </Reveal>
           </div>
         </section>
 
         {/* CTA */}
         <section className="py-16 md:py-24 bg-gradient-to-br from-[#3B3969] to-[#1e1c3d] text-white">
           <div className="mx-auto max-w-7xl px-6 lg:px-12 text-center">
+            <Reveal>
             <h2 className="text-3xl font-semibold mb-4">Join Our Growing Community</h2>
             <p className="text-lg text-white/70 max-w-2xl mx-auto">
               Experience the same high-quality training that has earned us praise from organisations across Australia.
             </p>
+            </Reveal>
           </div>
         </section>
 

@@ -2,8 +2,9 @@
 
 import { useState } from "react"
 import { Mail, CheckCircle2 } from "lucide-react"
+import { Reveal } from "@/components/reveal"
 
-export function NewsletterSection() {
+export function NewsletterSection({ lightTheme = true }: { lightTheme?: boolean }) {
   const [email, setEmail] = useState("")
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -17,12 +18,19 @@ export function NewsletterSection() {
     setIsSubmitted(true)
   }
 
+  const isDark = !lightTheme
+
   return (
-    <section className="py-[44px] md:py-[56px] bg-gradient-to-br from-[#3B3969] to-[#2E2C5A] relative overflow-hidden">
+    <section className={`py-[44px] md:py-[56px] relative overflow-hidden ${
+      isDark
+        ? "bg-gradient-to-br from-[#3B3969] to-[#2E2C5A]"
+        : "bg-[#F5F5F5] border-t border-[#E5E5E5]"
+    }`}>
       {/* Subtle Pattern overlay */}
-      <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '32px 32px' }}></div>
+      {isDark && <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '32px 32px' }}></div>}
       
       <div className="mx-auto max-w-4xl px-5 lg:px-8 relative z-10">
+        <Reveal>
         {isSubmitted ? (
           /* ── Success ── */
           <div className="flex flex-col items-center gap-4 text-center">
@@ -30,8 +38,8 @@ export function NewsletterSection() {
               <CheckCircle2 className="w-7 h-7 text-green-400" />
             </div>
             <div>
-              <h3 className="text-xl font-bold text-white mb-2">Thank you for subscribing!</h3>
-              <p className="text-white/70 text-sm leading-relaxed max-w-sm mx-auto">
+              <h3 className={`text-xl font-bold mb-2 ${isDark ? "text-white" : "text-[#1a1a2e]"}`}>Thank you for subscribing!</h3>
+              <p className={`text-sm leading-relaxed max-w-sm mx-auto ${isDark ? "text-white/70" : "text-[#64648c]"}`}>
                 We&apos;ll keep you updated with the latest news and training opportunities.
               </p>
             </div>
@@ -39,11 +47,11 @@ export function NewsletterSection() {
         ) : (
           /* ── Default: Centered layout ── */
           <div className="text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight mb-[12px]">
+            <h2 className={`text-3xl md:text-4xl font-bold leading-tight mb-[12px] ${isDark ? "text-white" : "text-[#1a1a2e]"}`}>
               Stay Updated with First Aid Training and Safety Tips
             </h2>
 
-            <p className="text-base text-white/80 max-w-2xl mx-auto mb-[32px]">
+            <p className={`text-base max-w-2xl mx-auto mb-[32px] ${isDark ? "text-white/80" : "text-[#64648c]"}`}>
               Subscribe to receive updates about upcoming training programs, safety resources, and community events.
             </p>
 
@@ -54,7 +62,11 @@ export function NewsletterSection() {
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email address"
                 required
-                className="bg-white/10 border border-white/20 rounded-lg px-5 py-3.5 w-full text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-[#CB154E] focus:bg-white/15 transition-all"
+                className={`rounded-lg px-5 py-3.5 w-full focus:outline-none focus:ring-2 focus:ring-[#CB154E] transition-all ${
+                  isDark
+                    ? "bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:bg-white/15"
+                    : "bg-white border border-[#E5E5E5] text-[#1a1a2e] placeholder:text-[#9090a0] focus:bg-white"
+                }`}
               />
               <button
                 type="submit"
@@ -66,6 +78,7 @@ export function NewsletterSection() {
             </form>
           </div>
         )}
+        </Reveal>
       </div>
     </section>
   )

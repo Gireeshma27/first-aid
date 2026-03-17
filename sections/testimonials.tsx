@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { SectionHeader } from "@/components/section-header"
 import    { Star, Quote, ChevronRight } from "lucide-react"
+import { Reveal } from "@/components/reveal"
 
 const testimonials = [
   {
@@ -62,12 +63,15 @@ export function TestimonialsSection() {
         animation: 'subtleFloat 9s ease-in-out infinite'
       }} />
       <div className="mx-auto max-w-7xl px-4 lg:px-8 relative z-10">
+        <Reveal>
         <SectionHeader
           badge="Testimonials"
           title="What Our Clients Say"
           description="Hear from organisations and individuals who have completed our training programs."
         />
+        </Reveal>
 
+        <Reveal delay={100}>
         <div className="mt-10 grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch relative z-10">
 
           {/* ── Left: person selector ── */}
@@ -142,6 +146,7 @@ export function TestimonialsSection() {
           </div>
 
         </div>
+        </Reveal>
       </div>
     </section>
   )
