@@ -180,7 +180,7 @@ export default function StatisticsPage() {
                     variant="outline"
                     className="border-white/25 text-white bg-white/8 hover:bg-white/15 font-semibold rounded-full px-8 h-12 text-sm transition-all duration-300"
                   >
-                    <Link href="/contact">Book Training</Link>
+                    <Link href="/book-training">Book Training</Link>
                   </Button>
                 </div>
               </div>
