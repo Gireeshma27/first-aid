@@ -161,7 +161,7 @@ export default function CprContent() {
                   asChild
                   className="bg-[#CB154E] hover:bg-[#CB154E]/90 text-white font-semibold px-8 py-3 rounded-lg shadow-lg shadow-[#CB154E]/30"
                 >
-                  <Link href="/contact">
+                  <Link href="/book-training">
                     Book This Training <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                 </Button>
@@ -466,7 +466,7 @@ export default function CprContent() {
               asChild
               className="bg-white text-[#CB154E] hover:bg-white/90 font-bold px-10 py-3 rounded-lg shadow-lg text-base"
             >
-              <Link href="/contact">Book This Training</Link>
+              <Link href="/book-training">Book This Training</Link>
             </Button>
             <Button
               asChild

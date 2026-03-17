@@ -52,7 +52,7 @@ export default function CustomTrainingPage() {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Button asChild className="bg-[#CB154E] hover:bg-[#CB154E]/90 text-white font-semibold px-8 py-3 h-auto rounded-xl shadow-lg shadow-[#CB154E]/20">
-                    <Link href="/contact">Discuss Your Needs <ArrowRight className="w-4 h-4 ml-2" /></Link>
+                    <Link href="/book-training">Discuss Your Needs <ArrowRight className="w-4 h-4 ml-2" /></Link>
                   </Button>
                   <Button asChild className="inline-flex items-center justify-center gap-2 border border-white/30 bg-transparent text-white hover:bg-white/10 hover:text-white font-semibold px-8 py-3 h-auto rounded-xl transition-colors duration-200">
                     <Link href="/contact">Get in Touch</Link>
@@ -161,7 +161,7 @@ export default function CustomTrainingPage() {
             <p className="text-white/70 text-lg mb-8 max-w-2xl mx-auto">Tell us about your organisation and we&apos;ll design a training solution that fits your team perfectly.</p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Button asChild className="bg-white text-[#CB154E] hover:bg-white/90 font-semibold px-8 py-3 h-auto rounded-xl shadow-lg">
-                <Link href="/contact">Start the Conversation <ArrowRight className="w-4 h-4 ml-2" /></Link>
+                <Link href="/book-training">Start the Conversation <ArrowRight className="w-4 h-4 ml-2" /></Link>
               </Button>
               <Button asChild className="inline-flex items-center justify-center gap-2 border border-white/30 bg-transparent text-white hover:bg-white/10 hover:text-white font-semibold px-8 py-3 h-auto rounded-xl transition-colors duration-200">
                 <Link href="/contact"><Phone className="w-4 h-4 mr-2" />Contact Us</Link>
