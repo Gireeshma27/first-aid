@@ -47,11 +47,11 @@ export function NewsletterSection({ lightTheme = true }: { lightTheme?: boolean 
         ) : (
           /* ── Default: Centered layout ── */
           <div className="text-center">
-            <h2 className={`text-3xl md:text-4xl font-bold leading-tight mb-[12px] ${isDark ? "text-white" : "text-[#1a1a2e]"}`}>
+            <h2 className={`text-3xl md:text-4xl font-bold leading-tight mb-3 ${isDark ? "text-white" : "text-[#1a1a2e]"}`}>
               Stay Updated with First Aid Training and Safety Tips
             </h2>
 
-            <p className={`text-base max-w-2xl mx-auto mb-[32px] ${isDark ? "text-white/80" : "text-[#64648c]"}`}>
+            <p className={`text-base max-w-2xl mx-auto mb-8 ${isDark ? "text-white/80" : "text-[#64648c]"}`}>
               Subscribe to receive updates about upcoming training programs, safety resources, and community events.
             </p>
 

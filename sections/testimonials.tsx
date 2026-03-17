@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { SectionHeader } from "@/components/section-header"
-import    { Star, Quote, ChevronRight } from "lucide-react"
+import { Star, Quote, ChevronRight } from "lucide-react"
 import { Reveal } from "@/components/reveal"
 
 const testimonials = [
@@ -56,7 +56,7 @@ export function TestimonialsSection() {
   const active = testimonials[activeIndex]
 
   return (
-    <section className="py-[44px] md:py-[56px] bg-[#F5F5F5] relative overflow-hidden">
+    <section className="py-12 md:py-16 bg-[#F5F5F5] relative overflow-hidden">
       {/* Subtle animated background elements */}
       <div className="absolute inset-0 pointer-events-none" style={{
         background: 'radial-gradient(circle at 15% 80%, rgba(203,21,78,0.04) 0%, transparent 50%), radial-gradient(circle at 85% 20%, rgba(59,57,105,0.04) 0%, transparent 50%)',
@@ -76,7 +76,7 @@ export function TestimonialsSection() {
 
           {/* ── Left: person selector ── */}
           <div className="flex flex-col gap-3">
-                 {testimonials.map((t, i) => {
+            {testimonials.map((t, i) => {
               const isActive = i === activeIndex
               return (
                 <button
@@ -125,7 +125,8 @@ export function TestimonialsSection() {
               <Quote className="w-10 h-10 text-[#CB154E] fill-[#CB154E] mb-6" />
               <p
                 key={activeIndex}
-                className="text-white text-lg md:text-xl leading-relaxed font-medium"
+                className="text-white text-lg md:text-xl leading-relaxed font-medium animate-fade-in-up"
+                style={{ animationDuration: '0.4s' }}
               >
                 &ldquo;{active.content}&rdquo;
               </p>

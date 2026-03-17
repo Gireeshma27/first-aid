@@ -14,7 +14,7 @@ export default function ServicesPage() {
     <>
       <Navbar />
       <main className="bg-[#F5F5F5]">
-        <div className="pt-4 md:pt-10">
+        <div className="pt-8 md:pt-12">
           <ServicesSection />
         </div>
         <NewsletterSection />

@@ -98,7 +98,7 @@ export function StatisticsSection() {
   }, [])
 
   return (
-    <section className="relative py-[44px] md:py-[56px] bg-[#F5F5F5] overflow-hidden">
+    <section className="relative py-12 md:py-16 bg-[#F5F5F5] overflow-hidden">
       {/* Subtle animated background elements */}
       <div className="absolute inset-0 pointer-events-none" style={{
         background: 'radial-gradient(circle at 20% 50%, rgba(203,21,78,0.04) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(59,57,105,0.04) 0%, transparent 50%)',
@@ -108,8 +108,8 @@ export function StatisticsSection() {
         
         {/* Section Header */}
         <Reveal>
-        <div className="text-center mb-[32px] max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#3B3969] mb-[12px] tracking-tight">
+        <div className="text-center mb-8 max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#3B3969] mb-3 tracking-tight">
             Why First Aid Matters
           </h2>
           <p className="text-lg text-gray-600 leading-relaxed">
@@ -119,18 +119,18 @@ export function StatisticsSection() {
         </Reveal>
 
         {/* Stats Cards Grid */}
-        <div ref={ref} className="reveal-section grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <div ref={ref} className="reveal-section grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
           {statistics.map((stat, index) => {
             const Icon = stat.icon
             return (
               <div
                 key={index}
-                className="bg-white rounded-2xl p-8 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.12)] transition-all duration-300 hover:-translate-y-1 flex flex-col items-start"
+                className="bg-white rounded-2xl p-8 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.12)] transition-all duration-300 hover:-translate-y-1 flex flex-col items-center text-center"
               >
-                <div className="w-14 h-14 rounded-full bg-[#CB154E]/10 flex items-center justify-center mb-6">
+                <div className="w-14 h-14 rounded-full bg-[#CB154E]/10 flex items-center justify-center mb-5">
                   <Icon className="w-7 h-7 text-[#CB154E]" />
                 </div>
-                <div className="mb-3">
+                <div className="mb-2">
                   <p className="text-[2.5rem] font-bold text-[#3B3969] tracking-tight leading-none">
                     <AnimatedCounter target={stat.numericValue} suffix={stat.suffix} prefix={stat.prefix} />
                   </p>

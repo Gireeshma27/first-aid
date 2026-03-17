@@ -31,7 +31,7 @@ export function SectionHeader({ badge, title, description, centered = true }: Se
   return (
     <div
       ref={ref}
-      className={`max-w-3xl ${centered ? "mx-auto text-center" : ""} mb-[32px] reveal-section`}
+      className={`max-w-3xl ${centered ? "mx-auto text-center" : ""} mb-8 reveal-section`}
     >
       {badge && (
         <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-[#3B3969]/10 text-[#3B3969] text-sm font-semibold mb-5 tracking-wide">

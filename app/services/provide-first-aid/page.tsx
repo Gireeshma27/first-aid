@@ -97,7 +97,7 @@ export default function ProvideFirstAidPage() {
         </section>
 
         {/* Emergency tiles */}
-        <section className="py-14 bg-white">
+        <section className="py-12 md:py-16 bg-white">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <Reveal>
             <div className="text-center mb-10">
