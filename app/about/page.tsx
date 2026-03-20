@@ -8,6 +8,7 @@ import { Reveal } from "@/components/reveal"
 import Image from "next/image"
 import type { ComponentType } from "react"
 import { CheckCircle2, Heart, Target, Users, Award, Shield, Clock, Building2, BookOpen, Baby, Stethoscope } from "lucide-react"
+import { NationallyRecognisedBadge } from "@/components/nationally-recognised-badge"
 
 const values = [
   {
@@ -110,10 +111,7 @@ export default function AboutPage() {
                     <Award className="w-4 h-4 text-[#CB154E]" />
                     <span className="text-white/80 text-sm font-semibold">RTO 91222 Partner</span>
                   </div>
-                  <div className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-white/10 border border-white/20">
-                    <Shield className="w-4 h-4 text-[#CB154E]" />
-                    <span className="text-white/80 text-sm font-semibold">Nationally Recognised</span>
-                  </div>
+                  <NationallyRecognisedBadge className="shadow-lg" />
                   <div className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-white/10 border border-white/20">
                     <Clock className="w-4 h-4 text-[#CB154E]" />
                     <span className="text-white/80 text-sm font-semibold">15+ Years’ Experience</span>
@@ -322,10 +320,7 @@ export default function AboutPage() {
               {/* Right — Text content */}
               <Reveal delay={100}>
               <div className="space-y-8">
-                <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#CB154E]/8 text-[#CB154E] text-sm font-semibold border border-[#CB154E]/10">
-                  <Award className="w-4 h-4" />
-                  Nationally Recognised
-                </div>
+                <NationallyRecognisedBadge />
                 <h2 className="text-3xl md:text-4xl font-bold text-[#333333] leading-tight tracking-tight">
                   Partnership with Healthcorp RTO
                 </h2>

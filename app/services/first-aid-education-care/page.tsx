@@ -7,9 +7,10 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import type { Metadata } from "next"
 import { Reveal } from "@/components/reveal"
+import { NationallyRecognisedBadge } from "@/components/nationally-recognised-badge"
 
 export const metadata: Metadata = {
-  title: "HLTAID012 – First Aid in Education & Care | First Aid Network Australia",
+  title: "HLTAID012 First Aid in Education & Care | First Aid Network Australia",
   description: "Specifically designed for childcare educators, teachers and school staff. Covers infant and child CPR, anaphylaxis, asthma and paediatric emergencies.",
 }
 
@@ -39,10 +40,7 @@ export default function FirstAidEducationCarePage() {
             <div className="flex flex-col lg:flex-row gap-12 items-center">
               <div className="flex-1 min-w-0">
                 <div className="flex flex-wrap items-center gap-3 mb-6">
-                  <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white/90 text-sm font-medium backdrop-blur-sm border border-white/20">
-                    <GraduationCap className="w-4 h-4" />
-                    Nationally Recognised
-                  </span>
+                  <NationallyRecognisedBadge />
                   <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#CB154E]/20 text-white/90 text-sm font-medium border border-[#CB154E]/30">
                     In partnership with Healthcorp (RTO 91222)
                   </span>
@@ -237,6 +235,15 @@ export default function FirstAidEducationCarePage() {
               </div>
             </div>
             </Reveal>
+          </div>
+        </section>
+
+        {/* RTO Compliance */}
+        <section className="py-10 md:py-14 bg-[#F7F7FA] border-t border-[#E8E8F0]">
+          <div className="mx-auto max-w-4xl px-6 lg:px-12 text-center">
+            <p className="text-[#64648c] text-sm leading-relaxed">
+              This training is delivered in partnership with Healthcorp (RTO 91222), a Registered Training Organisation approved to deliver nationally recognised qualifications under the Australian Skills Quality Authority (ASQA). Upon successful completion of this course, participants will receive the nationally recognised unit of competency <strong className="text-[#1a1a2e]">HLTAID012 — Provide First Aid in an Education and Care Setting</strong>, issued by Healthcorp (RTO 91222).
+            </p>
           </div>
         </section>
 

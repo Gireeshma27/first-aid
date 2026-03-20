@@ -10,9 +10,9 @@ import logo from "@/public/images/logo.png"
 import { Button } from "@/components/ui/button"
 
 const services = [
-  { name: "HLTAID009 – Provide CPR", href: "/services/cpr-training" },
-  { name: "HLTAID011 – Provide First Aid", href: "/services/provide-first-aid" },
-  { name: "HLTAID012 – First Aid in Education & Care", href: "/services/first-aid-education-care" },
+  { name: "HLTAID009 Provide CPR", href: "/services/cpr-training" },
+  { name: "HLTAID011 Provide First Aid", href: "/services/provide-first-aid" },
+  { name: "HLTAID012 First Aid in Education & Care", href: "/services/first-aid-education-care" },
   { name: "Anaphylaxis & Asthma Management", href: "/services/anaphylaxis-asthma-training" },
   { name: "RAMOAP Training for NSW Teachers", href: "/services/ramoap-training" },
   { name: "Community Clinical Awareness", href: "/services/community-clinical-awareness" },
@@ -106,13 +106,13 @@ export function Navbar() {
             <Image
               src={logo}
               alt="First Aid Network Australia"
-              className="h-[45px] lg:h-[55px] w-auto object-contain transition-transform hover:scale-105 duration-300"
-              width={200}
-              height={55}
+              className="h-[55px] lg:h-[70px] w-auto object-contain transition-transform hover:scale-105 duration-300"
+              width={250}
+              height={70}
               priority
             />
-            <span className="text-[#3B3969] font-bold text-sm sm:text-base lg:text-lg leading-tight tracking-tight">
-              First Aid Network<br />Australia
+            <span className="font-bold text-sm sm:text-base lg:text-lg leading-tight tracking-tight">
+              <span className="text-[#3B3969]">First Aid </span><span className="text-[#CB154E]">Network</span>
             </span>
           </Link>
         </div>
@@ -191,7 +191,7 @@ export function Navbar() {
           <div className="fixed inset-y-0 right-0 z-[70] w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-200 animate-slide-in">
             <div className="flex items-center justify-between">
               <Link href="/" className="-m-1.5 p-1.5" onClick={() => setMobileMenuOpen(false)}>
-                <Image src={logo} alt="First Aid Network Australia" className="h-[40px] w-auto" width={200} height={40} />
+                <Image src={logo} alt="First Aid Network Australia" className="h-[50px] w-auto" width={220} height={50} />
               </Link>
               <button
                 type="button"

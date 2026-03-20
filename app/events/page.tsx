@@ -5,6 +5,7 @@ import { CheckCircle2, Shield, Clock, Stethoscope, ArrowRight, Zap, Award, Heart
 import Image from "next/image"
 import type { Metadata } from "next"
 import { Reveal } from "@/components/reveal"
+import { EventCarousel } from "@/components/event-carousel"
 
 export const metadata: Metadata = {
   title: "Event Medical Services | First Aid Network Australia",
@@ -12,12 +13,12 @@ export const metadata: Metadata = {
 }
 
 const eventTypes = [
-  { title: "School Carnivals & Excursions", image: "/images/cpr-classroom.png"   },
-  { title: "Sports Competitions",           image: "/images/hero-training.png"   },
-  { title: "Community Festivals",           image: "/images/course-childcare.png"},
-  { title: "Corporate Events",              image: "/images/course-first-aid.png"},
-  { title: "Event Medical Staff",           image: "/images/event-medical.png"   },
-  { title: "Public Gatherings",             image: "/images/trainer.png"         },
+  { title: "School Carnivals & Excursions", image: "/images/cpr-classroom.png", description: "On-site first aid coverage for school sporting carnivals, excursions and outdoor activities." },
+  { title: "Sports Competitions", image: "/images/hero-training.png", description: "Professional medical support for local and regional sporting tournaments and competitions." },
+  { title: "Community Festivals", image: "/images/course-childcare.png", description: "Qualified medics ensuring safety at community festivals, fairs and public celebrations." },
+  { title: "Corporate Events", image: "/images/course-first-aid.png", description: "Medical personnel for corporate functions, team-building days and workplace gatherings." },
+  { title: "Event Medical Staff", image: "/images/event-medical.png", description: "Dedicated medical professionals equipped to handle any on-site emergency." },
+  { title: "Public Gatherings", image: "/images/trainer.png", description: "First aid services for concerts, markets, charity runs and large public events." },
 ]
 
 const whyCards = [
@@ -186,10 +187,10 @@ export default function EventsPage() {
         </section>
 
         {/* â”€â”€ Types of Events â”€â”€ */}
-        <section id="types" className="py-12 md:py-16 bg-[#F5F5F5]">
+        <section id="types" className="py-12 md:py-16 bg-[#F5F5F5] overflow-hidden">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <Reveal>
-            <div className="text-center mb-16">
+            <div className="text-center mb-12">
               <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-[#3B3969]/8 text-[#3B3969] text-sm font-semibold mb-5">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#3B3969]" />
                 Types of Events
@@ -202,36 +203,11 @@ export default function EventsPage() {
               </p>
             </div>
             </Reveal>
-            
-            <Reveal delay={100}>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
-              {eventTypes.map((event) => (
-                <div
-                  key={event.title}
-                  className="group relative rounded-[2rem] overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 bg-white"
-                  style={{ height: "300px" }}
-                >
-                  <div className="absolute inset-0">
-                    <Image
-                      src={event.image}
-                      alt={event.title}
-                      fill
-                      loading="eager"
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      className="object-cover group-hover:scale-105 transition-transform duration-700"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#1e1c3d]/90 via-[#1e1c3d]/30 to-transparent" />
-                  </div>
+          </div>
 
-                  <div className="absolute bottom-0 left-0 right-0 p-6 flex items-center gap-3">
-                    <div className="w-9 h-9 rounded-full bg-[#CB154E] flex items-center justify-center flex-shrink-0 shadow-lg group-hover:bg-white transition-colors duration-300">
-                      <CheckCircle2 className="w-4 h-4 text-white group-hover:text-[#CB154E] transition-colors duration-300" />
-                    </div>
-                    <span className="text-white font-bold text-base drop-shadow-md leading-snug min-w-0 line-clamp-2">{event.title}</span>
-                  </div>
-                </div>
-              ))}
-            </div>            </Reveal>          </div>
+          <Reveal delay={100}>
+            <EventCarousel events={eventTypes} />
+          </Reveal>
         </section>
 
         {/* â”€â”€ Why Professional Event Medics â”€â”€ */}
