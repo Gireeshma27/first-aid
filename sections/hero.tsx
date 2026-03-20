@@ -143,14 +143,24 @@ export function Hero() {
           border: 1px solid rgba(255,255,255,0.1);
           backdrop-filter: blur(14px);
           border-radius: 16px;
-          padding: 18px 28px;
+          padding: 14px 12px;
           display: flex;
           gap: 0;
+          width: 100%;
+          min-width: 0;
+          box-sizing: border-box;
+        }
+        @media (min-width: 480px) {
+          .stats-glass { padding: 18px 28px; }
+          .stat-col { padding: 0 20px; }
+          .stat-col:first-child { padding-left: 0; }
+          .stat-col:last-child  { padding-right: 0; }
         }
         .stat-col {
           flex: 1;
+          min-width: 0;
           position: relative;
-          padding: 0 24px;
+          padding: 0 8px;
         }
         .stat-col:first-child { padding-left: 0; }
         .stat-col:last-child  { padding-right: 0; }
@@ -297,9 +307,9 @@ export function Hero() {
               {/* Stats — glassmorphism row */}
               <div className="anim-up d5 stats-glass mt-2">
                 {stats.map((s, i) => (
-                  <div key={i} className={`stat-col ${i === 2 ? "hidden sm:block" : ""}`}>
-                    <p className="text-[1.75rem] font-extrabold text-white leading-none tracking-tight">{s.value}</p>
-                    <p className="text-[0.72rem] mt-1.5 font-medium uppercase tracking-widest"
+                  <div key={i} className="stat-col">
+                    <p className="text-[1.4rem] xs:text-[1.6rem] sm:text-[1.75rem] font-extrabold text-white leading-none tracking-tight">{s.value}</p>
+                    <p className="text-[0.6rem] sm:text-[0.72rem] mt-1.5 font-medium uppercase tracking-widest"
                       style={{ color: "rgba(255,255,255,0.4)", letterSpacing: "0.09em" }}>
                       {s.label}
                     </p>
