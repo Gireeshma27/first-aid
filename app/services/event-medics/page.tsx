@@ -3,6 +3,7 @@ import { Footer } from "@/components/footer"
 import { NewsletterSection } from "@/sections/newsletter"
 import { CheckCircle2, Phone, ArrowRight, MapPin, Calendar, Shield, Zap, Users, Heart } from "lucide-react"
 import { FiCalendar, FiBriefcase, FiActivity, FiMusic, FiSun, FiUsers, FiMapPin, FiAward } from "react-icons/fi"
+import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import type { Metadata } from "next"
@@ -30,40 +31,65 @@ export default function EventMedicsPage() {
       <Navbar />
       <main>
         {/* Hero */}
-        <section className="relative min-h-[560px] flex items-center overflow-hidden bg-[#1a1a2e]">
+        <section className="relative min-h-[520px] flex items-center overflow-hidden" style={{ background: "linear-gradient(135deg, #3B3969 0%, #2d2b5e 50%, #1a1a2e 100%)" }}>
           <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-[#CB154E]/20 blur-3xl animate-blob" />
           <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-[#3B3969]/30 blur-3xl animate-blob-delay" />
           <div className="absolute top-1/2 right-1/4 w-[350px] h-[350px] rounded-full bg-white/5 blur-3xl animate-blob-delay-2" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#1a1a2e]/90 via-[#1a1a2e]/60 to-transparent" />
-          <div className="relative mx-auto max-w-7xl px-6 lg:px-12 py-20">
-            <div className="max-w-3xl">
-              <div className="flex flex-wrap items-center gap-3 mb-6">
-                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white/90 text-sm font-medium backdrop-blur-sm border border-white/20">
-                  <Shield className="w-4 h-4" />
-                  Qualified Event Medics
-                </span>
-                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#CB154E]/20 text-white/90 text-sm font-medium border border-[#CB154E]/30">
-                  On-Site Medical Coverage
-                </span>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#3B3969]/80 via-transparent to-transparent" />
+          <div className="relative mx-auto max-w-7xl px-6 lg:px-12 py-16 pb-20">
+            <div className="flex flex-col lg:flex-row gap-12 items-center">
+              <div className="flex-1 min-w-0">
+                <div className="flex flex-wrap items-center gap-3 mb-6">
+                  <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white/90 text-sm font-medium backdrop-blur-sm border border-white/20">
+                    <Shield className="w-4 h-4" />
+                    Qualified Event Medics
+                  </span>
+                  <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#CB154E]/20 text-white/90 text-sm font-medium border border-[#CB154E]/30">
+                    On-Site Medical Coverage
+                  </span>
+                </div>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                  Event Medics &amp;<br />
+                  <span className="text-[#CB154E]">On-Site Medical Support</span>
+                </h1>
+                <p className="text-white/75 text-lg md:text-xl leading-relaxed mb-8 max-w-xl">
+                  Qualified medics for events of all sizes — from school carnivals and excursions to corporate functions and community gatherings. Peace of mind for every event.
+                </p>
+                <div className="flex flex-wrap gap-4">
+                  <Button asChild className="bg-[#CB154E] hover:bg-[#CB154E]/90 text-white font-semibold px-8 py-3 h-auto rounded-xl shadow-lg">
+                    <Link href="/book-training">Book Event Coverage <ArrowRight className="w-4 h-4 ml-2" /></Link>
+                  </Button>
+                  <Button asChild className="inline-flex items-center justify-center gap-2 border border-white/30 bg-transparent text-white hover:bg-white/10 hover:text-white font-semibold px-8 py-3 h-auto rounded-xl transition-colors duration-200">
+                    <Link href="/contact">Get a Quote</Link>
+                  </Button>
+                </div>
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                Event Medics &amp;<br />
-                <span className="text-[#CB154E]">On-Site Medical Support</span>
-              </h1>
-              <p className="text-white/75 text-lg md:text-xl leading-relaxed mb-8 max-w-2xl">
-                Qualified medics for events of all sizes — from school carnivals and excursions to corporate functions and community gatherings. Peace of mind for every event.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <Button asChild className="bg-[#CB154E] hover:bg-[#CB154E]/90 text-white font-semibold px-8 py-3 h-auto rounded-xl shadow-lg">
-                  <Link href="/book-training">Book Event Coverage <ArrowRight className="w-4 h-4 ml-2" /></Link>
-                </Button>
-                <Button asChild className="inline-flex items-center justify-center gap-2 border border-white/30 bg-transparent text-white hover:bg-white/10 hover:text-white font-semibold px-8 py-3 h-auto rounded-xl transition-colors duration-200">
-                  <Link href="/contact">Get a Quote</Link>
-                </Button>
+              <div className="flex-shrink-0 w-full lg:w-[420px]">
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-black/40 aspect-[4/3]">
+                  <Image
+                    src="/images/event-medical.png"
+                    alt="Event medics providing on-site medical support"
+                    fill
+                    priority
+                    sizes="(max-width: 1024px) 100vw, 420px"
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#3B3969]/70 via-transparent to-transparent" />
+                  <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-sm rounded-xl p-4 flex items-center gap-3 shadow-lg">
+                    <div className="w-10 h-10 rounded-lg bg-[#CB154E] flex-shrink-0 flex items-center justify-center">
+                      <Shield className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <p className="text-[#1a1a2e] font-bold text-sm">Qualified Event Medics</p>
+                      <p className="text-[#64648c] text-xs">On-Site Medical Coverage</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div className="absolute bottom-0 left-0 right-0 bg-black/40 backdrop-blur-sm border-t border-white/10">
+          {/* Stat strip */}
+          <div className="absolute bottom-0 left-0 right-0 bg-black/30 backdrop-blur-sm border-t border-white/10">
             <div className="mx-auto max-w-7xl px-6 lg:px-12 py-4 flex flex-wrap gap-6">
               {[{ icon: <MapPin className="w-4 h-4" />, text: "On-site at your event" }, { icon: <Calendar className="w-4 h-4" />, text: "All event types" }, { icon: <Zap className="w-4 h-4" />, text: "Rapid medical response" }].map((s) => (
                 <div key={s.text} className="flex items-center gap-2 text-white/70 text-sm">{s.icon}<span>{s.text}</span></div>
