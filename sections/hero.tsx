@@ -143,14 +143,24 @@ export function Hero() {
           border: 1px solid rgba(255,255,255,0.1);
           backdrop-filter: blur(14px);
           border-radius: 16px;
-          padding: 18px 28px;
+          padding: 14px 12px;
           display: flex;
           gap: 0;
+          width: 100%;
+          min-width: 0;
+          box-sizing: border-box;
+        }
+        @media (min-width: 480px) {
+          .stats-glass { padding: 18px 28px; }
+          .stat-col { padding: 0 20px; }
+          .stat-col:first-child { padding-left: 0; }
+          .stat-col:last-child  { padding-right: 0; }
         }
         .stat-col {
           flex: 1;
+          min-width: 0;
           position: relative;
-          padding: 0 24px;
+          padding: 0 8px;
         }
         .stat-col:first-child { padding-left: 0; }
         .stat-col:last-child  { padding-right: 0; }
@@ -248,7 +258,7 @@ export function Hero() {
         ))}
 
         {/* ── Main grid ── */}
-        <div className="relative mx-auto max-w-7xl px-5 lg:px-10 py-[44px] md:py-[56px]" style={{ zIndex: 3 }}>
+        <div className="relative mx-auto max-w-7xl px-5 lg:px-10 pt-[44px] pb-[16px] md:pt-[56px] md:pb-[20px]" style={{ zIndex: 3 }}>
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
             {/* ── LEFT ── */}
@@ -297,9 +307,9 @@ export function Hero() {
               {/* Stats — glassmorphism row */}
               <div className="anim-up d5 stats-glass mt-2">
                 {stats.map((s, i) => (
-                  <div key={i} className={`stat-col ${i === 2 ? "hidden sm:block" : ""}`}>
-                    <p className="text-[1.75rem] font-extrabold text-white leading-none tracking-tight">{s.value}</p>
-                    <p className="text-[0.72rem] mt-1.5 font-medium uppercase tracking-widest"
+                  <div key={i} className="stat-col">
+                    <p className="text-[1.4rem] xs:text-[1.6rem] sm:text-[1.75rem] font-extrabold text-white leading-none tracking-tight">{s.value}</p>
+                    <p className="text-[0.6rem] sm:text-[0.72rem] mt-1.5 font-medium uppercase tracking-widest"
                       style={{ color: "rgba(255,255,255,0.4)", letterSpacing: "0.09em" }}>
                       {s.label}
                     </p>
@@ -393,7 +403,7 @@ export function Hero() {
         {/* Bottom wave */}
         <div className="absolute bottom-0 left-0 right-0 pointer-events-none" style={{ zIndex: 4 }}>
           <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full">
-            <path d="M0 40L48 36.7C96 33.3 192 26.7 288 26.7C384 26.7 480 33.3 576 40C672 46.7 768 53.3 864 50C960 46.7 1056 33.3 1152 30C1248 26.7 1344 33.3 1392 36.7L1440 40V80H0V40Z" fill="white" />
+            <path d="M0 40L48 36.7C96 33.3 192 26.7 288 26.7C384 26.7 480 33.3 576 40C672 46.7 768 53.3 864 50C960 46.7 1056 33.3 1152 30C1248 26.7 1344 33.3 1392 36.7L1440 40V80H0V40Z" fill="#F5F5F5" />
           </svg>
         </div>
       </section>
