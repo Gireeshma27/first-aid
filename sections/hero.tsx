@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowRight, PlayCircle, Shield, Heart, Stethoscope, Cross, Activity } from "lucide-react"
+import { NationallyRecognisedBadge } from "@/components/nationally-recognised-badge"
 
 const floatingIcons = [
   { Icon: Shield, top: "12%", left: "4%", delay: "0s", size: "w-7 h-7" },
@@ -255,27 +256,21 @@ export function Hero() {
 
               {/* Badge pill */}
               <div className="anim-up d1">
-                <span
-                  className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full text-[0.82rem] font-semibold tracking-wide text-white/90"
-                  style={{ background: "rgba(203,21,78,0.16)", border: "1px solid rgba(203,21,78,0.38)", letterSpacing: "0.03em" }}
-                >
-                  <span className="ping-dot relative inline-flex h-2 w-2 rounded-full bg-[#CB154E]" />
-                  Nationally Recognised Training Provider
-                </span>
+                <NationallyRecognisedBadge />
               </div>
 
               {/* Heading */}
               <div className="anim-up d2">
                 <span className="h-accent" />
                 <h1 className="text-[2.55rem] md:text-[2.9rem] lg:text-[3.2rem] font-extrabold text-white leading-[1.1] tracking-tight">
-                  First aid network{" "}
+                  First Aid{" "}
                   <span style={{
                     background: "linear-gradient(130deg, #CB154E 20%, #f7395e 100%)",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                     backgroundClip: "text",
                   }}>
-                    Australia
+                    Network
                   </span>
                 </h1>
               </div>

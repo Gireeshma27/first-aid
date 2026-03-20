@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { Heart, Users, Clock, Phone, ArrowRight, Shield, Activity, Zap, Monitor, CheckCircle2 } from "lucide-react"
+import { NationallyRecognisedBadge } from "@/components/nationally-recognised-badge"
 import { Button } from "@/components/ui/button"
 import { NewsletterSection } from "@/sections/newsletter"
 import {
@@ -127,9 +128,11 @@ export default function CprContent() {
         <div className="relative mx-auto max-w-7xl px-6 lg:px-12">
           <div className="flex flex-col lg:flex-row gap-12 items-center">
             <div className="flex-1">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#CB154E]/20 border border-[#CB154E]/30 text-[#ff6b9d] text-sm font-semibold mb-6">
-                <Heart className="w-4 h-4" />
-                Nationally Recognised Training · In partnership with Healthcorp (RTO 91222)
+              <div className="flex flex-wrap items-center gap-3 mb-6">
+                <NationallyRecognisedBadge />
+                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#CB154E]/20 text-[#ff6b9d] text-sm font-semibold border border-[#CB154E]/30">
+                  In partnership with Healthcorp (RTO 91222)
+                </span>
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
                 HLTAID009
@@ -478,6 +481,15 @@ export default function CprContent() {
               </Link>
             </Button>
           </div>
+        </div>
+      </section>
+
+      {/* ── RTO COMPLIANCE ── */}
+      <section className="py-10 md:py-14 bg-[#F7F7FA] border-t border-[#E8E8F0]">
+        <div className="mx-auto max-w-4xl px-6 lg:px-12 text-center">
+          <p className="text-[#64648c] text-sm leading-relaxed">
+            This training is delivered in partnership with Healthcorp (RTO 91222), a Registered Training Organisation approved to deliver nationally recognised qualifications under the Australian Skills Quality Authority (ASQA). Upon successful completion of this course, participants will receive the nationally recognised unit of competency <strong className="text-[#1a1a2e]">HLTAID009 — Provide Cardiopulmonary Resuscitation</strong>, issued by Healthcorp (RTO 91222).
+          </p>
         </div>
       </section>
 

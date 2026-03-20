@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 220" width="200" height="220">
+  <!-- Nationally Recognised Training Logo - Inverted Triangle -->
+  <g transform="translate(100, 10)">
+    <!-- Row 1 (top - widest) -->
+    <polygon points="-80,0 -40,0 -42,4 -78,4" fill="#C41E3A"/>
+    <polygon points="-36,0 4,0 2,4 -34,4" fill="#006B3F"/>
+    <polygon points="8,0 48,0 46,4 6,4" fill="#C41E3A"/>
+    <polygon points="52,0 80,0 78,4 50,4" fill="#006B3F"/>
+
+    <!-- Row 2 -->
+    <polygon points="-75,10 -38,10 -40,14 -73,14" fill="#006B3F"/>
+    <polygon points="-34,10 2,10 0,14 -32,14" fill="#C41E3A"/>
+    <polygon points="6,10 42,10 40,14 4,14" fill="#006B3F"/>
+    <polygon points="46,10 75,10 73,14 44,14" fill="#C41E3A"/>
+
+    <!-- Row 3 -->
+    <polygon points="-70,20 -36,20 -38,24 -68,24" fill="#C41E3A"/>
+    <polygon points="-32,20 0,20 -2,24 -30,24" fill="#006B3F"/>
+    <polygon points="4,20 38,20 36,24 2,24" fill="#C41E3A"/>
+    <polygon points="42,20 70,20 68,24 40,24" fill="#006B3F"/>
+
+    <!-- Row 4 -->
+    <polygon points="-65,30 -34,30 -36,34 -63,34" fill="#006B3F"/>
+    <polygon points="-30,30 -2,30 -4,34 -28,34" fill="#C41E3A"/>
+    <polygon points="2,30 34,30 32,34 0,34" fill="#006B3F"/>
+    <polygon points="38,30 65,30 63,34 36,34" fill="#C41E3A"/>
+
+    <!-- Row 5 -->
+    <polygon points="-60,40 -32,40 -34,44 -58,44" fill="#C41E3A"/>
+    <polygon points="-28,40 -4,40 -6,44 -26,44" fill="#006B3F"/>
+    <polygon points="0,40 28,40 26,44 -2,44" fill="#C41E3A"/>
+    <polygon points="32,40 60,40 58,44 30,44" fill="#006B3F"/>
+
+    <!-- Row 6 -->
+    <polygon points="-55,50 -30,50 -32,54 -53,54" fill="#006B3F"/>
+    <polygon points="-26,50 -6,50 -8,54 -24,54" fill="#C41E3A"/>
+    <polygon points="-2,50 24,50 22,54 -4,54" fill="#006B3F"/>
+    <polygon points="28,50 55,50 53,54 26,54" fill="#C41E3A"/>
+
+    <!-- Row 7 -->
+    <polygon points="-50,60 -28,60 -30,64 -48,64" fill="#C41E3A"/>
+    <polygon points="-24,60 -8,60 -10,64 -22,64" fill="#006B3F"/>
+    <polygon points="-4,60 20,60 18,64 -6,64" fill="#C41E3A"/>
+    <polygon points="24,60 50,60 48,64 22,64" fill="#006B3F"/>
+
+    <!-- Row 8 -->
+    <polygon points="-45,70 -26,70 -28,74 -43,74" fill="#006B3F"/>
+    <polygon points="-22,70 -10,70 -12,74 -20,74" fill="#C41E3A"/>
+    <polygon points="-6,70 16,70 14,74 -8,74" fill="#006B3F"/>
+    <polygon points="20,70 45,70 43,74 18,74" fill="#C41E3A"/>
+
+    <!-- Row 9 -->
+    <polygon points="-40,80 -24,80 -26,84 -38,84" fill="#C41E3A"/>
+    <polygon points="-20,80 -12,80 -14,84 -18,84" fill="#006B3F"/>
+    <polygon points="-8,80 12,80 10,84 -10,84" fill="#C41E3A"/>
+    <polygon points="16,80 40,80 38,84 14,84" fill="#006B3F"/>
+
+    <!-- Row 10 -->
+    <polygon points="-35,90 -22,90 -24,94 -33,94" fill="#006B3F"/>
+    <polygon points="-18,90 -12,90 -14,94 -16,94" fill="#C41E3A"/>
+    <polygon points="-8,90 8,90 6,94 -10,94" fill="#006B3F"/>
+    <polygon points="12,90 35,90 33,94 10,94" fill="#C41E3A"/>
+
+    <!-- Row 11 -->
+    <polygon points="-30,100 -20,100 -22,104 -28,104" fill="#C41E3A"/>
+    <polygon points="-16,100 -10,100 -12,104 -14,104" fill="#006B3F"/>
+    <polygon points="-6,100 6,100 4,104 -8,104" fill="#C41E3A"/>
+    <polygon points="10,100 30,100 28,104 8,104" fill="#006B3F"/>
+
+    <!-- Row 12 (bottom - narrowest) -->
+    <polygon points="-22,110 -14,110 -16,114 -20,114" fill="#006B3F"/>
+    <polygon points="-10,110 0,110 -2,114 -8,114" fill="#C41E3A"/>
+    <polygon points="4,110 14,110 12,114 2,114" fill="#006B3F"/>
+    <polygon points="18,110 22,110 20,114 16,114" fill="#C41E3A"/>
+  </g>
+
+  <!-- Text -->
+  <text x="100" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333333" letter-spacing="1">
+    <tspan x="100" dy="0">NATIONALLY RECOGNISED</tspan>
+    <tspan x="100" dy="22">TRAINING</tspan>
+  </text>
+</svg>

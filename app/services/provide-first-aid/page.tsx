@@ -6,25 +6,37 @@ import { FiDroplet, FiZap, FiActivity, FiWind, FiAlertOctagon, FiAlertCircle, Fi
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import type { Metadata } from "next"
 import { Reveal } from "@/components/reveal"
+import { NationallyRecognisedBadge } from "@/components/nationally-recognised-badge"
 
-export const metadata: Metadata = {
-  title: "HLTAID011 – Provide First Aid | First Aid Network Australia",
+export const metadata = {
+  title: "HLTAID011 Provide First Aid | First Aid Network Australia",
   description: "Australia's most comprehensive general first aid qualification. Covers CPR, AED use, medical emergencies, wound management, and more.",
 }
 
+const emergencies = [
+  { icon: FiDroplet, label: "Severe Bleeding", desc: "Control life-threatening haemorrhage with pressure and tourniquets" },
+  { icon: FiZap, label: "Burns & Scalds", desc: "Treat thermal, chemical and electrical burns safely" },
+  { icon: FiActivity, label: "Fractures", desc: "Immobilise broken bones and manage spinal injuries" },
+  { icon: FiWind, label: "Asthma Attack", desc: "Administer reliever medication and manage breathing emergencies" },
+  { icon: FiAlertOctagon, label: "Stroke", desc: "Recognise FAST signs and provide urgent first response" },
+  { icon: FiAlertCircle, label: "Anaphylaxis", desc: "Use adrenaline auto-injectors for severe allergic reactions" },
+  { icon: FiHeart, label: "Heart Attack", desc: "Recognise symptoms and perform CPR with AED" },
+  { icon: FiUser, label: "Seizures", desc: "Manage convulsions and protect the casualty from harm" },
+]
+
+const cardColors = [
+  { bg: "bg-[#FEF0F4]", iconBg: "bg-[#CB154E]/15", iconColor: "text-[#CB154E]" },
+  { bg: "bg-[#EEF0FF]", iconBg: "bg-[#3B3969]/15", iconColor: "text-[#3B3969]" },
+  { bg: "bg-[#FFF5EC]", iconBg: "bg-[#E67E22]/15", iconColor: "text-[#E67E22]" },
+  { bg: "bg-[#ECFDF5]", iconBg: "bg-[#10B981]/15", iconColor: "text-[#10B981]" },
+  { bg: "bg-[#F0F4FE]", iconBg: "bg-[#6366F1]/15", iconColor: "text-[#6366F1]" },
+  { bg: "bg-[#FEF3F2]", iconBg: "bg-[#EF4444]/15", iconColor: "text-[#EF4444]" },
+  { bg: "bg-[#FDF4FF]", iconBg: "bg-[#A855F7]/15", iconColor: "text-[#A855F7]" },
+  { bg: "bg-[#F0FDFA]", iconBg: "bg-[#14B8A6]/15", iconColor: "text-[#14B8A6]" },
+]
+
 export default function ProvideFirstAidPage() {
-  const emergencies = [
-    { icon: FiDroplet, label: "Severe Bleeding" },
-    { icon: FiZap, label: "Burns & Scalds" },
-    { icon: FiActivity, label: "Fractures" },
-    { icon: FiWind, label: "Asthma Attack" },
-    { icon: FiAlertOctagon, label: "Stroke" },
-    { icon: FiAlertCircle, label: "Anaphylaxis" },
-    { icon: FiHeart, label: "Heart Attack" },
-    { icon: FiUser, label: "Seizures" },
-  ]
 
   return (
     <>
@@ -40,10 +52,7 @@ export default function ProvideFirstAidPage() {
             <div className="flex flex-col lg:flex-row gap-12 items-center">
               <div className="flex-1 min-w-0">
                 <div className="flex flex-wrap items-center gap-3 mb-6">
-                  <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white/90 text-sm font-medium backdrop-blur-sm border border-white/20">
-                    <ShieldPlus className="w-4 h-4" />
-                    Nationally Recognised
-                  </span>
+                  <NationallyRecognisedBadge />
                   <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#CB154E]/20 text-white/90 text-sm font-medium border border-[#CB154E]/30">
                     In partnership with Healthcorp (RTO 91222)
                   </span>
@@ -96,8 +105,8 @@ export default function ProvideFirstAidPage() {
           </div>
         </section>
 
-        {/* Emergency tiles */}
-        <section className="py-12 md:py-16 bg-white">
+        {/* Emergency tiles — Auto-scrolling carousel */}
+        <section className="py-12 md:py-16 bg-white overflow-hidden">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <Reveal>
             <div className="text-center mb-10">
@@ -107,19 +116,40 @@ export default function ProvideFirstAidPage() {
               <h2 className="text-2xl md:text-3xl font-bold text-[#1a1a2e]">Medical Emergencies Covered</h2>
             </div>
             </Reveal>
-            <Reveal delay={100}>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-              {emergencies.map(({ icon: Icon, label }) => (
-                <div key={label} className="flex flex-col items-center gap-3 p-5 rounded-2xl bg-[#F7F7FA] border border-[#E8E8F0] hover:border-[#CB154E]/30 hover:bg-[#CB154E]/[0.03] transition-colors">
-                  <div className="w-10 h-10 rounded-xl bg-[#CB154E]/10 flex items-center justify-center">
-                    <Icon className="w-5 h-5 text-[#CB154E]" />
-                  </div>
-                  <span className="text-sm font-semibold text-[#1a1a2e] text-center">{label}</span>
-                </div>
-              ))}
-            </div>
-            </Reveal>
           </div>
+          <Reveal delay={100}>
+          <div className="relative">
+            <style>{`
+              @keyframes scrollCards {
+                0% { transform: translateX(0); }
+                100% { transform: translateX(-50%); }
+              }
+              .scroll-track {
+                display: flex;
+                gap: 1rem;
+                width: max-content;
+                animation: scrollCards 30s linear infinite;
+              }
+              .scroll-track:hover {
+                animation-play-state: paused;
+              }
+            `}</style>
+            <div className="scroll-track">
+              {[...emergencies, ...emergencies].map(({ icon: Icon, label, desc }, i) => {
+                const color = cardColors[i % cardColors.length]
+                return (
+                  <div key={`${label}-${i}`} className={`flex-shrink-0 w-[260px] ${color.bg} rounded-2xl p-5 border border-transparent hover:shadow-lg transition-shadow duration-300`}>
+                    <div className={`w-11 h-11 rounded-xl ${color.iconBg} flex items-center justify-center mb-3`}>
+                      <Icon className={`w-5 h-5 ${color.iconColor}`} />
+                    </div>
+                    <h3 className="text-sm font-bold text-[#1a1a2e] mb-1.5">{label}</h3>
+                    <p className="text-xs text-[#64648c] leading-relaxed">{desc}</p>
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+          </Reveal>
         </section>
 
         {/* Skills grid */}
@@ -153,7 +183,7 @@ export default function ProvideFirstAidPage() {
                 </div>
                 <h3 className="text-base font-bold text-[#1a1a2e] mb-4">Medical Emergencies</h3>
                 <ul className="space-y-3">
-                  {["Heart attack and stroke", "Anaphylaxis — severe allergic reactions", "Asthma attacks", "Seizures and diabetic emergencies", "Shock, unconsciousness and fainting"].map((item) => (
+                  {["Heart attack and stroke", "Anaphylaxis and severe allergic reactions", "Asthma attacks", "Seizures and diabetic emergencies", "Shock, unconsciousness and fainting"].map((item) => (
                     <li key={item} className="flex items-start gap-2.5">
                       <CheckCircle2 className="w-4 h-4 text-[#CB154E] flex-shrink-0 mt-0.5" />
                       <span className="text-[#64648c] text-sm leading-relaxed">{item}</span>
@@ -273,6 +303,15 @@ export default function ProvideFirstAidPage() {
               </div>
               </Reveal>
             </div>
+          </div>
+        </section>
+
+        {/* RTO Compliance */}
+        <section className="py-10 md:py-14 bg-[#F7F7FA] border-t border-[#E8E8F0]">
+          <div className="mx-auto max-w-4xl px-6 lg:px-12 text-center">
+            <p className="text-[#64648c] text-sm leading-relaxed">
+              This training is delivered in partnership with Healthcorp (RTO 91222), a Registered Training Organisation approved to deliver nationally recognised qualifications under the Australian Skills Quality Authority (ASQA). Upon successful completion of this course, participants will receive the nationally recognised unit of competency <strong className="text-[#1a1a2e]">HLTAID011 — Provide First Aid</strong>, issued by Healthcorp (RTO 91222).
+            </p>
           </div>
         </section>
 

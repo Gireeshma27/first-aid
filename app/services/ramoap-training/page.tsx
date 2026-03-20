@@ -256,6 +256,16 @@ export default function RamoapTrainingPage() {
           </div>
         </section>
 
+        {/* RTO Compliance */}
+        <section className="py-10 md:py-14 bg-[#F7F7FA] border-t border-[#E8E8F0]">
+          <div className="mx-auto max-w-4xl px-6 lg:px-12 text-center">
+            <p className="text-[#64648c] text-sm leading-relaxed">
+              This training is delivered in partnership with{" "}
+              <strong className="text-[#1a1a2e]">Healthcorp (RTO 91222)</strong>, a Registered Training Organisation approved to deliver nationally recognised qualifications under the Australian Skills Quality Authority (ASQA).
+            </p>
+          </div>
+        </section>
+
         <NewsletterSection />
       </main>
       <Footer />
