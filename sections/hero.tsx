@@ -248,7 +248,7 @@ export function Hero() {
         ))}
 
         {/* ── Main grid ── */}
-        <div className="relative mx-auto max-w-7xl px-5 lg:px-10 py-[44px] md:py-[56px]" style={{ zIndex: 3 }}>
+        <div className="relative mx-auto max-w-7xl px-5 lg:px-10 pt-[44px] pb-[16px] md:pt-[56px] md:pb-[20px]" style={{ zIndex: 3 }}>
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
             {/* ── LEFT ── */}
@@ -393,7 +393,7 @@ export function Hero() {
         {/* Bottom wave */}
         <div className="absolute bottom-0 left-0 right-0 pointer-events-none" style={{ zIndex: 4 }}>
           <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full">
-            <path d="M0 40L48 36.7C96 33.3 192 26.7 288 26.7C384 26.7 480 33.3 576 40C672 46.7 768 53.3 864 50C960 46.7 1056 33.3 1152 30C1248 26.7 1344 33.3 1392 36.7L1440 40V80H0V40Z" fill="white" />
+            <path d="M0 40L48 36.7C96 33.3 192 26.7 288 26.7C384 26.7 480 33.3 576 40C672 46.7 768 53.3 864 50C960 46.7 1056 33.3 1152 30C1248 26.7 1344 33.3 1392 36.7L1440 40V80H0V40Z" fill="#F5F5F5" />
           </svg>
         </div>
       </section>
