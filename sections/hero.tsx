@@ -401,8 +401,8 @@ export function Hero() {
         </div>
 
         {/* Bottom wave */}
-        <div className="absolute bottom-0 left-0 right-0 pointer-events-none" style={{ zIndex: 4 }}>
-          <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full">
+        <div className="absolute -bottom-px left-0 right-0 pointer-events-none" style={{ zIndex: 4 }}>
+          <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="block w-full" preserveAspectRatio="none">
             <path d="M0 40L48 36.7C96 33.3 192 26.7 288 26.7C384 26.7 480 33.3 576 40C672 46.7 768 53.3 864 50C960 46.7 1056 33.3 1152 30C1248 26.7 1344 33.3 1392 36.7L1440 40V80H0V40Z" fill="#F5F5F5" />
           </svg>
         </div>
