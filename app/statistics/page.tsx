@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import { useEffect, useRef, useState } from "react"
 import { Navbar } from "@/components/navbar"
@@ -290,7 +290,7 @@ export default function StatisticsPage() {
                     <AnimatedCounter target={10} suffix="%" />
                   </p>
                   <p className="text-base font-bold text-[#1e1c3d] mb-1">Current survival rate</p>
-                  <p className="text-sm text-[#666] leading-relaxed">Only 1 in 10 victims survive — because trained bystander help rarely reaches them in time.</p>
+                  <p className="text-sm text-[#666] leading-relaxed">Only 1 in 10 victims survive, because trained bystander help rarely reaches them in time.</p>
                 </div>
 
               </Reveal>
@@ -378,7 +378,7 @@ export default function StatisticsPage() {
               <p className="text-white/80 text-sm leading-relaxed font-medium">
                 When CPR <em>and</em> an AED are used within{" "}
                 <strong className="text-white">3–5 minutes</strong> of collapse, survival rates can reach{" "}
-                <strong className="text-[#CB154E]">up to 70%</strong> — compared to just 10% today.
+                <strong className="text-[#CB154E]">up to 70%</strong>, compared to just 10% today.
               </p>
             </div>
             </Reveal>
@@ -718,7 +718,7 @@ export default function StatisticsPage() {
                   icon: Home,
                   stat: "80%",
                   label: "Happen at Home",
-                  desc: "Most cardiac arrests occur at home \u2014 it could be someone you love.",
+                  desc: "Most cardiac arrests occur at home. It could be someone you love.",
                   accent: "#3B3969",
                   accentBg: "rgba(59,57,105,0.08)",
                   accentBorder: "rgba(59,57,105,0.18)",

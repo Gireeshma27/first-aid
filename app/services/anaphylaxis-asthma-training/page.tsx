@@ -7,6 +7,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import type { Metadata } from "next"
 import { Reveal } from "@/components/reveal"
+import { RTONotice } from "@/components/rto-notice"
 
 export const metadata: Metadata = {
   title: "Anaphylaxis & Asthma Management Training | First Aid Network Australia",
@@ -82,54 +83,54 @@ export default function AnaphylaxisAsthmaTrainingPage() {
         <section className="py-12 md:py-16 bg-white">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <Reveal>
-            <div className="text-center mb-12">
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#CB154E]/[0.06] text-[#CB154E] text-sm font-semibold mb-4">
-                <AlertTriangle className="w-4 h-4" />Dual-Condition Training
-              </span>
-              <h2 className="text-2xl md:text-3xl font-bold text-[#1a1a2e]">Two Critical Conditions — One Course</h2>
-            </div>
-            <div className="grid md:grid-cols-2 gap-6">
-              {/* Anaphylaxis column */}
-              <div className="rounded-2xl overflow-hidden border border-[#CB154E]/20 shadow-sm">
-                <div className="bg-gradient-to-br from-[#CB154E] to-[#a01040] px-7 py-6">
-                  <div className="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center mb-4">
-                    <Syringe className="w-5 h-5 text-white" />
+              <div className="text-center mb-12">
+                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#CB154E]/[0.06] text-[#CB154E] text-sm font-semibold mb-4">
+                  <AlertTriangle className="w-4 h-4" />Dual-Condition Training
+                </span>
+                <h2 className="text-2xl md:text-3xl font-bold text-[#1a1a2e]">Two Critical Conditions, One Course</h2>
+              </div>
+              <div className="grid md:grid-cols-2 gap-6">
+                {/* Anaphylaxis column */}
+                <div className="rounded-2xl overflow-hidden border border-[#CB154E]/20 shadow-sm">
+                  <div className="bg-gradient-to-br from-[#CB154E] to-[#a01040] px-7 py-6">
+                    <div className="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center mb-4">
+                      <Syringe className="w-5 h-5 text-white" />
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-1">Anaphylaxis Management</h3>
+                    <p className="text-white/80 text-sm">Life-threatening allergic reactions</p>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-1">Anaphylaxis Management</h3>
-                  <p className="text-white/80 text-sm">Life-threatening allergic reactions</p>
+                  <div className="bg-white p-7">
+                    <ul className="space-y-3">
+                      {["Recognise early signs of anaphylaxis", "Respond to life-threatening allergic reactions", "Administer adrenaline using EpiPens or Anapen", "Develop and implement an anaphylaxis action plan", "Understand allergy triggers and prevention strategies"].map((item) => (
+                        <li key={item} className="flex items-start gap-2.5">
+                          <CheckCircle2 className="w-4 h-4 text-[#CB154E] flex-shrink-0 mt-0.5" />
+                          <span className="text-[#64648c] text-sm leading-relaxed">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-                <div className="bg-white p-7">
-                  <ul className="space-y-3">
-                    {["Recognise early signs of anaphylaxis", "Respond to life-threatening allergic reactions", "Administer adrenaline using EpiPens or Anapen", "Develop and implement an anaphylaxis action plan", "Understand allergy triggers and prevention strategies"].map((item) => (
-                      <li key={item} className="flex items-start gap-2.5">
-                        <CheckCircle2 className="w-4 h-4 text-[#CB154E] flex-shrink-0 mt-0.5" />
-                        <span className="text-[#64648c] text-sm leading-relaxed">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
+                {/* Asthma column */}
+                <div className="rounded-2xl overflow-hidden border border-[#3B3969]/20 shadow-sm">
+                  <div className="bg-gradient-to-br from-[#3B3969] to-[#2d2b5e] px-7 py-6">
+                    <div className="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center mb-4">
+                      <Wind className="w-5 h-5 text-white" />
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-1">Asthma Management</h3>
+                    <p className="text-white/80 text-sm">Respiratory emergencies & triggers</p>
+                  </div>
+                  <div className="bg-white p-7">
+                    <ul className="space-y-3">
+                      {["Recognise asthma symptoms and triggers", "Identify and avoid asthma triggers", "Assist someone experiencing an asthma attack", "Use asthma inhalers and spacer devices correctly", "Implement asthma management plans"].map((item) => (
+                        <li key={item} className="flex items-start gap-2.5">
+                          <CheckCircle2 className="w-4 h-4 text-[#3B3969] flex-shrink-0 mt-0.5" />
+                          <span className="text-[#64648c] text-sm leading-relaxed">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </div>
-              {/* Asthma column */}
-              <div className="rounded-2xl overflow-hidden border border-[#3B3969]/20 shadow-sm">
-                <div className="bg-gradient-to-br from-[#3B3969] to-[#2d2b5e] px-7 py-6">
-                  <div className="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center mb-4">
-                    <Wind className="w-5 h-5 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-1">Asthma Management</h3>
-                  <p className="text-white/80 text-sm">Respiratory emergencies & triggers</p>
-                </div>
-                <div className="bg-white p-7">
-                  <ul className="space-y-3">
-                    {["Recognise asthma symptoms and triggers", "Identify and avoid asthma triggers", "Assist someone experiencing an asthma attack", "Use asthma inhalers and spacer devices correctly", "Implement asthma management plans"].map((item) => (
-                      <li key={item} className="flex items-start gap-2.5">
-                        <CheckCircle2 className="w-4 h-4 text-[#3B3969] flex-shrink-0 mt-0.5" />
-                        <span className="text-[#64648c] text-sm leading-relaxed">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
             </Reveal>
           </div>
         </section>
@@ -138,22 +139,22 @@ export default function AnaphylaxisAsthmaTrainingPage() {
         <section className="py-12 md:py-16 bg-[#F7F7FA]">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <Reveal>
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#3B3969]/[0.07] text-[#3B3969] text-sm font-semibold mb-5">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#3B3969]" />Delivery Method
-            </span>
-            <h2 className="text-2xl md:text-3xl font-bold text-[#1a1a2e] mb-8">How This Training Is Delivered</h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="relative bg-gradient-to-br from-[#3B3969] to-[#1e1c3d] rounded-2xl p-8 text-white overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 rounded-full bg-white/[0.03] blur-2xl" />
-                <h3 className="text-xl font-semibold mb-3 relative">Face-to-face</h3>
-                <p className="text-white/70 leading-relaxed relative">Hands-on practical training delivered at your school or childcare centre by experienced trainers.</p>
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#3B3969]/[0.07] text-[#3B3969] text-sm font-semibold mb-5">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#3B3969]" />Delivery Method
+              </span>
+              <h2 className="text-2xl md:text-3xl font-bold text-[#1a1a2e] mb-8">How This Training Is Delivered</h2>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="relative bg-gradient-to-br from-[#3B3969] to-[#1e1c3d] rounded-2xl p-8 text-white overflow-hidden">
+                  <div className="absolute top-0 right-0 w-32 h-32 rounded-full bg-white/[0.03] blur-2xl" />
+                  <h3 className="text-xl font-semibold mb-3 relative">Face-to-face</h3>
+                  <p className="text-white/70 leading-relaxed relative">Hands-on practical training delivered at your school or childcare centre by experienced trainers.</p>
+                </div>
+                <div className="relative bg-gradient-to-br from-[#CB154E] to-[#a01040] rounded-2xl p-8 text-white overflow-hidden">
+                  <div className="absolute top-0 right-0 w-32 h-32 rounded-full bg-white/[0.03] blur-2xl" />
+                  <h3 className="text-xl font-semibold mb-3 relative">Blended Learning</h3>
+                  <p className="text-white/70 leading-relaxed relative">Online theory combined with a practical component for flexibility around school schedules.</p>
+                </div>
               </div>
-              <div className="relative bg-gradient-to-br from-[#CB154E] to-[#a01040] rounded-2xl p-8 text-white overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 rounded-full bg-white/[0.03] blur-2xl" />
-                <h3 className="text-xl font-semibold mb-3 relative">Blended Learning</h3>
-                <p className="text-white/70 leading-relaxed relative">Online theory combined with a practical component for flexibility around school schedules.</p>
-              </div>
-            </div>
             </Reveal>
           </div>
         </section>
@@ -162,18 +163,18 @@ export default function AnaphylaxisAsthmaTrainingPage() {
         <section className="py-12 md:py-16 bg-white">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <Reveal>
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#3B3969]/[0.07] text-[#3B3969] text-sm font-semibold mb-5">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#3B3969]" />Who Should Attend
-            </span>
-            <h2 className="text-2xl md:text-3xl font-bold text-[#1a1a2e] mb-8">Who Is This Training For?</h2>
-            <div className="flex flex-wrap gap-2.5">
-              {["Teachers and school staff", "Childcare educators", "Early childhood workers", "Education support workers", "School canteen staff", "Sports coaches in schools", "After-school care staff", "Any staff with duty of care for children"].map((item) => (
-                <span key={item} className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-[#F7F7FA] border border-[#E8E8F0] text-[#333333] font-medium text-sm hover:bg-[#CB154E]/[0.04] hover:border-[#CB154E]/30 transition-colors">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#CB154E] flex-shrink-0" />
-                  {item}
-                </span>
-              ))}
-            </div>
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#3B3969]/[0.07] text-[#3B3969] text-sm font-semibold mb-5">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#3B3969]" />Who Should Attend
+              </span>
+              <h2 className="text-2xl md:text-3xl font-bold text-[#1a1a2e] mb-8">Who Is This Training For?</h2>
+              <div className="flex flex-wrap gap-2.5">
+                {["Teachers and school staff", "Childcare educators", "Early childhood workers", "Education support workers", "School canteen staff", "Sports coaches in schools", "After-school care staff", "Any staff with duty of care for children"].map((item) => (
+                  <span key={item} className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-[#F7F7FA] border border-[#E8E8F0] text-[#333333] font-medium text-sm hover:bg-[#CB154E]/[0.04] hover:border-[#CB154E]/30 transition-colors">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#CB154E] flex-shrink-0" />
+                    {item}
+                  </span>
+                ))}
+              </div>
             </Reveal>
           </div>
         </section>
@@ -182,29 +183,21 @@ export default function AnaphylaxisAsthmaTrainingPage() {
         <section className="py-12 md:py-16" style={{ background: "linear-gradient(135deg, #3B3969 0%, #CB154E 70%, #a01040 100%)" }}>
           <div className="mx-auto max-w-7xl px-6 lg:px-12 text-center">
             <Reveal>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Book Anaphylaxis &amp; Asthma Training</h2>
-            <p className="text-white/70 text-lg mb-8 max-w-2xl mx-auto">Ensure your school or care centre team is prepared to respond to allergic and asthmatic emergencies.</p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <Button asChild className="bg-[#CB154E] hover:bg-[#CB154E]/90 text-white font-semibold px-8 py-3 h-auto rounded-xl shadow-lg">
-                <Link href="/book-training">Book Training <ArrowRight className="w-4 h-4 ml-2" /></Link>
-              </Button>
-              <Button asChild className="inline-flex items-center justify-center gap-2 border border-white/30 bg-transparent text-white hover:bg-white/10 hover:text-white font-semibold px-8 py-3 h-auto rounded-xl transition-colors duration-200">
-                <Link href="/contact"><Phone className="w-4 h-4 mr-2" />Contact Us</Link>
-              </Button>
-            </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Book Anaphylaxis &amp; Asthma Training</h2>
+              <p className="text-white/70 text-lg mb-8 max-w-2xl mx-auto">Ensure your school or care centre team is prepared to respond to allergic and asthmatic emergencies.</p>
+              <div className="flex flex-wrap gap-4 justify-center">
+                <Button asChild className="bg-[#CB154E] hover:bg-[#CB154E]/90 text-white font-semibold px-8 py-3 h-auto rounded-xl shadow-lg">
+                  <Link href="/book-training">Book Training <ArrowRight className="w-4 h-4 ml-2" /></Link>
+                </Button>
+                <Button asChild className="inline-flex items-center justify-center gap-2 border border-white/30 bg-transparent text-white hover:bg-white/10 hover:text-white font-semibold px-8 py-3 h-auto rounded-xl transition-colors duration-200">
+                  <Link href="/contact"><Phone className="w-4 h-4 mr-2" />Contact Us</Link>
+                </Button>
+              </div>
             </Reveal>
           </div>
         </section>
 
-        {/* RTO Compliance */}
-        <section className="py-10 md:py-14 bg-[#F7F7FA] border-t border-[#E8E8F0]">
-          <div className="mx-auto max-w-4xl px-6 lg:px-12 text-center">
-            <p className="text-[#64648c] text-sm leading-relaxed">
-              This training is delivered in partnership with{" "}
-              <strong className="text-[#1a1a2e]">Healthcorp (RTO 91222)</strong>, a Registered Training Organisation approved to deliver nationally recognised qualifications under the Australian Skills Quality Authority (ASQA).
-            </p>
-          </div>
-        </section>
+        <RTONotice />
 
         <NewsletterSection />
       </main>

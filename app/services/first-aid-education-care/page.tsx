@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button"
 import type { Metadata } from "next"
 import { Reveal } from "@/components/reveal"
 import { NationallyRecognisedBadge } from "@/components/nationally-recognised-badge"
+import { RTONotice } from "@/components/rto-notice"
 
 export const metadata: Metadata = {
   title: "HLTAID012 First Aid in Education & Care | First Aid Network Australia",
@@ -96,20 +97,20 @@ export default function FirstAidEducationCarePage() {
         <section className="py-14 bg-white">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <Reveal>
-            <div className="text-center mb-10">
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#CB154E]/[0.06] text-[#CB154E] text-sm font-semibold mb-4">
-                <Baby className="w-4 h-4" />Paediatric Emergencies Covered
-              </span>
-              <h2 className="text-2xl md:text-3xl font-bold text-[#1a1a2e]">Child-Specific Emergency Training</h2>
-            </div>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-              {paediatricTopics.map((t) => (
-                <div key={t.label} className="flex flex-col items-center gap-3 p-5 rounded-2xl bg-[#3B3969]/[0.04] border border-[#3B3969]/10 hover:border-[#CB154E]/30 hover:bg-[#CB154E]/[0.03] transition-colors">
-                  <span className="text-3xl">{t.icon}</span>
-                  <span className="text-sm font-semibold text-[#1a1a2e] text-center">{t.label}</span>
-                </div>
-              ))}
-            </div>
+              <div className="text-center mb-10">
+                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#CB154E]/[0.06] text-[#CB154E] text-sm font-semibold mb-4">
+                  <Baby className="w-4 h-4" />Paediatric Emergencies Covered
+                </span>
+                <h2 className="text-2xl md:text-3xl font-bold text-[#1a1a2e]">Child-Specific Emergency Training</h2>
+              </div>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                {paediatricTopics.map((t) => (
+                  <div key={t.label} className="flex flex-col items-center gap-3 p-5 rounded-2xl bg-[#3B3969]/[0.04] border border-[#3B3969]/10 hover:border-[#CB154E]/30 hover:bg-[#CB154E]/[0.03] transition-colors">
+                    <span className="text-3xl">{t.icon}</span>
+                    <span className="text-sm font-semibold text-[#1a1a2e] text-center">{t.label}</span>
+                  </div>
+                ))}
+              </div>
             </Reveal>
           </div>
         </section>
@@ -118,40 +119,40 @@ export default function FirstAidEducationCarePage() {
         <section className="py-12 md:py-16 bg-[#F7F7FA]">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <Reveal>
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#3B3969]/[0.07] text-[#3B3969] text-sm font-semibold mb-5">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#3B3969]" />Key Learning Outcomes
-            </span>
-            <h2 className="text-2xl md:text-3xl font-bold text-[#1a1a2e] mb-10">What You Will Learn</h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-white rounded-2xl p-8 border border-[#E8E8F0] shadow-sm">
-                <div className="w-10 h-10 rounded-xl bg-[#CB154E]/10 flex items-center justify-center mb-5">
-                  <Baby className="w-5 h-5 text-[#CB154E]" />
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#3B3969]/[0.07] text-[#3B3969] text-sm font-semibold mb-5">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#3B3969]" />Key Learning Outcomes
+              </span>
+              <h2 className="text-2xl md:text-3xl font-bold text-[#1a1a2e] mb-10">What You Will Learn</h2>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="bg-white rounded-2xl p-8 border border-[#E8E8F0] shadow-sm">
+                  <div className="w-10 h-10 rounded-xl bg-[#CB154E]/10 flex items-center justify-center mb-5">
+                    <Baby className="w-5 h-5 text-[#CB154E]" />
+                  </div>
+                  <h3 className="text-base font-bold text-[#1a1a2e] mb-4">Child &amp; Infant Emergencies</h3>
+                  <ul className="space-y-3">
+                    {["Infant and child CPR", "Childhood choking emergencies", "Asthma management in children", "Anaphylaxis and severe allergic reactions", "Febrile seizures", "Head injuries and falls in children", "Burns, scalds and fractures"].map((item) => (
+                      <li key={item} className="flex items-start gap-2.5">
+                        <CheckCircle2 className="w-4 h-4 text-[#CB154E] flex-shrink-0 mt-0.5" />
+                        <span className="text-[#64648c] text-sm leading-relaxed">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <h3 className="text-base font-bold text-[#1a1a2e] mb-4">Child &amp; Infant Emergencies</h3>
-                <ul className="space-y-3">
-                  {["Infant and child CPR", "Childhood choking emergencies", "Asthma management in children", "Anaphylaxis and severe allergic reactions", "Febrile seizures", "Head injuries and falls in children", "Burns, scalds and fractures"].map((item) => (
-                    <li key={item} className="flex items-start gap-2.5">
-                      <CheckCircle2 className="w-4 h-4 text-[#CB154E] flex-shrink-0 mt-0.5" />
-                      <span className="text-[#64648c] text-sm leading-relaxed">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="bg-white rounded-2xl p-8 border border-[#E8E8F0] shadow-sm">
-                <div className="w-10 h-10 rounded-xl bg-[#3B3969]/10 flex items-center justify-center mb-5">
-                  <GraduationCap className="w-5 h-5 text-[#3B3969]" />
+                <div className="bg-white rounded-2xl p-8 border border-[#E8E8F0] shadow-sm">
+                  <div className="w-10 h-10 rounded-xl bg-[#3B3969]/10 flex items-center justify-center mb-5">
+                    <GraduationCap className="w-5 h-5 text-[#3B3969]" />
+                  </div>
+                  <h3 className="text-base font-bold text-[#1a1a2e] mb-4">Risk Management in Education Settings</h3>
+                  <ul className="space-y-3">
+                    {["Duty of care responsibilities", "Managing medical conditions in childcare", "Incident reporting and documentation", "Infection control in childcare environments", "Managing emergencies during excursions"].map((item) => (
+                      <li key={item} className="flex items-start gap-2.5">
+                        <CheckCircle2 className="w-4 h-4 text-[#CB154E] flex-shrink-0 mt-0.5" />
+                        <span className="text-[#64648c] text-sm leading-relaxed">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <h3 className="text-base font-bold text-[#1a1a2e] mb-4">Risk Management in Education Settings</h3>
-                <ul className="space-y-3">
-                  {["Duty of care responsibilities", "Managing medical conditions in childcare", "Incident reporting and documentation", "Infection control in childcare environments", "Managing emergencies during excursions"].map((item) => (
-                    <li key={item} className="flex items-start gap-2.5">
-                      <CheckCircle2 className="w-4 h-4 text-[#CB154E] flex-shrink-0 mt-0.5" />
-                      <span className="text-[#64648c] text-sm leading-relaxed">{item}</span>
-                    </li>
-                  ))}
-                </ul>
               </div>
-            </div>
             </Reveal>
           </div>
         </section>
@@ -163,27 +164,27 @@ export default function FirstAidEducationCarePage() {
           <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-[#3B3969]/5 blur-3xl" />
           <div className="relative mx-auto max-w-7xl px-6 lg:px-12">
             <Reveal>
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#CB154E]/10 text-[#CB154E] text-sm font-semibold mb-5 border border-[#CB154E]/20">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#CB154E]" />Delivery Method
-            </span>
-            <h2 className="text-2xl md:text-3xl font-bold text-[#1a1a2e] mb-4">How This Training Is Delivered</h2>
-            <p className="text-[#64648c] text-base leading-relaxed mb-8 max-w-2xl">We deliver the HLTAID012 course in formats that suit education and care settings, with practical components essential for compliance.</p>
-            <div className="grid sm:grid-cols-2 gap-4 max-w-2xl">
-              <div className="bg-white rounded-2xl p-6 border border-gray-200 hover:shadow-lg hover:border-[#CB154E]/40 transition-all duration-300">
-                <div className="w-8 h-8 rounded-lg bg-[#3B3969] flex items-center justify-center mb-4 hover:bg-[#CB154E] transition-colors duration-300">
-                  <Users className="w-4 h-4 text-white" />
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#CB154E]/10 text-[#CB154E] text-sm font-semibold mb-5 border border-[#CB154E]/20">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#CB154E]" />Delivery Method
+              </span>
+              <h2 className="text-2xl md:text-3xl font-bold text-[#1a1a2e] mb-4">How This Training Is Delivered</h2>
+              <p className="text-[#64648c] text-base leading-relaxed mb-8 max-w-2xl">We deliver the HLTAID012 course in formats that suit education and care settings, with practical components essential for compliance.</p>
+              <div className="grid sm:grid-cols-2 gap-4 max-w-2xl">
+                <div className="bg-white rounded-2xl p-6 border border-gray-200 hover:shadow-lg hover:border-[#CB154E]/40 transition-all duration-300">
+                  <div className="w-8 h-8 rounded-lg bg-[#3B3969] flex items-center justify-center mb-4 hover:bg-[#CB154E] transition-colors duration-300">
+                    <Users className="w-4 h-4 text-white" />
+                  </div>
+                  <h3 className="text-[#1a1a2e] font-semibold mb-2">Face-to-face</h3>
+                  <p className="text-[#64648c] text-sm leading-relaxed">Full practical training delivered at your education setting or training facility.</p>
                 </div>
-                <h3 className="text-[#1a1a2e] font-semibold mb-2">Face-to-face</h3>
-                <p className="text-[#64648c] text-sm leading-relaxed">Full practical training delivered at your education setting or training facility.</p>
-              </div>
-              <div className="bg-white rounded-2xl p-6 border border-gray-200 hover:shadow-lg hover:border-[#CB154E]/40 transition-all duration-300">
-                <div className="w-8 h-8 rounded-lg bg-[#CB154E] flex items-center justify-center mb-4">
-                  <BookOpen className="w-4 h-4 text-white" />
+                <div className="bg-white rounded-2xl p-6 border border-gray-200 hover:shadow-lg hover:border-[#CB154E]/40 transition-all duration-300">
+                  <div className="w-8 h-8 rounded-lg bg-[#CB154E] flex items-center justify-center mb-4">
+                    <BookOpen className="w-4 h-4 text-white" />
+                  </div>
+                  <h3 className="text-[#1a1a2e] font-semibold mb-2">Blended Learning</h3>
+                  <p className="text-[#64648c] text-sm leading-relaxed">Online theory with in-person practical assessment, ideal for busy educators.</p>
                 </div>
-                <h3 className="text-[#1a1a2e] font-semibold mb-2">Blended Learning</h3>
-                <p className="text-[#64648c] text-sm leading-relaxed">Online theory with in-person practical assessment, ideal for busy educators.</p>
               </div>
-            </div>
             </Reveal>
           </div>
         </section>
@@ -192,18 +193,18 @@ export default function FirstAidEducationCarePage() {
         <section className="py-12 md:py-16 bg-white relative overflow-hidden">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <Reveal>
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#3B3969]/[0.07] text-[#3B3969] text-sm font-semibold mb-5">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#3B3969]" />Who Should Attend
-            </span>
-            <h2 className="text-2xl md:text-3xl font-bold text-[#1a1a2e] mb-8">Who Is This Training For?</h2>
-            <div className="flex flex-wrap gap-2.5">
-              {["Childcare educators", "Early childhood workers", "Teachers and school staff", "Education support workers", "Preschool staff", "Family day care providers", "Out-of-school-hours care staff", "Anyone working with children"].map((item) => (
-                <span key={item} className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-[#F7F7FA] border border-[#E8E8F0] text-[#333333] font-medium text-sm hover:bg-[#3B3969]/[0.04] hover:border-[#3B3969]/20 transition-colors">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#CB154E] flex-shrink-0" />
-                  {item}
-                </span>
-              ))}
-            </div>
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#3B3969]/[0.07] text-[#3B3969] text-sm font-semibold mb-5">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#3B3969]" />Who Should Attend
+              </span>
+              <h2 className="text-2xl md:text-3xl font-bold text-[#1a1a2e] mb-8">Who Is This Training For?</h2>
+              <div className="flex flex-wrap gap-2.5">
+                {["Childcare educators", "Early childhood workers", "Teachers and school staff", "Education support workers", "Preschool staff", "Family day care providers", "Out-of-school-hours care staff", "Anyone working with children"].map((item) => (
+                  <span key={item} className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-[#F7F7FA] border border-[#E8E8F0] text-[#333333] font-medium text-sm hover:bg-[#3B3969]/[0.04] hover:border-[#3B3969]/20 transition-colors">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#CB154E] flex-shrink-0" />
+                    {item}
+                  </span>
+                ))}
+              </div>
             </Reveal>
           </div>
         </section>
@@ -212,40 +213,36 @@ export default function FirstAidEducationCarePage() {
         <section className="py-12 md:py-16" style={{ background: "linear-gradient(135deg, #3B3969 0%, #2d2b5e 60%, #1a1a2e 100%)" }}>
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <Reveal>
-            <div className="grid lg:grid-cols-2 gap-10 items-center">
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Book Education &amp; Care First Aid Training?</h2>
-                <p className="text-white/70 text-lg leading-relaxed mb-8">Equip your team with the required qualification for educators in regulated care settings.</p>
-                <div className="flex flex-wrap gap-4">
-                  <Button asChild className="bg-[#CB154E] hover:bg-[#CB154E]/90 text-white font-semibold px-8 py-3 h-auto rounded-xl shadow-lg">
-                    <Link href="/book-training">Book Training <ArrowRight className="w-4 h-4 ml-2" /></Link>
-                  </Button>
-                  <Button asChild className="inline-flex items-center justify-center gap-2 border border-white/30 bg-transparent text-white hover:bg-white/10 hover:text-white font-semibold px-8 py-3 h-auto rounded-xl transition-colors duration-200">
-                    <Link href="/contact"><Phone className="w-4 h-4 mr-2" />Contact Us</Link>
-                  </Button>
+              <div className="grid lg:grid-cols-2 gap-10 items-center">
+                <div>
+                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Book Education &amp; Care First Aid Training?</h2>
+                  <p className="text-white/70 text-lg leading-relaxed mb-8">Equip your team with the required qualification for educators in regulated care settings.</p>
+                  <div className="flex flex-wrap gap-4">
+                    <Button asChild className="bg-[#CB154E] hover:bg-[#CB154E]/90 text-white font-semibold px-8 py-3 h-auto rounded-xl shadow-lg">
+                      <Link href="/book-training">Book Training <ArrowRight className="w-4 h-4 ml-2" /></Link>
+                    </Button>
+                    <Button asChild className="inline-flex items-center justify-center gap-2 border border-white/30 bg-transparent text-white hover:bg-white/10 hover:text-white font-semibold px-8 py-3 h-auto rounded-xl transition-colors duration-200">
+                      <Link href="/contact"><Phone className="w-4 h-4 mr-2" />Contact Us</Link>
+                    </Button>
+                  </div>
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  {[{ label: "Nationally Recognised", sub: "HLTAID012 qualification" }, { label: "RTO Partner", sub: "Healthcorp (RTO 91222)" }, { label: "All Formats", sub: "F2F & Blended options" }, { label: "Education Sector", sub: "Childcare & school focus" }].map((s) => (
+                    <div key={s.label} className="bg-white/[0.08] rounded-2xl p-5 border border-white/10">
+                      <div className="text-white font-bold text-sm mb-1">{s.label}</div>
+                      <div className="text-white/60 text-xs">{s.sub}</div>
+                    </div>
+                  ))}
                 </div>
               </div>
-              <div className="grid grid-cols-2 gap-4">
-                {[{ label: "Nationally Recognised", sub: "HLTAID012 qualification" }, { label: "RTO Partner", sub: "Healthcorp (RTO 91222)" }, { label: "All Formats", sub: "F2F & Blended options" }, { label: "Education Sector", sub: "Childcare & school focus" }].map((s) => (
-                  <div key={s.label} className="bg-white/[0.08] rounded-2xl p-5 border border-white/10">
-                    <div className="text-white font-bold text-sm mb-1">{s.label}</div>
-                    <div className="text-white/60 text-xs">{s.sub}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
             </Reveal>
           </div>
         </section>
 
-        {/* RTO Compliance */}
-        <section className="py-10 md:py-14 bg-[#F7F7FA] border-t border-[#E8E8F0]">
-          <div className="mx-auto max-w-4xl px-6 lg:px-12 text-center">
-            <p className="text-[#64648c] text-sm leading-relaxed">
-              This training is delivered in partnership with Healthcorp (RTO 91222), a Registered Training Organisation approved to deliver nationally recognised qualifications under the Australian Skills Quality Authority (ASQA). Upon successful completion of this course, participants will receive the nationally recognised unit of competency <strong className="text-[#1a1a2e]">HLTAID012 — Provide First Aid in an Education and Care Setting</strong>, issued by Healthcorp (RTO 91222).
-            </p>
-          </div>
-        </section>
+        <RTONotice
+          courseCode="HLTAID012"
+          courseTitle="Provide First Aid in an Education and Care Setting"
+        />
 
         <NewsletterSection />
       </main>

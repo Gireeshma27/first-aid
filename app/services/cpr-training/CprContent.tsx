@@ -5,6 +5,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Heart, Users, Clock, Phone, ArrowRight, Shield, Activity, Zap, Monitor, CheckCircle2 } from "lucide-react"
 import { NationallyRecognisedBadge } from "@/components/nationally-recognised-badge"
+import { RTONotice } from "@/components/rto-notice"
 import { Button } from "@/components/ui/button"
 import { NewsletterSection } from "@/sections/newsletter"
 import {
@@ -79,16 +80,16 @@ function Reveal({
 ───────────────────────────────────────────── */
 const drsabcd: { letter: string; icon: IconType; accent: string; label: string; desc: string }[] = [
   { letter: "D", icon: FiAlertOctagon, accent: "#CB154E", label: "Danger", desc: "Ensure the scene is safe for you, bystanders and the casualty before approaching" },
-  { letter: "R", icon: FiUser, accent: "#3B3969", label: "Response", desc: "Check consciousness — call their name and squeeze their shoulders firmly" },
+  { letter: "R", icon: FiUser, accent: "#3B3969", label: "Response", desc: "Check consciousness, call their name and squeeze their shoulders firmly" },
   { letter: "S", icon: FiPhoneCall, accent: "#CB154E", label: "Send Help", desc: "Call 000 or ask a bystander to call. Confirm the ambulance is dispatched" },
   { letter: "A", icon: FiWind, accent: "#3B3969", label: "Airway", desc: "Head-tilt chin-lift to open the airway. Remove any visible obstructions" },
-  { letter: "B", icon: FiActivity, accent: "#CB154E", label: "Breathing", desc: "Look, listen and feel for normal breathing — assess for no more than 10 seconds" },
+  { letter: "B", icon: FiActivity, accent: "#CB154E", label: "Breathing", desc: "Look, listen and feel for normal breathing, assess for no more than 10 seconds" },
   { letter: "C", icon: FiHeart, accent: "#3B3969", label: "CPR", desc: "30 compressions then 2 rescue breaths. Push hard & fast at 100–120 per minute" },
   { letter: "D", icon: FiZap, accent: "#CB154E", label: "Defib", desc: "Attach an AED as soon as possible and follow the voice and visual prompts" },
 ]
 
 const cprSkills: { icon: IconType; text: string }[] = [
-  { icon: FiHeart, text: "Perform effective adult CPR — 30:2 ratio, 100–120 compressions per minute" },
+  { icon: FiHeart, text: "Perform effective adult CPR, 30:2 ratio, 100–120 compressions per minute" },
   { icon: FiUser, text: "Perform infant and child CPR with the correct modified technique" },
   { icon: FiZap, text: "Safely operate an Automated External Defibrillator (AED)" },
   { icon: FiActivity, text: "Place a casualty into the lateral (recovery) position" },
@@ -322,7 +323,7 @@ export default function CprContent() {
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-[#1a1a2e]">How Training Is Delivered</h2>
             <p className="text-[#64648c] mt-3 max-w-xl">
-              Choose the format that suits your team — full hands-on session or flexible blended learning.
+              Choose the format that suits your team, whether a full hands-on session or flexible blended learning.
             </p>
           </Reveal>
 
@@ -377,7 +378,7 @@ export default function CprContent() {
               </p>
               <ul className="space-y-2.5">
                 {[
-                  "Online theory — self-paced, anytime",
+                  "Online theory, self-paced, anytime",
                   "Shorter in-person practical (~2 hours)",
                   "Perfect for remote or dispersed teams",
                   "Same nationally recognised outcome",
@@ -485,15 +486,12 @@ export default function CprContent() {
       </section>
 
       {/* ── RTO COMPLIANCE ── */}
-      <section className="py-10 md:py-14 bg-[#F7F7FA] border-t border-[#E8E8F0]">
-        <div className="mx-auto max-w-4xl px-6 lg:px-12 text-center">
-          <p className="text-[#64648c] text-sm leading-relaxed">
-            This training is delivered in partnership with Healthcorp (RTO 91222), a Registered Training Organisation approved to deliver nationally recognised qualifications under the Australian Skills Quality Authority (ASQA). Upon successful completion of this course, participants will receive the nationally recognised unit of competency <strong className="text-[#1a1a2e]">HLTAID009 — Provide Cardiopulmonary Resuscitation</strong>, issued by Healthcorp (RTO 91222).
-          </p>
-        </div>
-      </section>
+      <RTONotice
+        courseCode="HLTAID009"
+        courseTitle="Provide Cardiopulmonary Resuscitation"
+      />
 
-      {/* ── NEWSLETTER (light theme — separated from footer) ── */}
+      {/* ── NEWSLETTER ── */}
       <NewsletterSection lightTheme />
     </>
   )
