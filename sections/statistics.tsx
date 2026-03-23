@@ -98,7 +98,7 @@ export function StatisticsSection() {
   }, [])
 
   return (
-    <section className="relative pt-6 pb-12 md:pt-8 md:pb-16 bg-[#F5F5F5] overflow-hidden">
+    <section className="relative pt-6 pb-12 md:pt-8 md:pb-16 bg-[#F5F5F5] overflow-hidden -mt-px">
       {/* Subtle animated background elements */}
       <div className="absolute inset-0 pointer-events-none" style={{
         background: 'radial-gradient(circle at 20% 50%, rgba(203,21,78,0.04) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(59,57,105,0.04) 0%, transparent 50%)',
