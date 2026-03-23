@@ -51,7 +51,7 @@ const benefits = [
   {
     icon: Users,
     title: "Any Group Size",
-    desc: "From small teams to large corporate events — fully flexible.",
+    desc: "From small teams to large corporate events, fully flexible.",
   },
   {
     icon: CalendarCheck,
@@ -162,7 +162,7 @@ export default function BookTrainingPage() {
               </span>
             </h1>
             <p className="text-lg text-white/75 leading-relaxed max-w-2xl mx-auto mb-10">
-              Workplace, school, or community — our certified trainers come to you. Fill in the form and our team will tailor a program around your needs.
+              Workplace, school, or community. Our certified trainers come to you. Fill in the form and our team will tailor a program around your needs.
             </p>
 
             {/* Stats row */}
@@ -225,7 +225,7 @@ export default function BookTrainingPage() {
                     ))}
                   </div>
                   <blockquote className="relative text-white/90 text-sm leading-relaxed font-medium italic mb-4">
-                    &ldquo;The trainer was fantastic — engaging, knowledgeable, and incredibly professional. Our whole team felt confident after the session.&rdquo;
+                    &ldquo;The trainer was fantastic, engaging, knowledgeable, and incredibly professional. Our whole team felt confident after the session.&rdquo;
                   </blockquote>
                   <div className="flex items-center gap-3">
                     <div className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white font-bold text-sm">
@@ -297,7 +297,7 @@ export default function BookTrainingPage() {
                     <div className="bg-gradient-to-r from-[#3B3969] to-[#4e4a8a] px-8 py-6">
                       <h2 className="text-xl font-bold text-white">Training Request Form</h2>
                       <p className="text-white/60 text-sm mt-1">
-                        Fill in your details — we&apos;ll handle the rest.
+                        Fill in your details and we&apos;ll handle the rest.
                       </p>
                     </div>
 

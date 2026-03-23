@@ -105,17 +105,17 @@ export function StatisticsSection() {
         animation: 'subtleFloat 8s ease-in-out infinite'
       }} />
       <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
-        
+
         {/* Section Header */}
         <Reveal>
-        <div className="text-center mb-8 max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#3B3969] mb-3 tracking-tight">
-            Why First Aid Matters
-          </h2>
-          <p className="text-lg text-gray-600 leading-relaxed">
-            Learning CPR and first aid empowers individuals to take action during critical moments when every second counts.
-          </p>
-        </div>
+          <div className="text-center mb-8 max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#3B3969] mb-3 tracking-tight">
+              Why First Aid Matters
+            </h2>
+            <p className="text-lg text-gray-600 leading-relaxed">
+              Learning CPR and first aid empowers individuals to take action during critical moments when every second counts.
+            </p>
+          </div>
         </Reveal>
 
         {/* Stats Cards Grid */}
@@ -145,15 +145,15 @@ export function StatisticsSection() {
 
         {/* View Statistics Button */}
         <Reveal delay={100}>
-        <div className="flex justify-center">
-          <a
-            href="/statistics"
-            className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-[#CB154E] hover:bg-[#CB154E]/90 text-white font-semibold transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
-          >
-            View Statistics
-            <ArrowRight className="w-5 h-5" />
-          </a>
-        </div>
+          <div className="flex justify-center">
+            <a
+              href="/statistics"
+              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-[#CB154E] hover:bg-[#CB154E]/90 text-white font-semibold transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+            >
+              View Statistics
+              <ArrowRight className="w-5 h-5" />
+            </a>
+          </div>
         </Reveal>
       </div>
     </section>

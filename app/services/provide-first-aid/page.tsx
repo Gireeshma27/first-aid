@@ -8,6 +8,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Reveal } from "@/components/reveal"
 import { NationallyRecognisedBadge } from "@/components/nationally-recognised-badge"
+import { RTONotice } from "@/components/rto-notice"
 
 export const metadata = {
   title: "HLTAID011 Provide First Aid | First Aid Network Australia",
@@ -109,17 +110,17 @@ export default function ProvideFirstAidPage() {
         <section className="py-12 md:py-16 bg-white overflow-hidden">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <Reveal>
-            <div className="text-center mb-10">
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#CB154E]/[0.06] text-[#CB154E] text-sm font-semibold mb-4">
-                <AlertTriangle className="w-4 h-4" />What You&apos;ll Be Ready For
-              </span>
-              <h2 className="text-2xl md:text-3xl font-bold text-[#1a1a2e]">Medical Emergencies Covered</h2>
-            </div>
+              <div className="text-center mb-10">
+                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#CB154E]/[0.06] text-[#CB154E] text-sm font-semibold mb-4">
+                  <AlertTriangle className="w-4 h-4" />What You&apos;ll Be Ready For
+                </span>
+                <h2 className="text-2xl md:text-3xl font-bold text-[#1a1a2e]">Medical Emergencies Covered</h2>
+              </div>
             </Reveal>
           </div>
           <Reveal delay={100}>
-          <div className="relative">
-            <style>{`
+            <div className="relative">
+              <style>{`
               @keyframes scrollCards {
                 0% { transform: translateX(0); }
                 100% { transform: translateX(-50%); }
@@ -134,21 +135,21 @@ export default function ProvideFirstAidPage() {
                 animation-play-state: paused;
               }
             `}</style>
-            <div className="scroll-track">
-              {[...emergencies, ...emergencies].map(({ icon: Icon, label, desc }, i) => {
-                const color = cardColors[i % cardColors.length]
-                return (
-                  <div key={`${label}-${i}`} className={`flex-shrink-0 w-[260px] ${color.bg} rounded-2xl p-5 border border-transparent hover:shadow-lg transition-shadow duration-300`}>
-                    <div className={`w-11 h-11 rounded-xl ${color.iconBg} flex items-center justify-center mb-3`}>
-                      <Icon className={`w-5 h-5 ${color.iconColor}`} />
+              <div className="scroll-track">
+                {[...emergencies, ...emergencies].map(({ icon: Icon, label, desc }, i) => {
+                  const color = cardColors[i % cardColors.length]
+                  return (
+                    <div key={`${label}-${i}`} className={`flex-shrink-0 w-[260px] ${color.bg} rounded-2xl p-5 border border-transparent hover:shadow-lg transition-shadow duration-300`}>
+                      <div className={`w-11 h-11 rounded-xl ${color.iconBg} flex items-center justify-center mb-3`}>
+                        <Icon className={`w-5 h-5 ${color.iconColor}`} />
+                      </div>
+                      <h3 className="text-sm font-bold text-[#1a1a2e] mb-1.5">{label}</h3>
+                      <p className="text-xs text-[#64648c] leading-relaxed">{desc}</p>
                     </div>
-                    <h3 className="text-sm font-bold text-[#1a1a2e] mb-1.5">{label}</h3>
-                    <p className="text-xs text-[#64648c] leading-relaxed">{desc}</p>
-                  </div>
-                )
-              })}
+                  )
+                })}
+              </div>
             </div>
-          </div>
           </Reveal>
         </section>
 
@@ -156,56 +157,56 @@ export default function ProvideFirstAidPage() {
         <section className="py-12 md:py-16 bg-[#F7F7FA]">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <Reveal>
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#3B3969]/[0.07] text-[#3B3969] text-sm font-semibold mb-5">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#3B3969]" />Key Learning Outcomes
-            </span>
-            <h2 className="text-2xl md:text-3xl font-bold text-[#1a1a2e] mb-10">What You Will Learn</h2>
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#3B3969]/[0.07] text-[#3B3969] text-sm font-semibold mb-5">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#3B3969]" />Key Learning Outcomes
+              </span>
+              <h2 className="text-2xl md:text-3xl font-bold text-[#1a1a2e] mb-10">What You Will Learn</h2>
             </Reveal>
             <Reveal delay={100}>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-white rounded-2xl p-7 border border-[#E8E8F0] shadow-sm">
-                <div className="w-10 h-10 rounded-xl bg-[#3B3969]/10 flex items-center justify-center mb-5">
-                  <ShieldPlus className="w-5 h-5 text-[#3B3969]" />
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="bg-white rounded-2xl p-7 border border-[#E8E8F0] shadow-sm">
+                  <div className="w-10 h-10 rounded-xl bg-[#3B3969]/10 flex items-center justify-center mb-5">
+                    <ShieldPlus className="w-5 h-5 text-[#3B3969]" />
+                  </div>
+                  <h3 className="text-base font-bold text-[#1a1a2e] mb-4">Core Skills</h3>
+                  <ul className="space-y-3">
+                    {["Assess emergencies using DRSABCD", "CPR for adults, children & infants", "Use an Automated External Defibrillator (AED)", "Manage casualties until help arrives", "Duty of care and legal principles"].map((item) => (
+                      <li key={item} className="flex items-start gap-2.5">
+                        <CheckCircle2 className="w-4 h-4 text-[#CB154E] flex-shrink-0 mt-0.5" />
+                        <span className="text-[#64648c] text-sm leading-relaxed">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <h3 className="text-base font-bold text-[#1a1a2e] mb-4">Core Skills</h3>
-                <ul className="space-y-3">
-                  {["Assess emergencies using DRSABCD", "CPR for adults, children & infants", "Use an Automated External Defibrillator (AED)", "Manage casualties until help arrives", "Duty of care and legal principles"].map((item) => (
-                    <li key={item} className="flex items-start gap-2.5">
-                      <CheckCircle2 className="w-4 h-4 text-[#CB154E] flex-shrink-0 mt-0.5" />
-                      <span className="text-[#64648c] text-sm leading-relaxed">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="bg-white rounded-2xl p-7 border border-[#E8E8F0] shadow-sm">
-                <div className="w-10 h-10 rounded-xl bg-[#CB154E]/10 flex items-center justify-center mb-5">
-                  <AlertTriangle className="w-5 h-5 text-[#CB154E]" />
+                <div className="bg-white rounded-2xl p-7 border border-[#E8E8F0] shadow-sm">
+                  <div className="w-10 h-10 rounded-xl bg-[#CB154E]/10 flex items-center justify-center mb-5">
+                    <AlertTriangle className="w-5 h-5 text-[#CB154E]" />
+                  </div>
+                  <h3 className="text-base font-bold text-[#1a1a2e] mb-4">Medical Emergencies</h3>
+                  <ul className="space-y-3">
+                    {["Heart attack and stroke", "Anaphylaxis and severe allergic reactions", "Asthma attacks", "Seizures and diabetic emergencies", "Shock, unconsciousness and fainting"].map((item) => (
+                      <li key={item} className="flex items-start gap-2.5">
+                        <CheckCircle2 className="w-4 h-4 text-[#CB154E] flex-shrink-0 mt-0.5" />
+                        <span className="text-[#64648c] text-sm leading-relaxed">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <h3 className="text-base font-bold text-[#1a1a2e] mb-4">Medical Emergencies</h3>
-                <ul className="space-y-3">
-                  {["Heart attack and stroke", "Anaphylaxis and severe allergic reactions", "Asthma attacks", "Seizures and diabetic emergencies", "Shock, unconsciousness and fainting"].map((item) => (
-                    <li key={item} className="flex items-start gap-2.5">
-                      <CheckCircle2 className="w-4 h-4 text-[#CB154E] flex-shrink-0 mt-0.5" />
-                      <span className="text-[#64648c] text-sm leading-relaxed">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="bg-white rounded-2xl p-7 border border-[#E8E8F0] shadow-sm">
-                <div className="w-10 h-10 rounded-xl bg-[#3B3969]/10 flex items-center justify-center mb-5">
-                  <BookOpen className="w-5 h-5 text-[#3B3969]" />
+                <div className="bg-white rounded-2xl p-7 border border-[#E8E8F0] shadow-sm">
+                  <div className="w-10 h-10 rounded-xl bg-[#3B3969]/10 flex items-center justify-center mb-5">
+                    <BookOpen className="w-5 h-5 text-[#3B3969]" />
+                  </div>
+                  <h3 className="text-base font-bold text-[#1a1a2e] mb-4">Injury Management</h3>
+                  <ul className="space-y-3">
+                    {["Severe bleeding and wound care", "Burns and scalds", "Fractures and sprains", "Head and spinal injuries", "Poisoning, bites and marine stings"].map((item) => (
+                      <li key={item} className="flex items-start gap-2.5">
+                        <CheckCircle2 className="w-4 h-4 text-[#CB154E] flex-shrink-0 mt-0.5" />
+                        <span className="text-[#64648c] text-sm leading-relaxed">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <h3 className="text-base font-bold text-[#1a1a2e] mb-4">Injury Management</h3>
-                <ul className="space-y-3">
-                  {["Severe bleeding and wound care", "Burns and scalds", "Fractures and sprains", "Head and spinal injuries", "Poisoning, bites and marine stings"].map((item) => (
-                    <li key={item} className="flex items-start gap-2.5">
-                      <CheckCircle2 className="w-4 h-4 text-[#CB154E] flex-shrink-0 mt-0.5" />
-                      <span className="text-[#64648c] text-sm leading-relaxed">{item}</span>
-                    </li>
-                  ))}
-                </ul>
               </div>
-            </div>
             </Reveal>
           </div>
         </section>
@@ -218,35 +219,35 @@ export default function ProvideFirstAidPage() {
           <div className="relative mx-auto max-w-7xl px-6 lg:px-12">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <Reveal>
-              <div>
-                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#CB154E]/10 text-[#CB154E] text-sm font-semibold mb-5 border border-[#CB154E]/20">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#CB154E]" />Delivery Method
-                </span>
-                <h2 className="text-2xl md:text-3xl font-bold text-[#1a1a2e] mb-4">How This Training Is Delivered</h2>
-                <p className="text-[#64648c] text-base leading-relaxed mb-8">We deliver HLTAID011 in formats that work for your situation — whether you need a full day at your workplace or the flexibility of online theory with in-person assessment.</p>
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <div className="bg-white rounded-2xl p-6 border border-gray-200 hover:shadow-lg hover:border-[#CB154E]/40 transition-all duration-300">
-                    <div className="w-8 h-8 rounded-lg bg-[#3B3969] flex items-center justify-center mb-4 hover:bg-[#CB154E] transition-colors duration-300">
-                      <Users className="w-4 h-4 text-white" />
+                <div>
+                  <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#CB154E]/10 text-[#CB154E] text-sm font-semibold mb-5 border border-[#CB154E]/20">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#CB154E]" />Delivery Method
+                  </span>
+                  <h2 className="text-2xl md:text-3xl font-bold text-[#1a1a2e] mb-4">How This Training Is Delivered</h2>
+                  <p className="text-[#64648c] text-base leading-relaxed mb-8">We deliver HLTAID011 in formats that work for your situation, whether you need a full day at your workplace or the flexibility of online theory with in-person assessment.</p>
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    <div className="bg-white rounded-2xl p-6 border border-gray-200 hover:shadow-lg hover:border-[#CB154E]/40 transition-all duration-300">
+                      <div className="w-8 h-8 rounded-lg bg-[#3B3969] flex items-center justify-center mb-4 hover:bg-[#CB154E] transition-colors duration-300">
+                        <Users className="w-4 h-4 text-white" />
+                      </div>
+                      <h3 className="text-[#1a1a2e] font-semibold mb-2">Face-to-face</h3>
+                      <p className="text-[#64648c] text-sm leading-relaxed">Full day practical training at your workplace or our training facility.</p>
                     </div>
-                    <h3 className="text-[#1a1a2e] font-semibold mb-2">Face-to-face</h3>
-                    <p className="text-[#64648c] text-sm leading-relaxed">Full day practical training at your workplace or our training facility.</p>
-                  </div>
-                  <div className="bg-white rounded-2xl p-6 border border-gray-200 hover:shadow-lg hover:border-[#CB154E]/40 transition-all duration-300">
-                    <div className="w-8 h-8 rounded-lg bg-[#CB154E] flex items-center justify-center mb-4">
-                      <BookOpen className="w-4 h-4 text-white" />
+                    <div className="bg-white rounded-2xl p-6 border border-gray-200 hover:shadow-lg hover:border-[#CB154E]/40 transition-all duration-300">
+                      <div className="w-8 h-8 rounded-lg bg-[#CB154E] flex items-center justify-center mb-4">
+                        <BookOpen className="w-4 h-4 text-white" />
+                      </div>
+                      <h3 className="text-[#1a1a2e] font-semibold mb-2">Blended Learning</h3>
+                      <p className="text-[#64648c] text-sm leading-relaxed">Online theory combined with in-person practical assessment.</p>
                     </div>
-                    <h3 className="text-[#1a1a2e] font-semibold mb-2">Blended Learning</h3>
-                    <p className="text-[#64648c] text-sm leading-relaxed">Online theory combined with in-person practical assessment.</p>
                   </div>
                 </div>
-              </div>
               </Reveal>
               <Reveal delay={100}>
-              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
-                <Image src="/images/cpr-classroom.png" alt="First aid training delivery" fill loading="eager" sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a2e]/40 via-transparent to-transparent" />
-              </div>
+                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
+                  <Image src="/images/cpr-classroom.png" alt="First aid training delivery" fill loading="eager" sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a2e]/40 via-transparent to-transparent" />
+                </div>
               </Reveal>
             </div>
           </div>
@@ -256,20 +257,20 @@ export default function ProvideFirstAidPage() {
         <section className="py-12 md:py-16 bg-white relative overflow-hidden">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <Reveal>
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#3B3969]/[0.07] text-[#3B3969] text-sm font-semibold mb-5">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#3B3969]" />Who Should Attend
-            </span>
-            <h2 className="text-2xl md:text-3xl font-bold text-[#1a1a2e] mb-8">Who Is This Training For?</h2>
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#3B3969]/[0.07] text-[#3B3969] text-sm font-semibold mb-5">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#3B3969]" />Who Should Attend
+              </span>
+              <h2 className="text-2xl md:text-3xl font-bold text-[#1a1a2e] mb-8">Who Is This Training For?</h2>
             </Reveal>
             <Reveal delay={100}>
-            <div className="flex flex-wrap gap-2.5">
-              {["All workplace employees", "Support workers and carers", "Healthcare assistants", "Community group members", "Teachers and educators", "Childcare workers", "Fitness instructors", "Anyone seeking first aid certification"].map((item) => (
-                <span key={item} className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-[#F7F7FA] border border-[#E8E8F0] text-[#333333] font-medium text-sm hover:bg-[#3B3969]/[0.05] hover:border-[#3B3969]/20 transition-colors">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#CB154E] flex-shrink-0" />
-                  {item}
-                </span>
-              ))}
-            </div>
+              <div className="flex flex-wrap gap-2.5">
+                {["All workplace employees", "Support workers and carers", "Healthcare assistants", "Community group members", "Teachers and educators", "Childcare workers", "Fitness instructors", "Anyone seeking first aid certification"].map((item) => (
+                  <span key={item} className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-[#F7F7FA] border border-[#E8E8F0] text-[#333333] font-medium text-sm hover:bg-[#3B3969]/[0.05] hover:border-[#3B3969]/20 transition-colors">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#CB154E] flex-shrink-0" />
+                    {item}
+                  </span>
+                ))}
+              </div>
             </Reveal>
           </div>
         </section>
@@ -279,41 +280,37 @@ export default function ProvideFirstAidPage() {
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <div className="grid lg:grid-cols-2 gap-10 items-center">
               <Reveal>
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Book First Aid Training?</h2>
-                <p className="text-white/70 text-lg leading-relaxed mb-8">Equip your team with Australia&apos;s most comprehensive general first aid qualification. Delivered on-site or at our training facility.</p>
-                <div className="flex flex-wrap gap-4">
-                  <Button asChild className="bg-[#CB154E] hover:bg-[#CB154E]/90 text-white font-semibold px-8 py-3 h-auto rounded-xl shadow-lg">
-                    <Link href="/book-training">Book Training <ArrowRight className="w-4 h-4 ml-2" /></Link>
-                  </Button>
-                  <Button asChild className="inline-flex items-center justify-center gap-2 border border-white/30 bg-transparent text-white hover:bg-white/10 hover:text-white font-semibold px-8 py-3 h-auto rounded-xl transition-colors duration-200">
-                    <Link href="/contact"><Phone className="w-4 h-4 mr-2" />Contact Us</Link>
-                  </Button>
+                <div>
+                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Book First Aid Training?</h2>
+                  <p className="text-white/70 text-lg leading-relaxed mb-8">Equip your team with Australia&apos;s most comprehensive general first aid qualification. Delivered on-site or at our training facility.</p>
+                  <div className="flex flex-wrap gap-4">
+                    <Button asChild className="bg-[#CB154E] hover:bg-[#CB154E]/90 text-white font-semibold px-8 py-3 h-auto rounded-xl shadow-lg">
+                      <Link href="/book-training">Book Training <ArrowRight className="w-4 h-4 ml-2" /></Link>
+                    </Button>
+                    <Button asChild className="inline-flex items-center justify-center gap-2 border border-white/30 bg-transparent text-white hover:bg-white/10 hover:text-white font-semibold px-8 py-3 h-auto rounded-xl transition-colors duration-200">
+                      <Link href="/contact"><Phone className="w-4 h-4 mr-2" />Contact Us</Link>
+                    </Button>
+                  </div>
                 </div>
-              </div>
               </Reveal>
               <Reveal delay={100}>
-              <div className="grid grid-cols-2 gap-4">
-                {[{ label: "Nationally Recognised", sub: "HLTAID011 qualification" }, { label: "RTO Partner", sub: "Healthcorp (RTO 91222)" }, { label: "All Formats", sub: "F2F & Blended options" }, { label: "All Industries", sub: "Workplaces & community" }].map((s) => (
-                  <div key={s.label} className="bg-white/[0.08] rounded-2xl p-5 border border-white/10">
-                    <div className="text-white font-bold text-sm mb-1">{s.label}</div>
-                    <div className="text-white/60 text-xs">{s.sub}</div>
-                  </div>
-                ))}
-              </div>
+                <div className="grid grid-cols-2 gap-4">
+                  {[{ label: "Nationally Recognised", sub: "HLTAID011 qualification" }, { label: "RTO Partner", sub: "Healthcorp (RTO 91222)" }, { label: "All Formats", sub: "F2F & Blended options" }, { label: "All Industries", sub: "Workplaces & community" }].map((s) => (
+                    <div key={s.label} className="bg-white/[0.08] rounded-2xl p-5 border border-white/10">
+                      <div className="text-white font-bold text-sm mb-1">{s.label}</div>
+                      <div className="text-white/60 text-xs">{s.sub}</div>
+                    </div>
+                  ))}
+                </div>
               </Reveal>
             </div>
           </div>
         </section>
 
-        {/* RTO Compliance */}
-        <section className="py-10 md:py-14 bg-[#F7F7FA] border-t border-[#E8E8F0]">
-          <div className="mx-auto max-w-4xl px-6 lg:px-12 text-center">
-            <p className="text-[#64648c] text-sm leading-relaxed">
-              This training is delivered in partnership with Healthcorp (RTO 91222), a Registered Training Organisation approved to deliver nationally recognised qualifications under the Australian Skills Quality Authority (ASQA). Upon successful completion of this course, participants will receive the nationally recognised unit of competency <strong className="text-[#1a1a2e]">HLTAID011 — Provide First Aid</strong>, issued by Healthcorp (RTO 91222).
-            </p>
-          </div>
-        </section>
+        <RTONotice
+          courseCode="HLTAID011"
+          courseTitle="Provide First Aid"
+        />
 
         <NewsletterSection />
       </main>

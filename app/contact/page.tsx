@@ -92,7 +92,7 @@ export default function ContactPage() {
                 Let's discuss your training needs.
               </h1>
               <p className="text-xl text-white/60 leading-relaxed mb-16 font-medium">
-                Whether you need to book training, ask a question, or request a quote — our team is ready to help.
+                Whether you need to book training, ask a question, or request a quote, our team is ready to help.
               </p>
 
               <div className="space-y-10">

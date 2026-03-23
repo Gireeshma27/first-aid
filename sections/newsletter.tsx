@@ -52,7 +52,7 @@ export function NewsletterSection({ lightTheme = true }: { lightTheme?: boolean 
                 </h2>
 
                 <p className="text-base text-gray-500 leading-relaxed mb-6 max-w-lg">
-                  Subscribe to receive updates about upcoming training programs, safety resources, and community events — straight to your inbox.
+                  Subscribe to receive updates about upcoming training programs, safety resources, and community events, delivered straight to your inbox.
                 </p>
 
                 <div className="flex items-center gap-6 text-sm text-gray-400">

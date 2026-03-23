@@ -310,7 +310,7 @@ export default function AboutPage() {
                     <p className="text-5xl font-black text-[#CB154E] tracking-tight mb-6">91222</p>
                     <div className="h-px bg-white/10 mb-6" />
                     <p className="text-white/60 text-base leading-relaxed">
-                      Healthcorp — delivering nationally recognised qualifications across Australia
+                      Healthcorp, delivering nationally recognised qualifications across Australia
                     </p>
                   </div>
                 </div>

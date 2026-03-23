@@ -85,7 +85,7 @@ export async function POST(req: NextRequest) {
             </tr>
           </table>
           <div style="margin-top: 32px; padding: 16px; background: #f9f9f9; border-radius: 8px; text-align: center;">
-            <p style="margin: 0; color: #999999; font-size: 12px;">First Aid Network Australia — Booking Notification</p>
+            <p style="margin: 0; color: #999999; font-size: 12px;">First Aid Network Australia | Booking Notification</p>
           </div>
         </div>
       `,
