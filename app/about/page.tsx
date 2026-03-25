@@ -60,9 +60,9 @@ const milestones = [
 
 const stats = [
   { value: "15+", label: "Years Experience" },
-  { value: "10,000+", label: "Participants Trained" },
-  { value: "500+", label: "Organisations Served" },
-  { value: "98%", label: "Satisfaction Rate" },
+  { value: "80,000+", label: "Participants Trained" },
+  { value: "800+", label: "Organisations Served" },
+  { value: "100%", label: "Satisfaction Rate" },
 ]
 
 export default function AboutPage() {
@@ -72,7 +72,7 @@ export default function AboutPage() {
       <main>
         {/*  Hero & Story  */}
         <section
-          className="relative pt-16 pb-14 md:pt-20 md:pb-18 overflow-hidden"
+          className="relative pt-12 pb-10 md:pt-14 md:pb-12 overflow-hidden"
           style={{ background: "linear-gradient(135deg, #1e1c3d 0%, #3B3969 55%, #4A4880 100%)" }}
         >
           {/* Decorative blobs */}
@@ -93,7 +93,7 @@ export default function AboutPage() {
                   <span className="w-2 h-2 rounded-full bg-[#CB154E]" />
                   About Us
                 </span>
-                <h1 className="text-4xl md:text-5xl lg:text-[56px] font-bold text-white leading-[1.15] tracking-tight">
+                <h1 className="text-3xl md:text-4xl lg:text-[48px] font-bold text-white leading-[1.15] tracking-tight">
                   Building Confidence in{" "}
                   <span className="text-[#CB154E]">Emergency Response</span>
                 </h1>
@@ -121,7 +121,7 @@ export default function AboutPage() {
 
               {/* Right  Image */}
               <div className="relative">
-                <div className="relative aspect-[4/5] md:aspect-[3/4] rounded-[2.5rem] overflow-hidden shadow-2xl ring-1 ring-white/10">
+                <div className="relative aspect-[4/4] md:aspect-[4/3] rounded-[2.5rem] overflow-hidden shadow-2xl ring-1 ring-white/10">
                   <Image
                     src="/images/trainer.png"
                     alt="First Aid Network Australia training session"
@@ -133,13 +133,13 @@ export default function AboutPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-[#1e1c3d]/50 via-transparent to-transparent" />
                 </div>
                 {/* Floating RTO badge */}
-                <div className="absolute -left-6 md:-left-12 bottom-16 bg-white rounded-2xl p-6 shadow-2xl border border-gray-100 hidden sm:flex items-center gap-4">
-                  <div className="w-14 h-14 rounded-full bg-[#3B3969] flex items-center justify-center shadow-lg flex-shrink-0">
-                    <Award className="w-7 h-7 text-white" />
+                <div className="absolute -left-4 md:-left-8 bottom-14 bg-white rounded-xl p-4 shadow-2xl border border-gray-100 hidden sm:flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-[#3B3969] flex items-center justify-center shadow-lg flex-shrink-0">
+                    <Award className="w-5 h-5 text-white" />
                   </div>
                   <div>
-                    <p className="text-lg font-bold text-[#333333]">RTO 91222</p>
-                    <p className="text-sm font-medium text-[#666666]">Healthcorp Partner</p>
+                    <p className="text-sm font-bold text-[#333333]">RTO 91222</p>
+                    <p className="text-xs font-medium text-[#666666]">Healthcorp Partner</p>
                   </div>
                 </div>
               </div>
@@ -282,6 +282,8 @@ export default function AboutPage() {
         </section>
 
         {/*  Partnership with Healthcorp RTO  */}
+        {/* Partnership with Healthcorp RTO — hidden per client request */}
+        {false && (
         <section className="py-12 md:py-16 bg-[#F5F5F5]">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
@@ -353,6 +355,7 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
+        )}
 
         {/*  Trainer Expertise  */}
         <section className="py-12 md:py-16 bg-[#F5F5F5]">
