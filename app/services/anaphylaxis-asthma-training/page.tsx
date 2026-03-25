@@ -1,6 +1,5 @@
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
-import { NewsletterSection } from "@/sections/newsletter"
 import { CheckCircle2, Phone, ArrowRight, Users, Clock, AlertTriangle, Wind, Syringe } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
@@ -198,8 +197,6 @@ export default function AnaphylaxisAsthmaTrainingPage() {
         </section>
 
         <RTONotice />
-
-        <NewsletterSection />
       </main>
       <Footer />
     </>

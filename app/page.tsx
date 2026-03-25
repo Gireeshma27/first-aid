@@ -5,10 +5,7 @@ import { TrustBadgesStrip } from "@/sections/trust-badges"
 
 import { StatisticsSection } from "@/sections/statistics"
 import { ServicesSection } from "@/sections/services"
-import { NewsletterSection } from "@/sections/newsletter"
 import { EventsSection } from "@/sections/events"
-import { TrainersSection } from "@/sections/trainers"
-import { TestimonialsSection } from "@/sections/testimonials"
 
 export default function HomePage() {
   return (
@@ -20,10 +17,7 @@ export default function HomePage() {
 
         <StatisticsSection />
         <ServicesSection />
-        <NewsletterSection />
         <EventsSection />
-        <TrainersSection />
-        <TestimonialsSection />
       </main>
       <Footer />
     </>

@@ -99,8 +99,7 @@ const servicesData = [
   }
 ]
 
-const row1Data = servicesData.slice(0, 5)
-const row2Data = servicesData.slice(5)
+const allData = servicesData
 
 /* ─── Service Card ─── */
 function ServiceCard({ title, image, link, overlayColor, buttonTextColor, description, icon: Icon, accent }: {
@@ -363,11 +362,9 @@ const ScrollingRow = forwardRef<ScrollingRowHandle, { items: typeof servicesData
 /* ─── Main Section ─── */
 export function ServicesSection() {
   const row1Ref = useRef<ScrollingRowHandle>(null)
-  const row2Ref = useRef<ScrollingRowHandle>(null)
 
   const handleArrow = (dir: "left" | "right") => {
     row1Ref.current?.nudge(dir)
-    row2Ref.current?.nudge(dir)
   }
 
   return (
@@ -412,7 +409,7 @@ export function ServicesSection() {
               Our Services
             </h2>
             <p className="text-[1.05rem] text-white/65 leading-relaxed">
-              We deliver practical first aid training and healthcare support services for workplaces, schools and community organisations across Australia.
+              Training is delivered by qualified and experienced registered nurses. Upon successful completion, participants will receive a nationally recognised certification.
             </p>
           </div>
         </Reveal>
@@ -456,8 +453,7 @@ export function ServicesSection() {
           style={{ background: "linear-gradient(to left, #1e1c3d, transparent)" }} />
 
         <div className="flex flex-col gap-7">
-          <ScrollingRow ref={row1Ref} items={row1Data} direction="left" />
-          <ScrollingRow ref={row2Ref} items={row2Data} direction="right" />
+          <ScrollingRow ref={row1Ref} items={allData} direction="left" />
         </div>
       </div>
     </section>

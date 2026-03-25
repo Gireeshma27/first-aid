@@ -3,12 +3,12 @@
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { SectionHeader } from "@/components/section-header"
-import { NewsletterSection } from "@/sections/newsletter"
 import { Reveal } from "@/components/reveal"
 import Image from "next/image"
 import type { ComponentType } from "react"
 import { CheckCircle2, Heart, Target, Users, Award, Shield, Clock, Building2, BookOpen, Baby, Stethoscope } from "lucide-react"
 import { NationallyRecognisedBadge } from "@/components/nationally-recognised-badge"
+import { TrainersSection } from "@/sections/trainers"
 
 const values = [
   {
@@ -70,7 +70,7 @@ export default function AboutPage() {
     <>
       <Navbar />
       <main>
-        {/* ── Hero & Story ── */}
+        {/*  Hero & Story  */}
         <section
           className="relative pt-16 pb-14 md:pt-20 md:pb-18 overflow-hidden"
           style={{ background: "linear-gradient(135deg, #1e1c3d 0%, #3B3969 55%, #4A4880 100%)" }}
@@ -114,12 +114,12 @@ export default function AboutPage() {
                   <NationallyRecognisedBadge className="shadow-lg" />
                   <div className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-white/10 border border-white/20">
                     <Clock className="w-4 h-4 text-[#CB154E]" />
-                    <span className="text-white/80 text-sm font-semibold">15+ Years’ Experience</span>
+                    <span className="text-white/80 text-sm font-semibold">15+ Years Experience</span>
                   </div>
                 </div>
               </div>
 
-              {/* Right — Image */}
+              {/* Right  Image */}
               <div className="relative">
                 <div className="relative aspect-[4/5] md:aspect-[3/4] rounded-[2.5rem] overflow-hidden shadow-2xl ring-1 ring-white/10">
                   <Image
@@ -148,7 +148,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* ── Stats ── */}
+        {/*  Stats  */}
         <section className="py-12 md:py-16 bg-white overflow-hidden relative">
           <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: "radial-gradient(circle, #3B3969 1px, transparent 1px)", backgroundSize: "50px 50px" }} />
           <div className="mx-auto max-w-7xl px-6 lg:px-12 relative z-10">
@@ -185,7 +185,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* ── Our Values ── */}
+        {/*  Our Values  */}
         <section className="py-12 md:py-16 bg-[#F5F5F5] relative overflow-hidden">
           <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-[#3B3969]/5 to-transparent rounded-full blur-3xl pointer-events-none -z-1" />
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-[#CB154E]/3 to-transparent rounded-full blur-3xl pointer-events-none -z-1" />
@@ -220,7 +220,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* ── Journey Timeline ── */}
+        {/*  Journey Timeline  */}
         <section className="py-12 md:py-16 bg-white relative overflow-hidden">
           <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: "radial-gradient(circle, #3B3969 1px, transparent 1px)", backgroundSize: "40px 40px" }} />
           <div className="mx-auto max-w-7xl px-6 lg:px-12 relative z-10">
@@ -242,9 +242,9 @@ export default function AboutPage() {
             {/* Timeline */}
             <Reveal delay={100}>
             <div className="relative">
-              {/* Mobile — vertical connector line */}
+              {/* Mobile  vertical connector line */}
               <div className="absolute left-7 top-7 bottom-0 w-0.5 bg-gradient-to-b from-[#3B3969]/40 via-[#CB154E]/30 to-transparent lg:hidden" />
-              {/* Desktop — horizontal connector line */}
+              {/* Desktop  horizontal connector line */}
               <div className="hidden lg:block absolute top-7 left-[calc(100%/12)] right-[calc(100%/12)] h-0.5 bg-gradient-to-r from-transparent via-[#3B3969]/25 to-transparent" />
 
               <div className="flex flex-col lg:flex-row gap-8 lg:gap-0">
@@ -281,12 +281,12 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* ── Partnership with Healthcorp RTO ── */}
+        {/*  Partnership with Healthcorp RTO  */}
         <section className="py-12 md:py-16 bg-[#F5F5F5]">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
-              {/* Left — RTO visual block */}
+              {/* Left  RTO visual block */}
               <Reveal>
               <div className="relative">
                 <div
@@ -317,7 +317,7 @@ export default function AboutPage() {
               </div>
               </Reveal>
 
-              {/* Right — Text content */}
+              {/* Right  Text content */}
               <Reveal delay={100}>
               <div className="space-y-8">
                 <NationallyRecognisedBadge />
@@ -354,7 +354,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* ── Trainer Expertise ── */}
+        {/*  Trainer Expertise  */}
         <section className="py-12 md:py-16 bg-[#F5F5F5]">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <Reveal>
@@ -405,7 +405,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* ── Who We Work With ── */}
+        {/*  Who We Work With  */}
         <section className="py-12 md:py-16 bg-white relative overflow-hidden">
           <div className="absolute inset-0 opacity-[0.015]" style={{ backgroundImage: "radial-gradient(circle, #3B3969 1px, transparent 1px)", backgroundSize: "40px 40px" }} />
           <div className="mx-auto max-w-7xl px-6 lg:px-12 relative z-10">
@@ -477,7 +477,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <NewsletterSection />
+        <TrainersSection />
       </main>
       <Footer />
     </>

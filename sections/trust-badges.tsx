@@ -14,7 +14,7 @@ const badges = [
   {
     type: "icon" as const,
     icon: Award,
-    label: "RTO Certified",
+    label: "In Partnership",
     sublabel: "Healthcorp RTO 91222",
     color: "#3B3969",
   },
@@ -92,7 +92,7 @@ export function TrustBadgesStrip() {
                 <p className={`text-sm font-bold leading-snug ${isPink ? "text-[#CB154E]" : "text-[#3B3969]"}`}>
                   {badge.label}
                 </p>
-                <p className="text-[11px] font-medium text-[#999] mt-1 leading-snug">
+                <p className="text-[13px] font-medium text-[#777] mt-1.5 leading-relaxed">
                   {badge.sublabel}
                 </p>
               </div>

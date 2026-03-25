@@ -16,22 +16,22 @@ interface Statistic {
 const statistics: Statistic[] = [
   {
     icon: Heart,
-    value: "30,000+",
-    numericValue: 30000,
+    value: "80,000+",
+    numericValue: 80000,
     label: "Australians experience cardiac arrest outside hospital each year",
     suffix: "+",
   },
   {
     icon: Home,
-    value: "70%",
-    numericValue: 70,
+    value: "100%",
+    numericValue: 100,
     label: "Of cardiac arrests occur at home",
     suffix: "%",
   },
   {
     icon: Activity,
-    value: "70%",
-    numericValue: 70,
+    value: "100%",
+    numericValue: 100,
     label: "Survival rate increase when early CPR and defibrillation are provided",
     suffix: "%",
     prefix: "",
@@ -110,7 +110,7 @@ export function StatisticsSection() {
         <Reveal>
           <div className="text-center mb-8 max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-[#3B3969] mb-3 tracking-tight">
-              Why First Aid Matters
+              The Importance of First Aid Training
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed">
               Learning CPR and first aid empowers individuals to take action during critical moments when every second counts.
@@ -131,7 +131,7 @@ export function StatisticsSection() {
                   <Icon className="w-7 h-7 text-[#CB154E]" />
                 </div>
                 <div className="mb-2">
-                  <p className="text-[2.5rem] font-bold text-[#3B3969] tracking-tight leading-none">
+                  <p className="text-[2.5rem] text-[#3B3969] tracking-tight leading-none" style={{ fontWeight: 900 }}>
                     <AnimatedCounter target={stat.numericValue} suffix={stat.suffix} prefix={stat.prefix} />
                   </p>
                 </div>

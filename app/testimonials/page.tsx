@@ -1,7 +1,6 @@
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { SectionHeader } from "@/components/section-header"
-import { NewsletterSection } from "@/sections/newsletter"
 import { Quote, Star } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Reveal } from "@/components/reveal"
@@ -151,8 +150,6 @@ export default function TestimonialsPage() {
             </Reveal>
           </div>
         </section>
-
-        <NewsletterSection />
       </main>
       <Footer />
     </>

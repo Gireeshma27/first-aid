@@ -15,9 +15,9 @@ const floatingIcons = [
 ]
 
 const stats = [
-  { value: "10,000+", label: "Trained Participants" },
+  { value: "80,000+", label: "Trained Participants" },
   { value: "500+", label: "Organisations" },
-  { value: "98%", label: "Satisfaction Rate" },
+  { value: "100%", label: "Satisfaction Rate" },
 ]
 
 export function Hero() {
@@ -258,21 +258,16 @@ export function Hero() {
         ))}
 
         {/* ── Main grid ── */}
-        <div className="relative mx-auto max-w-7xl px-5 lg:px-10 pt-[44px] pb-[16px] md:pt-[56px] md:pb-[20px]" style={{ zIndex: 3 }}>
+        <div className="relative mx-auto max-w-7xl px-5 lg:px-10 pt-[28px] pb-[16px] md:pt-[36px] md:pb-[20px]" style={{ zIndex: 3 }}>
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
             {/* ── LEFT ── */}
             <div className="flex flex-col gap-6">
 
-              {/* Badge pill */}
-              <div className="anim-up d1">
-                <NationallyRecognisedBadge />
-              </div>
-
               {/* Heading */}
-              <div className="anim-up d2">
+              <div className="anim-up d1">
                 <span className="h-accent" />
-                <h1 className="text-[2.55rem] md:text-[2.9rem] lg:text-[3.2rem] font-extrabold text-white leading-[1.1] tracking-tight">
+                <h1 className="text-[2.2rem] md:text-[2.5rem] lg:text-[2.75rem] font-extrabold text-white leading-[1.1] tracking-tight">
                   First Aid{" "}
                   <span style={{
                     background: "linear-gradient(130deg, #CB154E 20%, #f7395e 100%)",
@@ -286,7 +281,7 @@ export function Hero() {
               </div>
 
               {/* Body */}
-              <div className="anim-up d3">
+              <div className="anim-up d2">
                 <p className="text-[1rem] leading-[1.8] max-w-[490px]"
                   style={{ color: "rgba(255,255,255,0.58)", fontWeight: 400 }}>
                   Practical, nationally recognised first aid training delivered by experienced healthcare professionals for workplaces, schools and communities.
@@ -294,7 +289,7 @@ export function Hero() {
               </div>
 
               {/* CTAs */}
-              <div className="anim-up d4 flex flex-wrap gap-3 items-center">
+              <div className="anim-up d3 flex flex-wrap gap-3 items-center">
                 <Link href="/book-training" className="btn-cta">
                   Book Training <ArrowRight className="w-4 h-4" />
                 </Link>
@@ -304,11 +299,16 @@ export function Hero() {
                 </Link>
               </div>
 
+              {/* Nationally Recognised — moved below CTAs */}
+              <div className="anim-up d4">
+                <NationallyRecognisedBadge />
+              </div>
+
               {/* Stats — glassmorphism row */}
               <div className="anim-up d5 stats-glass mt-2">
                 {stats.map((s, i) => (
                   <div key={i} className="stat-col">
-                    <p className="text-[1.4rem] xs:text-[1.6rem] sm:text-[1.75rem] font-extrabold text-white leading-none tracking-tight">{s.value}</p>
+                    <p className="text-[1.4rem] xs:text-[1.6rem] sm:text-[1.75rem] text-white leading-none tracking-tight" style={{ fontWeight: 900 }}>{s.value}</p>
                     <p className="text-[0.6rem] sm:text-[0.72rem] mt-1.5 font-medium uppercase tracking-widest"
                       style={{ color: "rgba(255,255,255,0.4)", letterSpacing: "0.09em" }}>
                       {s.label}
@@ -382,17 +382,29 @@ export function Hero() {
 
               {/* Badge — Flexible (top-right) */}
               <div
-                className="badge-dark absolute -top-4 -right-4 hidden md:flex anim-float"
-                style={{ animationDelay: "2s", animationDuration: "6s", zIndex: 10 }}
+                className="absolute -top-4 -right-4 hidden md:flex anim-float"
+                style={{
+                  animationDelay: "2s",
+                  animationDuration: "6s",
+                  zIndex: 10,
+                  background: "#F5F5F5",
+                  borderRadius: "14px",
+                  padding: "10px 14px",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "10px",
+                  boxShadow: "0 10px 30px rgba(0,0,0,0.15), 0 0 0 1px rgba(0,0,0,0.04)",
+                  minWidth: "160px",
+                }}
               >
-                <div className="badge-icon-wrap" style={{ background: "rgba(203,21,78,0.2)" }}>
-                  <svg style={{ width: 18, height: 18 }} fill="none" stroke="#CB154E" strokeWidth={2.5} viewBox="0 0 24 24">
+                <div className="badge-icon-wrap" style={{ background: "rgba(203,21,78,0.1)" }}>
+                  <svg style={{ width: 16, height: 16 }} fill="none" stroke="#CB154E" strokeWidth={2.5} viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
                 <div>
-                  <p style={{ fontWeight: 700, fontSize: "0.83rem", color: "white", lineHeight: 1.3 }}>Flexible Delivery</p>
-                  <p style={{ fontSize: "0.68rem", color: "rgba(255,255,255,0.42)", marginTop: 3, fontWeight: 500 }}>On-site & Online</p>
+                  <p style={{ fontWeight: 700, fontSize: "0.78rem", color: "#333", lineHeight: 1.3 }}>Flexible Delivery</p>
+                  <p style={{ fontSize: "0.64rem", color: "#999", marginTop: 2, fontWeight: 500 }}>On-site & Online</p>
                 </div>
               </div>
             </div>
