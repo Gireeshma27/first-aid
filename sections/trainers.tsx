@@ -121,9 +121,9 @@ export function TrainersSection() {
           {/* ── RIGHT: text content ── */}
           <div className="space-y-7">
             <SectionHeader
-              badge="Our Trainers"
-              title="Learn from Experienced Healthcare Professionals"
-              description="Our trainers bring real-world emergency response experience to every session, ensuring you receive practical, applicable knowledge."
+              badge="Online Learning"
+              title="Flexible Online Learning Options"
+              description="Access flexible online learning modules designed to complement practical first aid training. Our blended learning model combines self-paced online theory with hands-on practical sessions."
               centered={false}
             />
 

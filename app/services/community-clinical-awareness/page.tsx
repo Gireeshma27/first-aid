@@ -1,6 +1,5 @@
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
-import { NewsletterSection } from "@/sections/newsletter"
 import { CheckCircle2, Phone, ArrowRight, Users, Activity, Heart, AlertTriangle, BookOpen } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
@@ -15,14 +14,14 @@ export const metadata: Metadata = {
 
 export default function CommunityClinicalAwarenessPage() {
   const conditions = [
-    { icon: "🧠", label: "Stroke" },
-    { icon: "🫐", label: "Heart Attack" },
-    { icon: "🤗", label: "Sepsis" },
-    { icon: "💨", label: "Breathing Distress" },
-    { icon: "😵‍💫", label: "Sudden Confusion" },
-    { icon: "🩸", label: "Diabetic Complications" },
-    { icon: "🦠", label: "Infection" },
-    { icon: "💧", label: "Dehydration" },
+    { icon: "", label: "Stroke" },
+    { icon: "", label: "Heart Attack" },
+    { icon: "", label: "Sepsis" },
+    { icon: "", label: "Breathing Distress" },
+    { icon: "", label: "Sudden Confusion" },
+    { icon: "", label: "Diabetic Complications" },
+    { icon: "", label: "Infection" },
+    { icon: "", label: "Dehydration" },
   ]
 
   return (
@@ -235,8 +234,6 @@ export default function CommunityClinicalAwarenessPage() {
             </p>
           </div>
         </section>
-
-        <NewsletterSection />
       </main>
       <Footer />
     </>

@@ -1,6 +1,5 @@
-﻿import { Navbar } from "@/components/navbar"
+import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
-import { NewsletterSection } from "@/sections/newsletter"
 import { CheckCircle2, Shield, Clock, Stethoscope, ArrowRight, Zap, Award, Heart } from "lucide-react"
 import Image from "next/image"
 import type { Metadata } from "next"
@@ -35,7 +34,7 @@ export default function EventsPage() {
     <>
       <Navbar />
       <main>
-        {/* â”€â”€ Hero â”€â”€ */}
+        {/*  Hero  */}
         <section
           className="relative py-16 md:py-20 overflow-hidden"
           style={{ background: "linear-gradient(135deg, #1e1c3d 0%, #3B3969 60%, #4A4880 100%)" }}
@@ -52,7 +51,7 @@ export default function EventsPage() {
           <div className="relative mx-auto max-w-7xl px-6 lg:px-12">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
-              {/* Left â€” Text + CTA */}
+              {/* Left  Text + CTA */}
               <div className="space-y-8">
                 <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 text-white/90 text-sm font-semibold border border-white/20">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#CB154E]" />
@@ -97,7 +96,7 @@ export default function EventsPage() {
                 </div>
               </div>
 
-              {/* Right â€” Image */}
+              {/* Right  Image */}
               <div className="relative">
                 <div className="relative aspect-[4/3] rounded-[2rem] overflow-hidden shadow-2xl ring-1 ring-white/10">
                   <Image
@@ -120,7 +119,7 @@ export default function EventsPage() {
           </div>
         </section>
 
-        {/* â”€â”€ Overview â€” alternating (image right) â”€â”€ */}
+        {/*  Overview  alternating (image right)  */}
         <section id="event-services" className="py-12 md:py-16 bg-white relative">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
@@ -186,7 +185,7 @@ export default function EventsPage() {
           </div>
         </section>
 
-        {/* â”€â”€ Types of Events â”€â”€ */}
+        {/*  Types of Events  */}
         <section id="types" className="py-12 md:py-16 bg-[#F5F5F5] overflow-hidden">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <Reveal>
@@ -210,7 +209,7 @@ export default function EventsPage() {
           </Reveal>
         </section>
 
-        {/* â”€â”€ Why Professional Event Medics â”€â”€ */}
+        {/*  Why Professional Event Medics  */}
         <section className="py-12 md:py-16 bg-white">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <Reveal>
@@ -252,8 +251,7 @@ export default function EventsPage() {
           </div>
         </section>
 
-        {/* â”€â”€ CTA â”€â”€ */}
-        <NewsletterSection />
+        {/*  CTA  */}
       </main>
       <Footer />
     </>

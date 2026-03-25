@@ -7,7 +7,6 @@ import { Heart, Users, Clock, Phone, ArrowRight, Shield, Activity, Zap, Monitor,
 import { NationallyRecognisedBadge } from "@/components/nationally-recognised-badge"
 import { RTONotice } from "@/components/rto-notice"
 import { Button } from "@/components/ui/button"
-import { NewsletterSection } from "@/sections/newsletter"
 import {
   FiAlertOctagon,
   FiUser,
@@ -25,9 +24,9 @@ import {
 } from "react-icons/fi"
 import type { IconType } from "react-icons"
 
-/* ─────────────────────────────────────────────
+/* 
    Scroll-reveal wrapper
-───────────────────────────────────────────── */
+ */
 function Reveal({
   children,
   className,
@@ -75,21 +74,21 @@ function Reveal({
   )
 }
 
-/* ─────────────────────────────────────────────
+/* 
    Data
-───────────────────────────────────────────── */
+ */
 const drsabcd: { letter: string; icon: IconType; accent: string; label: string; desc: string }[] = [
   { letter: "D", icon: FiAlertOctagon, accent: "#CB154E", label: "Danger", desc: "Ensure the scene is safe for you, bystanders and the casualty before approaching" },
   { letter: "R", icon: FiUser, accent: "#3B3969", label: "Response", desc: "Check consciousness, call their name and squeeze their shoulders firmly" },
   { letter: "S", icon: FiPhoneCall, accent: "#CB154E", label: "Send Help", desc: "Call 000 or ask a bystander to call. Confirm the ambulance is dispatched" },
   { letter: "A", icon: FiWind, accent: "#3B3969", label: "Airway", desc: "Head-tilt chin-lift to open the airway. Remove any visible obstructions" },
   { letter: "B", icon: FiActivity, accent: "#CB154E", label: "Breathing", desc: "Look, listen and feel for normal breathing, assess for no more than 10 seconds" },
-  { letter: "C", icon: FiHeart, accent: "#3B3969", label: "CPR", desc: "30 compressions then 2 rescue breaths. Push hard & fast at 100–120 per minute" },
+  { letter: "C", icon: FiHeart, accent: "#3B3969", label: "CPR", desc: "30 compressions then 2 rescue breaths. Push hard & fast at 100120 per minute" },
   { letter: "D", icon: FiZap, accent: "#CB154E", label: "Defib", desc: "Attach an AED as soon as possible and follow the voice and visual prompts" },
 ]
 
 const cprSkills: { icon: IconType; text: string }[] = [
-  { icon: FiHeart, text: "Perform effective adult CPR, 30:2 ratio, 100–120 compressions per minute" },
+  { icon: FiHeart, text: "Perform effective adult CPR, 30:2 ratio, 100120 compressions per minute" },
   { icon: FiUser, text: "Perform infant and child CPR with the correct modified technique" },
   { icon: FiZap, text: "Safely operate an Automated External Defibrillator (AED)" },
   { icon: FiActivity, text: "Place a casualty into the lateral (recovery) position" },
@@ -115,13 +114,13 @@ const whoAttends: { icon: IconType; label: string }[] = [
   { icon: FiAward, label: "Anyone seeking CPR certification" },
 ]
 
-/* ─────────────────────────────────────────────
+/* 
    Main component
-───────────────────────────────────────────── */
+ */
 export default function CprContent() {
   return (
     <>
-      {/* ── HERO ── */}
+      {/*  HERO  */}
       <section className="relative overflow-hidden bg-gradient-to-br from-[#1a1a2e] via-[#2a1a35] to-[#CB154E]/80 py-16 md:py-20">
         <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-[#CB154E]/20 blur-3xl animate-blob" />
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-white/5 blur-3xl animate-blob-delay" />
@@ -207,7 +206,7 @@ export default function CprContent() {
         </div>
       </section>
 
-      {/* ── DRSABCD ACTION PLAN ── */}
+      {/*  DRSABCD ACTION PLAN  */}
       <section className="py-12 md:py-16 bg-white relative overflow-hidden">
         <div
           className="absolute inset-0 pointer-events-none"
@@ -252,7 +251,7 @@ export default function CprContent() {
         </div>
       </section>
 
-      {/* ── WHAT YOU LEARN ── */}
+      {/*  WHAT YOU LEARN  */}
       <section className="py-12 md:py-16 bg-[#F7F7FA]">
         <div className="mx-auto max-w-7xl px-6 lg:px-12">
           <Reveal className="mb-8">
@@ -311,7 +310,7 @@ export default function CprContent() {
         </div>
       </section>
 
-      {/* ── DELIVERY METHOD ── */}
+      {/*  DELIVERY METHOD  */}
       <section className="py-12 md:py-16 bg-white relative overflow-hidden">
         <div className="absolute top-0 right-0 w-80 h-80 rounded-full bg-[#CB154E]/4 blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#3B3969]/4 blur-3xl pointer-events-none" />
@@ -350,7 +349,7 @@ export default function CprContent() {
                   "AED trainer operation",
                   "On-site at your workplace or venue",
                   "Immediate practical assessment",
-                  "Ideal for groups of 6–24 participants",
+                  "Ideal for groups of 624 participants",
                 ].map((item) => (
                   <li key={item} className="flex items-center gap-2.5 text-sm text-[#333333]">
                     <CheckCircle2 className="w-4 h-4 text-[#3B3969] flex-shrink-0" />
@@ -395,7 +394,7 @@ export default function CprContent() {
         </div>
       </section>
 
-      {/* ── WHO SHOULD ATTEND ── */}
+      {/*  WHO SHOULD ATTEND  */}
       <section className="py-12 md:py-16 bg-[#F7F7FA] relative overflow-hidden">
         <div className="mx-auto max-w-7xl px-6 lg:px-12 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -450,7 +449,7 @@ export default function CprContent() {
         </div>
       </section>
 
-      {/* ── CTA ── */}
+      {/*  CTA  */}
       <section className="py-12 md:py-16 bg-gradient-to-r from-[#CB154E] to-[#a01040] relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-20 pointer-events-none"
@@ -485,14 +484,13 @@ export default function CprContent() {
         </div>
       </section>
 
-      {/* ── RTO COMPLIANCE ── */}
+      {/*  RTO COMPLIANCE  */}
       <RTONotice
         courseCode="HLTAID009"
         courseTitle="Provide Cardiopulmonary Resuscitation"
       />
 
-      {/* ── NEWSLETTER ── */}
-      <NewsletterSection lightTheme />
+      {/*  NEWSLETTER  */}
     </>
   )
 }

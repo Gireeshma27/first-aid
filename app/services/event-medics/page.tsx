@@ -1,6 +1,5 @@
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
-import { NewsletterSection } from "@/sections/newsletter"
 import { CheckCircle2, Phone, ArrowRight, MapPin, Calendar, Shield, Zap, Users, Heart } from "lucide-react"
 import { FiCalendar, FiBriefcase, FiActivity, FiMusic, FiSun, FiUsers, FiMapPin, FiAward } from "react-icons/fi"
 import Image from "next/image"
@@ -235,8 +234,6 @@ export default function EventMedicsPage() {
         </section>
 
         <RTONotice />
-
-        <NewsletterSection />
       </main>
       <Footer />
     </>

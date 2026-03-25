@@ -1,7 +1,6 @@
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { SectionHeader } from "@/components/section-header"
-import { NewsletterSection } from "@/sections/newsletter"
 import { CheckCircle2, Shield, Syringe, Wind, Heart, AlertTriangle, Users } from "lucide-react"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -219,8 +218,6 @@ export default function MedicinesTrainingPage() {
             </div>
           </section>
         ))}
-
-        <NewsletterSection />
       </main>
       <Footer />
     </>

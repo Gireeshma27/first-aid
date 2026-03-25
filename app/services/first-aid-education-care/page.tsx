@@ -1,6 +1,5 @@
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
-import { NewsletterSection } from "@/sections/newsletter"
 import { CheckCircle2, Phone, ArrowRight, Users, Clock, BookOpen, Baby, GraduationCap, Heart } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
@@ -17,14 +16,14 @@ export const metadata: Metadata = {
 
 export default function FirstAidEducationCarePage() {
   const paediatricTopics = [
-    { icon: "👶", label: "Infant CPR" },
-    { icon: "🧒", label: "Child CPR" },
-    { icon: "😤", label: "Choking" },
-    { icon: "💨", label: "Asthma" },
-    { icon: "⚡", label: "Anaphylaxis" },
-    { icon: "🌡️", label: "Febrile Seizures" },
-    { icon: "🤕", label: "Head Injuries" },
-    { icon: "🔥", label: "Burns & Scalds" },
+    { icon: "", label: "Infant CPR" },
+    { icon: "", label: "Child CPR" },
+    { icon: "", label: "Choking" },
+    { icon: "", label: "Asthma" },
+    { icon: "", label: "Anaphylaxis" },
+    { icon: "", label: "Febrile Seizures" },
+    { icon: "", label: "Head Injuries" },
+    { icon: "", label: "Burns & Scalds" },
   ]
 
   return (
@@ -243,8 +242,6 @@ export default function FirstAidEducationCarePage() {
           courseCode="HLTAID012"
           courseTitle="Provide First Aid in an Education and Care Setting"
         />
-
-        <NewsletterSection />
       </main>
       <Footer />
     </>

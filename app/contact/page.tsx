@@ -1,7 +1,6 @@
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { ContactForm } from "@/components/contact-form"
-import { NewsletterSection } from "@/sections/newsletter"
 import { Phone, Mail, Clock, MapPin, MessageSquare } from "lucide-react"
 import {
   Accordion,
@@ -17,7 +16,7 @@ const contactMethods = [
     title: "Phone",
     description: "Speak directly with our team",
     value: "1300 FIRST AID",
-    subtext: "Monday to Friday, 8am â€“ 6pm AEST",
+    subtext: "Monday to Friday, 8am  6pm AEST",
   },
   {
     icon: Mail,
@@ -74,10 +73,10 @@ export default function ContactPage() {
     <>
       <Navbar />
       <main>
-        {/* ── Massive Split Screen Contact ── */}
+        {/*  Massive Split Screen Contact  */}
         <div className="flex flex-col lg:flex-row min-h-[90vh]">
           
-          {/* LEFT — Deep Blue Panel */}
+          {/* LEFT  Deep Blue Panel */}
           <div className="lg:w-1/2 bg-[#3B3969] text-white px-6 py-20 lg:p-24 xl:p-32 flex flex-col justify-center relative overflow-hidden">
             {/* Background elements */}
             <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-white/[0.03] blur-3xl pointer-events-none" />
@@ -112,7 +111,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          {/* RIGHT — Minimal White Form Panel */}
+          {/* RIGHT  Minimal White Form Panel */}
           <div className="lg:w-1/2 bg-white px-6 py-20 lg:p-24 xl:p-32 flex flex-col justify-center relative">
             <div className="max-w-xl mx-auto lg:mx-0 w-full lg:mr-auto">
               <h2 className="text-3xl lg:text-4xl font-bold text-[#333333] mb-4 tracking-tight">Request Consultation</h2>
@@ -127,9 +126,9 @@ export default function ContactPage() {
                 <div>
                   <h4 className="font-bold text-[#333333] mb-3 text-sm uppercase tracking-widest">What to Include</h4>
                   <ul className="space-y-2 text-[15px] font-medium text-[#666666]">
-                    <li>• Type of training required</li>
-                    <li>• Estimated number of participants</li>
-                    <li>• Preferred dates and location</li>
+                    <li> Type of training required</li>
+                    <li> Estimated number of participants</li>
+                    <li> Preferred dates and location</li>
                   </ul>
                 </div>
               </div>
@@ -137,7 +136,7 @@ export default function ContactPage() {
           </div>
         </div>
 
-        {/* ── FAQs ── */}
+        {/*  FAQs  */}
         <section className="py-16 md:py-24 bg-white">
           <div className="mx-auto max-w-3xl px-6 lg:px-12">
             <Reveal>
@@ -175,9 +174,6 @@ export default function ContactPage() {
             </Reveal>
           </div>
         </section>
-
-
-        <NewsletterSection />
       </main>
       <Footer />
     </>

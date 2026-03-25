@@ -1,9 +1,8 @@
-﻿"use client"
+"use client"
 
 import { useEffect, useRef, useState } from "react"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
-import { NewsletterSection } from "@/sections/newsletter"
 import Link from "next/link"
 import {
   Heart,
@@ -19,9 +18,9 @@ import {
 import { Button } from "@/components/ui/button"
 import { Reveal } from "@/components/reveal"
 
-/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+/* 
    Animated counter
-â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+ */
 function AnimatedCounter({
   target,
   suffix = "",
@@ -72,9 +71,9 @@ function AnimatedCounter({
   )
 }
 
-/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+/* 
    Animated progress bar
-â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+ */
 function AnimatedBar({ percent, color }: { percent: number; color: string }) {
   const [width, setWidth] = useState(0)
   const ref = useRef<HTMLDivElement>(null)
@@ -106,18 +105,18 @@ function AnimatedBar({ percent, color }: { percent: number; color: string }) {
   )
 }
 
-/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+/* 
    Page
-â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+ */
 export default function StatisticsPage() {
   return (
     <>
       <Navbar />
       <main>
 
-        {/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+        {/* 
             HERO
-        â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
+         */}
         <section
           className="relative pt-16 pb-14 md:pt-20 md:pb-16 overflow-hidden"
           style={{ background: "linear-gradient(135deg, #1e1c3d 0%, #3B3969 55%, #4A4880 100%)" }}
@@ -152,7 +151,7 @@ export default function StatisticsPage() {
               <div>
                 <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 text-white/80 text-xs font-semibold border border-white/15 mb-8 tracking-wide uppercase">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#CB154E]" />
-                  CPR &amp; First Aid Statistics â€” Australia
+                  CPR &amp; First Aid Statistics  Australia
                 </span>
                 <h1 className="text-4xl md:text-5xl lg:text-[54px] font-bold text-white leading-[1.1] tracking-tight mb-6">
                   The Numbers That Make
@@ -185,7 +184,7 @@ export default function StatisticsPage() {
                 </div>
               </div>
 
-              {/* Right: 2Ã—2 stat cards */}
+              {/* Right: 22 stat cards */}
               <div className="grid grid-cols-2 gap-4">
                 <div className="rounded-3xl bg-[#CB154E]/20 border border-[#CB154E]/35 p-7 text-center backdrop-blur-sm hover:bg-[#CB154E]/25 transition-colors duration-300">
                   <p className="text-4xl font-black text-white tracking-tight mb-2">32,000+</p>
@@ -213,9 +212,9 @@ export default function StatisticsPage() {
           </div>
         </section>
 
-        {/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-            SECTION 1 â€” SCALE OF THE PROBLEM
-        â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
+        {/* 
+            SECTION 1  SCALE OF THE PROBLEM
+         */}
         <section className="py-12 md:py-16 bg-white">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
 
@@ -234,7 +233,7 @@ export default function StatisticsPage() {
             {/* Feature layout: large card left + two stacked right */}
             <div className="grid lg:grid-cols-5 gap-6">
 
-              {/* Large feature card — 32,000 */}
+              {/* Large feature card  32,000 */}
               <Reveal className="lg:col-span-3" delay={0}>
               <div
                 className="relative rounded-3xl overflow-hidden p-10 flex flex-col justify-between min-h-[360px] h-full"
@@ -256,7 +255,7 @@ export default function StatisticsPage() {
                     Australians experience out-of-hospital cardiac arrest every year
                   </p>
                   <p className="text-white/50 text-sm leading-relaxed max-w-md">
-                    Over 32,000 cardiac arrests occur outside of hospitals annually â€” one of the highest rates in the developed world. Most happen without warning.
+                    Over 32,000 cardiac arrests occur outside of hospitals annually  one of the highest rates in the developed world. Most happen without warning.
                   </p>
                 </div>
               </div>
@@ -276,7 +275,7 @@ export default function StatisticsPage() {
                     <AnimatedCounter target={70} prefix="~" />
                   </p>
                   <p className="text-base font-bold text-[#1e1c3d] mb-1">Cardiac arrests every day</p>
-                  <p className="text-sm text-[#666] leading-relaxed">One cardiac arrest every 21 minutes â€” across homes, workplaces, and public spaces nationwide.</p>
+                  <p className="text-sm text-[#666] leading-relaxed">One cardiac arrest every 21 minutes  across homes, workplaces, and public spaces nationwide.</p>
                 </div>
 
                 {/* 10% survival */}
@@ -299,9 +298,9 @@ export default function StatisticsPage() {
           </div>
         </section>
 
-        {/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-            SECTION 2 â€” EVERY SECOND COUNTS
-        â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
+        {/* 
+            SECTION 2  EVERY SECOND COUNTS
+         */}
         <section
           className="relative py-12 md:py-16 overflow-hidden"
           style={{ background: "linear-gradient(135deg, #1e1c3d 0%, #3B3969 60%, #4A4880 100%)" }}
@@ -319,15 +318,15 @@ export default function StatisticsPage() {
               Survival Drops Every Single Minute
             </h2>
             <p className="text-white/55 text-base max-w-xl mx-auto mb-14 leading-relaxed">
-              Without CPR or defibrillation, chances of survival decrease by 7–10% for every minute that
+              Without CPR or defibrillation, chances of survival decrease by 710% for every minute that
               passes. The window to act is dangerously short.
             </p>
             </Reveal>
 
-            {/* ── Horizontal timeline ── */}
+            {/* -- Horizontal timeline -- */}
             <Reveal delay={200}>
             <div className="relative max-w-3xl mx-auto mb-6">
-              {/* Connecting gradient line â€” sits at vertical centre of circles */}
+              {/* Connecting gradient line  sits at vertical centre of circles */}
               <div
                 className="absolute top-[52px] left-[4%] right-[4%] h-px opacity-20 pointer-events-none"
                 style={{ background: "linear-gradient(to right, #22c55e, #84cc16, #eab308, #f97316, #ef4444, #CB154E)" }}
@@ -377,7 +376,7 @@ export default function StatisticsPage() {
               </div>
               <p className="text-white/80 text-sm leading-relaxed font-medium">
                 When CPR <em>and</em> an AED are used within{" "}
-                <strong className="text-white">3–5 minutes</strong> of collapse, survival rates can reach{" "}
+                <strong className="text-white">35 minutes</strong> of collapse, survival rates can reach{" "}
                 <strong className="text-[#CB154E]">up to 70%</strong>, compared to just 10% today.
               </p>
             </div>
@@ -385,9 +384,9 @@ export default function StatisticsPage() {
           </div>
         </section>
 
-        {/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-            SECTION 3 â€” CPR IMPACT
-        â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
+        {/* 
+            SECTION 3  CPR IMPACT
+         */}
         <section className="py-12 md:py-16 bg-[#F9F9FC]">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <div className="text-center mb-14">
@@ -411,8 +410,8 @@ export default function StatisticsPage() {
                   <Activity className="w-6 h-6 text-[#3B3969]" />
                 </div>
                 <div className="flex items-end gap-1 mb-3">
-                  <span className="text-5xl font-black text-[#3B3969] tracking-tight leading-none">2â€“3</span>
-                  <span className="text-3xl font-black text-[#3B3969] leading-none pb-0.5">Ã—</span>
+                  <span className="text-5xl font-black text-[#3B3969] tracking-tight leading-none">23</span>
+                  <span className="text-3xl font-black text-[#3B3969] leading-none pb-0.5"></span>
                 </div>
                 <p className="text-base font-bold text-[#1e1c3d] mb-2">Higher survival chances with CPR</p>
                 <p className="text-sm text-[#666] leading-relaxed">
@@ -435,7 +434,7 @@ export default function StatisticsPage() {
                 </div>
                 <p className="text-base font-bold text-white mb-2">Survival rate possible with early AED</p>
                 <p className="text-sm text-white/75 leading-relaxed">
-                  When CPR is combined with defibrillation within 3â€“5 minutes of collapse, survival rates can climb to up to 70%.
+                  When CPR is combined with defibrillation within 35 minutes of collapse, survival rates can climb to up to 70%.
                 </p>
               </div>
               </Reveal>
@@ -448,12 +447,12 @@ export default function StatisticsPage() {
                   <Clock className="w-6 h-6 text-[#CB154E]" />
                 </div>
                 <div className="flex items-end gap-1 mb-3">
-                  <span className="text-5xl font-black text-[#CB154E] tracking-tight leading-none">7â€“10</span>
+                  <span className="text-5xl font-black text-[#CB154E] tracking-tight leading-none">710</span>
                   <span className="text-3xl font-black text-[#CB154E] leading-none pb-0.5">%</span>
                 </div>
                 <p className="text-base font-bold text-[#1e1c3d] mb-2">Survival drop per minute without CPR</p>
                 <p className="text-sm text-[#666] leading-relaxed">
-                  For every minute that passes without CPR or defibrillation, the chance of survival falls by 7â€“10%. Fast action is not optional â€” it is everything.
+                  For every minute that passes without CPR or defibrillation, the chance of survival falls by 710%. Fast action is not optional  it is everything.
                 </p>
               </div>
               </Reveal>
@@ -461,9 +460,9 @@ export default function StatisticsPage() {
           </div>
         </section>
 
-        {/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-            SECTION 4 â€” BYSTANDER & LOCATION
-        â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
+        {/* 
+            SECTION 4  BYSTANDER & LOCATION
+         */}
         <section className="py-12 md:py-16 bg-white">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
 
@@ -483,7 +482,7 @@ export default function StatisticsPage() {
               </Reveal>
             </div>
 
-            {/* â”€â”€ Featured 80% at home â”€â”€ */}
+            {/*  Featured 80% at home  */}
             <Reveal delay={100}>
             <div
               className="relative rounded-3xl overflow-hidden p-10 md:p-14 mb-6"
@@ -503,7 +502,7 @@ export default function StatisticsPage() {
                   </p>
                   <p className="text-xl font-bold text-white mb-3">of cardiac arrests occur at home</p>
                   <p className="text-white/50 text-base leading-relaxed">
-                    This means the first responder isn&rsquo;t usually a paramedic â€” it&rsquo;s a family
+                    This means the first responder isn&rsquo;t usually a paramedic  it&rsquo;s a family
                     member, a partner, or a friend. Being trained in CPR could mean saving someone you love.
                   </p>
                 </div>
@@ -517,12 +516,12 @@ export default function StatisticsPage() {
                     },
                     {
                       Icon: Activity,
-                      stat: "45â€“75%",
+                      stat: "4575%",
                       label: "bystander CPR rates vary across Australian states and territories",
                     },
                     {
                       Icon: Clock,
-                      stat: "7â€“10%",
+                      stat: "710%",
                       label: "survival drops per minute without CPR or defibrillation",
                     },
                   ].map((item) => (
@@ -543,13 +542,13 @@ export default function StatisticsPage() {
             </div>
             </Reveal>
 
-            {/* â”€â”€ Bottom callout strip â”€â”€ */}
+            {/*  Bottom callout strip  */}
             <Reveal delay={200}>
             <div className="rounded-3xl bg-[#F9F9FC] border border-gray-100 px-8 py-6 flex flex-col sm:flex-row items-center gap-3 sm:gap-6">
               <AlertCircle className="w-6 h-6 text-[#CB154E] shrink-0" />
               <p className="text-sm text-[#444] leading-relaxed font-medium text-center sm:text-left">
                 Across Australia, bystander CPR rates range from <strong className="text-[#1e1c3d]">45% to 75%</strong> depending on
-                location â€” meaning tens of thousands of cardiac arrest victims each year do not receive
+                location  meaning tens of thousands of cardiac arrest victims each year do not receive
                 the help they need in time. <strong className="text-[#1e1c3d]">Training more Australians closes this gap.</strong>
               </p>
             </div>
@@ -558,9 +557,9 @@ export default function StatisticsPage() {
           </div>
         </section>
 
-        {/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-            SECTION 5 â€” TRAINING GAP
-        â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
+        {/* 
+            SECTION 5  TRAINING GAP
+         */}
         <section className="py-12 md:py-16 bg-[#F9F9FC]">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -583,7 +582,7 @@ export default function StatisticsPage() {
                   without practice.
                 </p>
                 <p className="text-[#555] text-base leading-relaxed">
-                  Annual refresher training is strongly recommended â€” and is the single most effective way
+                  Annual refresher training is strongly recommended  and is the single most effective way
                   to ensure you're ready to act when it truly matters.
                 </p>
                 <Button
@@ -653,9 +652,9 @@ export default function StatisticsPage() {
           </div>
         </section>
 
-        {/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-            CTA â€” WHY TRAINING MATTERS
-        â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
+        {/* 
+            CTA  WHY TRAINING MATTERS
+         */}
         <section
           className="relative py-12 md:py-16 overflow-hidden"
           style={{ background: "linear-gradient(135deg, #F9F9FC 0%, #F0F0F6 100%)" }}
@@ -684,7 +683,7 @@ export default function StatisticsPage() {
             </Reveal>
             </div>
 
-            {/* ── Modern stat highlight cards ── */}
+            {/* -- Modern stat highlight cards -- */}
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-12">
               {[
                 {
@@ -752,7 +751,7 @@ export default function StatisticsPage() {
               ))}
             </div>
 
-            {/* ── Supporting fact strip ── */}
+            {/* -- Supporting fact strip -- */}
             <Reveal delay={100}>
             <div className="grid sm:grid-cols-2 gap-4 mb-12">
               {[
@@ -772,7 +771,7 @@ export default function StatisticsPage() {
             </div>
             </Reveal>
 
-            {/* ── CTA bar ── */}
+            {/* -- CTA bar -- */}
             <Reveal delay={120}>
             <div className="rounded-3xl bg-gradient-to-r from-[#3B3969] to-[#4A4880] border border-[#3B3969]/20 px-8 py-8 flex flex-col md:flex-row items-center justify-between gap-6">
               <p className="text-white/80 text-base font-medium leading-relaxed max-w-xl text-center md:text-left">
@@ -802,8 +801,6 @@ export default function StatisticsPage() {
 
           </div>
         </section>
-
-        <NewsletterSection />
       </main>
       <Footer />
     </>

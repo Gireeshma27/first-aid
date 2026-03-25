@@ -1,7 +1,6 @@
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { ServicesSection } from "@/sections/services"
-import { NewsletterSection } from "@/sections/newsletter"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -17,7 +16,6 @@ export default function ServicesPage() {
         <div className="pt-8 md:pt-12">
           <ServicesSection />
         </div>
-        <NewsletterSection />
       </main>
       <Footer />
     </>

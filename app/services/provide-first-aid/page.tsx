@@ -1,6 +1,5 @@
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
-import { NewsletterSection } from "@/sections/newsletter"
 import { CheckCircle2, Phone, ShieldPlus, ArrowRight, Users, Clock, BookOpen, AlertTriangle } from "lucide-react"
 import { FiDroplet, FiZap, FiActivity, FiWind, FiAlertOctagon, FiAlertCircle, FiHeart, FiUser } from "react-icons/fi"
 import Image from "next/image"
@@ -106,7 +105,7 @@ export default function ProvideFirstAidPage() {
           </div>
         </section>
 
-        {/* Emergency tiles — Auto-scrolling carousel */}
+        {/* Emergency tiles  Auto-scrolling carousel */}
         <section className="py-12 md:py-16 bg-white overflow-hidden">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <Reveal>
@@ -311,8 +310,6 @@ export default function ProvideFirstAidPage() {
           courseCode="HLTAID011"
           courseTitle="Provide First Aid"
         />
-
-        <NewsletterSection />
       </main>
       <Footer />
     </>
