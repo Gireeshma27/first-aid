@@ -59,7 +59,7 @@ export function BookingSection() {
               </div>
               <div>
                 <h4 className="font-semibold text-white mb-1">Call Us</h4>
-                <p className="text-white/60">1300 FIRST AID</p>
+                <p className="text-white/60">(02) 9627 2659</p>
               </div>
             </div>
             <div className="flex items-start gap-4 group">
@@ -68,7 +68,7 @@ export function BookingSection() {
               </div>
               <div>
                 <h4 className="font-semibold text-white mb-1">Email Us</h4>
-                <p className="text-white/60">info@firstaidnetwork.com.au</p>
+                <p className="text-white/60">info@firstaidnetworkaustralia.com.au</p>
               </div>
             </div>
             <div className="flex items-start gap-4 group">

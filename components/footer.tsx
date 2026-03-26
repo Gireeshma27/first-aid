@@ -3,7 +3,7 @@
 import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin, Twitter, ArrowRight } from "lucide-react"
+import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin, Twitter, Youtube, ArrowRight } from "lucide-react"
 import logo from "@/public/images/logo.png"
 
 const navLinks = [
@@ -15,11 +15,16 @@ const navLinks = [
   { name: "Contact", href: "/contact" },
 ]
 
+const TiktokIcon = (props: any) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+    <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5v3a3 3 0 0 1-3 3z" />
+  </svg>
+)
+
 const socialLinks = [
-  { name: "Facebook", icon: Facebook, href: "#" },
-  { name: "Instagram", icon: Instagram, href: "#" },
-  { name: "LinkedIn", icon: Linkedin, href: "#" },
-  { name: "Twitter", icon: Twitter, href: "#" },
+  { name: "Instagram", icon: Instagram, href: "https://www.instagram.com/firstaidnetworkaustralia?igsh=M3UxdWc2cWo3OGg=" },
+  { name: "TikTok", icon: TiktokIcon, href: "https://vt.tiktok.com/ZSu3kFXt9/" },
+  { name: "YouTube", icon: Youtube, href: "https://www.youtube.com/@FirstAidNetworkAustralia" },
 ]
 
 export function Footer() {
@@ -116,25 +121,25 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <span className="text-[#CB154E] font-bold text-xs mt-0.5 w-4 shrink-0">A:</span>
                 <span className="text-sm text-white/55 leading-relaxed">
-                  Servicing all of Australia
+                  Suite 226, 2–8 Brookhollow Avenue, Norwest NSW 2153
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-[#CB154E] font-bold text-xs mt-0.5 w-4 shrink-0">P:</span>
                 <a
-                  href="tel:1300347782"
+                  href="tel:0296272659"
                   className="text-sm text-white/55 hover:text-white transition-colors duration-200"
                 >
-                  1300 FIRST AID
+                  (02) 9627 2659
                 </a>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-[#CB154E] font-bold text-xs mt-0.5 w-4 shrink-0">E:</span>
                 <a
-                  href="mailto:info@firstaidnetwork.com.au"
+                  href="mailto:info@firstaidnetworkaustralia.com.au"
                   className="text-sm text-white/55 hover:text-white transition-colors duration-200 break-all"
                 >
-                  info@firstaidnetwork.com.au
+                  info@firstaidnetworkaustralia.com.au
                 </a>
               </li>
             </ul>

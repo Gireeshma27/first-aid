@@ -9,38 +9,79 @@ import {
 import logo from "@/public/images/logo.png"
 import { Button } from "@/components/ui/button"
 
-const services = [
+const coursesList = [
   { name: "HLTAID009 Provide CPR", href: "/services/cpr-training" },
   { name: "HLTAID011 Provide First Aid", href: "/services/provide-first-aid" },
   { name: "HLTAID012 First Aid in Education & Care", href: "/services/first-aid-education-care" },
   { name: "Anaphylaxis & Asthma Management", href: "/services/anaphylaxis-asthma-training" },
   { name: "RAMOAP Training for NSW Teachers", href: "/services/ramoap-training" },
-  { name: "Community Clinical Awareness", href: "/services/community-clinical-awareness" },
-  { name: "Drug and Alcohol Testing", href: "/services/drug-alcohol-testing" },
-  { name: "Event Medics & On-Site Support", href: "/services/event-medics" },
-  { name: "Custom & Tailored Training", href: "/services/custom-training" },
 ]
 
-type ServiceItem = typeof services[number]
+const servicesList = [
+  { name: "Drug and Alcohol Testing", href: "/services/drug-alcohol-testing" },
+  { name: "Event Medical Services", href: "/services/event-medics" },
+  { name: "Medicine and Onsite Support", href: "/services/medicine-onsite-support" },
+  { name: "Custom and Tailored Training", href: "/services/custom-training" },
+]
 
 const navigation = [
-  { name: "Home", href: "/", dropdown: null as null | ServiceItem[], isServices: false },
-  { name: "Services", href: "/services", dropdown: services as ServiceItem[], isServices: true },
-  { name: "Events", href: "/events", dropdown: null, isServices: false },
-  { name: "Statistics", href: "/statistics", dropdown: null, isServices: false },
-  { name: "About Us", href: "/about", dropdown: null, isServices: false },
-  { name: "Contact", href: "/contact", dropdown: null, isServices: false },
+  { name: "Home", href: "/", type: "link" },
+  { name: "Courses", href: "/courses", type: "courses" },
+  { name: "Services", href: "/services", type: "services" },
+  { name: "Statistics", href: "/statistics", type: "link" },
+  { name: "About Us", href: "/about", type: "link" },
+  { name: "Contact", href: "/contact", type: "link" },
 ]
 
-/* ── Compact 2-column dropdown (Services — click only, no icons) ── */
-function ServicesDropdown({ items, isOpen }: { items: ServiceItem[]; isOpen: boolean }) {
+function CoursesDropdown({ isOpen }: { isOpen: boolean }) {
+  if (!isOpen) return null
+
+  return (
+    <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 z-50 animate-slide-down">
+      <div className="bg-white/95 backdrop-blur-md rounded-2xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] border border-white/40 p-5 w-[640px] max-w-[90vw]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-1">
+          {coursesList.map(({ name, href }) => (
+            <Link
+              key={name}
+              href={href}
+              className="block px-3 py-2.5 rounded-xl text-sm text-[#333333] hover:bg-[#3B3969]/5 hover:text-[#3B3969] transition-all duration-200 font-semibold leading-relaxed"
+            >
+              {name}
+            </Link>
+          ))}
+        </div>
+        
+        <div className="mt-3 mb-3 border-t border-gray-200/60"></div>
+        
+        <div className="px-3 pb-1">
+          <p className="text-[11px] text-gray-500 tracking-wider uppercase font-semibold mb-1 opacity-80">
+            In partnership with Healthcorp RTO 91222
+          </p>
+          <Link
+            href="/services/community-clinical-awareness"
+            className="block py-2 rounded-xl group"
+          >
+            <div className="text-sm text-[#333333] group-hover:text-[#3B3969] transition-colors font-semibold leading-relaxed">
+              Community Clinical Awareness
+            </div>
+            <div className="text-[12.5px] text-gray-400 mt-0.5 font-medium">
+              Non-accredited (Not nationally recognised)
+            </div>
+          </Link>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function ServicesDropdown({ isOpen }: { isOpen: boolean }) {
   if (!isOpen) return null
 
   return (
     <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 z-50 animate-slide-down">
       <div className="bg-white/95 backdrop-blur-md rounded-2xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] border border-white/40 p-3 w-[460px]">
         <div className="grid grid-cols-2 gap-2">
-          {items.map(({ name, href }) => (
+          {servicesList.map(({ name, href }) => (
             <Link
               key={name}
               href={href}
@@ -51,6 +92,58 @@ function ServicesDropdown({ items, isOpen }: { items: ServiceItem[]; isOpen: boo
           ))}
         </div>
       </div>
+    </div>
+  )
+}
+
+function MobileCoursesDropdown({ closeMenu }: { closeMenu: () => void }) {
+  return (
+    <div className="ml-4 space-y-1 animate-slide-down">
+      {coursesList.map((subItem) => (
+        <Link
+          key={subItem.name}
+          href={subItem.href}
+          className="block rounded-lg px-4 py-2.5 text-sm text-[#666666] hover:bg-[#F5F5F5] hover:text-[#3B3969] transition-colors"
+          onClick={closeMenu}
+        >
+          {subItem.name}
+        </Link>
+      ))}
+      <div className="my-2 border-t border-gray-200/60 mx-4"></div>
+      <div className="px-4 py-1">
+        <p className="text-[10px] text-gray-500 tracking-wider uppercase font-semibold mb-1 opacity-80">
+          In partnership with Healthcorp RTO 91222
+        </p>
+        <Link
+          href="/services/community-clinical-awareness"
+          className="block py-2 rounded-lg group"
+          onClick={closeMenu}
+        >
+          <div className="text-sm text-[#666666] group-hover:text-[#3B3969] transition-colors">
+            Community Clinical Awareness
+          </div>
+          <div className="text-[12px] text-gray-400 mt-0.5">
+            Non-accredited (Not nationally recognised)
+          </div>
+        </Link>
+      </div>
+    </div>
+  )
+}
+
+function MobileServicesDropdown({ closeMenu }: { closeMenu: () => void }) {
+  return (
+    <div className="ml-4 space-y-1 animate-slide-down">
+      {servicesList.map((subItem) => (
+        <Link
+          key={subItem.name}
+          href={subItem.href}
+          className="block rounded-lg px-4 py-2.5 text-sm text-[#666666] hover:bg-[#F5F5F5] hover:text-[#3B3969] transition-colors"
+          onClick={closeMenu}
+        >
+          {subItem.name}
+        </Link>
+      ))}
     </div>
   )
 }
@@ -132,7 +225,7 @@ export function Navbar() {
         {/* Desktop nav */}
         <div className="hidden lg:flex lg:gap-x-2">
           {navigation.map((item) => {
-            const hasDropdown = !!item.dropdown
+            const hasDropdown = item.type === "courses" || item.type === "services"
             const isOpen = activeDropdown === item.name
 
             return (
@@ -160,9 +253,8 @@ export function Navbar() {
                   </Link>
                 )}
 
-                {item.isServices && item.dropdown && (
-                  <ServicesDropdown items={item.dropdown as ServiceItem[]} isOpen={isOpen} />
-                )}
+                {item.type === "courses" && <CoursesDropdown isOpen={isOpen} />}
+                {item.type === "services" && <ServicesDropdown isOpen={isOpen} />}
               </div>
             )
           })}
@@ -204,9 +296,12 @@ export function Navbar() {
             </div>
             <div className="mt-8 flow-root">
               <div className="space-y-1">
-                {navigation.map((item) => (
+                {navigation.map((item) => {
+                  const hasDropdown = item.type === "courses" || item.type === "services"
+                  
+                  return (
                   <div key={item.name}>
-                    {item.dropdown ? (
+                    {hasDropdown ? (
                       <>
                         <button
                           onClick={() => setMobileAccordion(mobileAccordion === item.name ? null : item.name)}
@@ -216,18 +311,11 @@ export function Navbar() {
                           <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileAccordion === item.name ? "rotate-180" : ""}`} />
                         </button>
                         {mobileAccordion === item.name && (
-                          <div className="ml-4 space-y-1 animate-slide-down">
-                            {item.dropdown.map((subItem) => (
-                              <Link
-                                key={subItem.name}
-                                href={subItem.href}
-                                className="block rounded-lg px-4 py-2.5 text-sm text-[#666666] hover:bg-[#F5F5F5] hover:text-[#3B3969] transition-colors"
-                                onClick={() => setMobileMenuOpen(false)}
-                              >
-                                {subItem.name}
-                              </Link>
-                            ))}
-                          </div>
+                          item.type === "courses" ? (
+                            <MobileCoursesDropdown closeMenu={() => setMobileMenuOpen(false)} />
+                          ) : (
+                            <MobileServicesDropdown closeMenu={() => setMobileMenuOpen(false)} />
+                          )
                         )}
                       </>
                     ) : (
@@ -240,7 +328,7 @@ export function Navbar() {
                       </Link>
                     )}
                   </div>
-                ))}
+                )})}
               </div>
               <div className="mt-8 pt-6 border-t border-gray-200">
                 <Button asChild className="w-full bg-[#CB154E] hover:bg-[#a50f3d] text-white font-semibold rounded-full py-6 text-base">

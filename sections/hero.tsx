@@ -267,7 +267,7 @@ export function Hero() {
               {/* Heading */}
               <div className="anim-up d1">
                 <span className="h-accent" />
-                <h1 className="text-[2.2rem] md:text-[2.5rem] lg:text-[2.75rem] font-extrabold text-white leading-[1.1] tracking-tight">
+                <h1 className="text-4xl md:text-5xl lg:text-5xl font-semibold text-white leading-[1.1] tracking-tight">
                   First Aid{" "}
                   <span style={{
                     background: "linear-gradient(130deg, #CB154E 20%, #f7395e 100%)",

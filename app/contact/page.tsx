@@ -15,14 +15,14 @@ const contactMethods = [
     icon: Phone,
     title: "Phone",
     description: "Speak directly with our team",
-    value: "1300 FIRST AID",
-    subtext: "Monday to Friday, 8am  6pm AEST",
+    value: "(02) 9627 2659",
+    subtext: "Monday to Friday, 8am - 6pm AEST",
   },
   {
     icon: Mail,
     title: "Email",
     description: "Send us a message anytime",
-    value: "info@firstaidnetwork.com.au",
+    value: "info@firstaidnetworkaustralia.com.au",
     subtext: "We'll respond within 24 hours",
   },
   {
@@ -34,17 +34,17 @@ const contactMethods = [
   },
   {
     icon: MapPin,
-    title: "Service Area",
-    description: "We come to you",
-    value: "All of Australia",
-    subtext: "On-site training nationwide",
+    title: "Headquarters",
+    description: "Visit our office",
+    value: "Suite 226, 2–8 Brookhollow Ave",
+    subtext: "Norwest NSW 2153",
   },
 ]
 
 const faqs = [
   {
     question: "How do I book a training course?",
-    answer: "You can book training by filling out the contact form below, calling us on 1300 FIRST AID, or emailing info@firstaidnetwork.com.au. We'll discuss your requirements and arrange a suitable date and location.",
+    answer: "You can book training by filling out the contact form below, calling us on (02) 9627 2659, or emailing info@firstaidnetworkaustralia.com.au. We'll discuss your requirements and arrange a suitable date and location.",
   },
   {
     question: "Do you offer on-site training?",
@@ -87,10 +87,10 @@ export default function ContactPage() {
                 <span className="w-2 h-2 rounded-full bg-[#CB154E]" />
                 Get in Touch
               </span>
-              <h1 className="text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-black text-white leading-[1.1] tracking-tight mb-6">
+              <h1 className="text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-semibold text-white leading-tight tracking-tight mb-4">
                 Let's discuss your training needs.
               </h1>
-              <p className="text-xl text-white/60 leading-relaxed mb-16 font-medium">
+              <p className="text-lg md:text-xl text-white/60 leading-relaxed mb-12 font-medium">
                 Whether you need to book training, ask a question, or request a quote, our team is ready to help.
               </p>
 

@@ -154,7 +154,7 @@ export default function BookTrainingPage() {
               <HeartPulse className="w-4 h-4 text-[#CB154E]" />
               Training Enquiry
             </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-white leading-tight mb-6">
               Book First Aid{" "}
               <span className="relative inline-block">
                 <span className="relative z-10 text-[#CB154E]">Training</span>
@@ -241,7 +241,7 @@ export default function BookTrainingPage() {
                 {/* Contact strip */}
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a
-                    href="tel:+61400000000"
+                    href="tel:0296272659"
                     className="flex-1 flex items-center gap-3 bg-white rounded-xl border border-gray-100 px-5 py-4 shadow-sm hover:shadow-md hover:border-[#CB154E]/30 transition-all group"
                   >
                     <div className="w-10 h-10 rounded-xl bg-[#CB154E]/10 flex items-center justify-center group-hover:bg-[#CB154E] transition-colors">
@@ -249,7 +249,7 @@ export default function BookTrainingPage() {
                     </div>
                     <div>
                       <p className="text-xs text-[#999999] font-medium">Call Us</p>
-                      <p className="text-sm font-bold text-[#3B3969]">0400 000 000</p>
+                      <p className="text-sm font-bold text-[#3B3969]">(02) 9627 2659</p>
                     </div>
                   </a>
                   <a
@@ -261,7 +261,7 @@ export default function BookTrainingPage() {
                     </div>
                     <div>
                       <p className="text-xs text-[#999999] font-medium">Email Us</p>
-                      <p className="text-sm font-bold text-[#3B3969] truncate">info@firstaidnetwork...</p>
+                      <p className="text-sm font-bold text-[#3B3969] truncate">info@firstaidnetworkaustralia...</p>
                     </div>
                   </a>
                 </div>
