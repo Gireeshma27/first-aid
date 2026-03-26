@@ -184,27 +184,27 @@ export default function StatisticsPage() {
                 </div>
               </div>
 
-              {/* Right: 22 stat cards */}
-              <div className="grid grid-cols-2 gap-4">
-                <div className="rounded-3xl bg-[#CB154E]/20 border border-[#CB154E]/35 p-7 text-center backdrop-blur-sm hover:bg-[#CB154E]/25 transition-colors duration-300">
-                  <p className="text-4xl font-black text-white tracking-tight mb-2">32,000+</p>
-                  <div className="w-8 h-px bg-white/20 mx-auto mb-2" />
-                  <p className="text-xs text-white/55 font-medium leading-snug">Cardiac arrests<br />per year in Australia</p>
+              {/* Right: 4 stat cards */}
+              <div className="grid grid-cols-2 gap-8">
+                <div className="rounded-3xl bg-[#CB154E]/20 border border-[#CB154E]/35 p-6 text-center backdrop-blur-sm hover:scale-105 shadow-lg transition-all duration-300">
+                  <p className="text-3xl font-semibold text-white tracking-tight mb-2">32,000+</p>
+                  <div className="w-8 h-px bg-white/30 mx-auto mb-2" />
+                  <p className="text-xs text-white/80 font-medium leading-snug">Cardiac arrests<br />per year in Australia</p>
                 </div>
-                <div className="rounded-3xl bg-white/8 border border-white/12 p-7 text-center backdrop-blur-sm hover:bg-white/12 transition-colors duration-300">
-                  <p className="text-4xl font-black text-white tracking-tight mb-2">~70</p>
-                  <div className="w-8 h-px bg-white/20 mx-auto mb-2" />
-                  <p className="text-xs text-white/55 font-medium leading-snug">Cardiac arrests<br />every single day</p>
+                <div className="rounded-3xl bg-white/10 border border-white/20 p-6 text-center backdrop-blur-sm hover:scale-105 shadow-lg transition-all duration-300">
+                  <p className="text-3xl font-semibold text-white tracking-tight mb-2">~70</p>
+                  <div className="w-8 h-px bg-white/30 mx-auto mb-2" />
+                  <p className="text-xs text-white/80 font-medium leading-snug">Cardiac arrests<br />every single day</p>
                 </div>
-                <div className="rounded-3xl bg-white/8 border border-white/12 p-7 text-center backdrop-blur-sm hover:bg-white/12 transition-colors duration-300">
-                  <p className="text-4xl font-black text-white tracking-tight mb-2">Only 10%</p>
-                  <div className="w-8 h-px bg-white/20 mx-auto mb-2" />
-                  <p className="text-xs text-white/55 font-medium leading-snug">Currently survive<br />out-of-hospital arrest</p>
+                <div className="rounded-3xl bg-white/10 border border-white/20 p-6 text-center backdrop-blur-sm hover:scale-105 shadow-lg transition-all duration-300">
+                  <p className="text-3xl font-semibold text-white tracking-tight mb-2">Only 10%</p>
+                  <div className="w-8 h-px bg-white/30 mx-auto mb-2" />
+                  <p className="text-xs text-white/80 font-medium leading-snug">Currently survive<br />out-of-hospital arrest</p>
                 </div>
-                <div className="rounded-3xl bg-[#CB154E]/20 border border-[#CB154E]/35 p-7 text-center backdrop-blur-sm hover:bg-[#CB154E]/25 transition-colors duration-300">
-                  <p className="text-4xl font-black text-white tracking-tight mb-2">80%</p>
-                  <div className="w-8 h-px bg-white/20 mx-auto mb-2" />
-                  <p className="text-xs text-white/55 font-medium leading-snug">Of cardiac arrests<br />happen at home</p>
+                <div className="rounded-3xl bg-[#CB154E]/20 border border-[#CB154E]/35 p-6 text-center backdrop-blur-sm hover:scale-105 shadow-lg transition-all duration-300">
+                  <p className="text-3xl font-semibold text-white tracking-tight mb-2">80%</p>
+                  <div className="w-8 h-px bg-white/30 mx-auto mb-2" />
+                  <p className="text-xs text-white/80 font-medium leading-snug">Of cardiac arrests<br />happen at home</p>
                 </div>
               </div>
 
@@ -215,10 +215,10 @@ export default function StatisticsPage() {
         {/* 
             SECTION 1  SCALE OF THE PROBLEM
          */}
-        <section className="py-12 md:py-16 bg-white">
+        <section className="py-16 md:py-20 bg-white">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
 
-            <div className="mb-12">
+            <div className="mb-16">
               <Reveal>
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#CB154E]/8 text-[#CB154E] text-xs font-bold uppercase tracking-widest mb-5">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#CB154E]" />
@@ -231,15 +231,14 @@ export default function StatisticsPage() {
             </div>
 
             {/* Feature layout: large card left + two stacked right */}
-            <div className="grid lg:grid-cols-5 gap-6">
+            <div className="grid lg:grid-cols-5 gap-10 md:gap-16">
 
               {/* Large feature card  32,000 */}
               <Reveal className="lg:col-span-3" delay={0}>
               <div
-                className="relative rounded-3xl overflow-hidden p-10 flex flex-col justify-between min-h-[360px] h-full"
+                className="relative rounded-3xl overflow-hidden p-9 flex flex-col justify-between min-h-[360px] h-full"
                 style={{ background: "linear-gradient(135deg, #1e1c3d 0%, #3B3969 100%)" }}
               >
-                <div className="absolute -top-6 -right-4 text-[220px] font-black opacity-[0.04] text-white select-none pointer-events-none leading-none tracking-tighter">32K</div>
                 <div className="absolute -bottom-10 -left-10 w-56 h-56 rounded-full bg-[#CB154E]/15 blur-3xl pointer-events-none" />
 
                 <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white/70 text-xs font-semibold w-fit border border-white/10">
@@ -247,14 +246,14 @@ export default function StatisticsPage() {
                   Annual cardiac arrests
                 </span>
 
-                <div className="relative z-10 mt-8">
-                  <p className="text-7xl md:text-8xl font-black text-white tracking-tight leading-none mb-5">
+                <div className="relative z-10 mt-8 flex flex-col gap-4">
+                  <p className="text-4xl md:text-5xl font-bold text-white tracking-tight leading-none mb-2">
                     <AnimatedCounter target={32000} suffix="+" />
                   </p>
-                  <p className="text-xl font-bold text-white mb-3 leading-snug">
+                  <p className="text-lg font-medium text-white/90 leading-snug">
                     Australians experience out-of-hospital cardiac arrest every year
                   </p>
-                  <p className="text-white/50 text-sm leading-relaxed max-w-md">
+                  <p className="text-white/60 text-sm leading-relaxed max-w-md">
                     Over 32,000 cardiac arrests occur outside of hospitals annually  one of the highest rates in the developed world. Most happen without warning.
                   </p>
                 </div>
@@ -262,33 +261,31 @@ export default function StatisticsPage() {
               </Reveal>
 
               {/* Two stacked cards */}
-              <Reveal className="lg:col-span-2 flex flex-col gap-6" delay={120}>
+              <Reveal className="lg:col-span-2 flex flex-col gap-8" delay={120}>
 
                 {/* ~70/day */}
-                <div className="group relative rounded-3xl bg-[#F9F9FC] border border-gray-100 p-8 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 overflow-hidden flex-1">
+                <div className="group relative rounded-3xl bg-[#F9F9FC] border border-gray-100 p-8 md:p-9 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 overflow-hidden flex-1 flex flex-col gap-4">
                   <div className="absolute top-0 left-0 right-0 h-1.5 bg-[#3B3969] rounded-t-3xl" />
-                  <div className="absolute -bottom-4 -right-2 text-[110px] font-black opacity-[0.04] text-[#3B3969] select-none pointer-events-none leading-none">70</div>
-                  <div className="w-11 h-11 rounded-2xl bg-[#3B3969]/10 flex items-center justify-center mb-5">
+                  <div className="w-11 h-11 rounded-2xl bg-[#3B3969]/10 flex items-center justify-center mb-1">
                     <Clock className="w-5 h-5 text-[#3B3969]" />
                   </div>
-                  <p className="text-5xl font-black text-[#3B3969] tracking-tight mb-2 relative z-10">
+                  <p className="text-3xl font-semibold text-[#3B3969] tracking-tight mb-1 relative z-10">
                     <AnimatedCounter target={70} prefix="~" />
                   </p>
-                  <p className="text-base font-bold text-[#1e1c3d] mb-1">Cardiac arrests every day</p>
+                  <p className="text-base font-semibold text-[#1e1c3d]">Cardiac arrests every day</p>
                   <p className="text-sm text-[#666] leading-relaxed">One cardiac arrest every 21 minutes  across homes, workplaces, and public spaces nationwide.</p>
                 </div>
 
                 {/* 10% survival */}
-                <div className="group relative rounded-3xl bg-[#F9F9FC] border border-gray-100 p-8 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 overflow-hidden flex-1">
+                <div className="group relative rounded-3xl bg-[#F9F9FC] border border-gray-100 p-8 md:p-9 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 overflow-hidden flex-1 flex flex-col gap-4">
                   <div className="absolute top-0 left-0 right-0 h-1.5 bg-[#CB154E] rounded-t-3xl" />
-                  <div className="absolute -bottom-4 -right-2 text-[110px] font-black opacity-[0.04] text-[#CB154E] select-none pointer-events-none leading-none">10</div>
-                  <div className="w-11 h-11 rounded-2xl bg-[#CB154E]/10 flex items-center justify-center mb-5">
+                  <div className="w-11 h-11 rounded-2xl bg-[#CB154E]/10 flex items-center justify-center mb-1">
                     <AlertCircle className="w-5 h-5 text-[#CB154E]" />
                   </div>
-                  <p className="text-5xl font-black text-[#CB154E] tracking-tight mb-2 relative z-10">
+                  <p className="text-3xl font-semibold text-[#CB154E] tracking-tight mb-1 relative z-10">
                     <AnimatedCounter target={10} suffix="%" />
                   </p>
-                  <p className="text-base font-bold text-[#1e1c3d] mb-1">Current survival rate</p>
+                  <p className="text-base font-semibold text-[#1e1c3d]">Current survival rate</p>
                   <p className="text-sm text-[#666] leading-relaxed">Only 1 in 10 victims survive, because trained bystander help rarely reaches them in time.</p>
                 </div>
 
@@ -370,7 +367,7 @@ export default function StatisticsPage() {
 
             {/* Callout */}
             <Reveal delay={450}>
-            <div className="rounded-2xl bg-white/8 border border-white/12 px-7 py-6 max-w-2xl mx-auto flex flex-col sm:flex-row items-center gap-4 text-left">
+            <div className="rounded-2xl bg-white/8 border border-white/12 px-8 md:px-9 py-7 md:py-8 max-w-2xl mx-auto flex flex-col sm:flex-row items-center gap-5 text-left">
               <div className="w-12 h-12 rounded-xl bg-[#CB154E] flex items-center justify-center shrink-0">
                 <Clock className="w-6 h-6 text-white" />
               </div>
@@ -387,9 +384,9 @@ export default function StatisticsPage() {
         {/* 
             SECTION 3  CPR IMPACT
          */}
-        <section className="py-12 md:py-16 bg-[#F9F9FC]">
+        <section className="py-16 md:py-20 bg-[#F9F9FC]">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
-            <div className="text-center mb-14">
+            <div className="text-center mb-16">
               <Reveal>
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#3B3969]/8 text-[#3B3969] text-xs font-bold uppercase tracking-widest mb-5">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#3B3969]" />
@@ -401,19 +398,18 @@ export default function StatisticsPage() {
               </Reveal>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-3 gap-8">
               {/* Card 1 */}
               <Reveal delay={0}>
-              <div className="relative bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 p-8 h-full">
+              <div className="relative bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 p-9 h-full flex flex-col gap-4">
                 <div className="absolute top-0 left-0 right-0 h-1.5 bg-[#3B3969] rounded-t-3xl" />
-                <div className="w-12 h-12 rounded-2xl bg-[#3B3969]/10 flex items-center justify-center mb-6">
+                <div className="w-12 h-12 rounded-2xl bg-[#3B3969]/10 flex items-center justify-center mb-2">
                   <Activity className="w-6 h-6 text-[#3B3969]" />
                 </div>
-                <div className="flex items-end gap-1 mb-3">
-                  <span className="text-5xl font-black text-[#3B3969] tracking-tight leading-none">23</span>
-                  <span className="text-3xl font-black text-[#3B3969] leading-none pb-0.5"></span>
+                <div className="flex items-end gap-1 mb-2">
+                  <span className="text-4xl font-semibold text-[#3B3969] tracking-tight leading-none">2-3x</span>
                 </div>
-                <p className="text-base font-bold text-[#1e1c3d] mb-2">Higher survival chances with CPR</p>
+                <p className="text-base font-semibold text-[#1e1c3d]">Higher survival chances</p>
                 <p className="text-sm text-[#666] leading-relaxed">
                   Immediate CPR from a bystander can double or even triple a person's chance of surviving cardiac arrest compared to waiting for paramedics alone.
                 </p>
@@ -422,37 +418,36 @@ export default function StatisticsPage() {
 
               {/* Card 2 */}
               <Reveal delay={100}>
-              <div className="relative bg-[#CB154E] rounded-3xl overflow-hidden shadow-lg hover:-translate-y-1 transition-all duration-300 p-8 h-full">
+              <div className="relative bg-[#CB154E] rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 p-9 h-full flex flex-col gap-4">
                 <div className="absolute -bottom-10 -right-10 w-40 h-40 rounded-full bg-white/5" />
-                <div className="w-12 h-12 rounded-2xl bg-white/20 flex items-center justify-center mb-6">
+                <div className="w-12 h-12 rounded-2xl bg-white/20 flex items-center justify-center mb-2">
                   <ShieldCheck className="w-6 h-6 text-white" />
                 </div>
-                <div className="flex items-end gap-1 mb-3">
-                  <span className="text-5xl font-black text-white tracking-tight leading-none">
+                <div className="flex items-end gap-1 mb-2">
+                  <span className="text-4xl font-semibold text-white tracking-tight leading-none">
                     <AnimatedCounter target={70} suffix="%" />
                   </span>
                 </div>
-                <p className="text-base font-bold text-white mb-2">Survival rate possible with early AED</p>
-                <p className="text-sm text-white/75 leading-relaxed">
-                  When CPR is combined with defibrillation within 35 minutes of collapse, survival rates can climb to up to 70%.
+                <p className="text-base font-semibold text-white">Survival rate with early AED</p>
+                <p className="text-sm text-white/80 leading-relaxed">
+                  When CPR is combined with defibrillation within 3-5 minutes of collapse, survival rates can climb to up to 70%.
                 </p>
               </div>
               </Reveal>
 
               {/* Card 3 */}
               <Reveal delay={200}>
-              <div className="relative bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 p-8">
+              <div className="relative bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 p-9 h-full flex flex-col gap-4">
                 <div className="absolute top-0 left-0 right-0 h-1.5 bg-[#CB154E] rounded-t-3xl" />
-                <div className="w-12 h-12 rounded-2xl bg-[#CB154E]/10 flex items-center justify-center mb-6">
+                <div className="w-12 h-12 rounded-2xl bg-[#CB154E]/10 flex items-center justify-center mb-2">
                   <Clock className="w-6 h-6 text-[#CB154E]" />
                 </div>
-                <div className="flex items-end gap-1 mb-3">
-                  <span className="text-5xl font-black text-[#CB154E] tracking-tight leading-none">710</span>
-                  <span className="text-3xl font-black text-[#CB154E] leading-none pb-0.5">%</span>
+                <div className="flex items-end gap-1 mb-2">
+                  <span className="text-4xl font-semibold text-[#CB154E] tracking-tight leading-none">7-10%</span>
                 </div>
-                <p className="text-base font-bold text-[#1e1c3d] mb-2">Survival drop per minute without CPR</p>
+                <p className="text-base font-semibold text-[#1e1c3d]">Survival drop per minute</p>
                 <p className="text-sm text-[#666] leading-relaxed">
-                  For every minute that passes without CPR or defibrillation, the chance of survival falls by 710%. Fast action is not optional  it is everything.
+                  For every minute that passes without CPR or defibrillation, the chance of survival falls by 7-10%. Fast action is essential.
                 </p>
               </div>
               </Reveal>
@@ -463,10 +458,10 @@ export default function StatisticsPage() {
         {/* 
             SECTION 4  BYSTANDER & LOCATION
          */}
-        <section className="py-12 md:py-16 bg-white">
+        <section className="py-16 md:py-20 bg-white">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
 
-            <div className="text-center mb-12">
+            <div className="text-center mb-16">
               <Reveal>
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#CB154E]/8 text-[#CB154E] text-xs font-bold uppercase tracking-widest mb-5">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#CB154E]" />
@@ -493,21 +488,21 @@ export default function StatisticsPage() {
 
               <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center relative z-10">
                 <div>
-                  <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white/70 text-xs font-semibold border border-white/10 mb-6">
+                  <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white/70 text-xs font-semibold border border-white/10 mb-7">
                     <Home className="w-3.5 h-3.5 text-[#CB154E]" />
                     Where cardiac arrests occur
                   </span>
-                  <p className="text-8xl md:text-9xl font-black text-white tracking-tight leading-none mb-4">
+                  <p className="text-5xl md:text-6xl font-bold text-white tracking-tight leading-none mb-4">
                     <AnimatedCounter target={80} suffix="%" />
                   </p>
-                  <p className="text-xl font-bold text-white mb-3">of cardiac arrests occur at home</p>
-                  <p className="text-white/50 text-base leading-relaxed">
+                  <p className="text-lg font-medium text-white mb-4">of cardiac arrests occur at home</p>
+                  <p className="text-white/60 text-sm leading-relaxed max-w-md">
                     This means the first responder isn&rsquo;t usually a paramedic  it&rsquo;s a family
                     member, a partner, or a friend. Being trained in CPR could mean saving someone you love.
                   </p>
                 </div>
 
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-5">
                   {[
                     {
                       Icon: Users,
@@ -527,7 +522,7 @@ export default function StatisticsPage() {
                   ].map((item) => (
                     <div
                       key={item.stat}
-                      className="flex items-start gap-4 bg-white/8 rounded-2xl p-5 border border-white/10 hover:bg-white/12 transition-colors duration-200"
+                      className="flex items-start gap-4 bg-white/8 rounded-2xl p-6 border border-white/10 hover:bg-white/12 transition-colors duration-200"
                     >
                       <div className="w-10 h-10 rounded-xl bg-white/15 flex items-center justify-center shrink-0">
                         <item.Icon className="w-5 h-5 text-white" />
@@ -544,8 +539,8 @@ export default function StatisticsPage() {
 
             {/*  Bottom callout strip  */}
             <Reveal delay={200}>
-            <div className="rounded-3xl bg-[#F9F9FC] border border-gray-100 px-8 py-6 flex flex-col sm:flex-row items-center gap-3 sm:gap-6">
-              <AlertCircle className="w-6 h-6 text-[#CB154E] shrink-0" />
+            <div className="rounded-3xl bg-[#F9F9FC] border border-gray-100 px-9 py-7 md:px-10 md:py-8 flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
+              <AlertCircle className="w-6 h-6 text-[#CB154E] shrink-0 mt-1" />
               <p className="text-sm text-[#444] leading-relaxed font-medium text-center sm:text-left">
                 Across Australia, bystander CPR rates range from <strong className="text-[#1e1c3d]">45% to 75%</strong> depending on
                 location  meaning tens of thousands of cardiac arrest victims each year do not receive
@@ -560,12 +555,12 @@ export default function StatisticsPage() {
         {/* 
             SECTION 5  TRAINING GAP
          */}
-        <section className="py-12 md:py-16 bg-[#F9F9FC]">
+        <section className="py-16 md:py-20 bg-[#F9F9FC]">
           <div className="mx-auto max-w-7xl px-6 lg:px-12">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
 
               {/* Left: copy */}
-              <div className="space-y-6">
+              <div className="space-y-7">
               <Reveal>
                 <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#3B3969]/8 text-[#3B3969] text-xs font-bold uppercase tracking-widest">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#3B3969]" />
@@ -585,23 +580,25 @@ export default function StatisticsPage() {
                   Annual refresher training is strongly recommended  and is the single most effective way
                   to ensure you're ready to act when it truly matters.
                 </p>
-                <Button
-                  asChild
-                  className="bg-[#CB154E] hover:bg-[#a50f3d] text-white font-semibold rounded-full shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 px-8 h-12 text-sm"
-                >
-                  <Link href="/book-training">
-                    Get CPR Trained Today
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Link>
-                </Button>
+                <div className="pt-8 md:pt-10">
+                  <Button
+                    asChild
+                    className="bg-[#CB154E] hover:bg-[#a50f3d] text-white font-semibold rounded-full shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 px-8 h-12 text-sm"
+                  >
+                    <Link href="/book-training">
+                      Get CPR Trained Today
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </Link>
+                  </Button>
+                </div>
               </Reveal>
               </div>
 
               {/* Right: progress bars */}
-              <div className="space-y-5">
+              <div className="space-y-10">
               <Reveal delay={100}>
-                <div className="bg-white rounded-3xl border border-gray-100 shadow-sm p-7">
-                  <div className="flex items-center justify-between mb-4">
+                <div className="bg-white rounded-3xl border border-gray-100 shadow-sm p-8 md:p-9">
+                  <div className="flex items-center justify-between mb-6">
                     <div className="flex items-center gap-3">
                       <div className="w-10 h-10 rounded-xl bg-[#3B3969]/10 flex items-center justify-center">
                         <BookOpen className="w-5 h-5 text-[#3B3969]" />
@@ -615,11 +612,13 @@ export default function StatisticsPage() {
                       <AnimatedCounter target={56} suffix="%" />
                     </span>
                   </div>
-                  <AnimatedBar percent={56} color="bg-[#3B3969]" />
+                  <div className="mt-4">
+                    <AnimatedBar percent={56} color="bg-[#3B3969]" />
+                  </div>
                 </div>
 
-                <div className="bg-white rounded-3xl border border-gray-100 shadow-sm p-7">
-                  <div className="flex items-center justify-between mb-4">
+                <div className="bg-white rounded-3xl border border-gray-100 shadow-sm p-8 md:p-9">
+                  <div className="flex items-center justify-between mb-6">
                     <div className="flex items-center gap-3">
                       <div className="w-10 h-10 rounded-xl bg-[#CB154E]/10 flex items-center justify-center">
                         <ShieldCheck className="w-5 h-5 text-[#CB154E]" />
@@ -633,11 +632,13 @@ export default function StatisticsPage() {
                       <AnimatedCounter target={22} suffix="%" />
                     </span>
                   </div>
-                  <AnimatedBar percent={22} color="bg-[#CB154E]" />
+                  <div className="mt-4">
+                    <AnimatedBar percent={22} color="bg-[#CB154E]" />
+                  </div>
                 </div>
 
-                <div className="rounded-3xl bg-[#1e1c3d] border border-white/5 px-7 py-6 flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-[#CB154E] flex items-center justify-center shrink-0 mt-0.5">
+                <div className="rounded-3xl bg-[#1e1c3d] border border-white/5 px-8 md:px-9 py-7 md:py-8 flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-xl bg-[#CB154E] flex items-center justify-center shrink-0 mt-1">
                     <AlertCircle className="w-5 h-5 text-white" />
                   </div>
                   <p className="text-sm text-white/70 leading-relaxed font-medium">
@@ -733,13 +734,13 @@ export default function StatisticsPage() {
                   >
                     <card.icon className="w-5 h-5" style={{ color: card.accent }} />
                   </div>
-                  <p className="text-3xl md:text-[2.2rem] font-extrabold tracking-tight leading-none" style={{ color: card.accent }}>
+                  <p className="text-2xl md:text-[2rem] font-bold tracking-tight leading-none" style={{ color: card.accent }}>
                     {card.stat}
                   </p>
-                  <p className="text-sm font-bold text-[#1e1c3d] uppercase tracking-wide leading-snug">
+                  <p className="text-sm font-semibold text-[#1e1c3d] uppercase tracking-wide leading-snug">
                     {card.label}
                   </p>
-                  <p className="text-[#666] text-sm leading-relaxed">
+                  <p className="text-[#666] text-sm leading-relaxed mt-1">
                     {card.desc}
                   </p>
                   <div

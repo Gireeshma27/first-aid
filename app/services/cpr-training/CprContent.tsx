@@ -128,22 +128,18 @@ export default function CprContent() {
         <div className="relative mx-auto max-w-7xl px-6 lg:px-12">
           <div className="flex flex-col lg:flex-row gap-12 items-center">
             <div className="flex-1">
-              <div className="flex flex-wrap items-center gap-3 mb-6">
-                <NationallyRecognisedBadge />
-                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#CB154E]/20 text-[#ff6b9d] text-sm font-semibold border border-[#CB154E]/30">
-                  In partnership with Healthcorp (RTO 91222)
-                </span>
-              </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
-                HLTAID009
-                <span className="block text-2xl md:text-3xl font-semibold text-white/70 mt-2">
-                  Provide Cardiopulmonary Resuscitation (CPR)
-                </span>
+              <div className="max-w-2xl pt-8 md:pt-16 mb-20 lg:mb-0">
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white/90 text-sm font-semibold mb-6 border border-white/10 backdrop-blur-sm">
+                <span className="w-2 h-2 rounded-full bg-[#CB154E]" />
+                HLTAID009 Provide cardiopulmonary resuscitation
+              </span>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white leading-tight mb-6">
+                Master Lifesaving CPR Skills
               </h1>
-              <p className="text-white/70 text-lg leading-relaxed mb-8 max-w-xl">
-                This course covers the essential skills needed to perform CPR in line with Australian Resuscitation
-                Council guidelines.
+              <p className="text-lg md:text-xl text-white/80 leading-relaxed mb-10 max-w-xl font-medium">
+                Comprehensive training delivered by healthcare professionals to give you the confidence to act when every second counts.
               </p>
+              </div>
               <div className="flex flex-wrap gap-3 mb-8">
                 {[
                   { icon: Clock, label: "Face-to-face & Blended" },
@@ -438,11 +434,9 @@ export default function CprContent() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a2e]/30 via-transparent to-transparent" />
               </div>
-              <div className="absolute -bottom-5 -left-5 bg-white rounded-2xl shadow-xl border border-[#E8E8F0] p-5 w-44">
-                <p className="text-3xl font-extrabold text-[#CB154E]">ARC</p>
-                <p className="text-[#64648c] text-xs font-medium mt-1 leading-snug">
-                  Australian Resuscitation Council Guidelines
-                </p>
+              <div className="bg-[#CB154E]/10 rounded-2xl p-6 border border-[#CB154E]/20 text-center">
+                <p className="text-2xl font-semibold text-[#CB154E]">ARC</p>
+                <p className="text-sm font-medium mt-1">Guidelines Met</p>
               </div>
             </Reveal>
           </div>
@@ -455,12 +449,9 @@ export default function CprContent() {
           className="absolute inset-0 opacity-20 pointer-events-none"
           style={{ backgroundImage: "radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1), transparent)" }}
         />
-        <div className="mx-auto max-w-4xl px-6 lg:px-12 text-center relative z-10">
-          <div className="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center mx-auto mb-6">
-            <Heart className="w-8 h-8 text-white" />
-          </div>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">Ready to Book CPR Training?</h2>
-          <p className="text-white/80 text-lg mb-8 max-w-2xl mx-auto">
+        <div className="relative z-10 mx-auto max-w-4xl text-center">
+          <h2 className="text-3xl md:text-4xl font-semibold text-white mb-4">Ready to Book CPR Training?</h2>
+          <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto font-medium">
             Book a session for your team or contact us to discuss your training needs. We deliver across the region with
             flexible scheduling.
           </p>

@@ -405,10 +405,10 @@ export function ServicesSection() {
               <span className="w-1.5 h-1.5 rounded-full bg-[#CB154E]" />
               What We Offer
             </span>
-            <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-extrabold text-white leading-tight tracking-tight mb-4">
+            <h2 className="text-3xl md:text-4xl font-semibold text-white leading-tight tracking-tight mb-4">
               Our Services
             </h2>
-            <p className="text-[1.05rem] text-white/65 leading-relaxed">
+            <p className="text-[1.05rem] text-white/65 leading-relaxed font-medium">
               Training is delivered by qualified and experienced registered nurses. Upon successful completion, participants will receive a nationally recognised certification.
             </p>
           </div>
