@@ -123,7 +123,7 @@ export default function AboutPage() {
               <div className="relative">
                 <div className="relative aspect-[4/4] md:aspect-[4/3] rounded-[2.5rem] overflow-hidden shadow-2xl ring-1 ring-white/10">
                   <Image
-                    src="/images/trainer.png"
+                    src="/images/first.png"
                     alt="First Aid Network Australia training session"
                     fill
                     priority
@@ -143,7 +143,6 @@ export default function AboutPage() {
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
         </section>
