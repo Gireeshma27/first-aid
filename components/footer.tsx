@@ -148,7 +148,7 @@ export function Footer() {
           {/* Column 4: Newsletter / CTA */}
           <div>
             <h3 className="text-sm font-bold text-white mb-6 uppercase tracking-wider">
-              Stay Updated
+              Stay in the Loop
             </h3>
             <p className="text-sm text-white/50 leading-relaxed mb-5">
               Subscribe to our newsletter for the latest training updates and health &amp; safety tips.
