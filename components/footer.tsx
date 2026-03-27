@@ -9,8 +9,8 @@ import logo from "@/public/images/logo.png"
 const navLinks = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/about" },
+  { name: "Courses", href: "/services" },
   { name: "Services", href: "/services" },
-  { name: "Events", href: "/events" },
   { name: "Statistics", href: "/statistics" },
   { name: "Contact", href: "/contact" },
 ]
