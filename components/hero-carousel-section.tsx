@@ -73,12 +73,12 @@ export function HeroCarouselSection() {
           {/* RIGHT SIDE - Carousel */}
           <div className="flex flex-col items-center justify-center">
             {/* Outer wrapper: holds arrows + card */}
-            <div className="relative flex items-center justify-center w-full max-w-md md:max-w-lg mx-auto px-6">
+            <div className="relative flex items-center justify-center w-full max-w-md md:max-w-lg mx-auto px-14">
               {/* Left Arrow — outside the card */}
               <button
                 onClick={goToPrevious}
                 className="absolute z-10 bg-white rounded-full p-2.5 shadow-lg hover:shadow-xl transition-all hover:bg-gray-50 hover:scale-110"
-                style={{ left: "-16px", top: "50%", transform: "translateY(-50%)" }}
+                style={{ left: "-20px", top: "50%", transform: "translateY(-50%)" }}
                 aria-label="Previous slide"
               >
                 <ChevronLeft className="w-5 h-5 text-[#3B3969]" />
@@ -123,7 +123,7 @@ export function HeroCarouselSection() {
               <button
                 onClick={goToNext}
                 className="absolute z-10 bg-white rounded-full p-2.5 shadow-lg hover:shadow-xl transition-all hover:bg-gray-50 hover:scale-110"
-                style={{ right: "-16px", top: "50%", transform: "translateY(-50%)" }}
+                style={{ right: "-20px", top: "50%", transform: "translateY(-50%)" }}
                 aria-label="Next slide"
               >
                 <ChevronRight className="w-5 h-5 text-[#3B3969]" />
