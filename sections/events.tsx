@@ -47,7 +47,7 @@ export function EventsSection() {
           <div className="relative">
             <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl bg-gray-100">
               <Image
-                src="/images/event-medical.png"
+                src="/images/event medical services.png"
                 alt="Event medical team providing first aid support at a community event"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"

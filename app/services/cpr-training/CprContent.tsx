@@ -121,14 +121,14 @@ export default function CprContent() {
   return (
     <>
       {/*  HERO  */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#1a1a2e] via-[#2a1a35] to-[#CB154E]/80 py-16 md:py-20">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#1a1a2e] via-[#2a1a35] to-[#CB154E]/80 py-12 md:py-16">
         <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-[#CB154E]/20 blur-3xl animate-blob" />
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-white/5 blur-3xl animate-blob-delay" />
         <div className="absolute top-1/2 left-1/4 w-[350px] h-[350px] rounded-full bg-[#3B3969]/25 blur-3xl animate-blob-delay-2" />
         <div className="relative mx-auto max-w-7xl px-6 lg:px-12">
           <div className="flex flex-col lg:flex-row gap-12 items-center">
             <div className="flex-1">
-              <div className="max-w-2xl pt-8 md:pt-16 mb-20 lg:mb-0">
+              <div className="max-w-2xl pt-4 md:pt-8 mb-12 lg:mb-0">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white/90 text-sm font-semibold mb-6 border border-white/10 backdrop-blur-sm">
                 <span className="w-2 h-2 rounded-full bg-[#CB154E]" />
                 HLTAID009 Provide cardiopulmonary resuscitation
@@ -187,7 +187,7 @@ export default function CprContent() {
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-                <div className="absolute bottom-5 left-5 right-5 flex items-center gap-3 bg-white/95 backdrop-blur rounded-xl p-4 shadow-lg">
+                <div className="absolute bottom-5 right-5 flex items-center gap-3 bg-white/95 backdrop-blur rounded-xl p-4 shadow-lg max-w-xs">
                   <div className="w-10 h-10 rounded-lg bg-[#CB154E] flex items-center justify-center flex-shrink-0">
                     <Activity className="w-5 h-5 text-white" />
                   </div>
