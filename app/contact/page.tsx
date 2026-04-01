@@ -162,7 +162,7 @@ export default function ContactPage() {
                   className="border border-gray-100 rounded-2xl px-6 bg-white shadow-sm data-[state=open]:shadow-md transition-shadow stagger-item card-shimmer"
                   style={{ animationDelay: `${index * 80}ms` }}
                 >
-                  <AccordionTrigger className="text-left font-semibold text-[#333333] hover:text-[#3B3969] py-5 text-base [&[data-state=open]>svg]:rotate-180">
+                  <AccordionTrigger className="text-left font-semibold text-[#333333] hover:text-[#3B3969] py-5 text-base [&[data-state=open]>svg]:rotate-180 cursor-pointer">
                     {faq.question}
                   </AccordionTrigger>
                   <AccordionContent className="text-[#666666] leading-relaxed pb-5">
