@@ -43,10 +43,10 @@ function BenefitCard({ title, description, icon: Icon, index }: { title: string;
   return (
     <div
       ref={ref}
-      className="reveal-section bg-[#F5F5F5] rounded-2xl p-8"
+      className="reveal-section bg-[#F5F5F5] rounded-2xl p-8 flex flex-col h-full"
       style={{ animationDelay: `${index * 120}ms` }}
     >
-      <div className="flex flex-col">
+      <div className="flex flex-col h-full">
         {/* Icon */}
         <Icon className="w-12 h-12 text-[#CB154E] mb-6" />
 
@@ -56,7 +56,7 @@ function BenefitCard({ title, description, icon: Icon, index }: { title: string;
         </h3>
 
         {/* Description */}
-        <p className="text-sm md:text-base text-gray-600 leading-relaxed">
+        <p className="text-sm md:text-base text-gray-600 leading-relaxed flex-1">
           {description}
         </p>
       </div>
