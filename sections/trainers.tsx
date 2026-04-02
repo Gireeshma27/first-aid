@@ -1,36 +1,37 @@
 "use client"
 
 import { useEffect, useRef } from "react"
-import Image from "next/image"
-import { SectionHeader } from "@/components/section-header"
-import { CheckCircle2, Award, Users, Clock } from "lucide-react"
-
-const trainers = [
-  {
-    name: "David Mercer",
-    role: "Lead Trainer & Paramedic",
-    description: "Over 15 years of experience in emergency response and paramedicine. David brings real-world emergency expertise to every training session.",
-    image: "/images/trainer-1.png",
-  },
-  {
-    name: "Sarah Williams",
-    role: "Registered Nurse & Trainer",
-    description: "A qualified registered nurse with extensive experience in critical care and emergency departments. Sarah specialises in child-focused first aid training.",
-    image: "/images/trainer-2.png",
-  },
-  {
-    name: "Mark Thompson",
-    role: "Workplace Safety Specialist",
-    description: "An experienced EMT with 20+ years in workplace health and safety. Mark delivers engaging, scenario-based training tailored to industry needs.",
-    image: "/images/trainer-3.png",
-  },
-]
+import { Reveal } from "@/components/reveal"
+import {
+  CheckCircle2,
+  Award,
+  Users,
+  Clock,
+  BookOpen,
+  Monitor,
+  ClipboardCheck,
+  GraduationCap,
+  ArrowRight,
+  Sparkles,
+} from "lucide-react"
 
 const highlights = [
-  { icon: Award,  text: "All trainers hold current industry qualifications and certifications" },
-  { icon: Clock,  text: "15+ years average industry experience per trainer" },
-  { icon: Users,  text: "Trained 10,000+ participants across Australia" },
-  { icon: CheckCircle2, text: "Real-world emergency response backgrounds" },
+  {
+    icon: Award,
+    text: "All trainers hold current industry qualifications and certifications",
+  },
+  {
+    icon: Clock,
+    text: "15+ years average industry experience per trainer",
+  },
+  {
+    icon: Users,
+    text: "Trained 10,000+ participants across Australia",
+  },
+  {
+    icon: CheckCircle2,
+    text: "Real-world emergency response backgrounds",
+  },
 ]
 
 export function TrainersSection() {
@@ -41,7 +42,10 @@ export function TrainersSection() {
     if (!el) return
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) { el.classList.add("visible"); observer.disconnect() }
+        if (entry.isIntersecting) {
+          el.classList.add("visible")
+          observer.disconnect()
+        }
       },
       { threshold: 0.1 }
     )
@@ -50,108 +54,191 @@ export function TrainersSection() {
   }, [])
 
   return (
-    <section className="py-[44px] md:py-[56px] bg-[#F5F5F5] relative overflow-hidden">
-      {/* Subtle animated background elements */}
-      <div className="absolute inset-0 pointer-events-none" style={{
-        background: 'radial-gradient(circle at 70% 30%, rgba(203,21,78,0.04) 0%, transparent 50%), radial-gradient(circle at 30% 70%, rgba(59,57,105,0.04) 0%, transparent 50%)',
-        animation: 'subtleFloat 12s ease-in-out infinite'
-      }} />
-      <div className="mx-auto max-w-[1200px] px-4 lg:px-8 relative z-10">
-        <div ref={ref} className="reveal-section grid lg:grid-cols-2 gap-14 items-center">
+    <section className="py-20 md:py-24 bg-white relative overflow-hidden">
+      {/* Subtle background pattern */}
+      <div
+        className="absolute inset-0 opacity-[0.015] pointer-events-none"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle, #3B3969 1px, transparent 1px)",
+          backgroundSize: "40px 40px",
+        }}
+      />
 
-          {/* ── LEFT: trainer photo grid ── */}
-          <div className="flex flex-col gap-5 md:gap-6">
-            {/* Lead Trainer */}
-            <div className="group relative overflow-hidden rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-500 aspect-[4/3] bg-gray-100">
-              <Image
-                src={trainers[0].image}
-                alt={trainers[0].name}
-                fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                loading="eager"
-                className="object-cover object-[center_15%] group-hover:scale-105 transition-transform duration-700"
+      <div
+        ref={ref}
+        className="reveal-section mx-auto max-w-[1200px] px-6 lg:px-12 relative z-10"
+      >
+        {/* Section Header */}
+        <div className="text-center mb-12 md:mb-16">
+          <Reveal>
+            <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#3B3969]/8 text-[#3B3969] text-sm font-semibold mb-4">
+              <span className="w-2 h-2 rounded-full bg-[#3B3969]" />
+              Online Learning
+            </span>
+            <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-[#333333] leading-tight tracking-tight">
+              Flexible Online Learning Options
+            </h2>
+            <p className="mt-3 text-base md:text-lg text-[#666666] leading-relaxed max-w-2xl mx-auto">
+              Access flexible online learning modules designed to complement
+              practical first aid training. Our blended learning model combines
+              self-paced online theory with hands-on practical sessions.
+            </p>
+          </Reveal>
+        </div>
+
+        {/* Bento Grid */}
+        <Reveal delay={100}>
+          <div className="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-5 md:gap-6">
+            {/* ── Hero Card (spans left, tall) ── */}
+            <div
+              className="md:col-span-6 lg:col-span-5 lg:row-span-2 rounded-3xl p-8 md:p-10 relative overflow-hidden group cursor-default"
+              style={{
+                background:
+                  "linear-gradient(145deg, #1e1c3d 0%, #3B3969 60%, #4a4880 100%)",
+              }}
+            >
+              {/* Decorative elements */}
+              <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-[#CB154E]/15 blur-3xl pointer-events-none" />
+              <div className="absolute bottom-0 left-0 w-48 h-48 rounded-full bg-white/5 blur-3xl pointer-events-none" />
+              <div
+                className="absolute inset-0 opacity-[0.04] pointer-events-none"
+                style={{
+                  backgroundImage:
+                    "radial-gradient(circle, #ffffff 1px, transparent 1px)",
+                  backgroundSize: "24px 24px",
+                }}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1e1c3d]/90 via-[#1e1c3d]/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500" />
-              
-              <div className="absolute inset-x-0 bottom-0 p-6 md:p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                <h3 className="text-2xl md:text-3xl font-bold text-white mb-1.5">{trainers[0].name}</h3>
-                <p className="text-[#CB154E] font-semibold flex items-center gap-2 text-sm md:text-base">
-                   <Award className="w-4 h-4" /> {trainers[0].role}
-                </p>
-                <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-all duration-500 ease-in-out">
-                  <div className="overflow-hidden">
-                    <p className="text-white/80 mt-4 text-sm md:text-base leading-relaxed max-w-lg">
-                      {trainers[0].description}
-                    </p>
+
+              <div className="relative z-10 h-full flex flex-col justify-between">
+                <div>
+                  <div className="w-14 h-14 rounded-2xl bg-white/10 border border-white/15 flex items-center justify-center mb-6 group-hover:bg-[#CB154E]/20 transition-colors duration-500">
+                    <Sparkles className="w-7 h-7 text-[#CB154E]" />
                   </div>
+                  <h3 className="text-2xl md:text-3xl font-bold text-white leading-snug mb-4">
+                    Blended Learning
+                    <br />
+                    <span className="text-[#CB154E]">Model</span>
+                  </h3>
+                  <p className="text-white/70 leading-relaxed text-base md:text-lg mb-8 max-w-sm">
+                    Our unique approach combines flexible online theory with
+                    hands-on practical sessions for a comprehensive learning
+                    experience.
+                  </p>
+                </div>
+
+                {/* Mini stats inside hero card */}
+                <div className="grid grid-cols-3 gap-3">
+                  {[
+                    { value: "15+", label: "Years Experience" },
+                    { value: "10k+", label: "Participants" },
+                    { value: "100%", label: "Satisfaction" },
+                  ].map((stat) => (
+                    <div
+                      key={stat.label}
+                      className="bg-white/8 backdrop-blur-sm rounded-xl p-3 text-center border border-white/10"
+                    >
+                      <p className="text-xl md:text-2xl font-bold text-white tracking-tight">
+                        {stat.value}
+                      </p>
+                      <p className="text-[10px] md:text-xs text-white/50 mt-0.5 font-medium uppercase tracking-wider">
+                        {stat.label}
+                      </p>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
 
-            {/* Supporting Trainers */}
-            <div className="grid grid-cols-2 gap-5 md:gap-6">
-              {trainers.slice(1).map((trainer, index) => (
-                <div key={trainer.name} className="group relative overflow-hidden rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-500 aspect-[4/5] md:aspect-square bg-gray-100">
-                  <Image
-                    src={trainer.image}
-                    alt={trainer.name}
-                    fill
-                    sizes="(max-width: 1024px) 50vw, 25vw"
-                    loading="eager"
-                    className={`object-cover group-hover:scale-105 transition-transform duration-700 ${index === 1 ? "object-top" : "object-[center_15%]"}`}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1e1c3d]/90 via-[#1e1c3d]/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500" />
-                  
-                  <div className="absolute inset-x-0 bottom-0 p-5 translate-y-3 group-hover:translate-y-0 transition-transform duration-500">
-                    <h3 className="text-xl font-bold text-white mb-1">{trainer.name}</h3>
-                    <p className="text-[#CB154E] font-medium text-xs md:text-sm">{trainer.role}</p>
-                    <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-all duration-500 ease-in-out">
-                      <div className="overflow-hidden">
-                        <p className="text-white/80 mt-3 text-xs md:text-sm leading-relaxed">
-                          {trainer.description}
-                        </p>
-                      </div>
-                    </div>
+            {/* ── Card: Self-Paced Online Theory ── */}
+            <div className="md:col-span-3 lg:col-span-4 group bg-[#F7F7FA] rounded-3xl p-7 border border-gray-100 hover:bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-400 cursor-default">
+              <div className="w-12 h-12 rounded-xl bg-[#3B3969]/10 flex items-center justify-center mb-5 group-hover:bg-[#3B3969] transition-colors duration-300">
+                <Monitor className="w-6 h-6 text-[#3B3969] group-hover:text-white transition-colors duration-300" />
+              </div>
+              <h3 className="text-lg font-bold text-[#333333] mb-2 group-hover:text-[#3B3969] transition-colors">
+                Self-Paced Online Theory
+              </h3>
+              <p className="text-sm text-[#666666] leading-relaxed">
+                Complete theoretical components at your own pace with
+                interactive online modules accessible 24/7 from any device.
+              </p>
+            </div>
+
+            {/* ── Card: Nationally Recognised ── */}
+            <div className="md:col-span-3 lg:col-span-3 group bg-[#F7F7FA] rounded-3xl p-7 border border-gray-100 hover:bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-400 cursor-default">
+              <div className="w-12 h-12 rounded-xl bg-[#CB154E]/10 flex items-center justify-center mb-5 group-hover:bg-[#CB154E] transition-colors duration-300">
+                <GraduationCap className="w-6 h-6 text-[#CB154E] group-hover:text-white transition-colors duration-300" />
+              </div>
+              <h3 className="text-lg font-bold text-[#333333] mb-2 group-hover:text-[#CB154E] transition-colors">
+                Nationally Recognised
+              </h3>
+              <p className="text-sm text-[#666666] leading-relaxed">
+                All qualifications are nationally recognised and delivered in
+                partnership with Healthcorp RTO 91222.
+              </p>
+            </div>
+
+            {/* ── Card: Practical Sessions ── */}
+            <div className="md:col-span-3 lg:col-span-3 group bg-[#F7F7FA] rounded-3xl p-7 border border-gray-100 hover:bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-400 cursor-default">
+              <div className="w-12 h-12 rounded-xl bg-[#3B3969]/10 flex items-center justify-center mb-5 group-hover:bg-[#3B3969] transition-colors duration-300">
+                <BookOpen className="w-6 h-6 text-[#3B3969] group-hover:text-white transition-colors duration-300" />
+              </div>
+              <h3 className="text-lg font-bold text-[#333333] mb-2 group-hover:text-[#3B3969] transition-colors">
+                Practical Sessions
+              </h3>
+              <p className="text-sm text-[#666666] leading-relaxed">
+                Hands-on practical training with experienced professionals
+                ensures you can confidently apply skills in real emergencies.
+              </p>
+            </div>
+
+            {/* ── Card: Compliance & Assessment ── */}
+            <div className="md:col-span-3 lg:col-span-4 group bg-[#F7F7FA] rounded-3xl p-7 border border-gray-100 hover:bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-400 cursor-default">
+              <div className="w-12 h-12 rounded-xl bg-[#CB154E]/10 flex items-center justify-center mb-5 group-hover:bg-[#CB154E] transition-colors duration-300">
+                <ClipboardCheck className="w-6 h-6 text-[#CB154E] group-hover:text-white transition-colors duration-300" />
+              </div>
+              <h3 className="text-lg font-bold text-[#333333] mb-2 group-hover:text-[#CB154E] transition-colors">
+                Blended Assessment
+              </h3>
+              <p className="text-sm text-[#666666] leading-relaxed">
+                Our blended learning model combines self-paced online theory
+                with hands-on practical sessions for thorough competency
+                assessment.
+              </p>
+            </div>
+          </div>
+        </Reveal>
+
+        {/* ── Highlights Strip ── */}
+        <Reveal delay={200}>
+          <div className="mt-10 md:mt-14 rounded-3xl overflow-hidden border border-gray-100 bg-[#F7F7FA]">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-gray-200/60">
+              {highlights.map(({ icon: Icon, text }, i) => (
+                <div
+                  key={text}
+                  className="group flex items-start gap-4 p-6 hover:bg-white transition-colors duration-300 cursor-default"
+                >
+                  <div
+                    className={`w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 transition-colors duration-300 ${
+                      i % 2 === 0
+                        ? "bg-[#3B3969]/10 group-hover:bg-[#3B3969]"
+                        : "bg-[#CB154E]/10 group-hover:bg-[#CB154E]"
+                    }`}
+                  >
+                    <Icon
+                      className={`w-5 h-5 group-hover:text-white transition-colors duration-300 ${
+                        i % 2 === 0 ? "text-[#3B3969]" : "text-[#CB154E]"
+                      }`}
+                    />
                   </div>
+                  <p className="text-sm text-[#666666] leading-relaxed mt-1">
+                    {text}
+                  </p>
                 </div>
               ))}
             </div>
           </div>
-
-          {/* ── RIGHT: text content ── */}
-          <div className="space-y-7">
-            <SectionHeader
-              badge="Online Learning"
-              title="Flexible Online Learning Options"
-              description="Access flexible online learning modules designed to complement practical first aid training. Our blended learning model combines self-paced online theory with hands-on practical sessions."
-              centered={false}
-            />
-
-            <ul className="space-y-4">
-              {highlights.map(({ icon: Icon, text }) => (
-                <li key={text} className="flex items-start gap-4 group">
-                  <div className="w-9 h-9 rounded-xl bg-[#3B3969]/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#3B3969] transition-colors duration-300 mt-0.5">
-                    <Icon className="w-4.5 h-4.5 text-[#3B3969] group-hover:text-white transition-colors duration-300 w-5 h-5" />
-                  </div>
-                  <p className="text-[#666666] leading-relaxed text-sm mt-1.5">{text}</p>
-                </li>
-              ))}
-            </ul>
-
-            <div className="grid grid-cols-3 gap-4 pt-2">
-              {[
-                { value: "15+", label: "Years Experience" },
-                { value: "10k+", label: "Participants" },
-                { value: "98%", label: "Satisfaction" },
-              ].map((stat) => (
-                <div key={stat.label} className="bg-white rounded-xl p-4 text-center border border-gray-100 shadow-sm">
-                  <p className="text-2xl font-bold text-[#3B3969]">{stat.value}</p>
-                  <p className="text-xs text-[#666666] mt-1 font-medium">{stat.label}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   )
