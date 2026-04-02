@@ -89,7 +89,7 @@ export default function TestimonialsPage() {
             <div className="absolute top-20 right-20 w-72 h-72 rounded-full bg-[#CB154E]/[0.06] blur-3xl" />
             <div className="absolute bottom-10 left-10 w-96 h-96 rounded-full bg-[#3B3969]/30 blur-3xl" />
           </div>
-          <div className="mx-auto max-w-7xl px-6 lg:px-12 relative">
+          <div className="mx-auto max-w-[1200px] px-6 lg:px-12 relative">
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.06] text-white text-sm font-semibold mb-6">
               <span className="w-1.5 h-1.5 rounded-full bg-[#CB154E]" />
               Testimonials
@@ -112,7 +112,7 @@ export default function TestimonialsPage() {
 
         {/* Testimonials Grid */}
         <section className="py-16 md:py-24 bg-[#F7F7FA]">
-          <div className="mx-auto max-w-7xl px-6 lg:px-12">
+          <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {testimonials.map((testimonial, index) => (
                 <Reveal key={index} delay={index * 80}>
@@ -141,7 +141,7 @@ export default function TestimonialsPage() {
 
         {/* CTA */}
         <section className="py-16 md:py-24 bg-gradient-to-br from-[#3B3969] to-[#1e1c3d] text-white">
-          <div className="mx-auto max-w-7xl px-6 lg:px-12 text-center">
+          <div className="mx-auto max-w-[1200px] px-6 lg:px-12 text-center">
             <Reveal>
             <h2 className="text-3xl font-semibold mb-4">Join Our Growing Community</h2>
             <p className="text-lg text-white/70 max-w-2xl mx-auto">

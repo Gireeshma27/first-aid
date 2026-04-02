@@ -36,7 +36,7 @@ export default function EventMedicsPage() {
           <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-[#3B3969]/30 blur-3xl animate-blob-delay" />
           <div className="absolute top-1/2 right-1/4 w-[350px] h-[350px] rounded-full bg-white/5 blur-3xl animate-blob-delay-2" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#3B3969]/80 via-transparent to-transparent" />
-          <div className="relative mx-auto max-w-7xl px-6 lg:px-12 py-16 pb-20">
+          <div className="relative mx-auto max-w-[1200px] px-6 lg:px-12 py-16 pb-20">
             <div className="flex flex-col lg:flex-row gap-12 items-center">
               <div className="flex-1 min-w-0">
                 <div className="flex flex-wrap items-center gap-3 mb-6">
@@ -75,14 +75,9 @@ export default function EventMedicsPage() {
                     className="object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#3B3969]/70 via-transparent to-transparent" />
-                  <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-sm rounded-xl p-4 flex items-center gap-3 shadow-lg">
-                    <div className="w-10 h-10 rounded-lg bg-[#CB154E] flex-shrink-0 flex items-center justify-center">
-                      <Shield className="w-5 h-5 text-white" />
-                    </div>
-                    <div>
-                      <p className="text-[#1a1a2e] font-bold text-sm">Qualified Event Medics</p>
-                      <p className="text-[#64648c] text-xs">On-Site Medical Coverage</p>
-                    </div>
+                  <div className="absolute top-[12px] left-[12px] image-badge">
+                    <Shield className="w-4 h-4 text-[#CB154E]" />
+                    Qualified Event Medics
                   </div>
                 </div>
               </div>
@@ -90,7 +85,7 @@ export default function EventMedicsPage() {
           </div>
           {/* Stat strip */}
           <div className="absolute bottom-0 left-0 right-0 bg-black/30 backdrop-blur-sm border-t border-white/10">
-            <div className="mx-auto max-w-7xl px-6 lg:px-12 py-4 flex flex-wrap gap-6">
+            <div className="mx-auto max-w-[1200px] px-6 lg:px-12 py-4 flex flex-wrap gap-6">
               {[{ icon: <MapPin className="w-4 h-4" />, text: "On-site at your event" }, { icon: <Calendar className="w-4 h-4" />, text: "All event types" }, { icon: <Zap className="w-4 h-4" />, text: "Rapid medical response" }].map((s) => (
                 <div key={s.text} className="flex items-center gap-2 text-white/70 text-sm">{s.icon}<span>{s.text}</span></div>
               ))}
@@ -100,7 +95,7 @@ export default function EventMedicsPage() {
 
         {/* Event type tiles */}
         <section className="py-12 md:py-14 bg-white">
-          <div className="mx-auto max-w-7xl px-6 lg:px-12">
+          <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
             <Reveal>
               <div className="text-center mb-10">
                 <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#CB154E]/[0.06] text-[#CB154E] text-sm font-semibold mb-4">
@@ -123,8 +118,8 @@ export default function EventMedicsPage() {
         </section>
 
         {/* What's included */}
-        <section className="py-12 md:py-16 bg-[#F7F7FA]">
-          <div className="mx-auto max-w-7xl px-6 lg:px-12">
+        <section className="py-20 bg-[#F7F7FA]">
+          <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
             <Reveal>
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#3B3969]/[0.07] text-[#3B3969] text-sm font-semibold mb-5">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#3B3969]" />What&apos;s Included
@@ -165,12 +160,12 @@ export default function EventMedicsPage() {
         </section>
 
         {/* Key benefits */}
-        <section className="py-12 md:py-16 bg-gradient-to-br from-[#3B3969] to-[#2d2b5e] relative overflow-hidden">
+        <section className="py-20 bg-gradient-to-br from-[#3B3969] to-[#2d2b5e] relative overflow-hidden">
           <div className="absolute inset-0">
             <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#CB154E]/10 blur-3xl animate-blob" />
             <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#3B3969]/20 blur-3xl animate-blob-delay" />
           </div>
-          <div className="relative mx-auto max-w-7xl px-6 lg:px-12">
+          <div className="relative mx-auto max-w-[1200px] px-6 lg:px-12">
             <Reveal>
               <div className="grid md:grid-cols-3 gap-6">
                 {[
@@ -192,8 +187,8 @@ export default function EventMedicsPage() {
         </section>
 
         {/* Who should use */}
-        <section className="py-12 md:py-16 bg-white">
-          <div className="mx-auto max-w-7xl px-6 lg:px-12">
+        <section className="py-20 bg-white">
+          <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
             <Reveal>
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#3B3969]/[0.07] text-[#3B3969] text-sm font-semibold mb-5">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#3B3969]" />Who Should Use This Service
@@ -212,12 +207,12 @@ export default function EventMedicsPage() {
         </section>
 
         {/* CTA */}
-        <section className="py-12 md:py-16 bg-gradient-to-br from-[#3B3969] to-[#2d2b5e] relative overflow-hidden">
+        <section className="py-20 bg-gradient-to-br from-[#3B3969] to-[#2d2b5e] relative overflow-hidden">
           <div className="absolute inset-0">
             <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#CB154E]/10 blur-3xl animate-blob" />
             <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#3B3969]/20 blur-3xl animate-blob-delay" />
           </div>
-          <div className="relative mx-auto max-w-7xl px-6 lg:px-12 text-center">
+          <div className="relative mx-auto max-w-[1200px] px-6 lg:px-12 text-center">
             <Reveal>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Book Event Medical Coverage</h2>
               <p className="text-white/70 text-lg mb-8 max-w-2xl mx-auto">Ensure your event has qualified medical support on-site. Contact us to discuss your event requirements and get a quote.</p>

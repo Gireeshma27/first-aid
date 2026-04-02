@@ -24,7 +24,7 @@ export function NewsletterSection({ lightTheme = true }: { lightTheme?: boolean 
       <div className="absolute top-0 right-0 w-80 h-80 rounded-full bg-[#3B3969]/5 blur-3xl" />
       <div className="absolute bottom-0 left-0 w-72 h-72 rounded-full bg-[#CB154E]/5 blur-3xl" />
 
-      <div className="relative z-10 mx-auto max-w-7xl px-5 lg:px-8">
+      <div className="relative z-10 mx-auto max-w-[1200px] px-5 lg:px-8">
         <Reveal>
           {isSubmitted ? (
             /* ── Success state ── */

@@ -191,7 +191,7 @@ export function Navbar() {
     >
       <nav
         ref={navRef}
-        className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-8"
+        className="mx-auto flex h-20 max-w-[1200px] items-center justify-between px-6 lg:px-8"
       >
         {/* Logo */}
         <div className="flex lg:flex-1">

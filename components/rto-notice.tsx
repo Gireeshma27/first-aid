@@ -44,16 +44,16 @@ export function RTONotice({ courseCode, courseTitle, className = "" }: RTONotice
 
             {/* Trust badges */}
             <div className="flex flex-wrap gap-2 mt-4">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#3B3969]/8 text-[#3B3969] text-xs font-semibold border border-[#3B3969]/15">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#3B3969]" />
+              <span className="rto-badge rto-badge--primary">
+                <span className="rto-badge__dot bg-[#3B3969]" />
                 RTO 91222 Accredited
               </span>
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#CB154E]/8 text-[#CB154E] text-xs font-semibold border border-[#CB154E]/15">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#CB154E]" />
+              <span className="rto-badge rto-badge--accent">
+                <span className="rto-badge__dot bg-[#CB154E]" />
                 ASQA Approved
               </span>
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-green-50 text-green-700 text-xs font-semibold border border-green-200">
-                <span className="w-1.5 h-1.5 rounded-full bg-green-600" />
+              <span className="rto-badge rto-badge--success">
+                <span className="rto-badge__dot bg-green-600" />
                 Nationally Recognised Qualification
               </span>
             </div>

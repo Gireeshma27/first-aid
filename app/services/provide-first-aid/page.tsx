@@ -48,7 +48,7 @@ export default function ProvideFirstAidPage() {
           <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-[#3B3969]/30 blur-3xl animate-blob-delay" />
           <div className="absolute top-1/2 left-1/3 w-[300px] h-[300px] rounded-full bg-white/5 blur-3xl animate-blob-delay-2" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#3B3969]/80 via-transparent to-transparent" />
-          <div className="relative mx-auto max-w-7xl px-6 lg:px-12 py-16 pb-20">
+          <div className="relative mx-auto max-w-[1200px] px-6 lg:px-12 py-16 pb-20">
             <div className="flex flex-col lg:flex-row gap-12 items-center">
               <div className="flex-1 min-w-0">
                 <div className="flex flex-wrap items-center gap-3 mb-6">
@@ -78,16 +78,11 @@ export default function ProvideFirstAidPage() {
               </div>
               <div className="flex-shrink-0 w-full lg:w-[420px]">
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-black/40 aspect-[4/3]">
-                  <Image src="/images/cpr-classroom.png" alt="First aid training session" fill priority sizes="(max-width: 1024px) 100vw, 420px" className="object-cover" />
+                  <Image src="/images/course-first-aid.png" alt="First aid training session" fill priority sizes="(max-width: 1024px) 100vw, 420px" className="object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#3B3969]/70 via-transparent to-transparent" />
-                  <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-sm rounded-xl p-4 flex items-center gap-3 shadow-lg">
-                    <div className="w-10 h-10 rounded-lg bg-[#CB154E] flex-shrink-0 flex items-center justify-center">
-                      <ShieldPlus className="w-5 h-5 text-white" />
-                    </div>
-                    <div>
-                      <p className="text-[#1a1a2e] font-bold text-sm">HLTAID011 Certified</p>
-                      <p className="text-[#64648c] text-xs">Nationally Recognised Qualification</p>
-                    </div>
+                  <div className="absolute top-[12px] left-[12px] image-badge">
+                    <ShieldPlus className="w-4 h-4 text-[#CB154E]" />
+                    HLTAID011 Certified
                   </div>
                 </div>
               </div>
@@ -95,7 +90,7 @@ export default function ProvideFirstAidPage() {
           </div>
           {/* Stat strip */}
           <div className="absolute bottom-0 left-0 right-0 bg-black/30 backdrop-blur-sm border-t border-white/10">
-            <div className="mx-auto max-w-7xl px-6 lg:px-12 py-4 flex flex-wrap gap-6">
+            <div className="mx-auto max-w-[1200px] px-6 lg:px-12 py-4 flex flex-wrap gap-6">
               {[{ icon: <Clock className="w-4 h-4" />, text: "Face-to-face & Blended" }, { icon: <Users className="w-4 h-4" />, text: "All industries" }, { icon: <BookOpen className="w-4 h-4" />, text: "Nationally Recognised" }].map((s) => (
                 <div key={s.text} className="flex items-center gap-2 text-white/70 text-sm">
                   {s.icon}<span>{s.text}</span>
@@ -106,8 +101,8 @@ export default function ProvideFirstAidPage() {
         </section>
 
         {/* Emergency tiles  Auto-scrolling carousel */}
-        <section className="py-12 md:py-16 bg-white overflow-hidden">
-          <div className="mx-auto max-w-7xl px-6 lg:px-12">
+        <section className="py-20 bg-white overflow-hidden">
+          <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
             <Reveal>
               <div className="text-center mb-10">
                 <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#CB154E]/[0.06] text-[#CB154E] text-sm font-semibold mb-4">
@@ -153,8 +148,8 @@ export default function ProvideFirstAidPage() {
         </section>
 
         {/* Skills grid */}
-        <section className="py-12 md:py-16 bg-[#F7F7FA]">
-          <div className="mx-auto max-w-7xl px-6 lg:px-12">
+        <section className="py-20 bg-[#F7F7FA]">
+          <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
             <Reveal>
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#3B3969]/[0.07] text-[#3B3969] text-sm font-semibold mb-5">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#3B3969]" />Key Learning Outcomes
@@ -211,11 +206,11 @@ export default function ProvideFirstAidPage() {
         </section>
 
         {/* Delivery */}
-        <section className="py-12 md:py-16 bg-gradient-to-b from-white to-[#F5F5F5] relative overflow-hidden">
+        <section className="py-20 bg-gradient-to-b from-white to-[#F5F5F5] relative overflow-hidden">
           <div className="absolute inset-0 opacity-[0.02] pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, #333333 1px, transparent 0)', backgroundSize: '32px 32px' }} />
           <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#CB154E]/5 blur-3xl" />
           <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-[#3B3969]/5 blur-3xl" />
-          <div className="relative mx-auto max-w-7xl px-6 lg:px-12">
+          <div className="relative mx-auto max-w-[1200px] px-6 lg:px-12">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <Reveal>
                 <div>
@@ -244,7 +239,7 @@ export default function ProvideFirstAidPage() {
               </Reveal>
               <Reveal delay={100}>
                 <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
-                  <Image src="/images/cpr-classroom.png" alt="First aid training delivery" fill loading="eager" sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
+                  <Image src="/images/first aid.png" alt="First aid training delivery" fill loading="eager" sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a2e]/40 via-transparent to-transparent" />
                 </div>
               </Reveal>
@@ -253,8 +248,8 @@ export default function ProvideFirstAidPage() {
         </section>
 
         {/* Who should attend */}
-        <section className="py-12 md:py-16 bg-white relative overflow-hidden">
-          <div className="mx-auto max-w-7xl px-6 lg:px-12">
+        <section className="py-20 bg-white relative overflow-hidden">
+          <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
             <Reveal>
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#3B3969]/[0.07] text-[#3B3969] text-sm font-semibold mb-5">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#3B3969]" />Who Should Attend
@@ -275,8 +270,8 @@ export default function ProvideFirstAidPage() {
         </section>
 
         {/* CTA */}
-        <section className="py-12 md:py-16" style={{ background: "linear-gradient(135deg, #3B3969 0%, #2d2b5e 60%, #1a1a2e 100%)" }}>
-          <div className="mx-auto max-w-7xl px-6 lg:px-12">
+        <section className="py-20" style={{ background: "linear-gradient(135deg, #3B3969 0%, #2d2b5e 60%, #1a1a2e 100%)" }}>
+          <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
             <div className="grid lg:grid-cols-2 gap-10 items-center">
               <Reveal>
                 <div>

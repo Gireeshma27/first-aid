@@ -41,7 +41,7 @@ export function EventsSection() {
         background: 'radial-gradient(circle at 90% 10%, rgba(203,21,78,0.03) 0%, transparent 40%), radial-gradient(circle at 10% 90%, rgba(59,57,105,0.03) 0%, transparent 40%)',
         animation: 'subtleFloat 10s ease-in-out infinite'
       }} />
-      <div className="mx-auto max-w-7xl px-4 lg:px-8 relative z-10">
+      <div className="mx-auto max-w-[1200px] px-4 lg:px-8 relative z-10">
         <div ref={ref} className="reveal-section grid lg:grid-cols-2 gap-12 items-center">
           {/* Left - Image */}
           <div className="relative">

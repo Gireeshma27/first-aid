@@ -36,7 +36,7 @@ export function BookingSection() {
       <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#CB154E]/10 blur-3xl" />
       <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-white/5 blur-3xl" />
 
-      <div className="relative mx-auto max-w-7xl px-4 lg:px-8">
+      <div className="relative mx-auto max-w-[1200px] px-4 lg:px-8">
         <div className="text-center mb-14">
           <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-sm text-white/90 text-sm font-semibold mb-5 tracking-wide">
             <span className="w-1.5 h-1.5 rounded-full bg-[#CB154E]" />

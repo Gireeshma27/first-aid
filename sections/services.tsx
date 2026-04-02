@@ -391,7 +391,7 @@ export function ServicesSection() {
       />
 
       {/* Header */}
-      <div className="relative z-10 mx-auto max-w-7xl px-4 lg:px-8 mb-14">
+      <div className="relative z-10 mx-auto max-w-[1200px] px-4 lg:px-8 mb-14">
         <Reveal>
           <div className="max-w-3xl mx-auto text-center">
             <span

@@ -56,13 +56,13 @@ export function TestimonialsSection() {
   const active = testimonials[activeIndex]
 
   return (
-    <section className="py-12 md:py-16 bg-[#F5F5F5] relative overflow-hidden">
+    <section className="py-20 bg-[#F5F5F5] relative overflow-hidden">
       {/* Subtle animated background elements */}
       <div className="absolute inset-0 pointer-events-none" style={{
         background: 'radial-gradient(circle at 15% 80%, rgba(203,21,78,0.04) 0%, transparent 50%), radial-gradient(circle at 85% 20%, rgba(59,57,105,0.04) 0%, transparent 50%)',
         animation: 'subtleFloat 9s ease-in-out infinite'
       }} />
-      <div className="mx-auto max-w-7xl px-4 lg:px-8 relative z-10">
+      <div className="mx-auto max-w-[1200px] px-4 lg:px-8 relative z-10">
         <Reveal>
         <SectionHeader
           badge="Testimonials"

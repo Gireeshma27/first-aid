@@ -58,7 +58,7 @@ export function CourseCard({
           <div className={`w-14 h-14 rounded-xl ${color}/10 flex items-center justify-center`} style={{ backgroundColor: `${color === 'bg-[#CB154E]' ? 'rgba(203,21,78,0.1)' : color === 'bg-[#3B3969]' ? 'rgba(59,57,105,0.1)' : 'rgba(59,57,105,0.1)'}` }}>
             {icon}
           </div>
-          <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#3B3969]/10 text-[#3B3969] text-xs font-semibold">
+          <span className="course-badge">
             <Award className="w-3 h-3" />
             {code}
           </span>

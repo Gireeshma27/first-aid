@@ -11,7 +11,7 @@ export function NationallyRecognisedBadge({
 }: NationallyRecognisedBadgeProps) {
   return (
     <span
-      className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white text-xs font-semibold shadow-sm border border-gray-100 ${className}`}
+      className={`national-badge ${className}`}
     >
       <Image
         src="/images/nationally-recognised.svg"
@@ -20,7 +20,7 @@ export function NationallyRecognisedBadge({
         height={22}
         className="w-[22px] h-[22px] object-contain"
       />
-      <span className="text-[#333333]">{text}</span>
+      <span className="text-[#3B3969]">{text}</span>
     </span>
   )
 }
