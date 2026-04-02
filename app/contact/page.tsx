@@ -1,7 +1,7 @@
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { ContactForm } from "@/components/contact-form"
-import { Phone, Mail, Clock, MapPin, MessageSquare } from "lucide-react"
+import { Phone, Mail, Clock, MapPin, MessageSquare, Shield } from "lucide-react"
 import {
   Accordion,
   AccordionContent,
@@ -111,26 +111,78 @@ export default function ContactPage() {
             </div>
           </div>
 
-          {/* RIGHT  Minimal White Form Panel */}
-          <div className="lg:w-1/2 bg-white px-6 py-20 lg:p-24 xl:p-32 flex flex-col justify-center relative">
-            <div className="max-w-xl mx-auto lg:mx-0 w-full lg:mr-auto">
-              <h2 className="text-3xl lg:text-4xl font-bold text-[#333333] mb-4 tracking-tight">Request Consultation</h2>
-              <p className="text-lg text-[#666666] mb-12 font-medium">Fill out the form and we'll get back to you within 24 hours.</p>
-              
-              <ContactForm />
-              
-              <div className="mt-16 p-8 bg-[#F5F5F5] rounded-[2rem] border border-gray-100 flex items-start gap-5">
-                <div className="w-12 h-12 rounded-xl bg-[#CB154E]/10 flex items-center justify-center shrink-0">
-                  <MessageSquare className="w-6 h-6 text-[#CB154E]" />
+          {/* RIGHT — Premium Form Panel */}
+          <div className="lg:w-1/2 bg-[#FAFAFA] px-6 py-20 lg:p-16 xl:p-24 flex flex-col justify-center relative overflow-hidden">
+            {/* Decorative background pattern */}
+            <div
+              className="absolute inset-0 opacity-[0.03] pointer-events-none"
+              style={{
+                backgroundImage: "radial-gradient(circle, #3B3969 1px, transparent 1px)",
+                backgroundSize: "32px 32px",
+              }}
+            />
+            {/* Decorative gradient blob */}
+            <div className="absolute -top-20 -right-20 w-[400px] h-[400px] rounded-full bg-[#CB154E]/[0.04] blur-3xl pointer-events-none" />
+            <div className="absolute -bottom-20 -left-20 w-[300px] h-[300px] rounded-full bg-[#3B3969]/[0.04] blur-3xl pointer-events-none" />
+
+            <div className="max-w-xl mx-auto lg:mx-0 w-full lg:mr-auto relative z-10">
+              {/* Header with accent line */}
+              <div className="mb-10">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-1 rounded-full bg-[#CB154E]" />
+                  <span className="text-sm font-bold text-[#CB154E] uppercase tracking-widest">Enquire Now</span>
                 </div>
-                <div>
-                  <h4 className="font-bold text-[#333333] mb-3 text-sm uppercase tracking-widest">What to Include</h4>
-                  <ul className="space-y-2 text-[15px] font-medium text-[#666666]">
-                    <li> Type of training required</li>
-                    <li> Estimated number of participants</li>
-                    <li> Preferred dates and location</li>
-                  </ul>
+                <h2 className="text-3xl lg:text-4xl font-bold text-[#333333] mb-3 tracking-tight">
+                  Request Consultation
+                </h2>
+                <p className="text-base text-[#666666] font-medium leading-relaxed">
+                  Fill out the form and we'll get back to you within 24 hours.
+                </p>
+              </div>
+
+              {/* Form card */}
+              <div className="bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-gray-100/80">
+                <ContactForm />
+              </div>
+
+              {/* What to Include card */}
+              <div className="mt-8 bg-white rounded-3xl p-7 border border-gray-100/80 shadow-sm">
+                <div className="flex items-center gap-3 mb-5">
+                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#3B3969] to-[#4a4880] flex items-center justify-center shadow-sm">
+                    <MessageSquare className="w-5 h-5 text-white" />
+                  </div>
+                  <h4 className="font-bold text-[#333333] text-base">What to Include</h4>
                 </div>
+                <ul className="space-y-3">
+                  {[
+                    "Type of training required",
+                    "Estimated number of participants",
+                    "Preferred dates and location",
+                  ].map((item) => (
+                    <li key={item} className="flex items-center gap-3">
+                      <div className="w-6 h-6 rounded-full bg-[#CB154E]/10 flex items-center justify-center flex-shrink-0">
+                        <svg className="w-3.5 h-3.5 text-[#CB154E]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <span className="text-sm text-[#555555] font-medium">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Trust strip */}
+              <div className="mt-8 grid grid-cols-3 gap-3">
+                {[
+                  { icon: Clock, label: "24hr Response" },
+                  { icon: Shield, label: "Secure & Private" },
+                  { icon: MessageSquare, label: "Free Quote" },
+                ].map((badge) => (
+                  <div key={badge.label} className="flex flex-col items-center gap-2 py-4 px-3 bg-white rounded-2xl border border-gray-100/80 shadow-sm">
+                    <badge.icon className="w-5 h-5 text-[#3B3969]" />
+                    <span className="text-xs font-semibold text-[#555555] text-center">{badge.label}</span>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
