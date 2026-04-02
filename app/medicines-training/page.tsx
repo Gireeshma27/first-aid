@@ -131,7 +131,7 @@ export default function MedicinesTrainingPage() {
             <div className="absolute top-20 right-20 w-72 h-72 rounded-full bg-[#CB154E]/[0.06] blur-3xl" />
             <div className="absolute bottom-10 left-10 w-96 h-96 rounded-full bg-[#3B3969]/30 blur-3xl" />
           </div>
-          <div className="mx-auto max-w-7xl px-6 lg:px-12 relative">
+          <div className="mx-auto max-w-[1200px] px-6 lg:px-12 relative">
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.06] text-white text-sm font-semibold mb-6">
               <span className="w-1.5 h-1.5 rounded-full bg-[#CB154E]" />
               Specialised Training
@@ -145,7 +145,7 @@ export default function MedicinesTrainingPage() {
 
         {/* Introduction */}
         <section className="py-16 md:py-24 bg-white">
-          <div className="mx-auto max-w-7xl px-6 lg:px-12">
+          <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
             <Reveal>
             <div className="max-w-3xl mx-auto text-center space-y-6">
               <div className="w-16 h-16 rounded-full bg-[#CB154E]/[0.06] flex items-center justify-center mx-auto">
@@ -168,7 +168,7 @@ export default function MedicinesTrainingPage() {
             key={program.title} 
             className={`py-16 md:py-24 ${index % 2 === 0 ? 'bg-[#F7F7FA]' : 'bg-white'}`}
           >
-            <div className="mx-auto max-w-7xl px-6 lg:px-12">
+            <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
               <Reveal>
               <div className="grid lg:grid-cols-2 gap-12 items-start">
                 <div className={`space-y-6 ${index % 2 === 1 ? 'lg:order-2' : ''}`}>

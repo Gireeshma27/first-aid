@@ -31,7 +31,7 @@ export default function CustomTrainingPage() {
           <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-[#3B3969]/30 blur-3xl animate-blob-delay" />
           <div className="absolute top-1/2 left-1/2 w-[300px] h-[300px] rounded-full bg-white/5 blur-3xl animate-blob-delay-2" />
           <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, rgba(59,57,105,0.85) 0%, rgba(45,43,94,0.75) 50%, rgba(203,21,78,0.4) 100%)" }} />
-          <div className="relative mx-auto max-w-7xl px-6 lg:px-12 py-20">
+          <div className="relative mx-auto max-w-[1200px] px-6 lg:px-12 py-20">
             <div className="flex flex-col lg:flex-row gap-12 items-center">
               <div className="flex-1 min-w-0">
                 <div className="flex flex-wrap items-center gap-3 mb-6">
@@ -63,14 +63,9 @@ export default function CustomTrainingPage() {
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-black/40 aspect-[4/3]">
                   <Image src="/images/custom and tailored.png" alt="Custom training programs" fill priority sizes="(max-width: 1024px) 100vw, 420px" className="object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#3B3969]/70 via-transparent to-transparent" />
-                  <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-sm rounded-xl p-4 flex items-center gap-3 shadow-lg">
-                    <div className="w-10 h-10 rounded-lg bg-[#CB154E] flex-shrink-0 flex items-center justify-center">
-                      <Settings className="w-5 h-5 text-white" />
-                    </div>
-                    <div>
-                      <p className="text-[#1a1a2e] font-bold text-sm">Fully Customisable</p>
-                      <p className="text-[#64648c] text-xs">Tailored to Your Organisation</p>
-                    </div>
+                  <div className="absolute top-[12px] left-[12px] image-badge">
+                    <Settings className="w-4 h-4 text-[#CB154E]" />
+                    Fully Customisable
                   </div>
                 </div>
               </div>
@@ -79,8 +74,8 @@ export default function CustomTrainingPage() {
         </section>
 
         {/* Training modules */}
-        <section className="py-12 md:py-16 bg-white">
-          <div className="mx-auto max-w-7xl px-6 lg:px-12">
+        <section className="py-20 bg-white">
+          <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
             <Reveal>
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#3B3969]/[0.07] text-[#3B3969] text-sm font-semibold mb-5">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#3B3969]" />Training Options
@@ -105,8 +100,8 @@ export default function CustomTrainingPage() {
         </section>
 
         {/* Our approach */}
-        <section className="py-12 md:py-16" style={{ background: "linear-gradient(135deg, #3B3969 0%, #2d2b5e 50%, #1a1a2e 100%)" }}>
-          <div className="mx-auto max-w-7xl px-6 lg:px-12">
+        <section className="py-20" style={{ background: "linear-gradient(135deg, #3B3969 0%, #2d2b5e 50%, #1a1a2e 100%)" }}>
+          <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
             <Reveal>
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div>
@@ -125,7 +120,7 @@ export default function CustomTrainingPage() {
                   </ul>
                 </div>
                 <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
-                  <Image src="/images/cpr-classroom.png" alt="Custom training session" fill loading="eager" sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
+                  <Image src="/images/custom1.png" alt="Custom training session" fill loading="eager" sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#3B3969]/60 via-transparent to-transparent" />
                 </div>
               </div>
@@ -134,8 +129,8 @@ export default function CustomTrainingPage() {
         </section>
 
         {/* Who we work with */}
-        <section className="py-12 md:py-16 bg-white">
-          <div className="mx-auto max-w-7xl px-6 lg:px-12">
+        <section className="py-20 bg-white">
+          <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
             <Reveal>
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#3B3969]/[0.07] text-[#3B3969] text-sm font-semibold mb-5">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#3B3969]" />Who We Work With
@@ -154,8 +149,8 @@ export default function CustomTrainingPage() {
         </section>
 
         {/* CTA */}
-        <section className="py-12 md:py-16" style={{ background: "linear-gradient(135deg, #CB154E 0%, #a01040 50%, #3B3969 100%)" }}>
-          <div className="mx-auto max-w-7xl px-6 lg:px-12 text-center">
+        <section className="py-20" style={{ background: "linear-gradient(135deg, #CB154E 0%, #a01040 50%, #3B3969 100%)" }}>
+          <div className="mx-auto max-w-[1200px] px-6 lg:px-12 text-center">
             <Reveal>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Let&apos;s Build Your Custom Program</h2>
               <p className="text-white/70 text-lg mb-8 max-w-2xl mx-auto">Tell us about your organisation and we&apos;ll design a training solution that fits your team perfectly.</p>

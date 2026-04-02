@@ -84,7 +84,7 @@ export default function AboutPage() {
             style={{ backgroundImage: "radial-gradient(circle, #ffffff 1px, transparent 1px)", backgroundSize: "30px 30px" }}
           />
 
-          <div className="mx-auto max-w-7xl px-6 lg:px-12 relative z-10">
+          <div className="mx-auto max-w-[1200px] px-6 lg:px-12 relative z-10">
             <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
 
               {/* Left */}
@@ -148,9 +148,9 @@ export default function AboutPage() {
         </section>
 
         {/*  Stats  */}
-        <section className="py-12 md:py-16 bg-white overflow-hidden relative">
+        <section className="py-20 bg-white overflow-hidden relative">
           <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: "radial-gradient(circle, #3B3969 1px, transparent 1px)", backgroundSize: "50px 50px" }} />
-          <div className="mx-auto max-w-7xl px-6 lg:px-12 relative z-10">
+          <div className="mx-auto max-w-[1200px] px-6 lg:px-12 relative z-10">
             <div className="text-center mb-10">
               <Reveal>
               <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#3B3969]/8 text-[#3B3969] text-sm font-semibold mb-4">
@@ -185,10 +185,10 @@ export default function AboutPage() {
         </section>
 
         {/*  Our Values  */}
-        <section className="py-12 md:py-16 bg-[#F5F5F5] relative overflow-hidden">
+        <section className="py-20 bg-[#F5F5F5] relative overflow-hidden">
           <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-[#3B3969]/5 to-transparent rounded-full blur-3xl pointer-events-none -z-1" />
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-[#CB154E]/3 to-transparent rounded-full blur-3xl pointer-events-none -z-1" />
-          <div className="mx-auto max-w-7xl px-6 lg:px-12 relative z-10">
+          <div className="mx-auto max-w-[1200px] px-6 lg:px-12 relative z-10">
             <div className="text-center mb-10 md:mb-14">
               <Reveal>
               <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#3B3969]/8 text-[#3B3969] text-sm font-semibold mb-4">
@@ -220,9 +220,9 @@ export default function AboutPage() {
         </section>
 
         {/*  Journey Timeline  */}
-        <section className="py-12 md:py-16 bg-white relative overflow-hidden">
+        <section className="py-20 bg-white relative overflow-hidden">
           <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: "radial-gradient(circle, #3B3969 1px, transparent 1px)", backgroundSize: "40px 40px" }} />
-          <div className="mx-auto max-w-7xl px-6 lg:px-12 relative z-10">
+          <div className="mx-auto max-w-[1200px] px-6 lg:px-12 relative z-10">
             <div className="text-center mb-12 md:mb-16">
               <Reveal>
               <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#CB154E]/8 text-[#CB154E] text-sm font-semibold mb-4">
@@ -283,8 +283,8 @@ export default function AboutPage() {
         {/*  Partnership with Healthcorp RTO  */}
         {/* Partnership with Healthcorp RTO — hidden per client request */}
         {false && (
-        <section className="py-12 md:py-16 bg-[#F5F5F5]">
-          <div className="mx-auto max-w-7xl px-6 lg:px-12">
+        <section className="py-20 bg-[#F5F5F5]">
+          <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
             <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
               {/* Left  RTO visual block */}
@@ -357,8 +357,8 @@ export default function AboutPage() {
         )}
 
         {/*  Trainer Expertise  */}
-        <section className="py-12 md:py-16 bg-[#F5F5F5]">
-          <div className="mx-auto max-w-7xl px-6 lg:px-12">
+        <section className="py-20 bg-[#F5F5F5]">
+          <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
             <Reveal>
             <SectionHeader
               badge="Our Team"
@@ -408,9 +408,9 @@ export default function AboutPage() {
         </section>
 
         {/*  Who We Work With  */}
-        <section className="py-12 md:py-16 bg-white relative overflow-hidden">
+        <section className="py-20 bg-white relative overflow-hidden">
           <div className="absolute inset-0 opacity-[0.015]" style={{ backgroundImage: "radial-gradient(circle, #3B3969 1px, transparent 1px)", backgroundSize: "40px 40px" }} />
-          <div className="mx-auto max-w-7xl px-6 lg:px-12 relative z-10">
+          <div className="mx-auto max-w-[1200px] px-6 lg:px-12 relative z-10">
             <div className="text-center mb-10">
               <Reveal>
               <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#CB154E]/8 text-[#CB154E] text-sm font-semibold mb-4">

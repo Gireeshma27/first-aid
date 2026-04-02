@@ -121,11 +121,11 @@ export default function CprContent() {
   return (
     <>
       {/*  HERO  */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#1a1a2e] via-[#2a1a35] to-[#CB154E]/80 py-12 md:py-16">
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-[#CB154E]/20 blur-3xl animate-blob" />
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-white/5 blur-3xl animate-blob-delay" />
-        <div className="absolute top-1/2 left-1/4 w-[350px] h-[350px] rounded-full bg-[#3B3969]/25 blur-3xl animate-blob-delay-2" />
-        <div className="relative mx-auto max-w-7xl px-6 lg:px-12">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#3B3969] to-[#2d2b5e] py-20">
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-white/10 blur-3xl animate-blob" />
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-black/10 blur-3xl animate-blob-delay" />
+        
+        <div className="relative mx-auto max-w-[1200px] px-6 lg:px-12">
           <div className="flex flex-col lg:flex-row gap-12 items-center">
             <div className="flex-1">
               <div className="max-w-2xl pt-4 md:pt-8 mb-12 lg:mb-0">
@@ -187,15 +187,10 @@ export default function CprContent() {
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-                <div className="absolute bottom-5 right-5 flex items-center gap-3 bg-white/95 backdrop-blur rounded-xl p-4 shadow-lg max-w-xs">
-                  <div className="w-10 h-10 rounded-lg bg-[#CB154E] flex items-center justify-center flex-shrink-0">
-                    <Activity className="w-5 h-5 text-white" />
+                <div className="absolute top-[12px] left-[12px] image-badge">
+                    <Activity className="w-4 h-4 text-[#CB154E]" />
+                    Life-Saving Skills
                   </div>
-                  <div>
-                    <p className="text-[#1a1a2e] font-bold text-sm">Life-Saving Skills</p>
-                    <p className="text-[#64648c] text-xs">Cardiac arrest response &amp; AED use</p>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -203,12 +198,12 @@ export default function CprContent() {
       </section>
 
       {/*  DRSABCD ACTION PLAN  */}
-      <section className="py-12 md:py-16 bg-white relative overflow-hidden">
+      <section className="py-20 bg-white relative overflow-hidden">
         <div
           className="absolute inset-0 pointer-events-none"
           style={{ backgroundImage: "linear-gradient(180deg, transparent 0%, rgba(203,21,78,0.02) 100%)" }}
         />
-        <div className="relative mx-auto max-w-7xl px-6 lg:px-12">
+        <div className="relative mx-auto max-w-[1200px] px-6 lg:px-12">
           <Reveal className="text-center mb-10">
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#CB154E]/[0.07] text-[#CB154E] text-sm font-semibold mb-4">
               <span className="w-1.5 h-1.5 rounded-full bg-[#CB154E]" />
@@ -248,8 +243,8 @@ export default function CprContent() {
       </section>
 
       {/*  WHAT YOU LEARN  */}
-      <section className="py-12 md:py-16 bg-[#F7F7FA]">
-        <div className="mx-auto max-w-7xl px-6 lg:px-12">
+      <section className="py-20 bg-[#F7F7FA]">
+        <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
           <Reveal className="mb-8">
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#3B3969]/[0.07] text-[#3B3969] text-sm font-semibold mb-3">
               <span className="w-1.5 h-1.5 rounded-full bg-[#3B3969]" />
@@ -307,10 +302,10 @@ export default function CprContent() {
       </section>
 
       {/*  DELIVERY METHOD  */}
-      <section className="py-12 md:py-16 bg-white relative overflow-hidden">
+      <section className="py-20 bg-white relative overflow-hidden">
         <div className="absolute top-0 right-0 w-80 h-80 rounded-full bg-[#CB154E]/4 blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#3B3969]/4 blur-3xl pointer-events-none" />
-        <div className="relative mx-auto max-w-7xl px-6 lg:px-12">
+        <div className="relative mx-auto max-w-[1200px] px-6 lg:px-12">
           <Reveal className="mb-10">
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#CB154E]/10 text-[#CB154E] text-sm font-semibold mb-4">
               <span className="w-1.5 h-1.5 rounded-full bg-[#CB154E]" />
@@ -391,8 +386,8 @@ export default function CprContent() {
       </section>
 
       {/*  WHO SHOULD ATTEND  */}
-      <section className="py-12 md:py-16 bg-[#F7F7FA] relative overflow-hidden">
-        <div className="mx-auto max-w-7xl px-6 lg:px-12 relative z-10">
+      <section className="py-20 bg-[#F7F7FA] relative overflow-hidden">
+        <div className="mx-auto max-w-[1200px] px-6 lg:px-12 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left: content */}
             <Reveal>
@@ -444,7 +439,7 @@ export default function CprContent() {
       </section>
 
       {/*  CTA  */}
-      <section className="py-12 md:py-16 bg-gradient-to-r from-[#CB154E] to-[#a01040] relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-r from-[#CB154E] to-[#a01040] relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-20 pointer-events-none"
           style={{ backgroundImage: "radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1), transparent)" }}

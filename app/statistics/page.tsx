@@ -144,7 +144,7 @@ export default function StatisticsPage() {
             style={{ backgroundImage: "radial-gradient(circle, #ffffff 1px, transparent 1px)", backgroundSize: "28px 28px" }}
           />
 
-          <div className="relative mx-auto max-w-7xl px-6 lg:px-12 z-10">
+          <div className="relative mx-auto max-w-[1200px] px-6 lg:px-12 z-10">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
               {/* Left: headline + CTAs */}
@@ -216,7 +216,7 @@ export default function StatisticsPage() {
             SECTION 1  SCALE OF THE PROBLEM
          */}
         <section className="py-16 md:py-20 bg-white">
-          <div className="mx-auto max-w-7xl px-6 lg:px-12">
+          <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
 
             <div className="mb-16">
               <Reveal>
@@ -299,7 +299,7 @@ export default function StatisticsPage() {
             SECTION 2  EVERY SECOND COUNTS
          */}
         <section
-          className="relative py-12 md:py-16 overflow-hidden"
+          className="relative py-20 overflow-hidden"
           style={{ background: "linear-gradient(135deg, #1e1c3d 0%, #3B3969 60%, #4A4880 100%)" }}
         >
           <div className="absolute -right-40 top-0 w-[500px] h-[500px] rounded-full bg-[#CB154E]/10 blur-3xl pointer-events-none" />
@@ -385,7 +385,7 @@ export default function StatisticsPage() {
             SECTION 3  CPR IMPACT
          */}
         <section className="py-16 md:py-20 bg-[#F9F9FC]">
-          <div className="mx-auto max-w-7xl px-6 lg:px-12">
+          <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
             <div className="text-center mb-16">
               <Reveal>
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#3B3969]/8 text-[#3B3969] text-xs font-bold uppercase tracking-widest mb-5">
@@ -459,7 +459,7 @@ export default function StatisticsPage() {
             SECTION 4  BYSTANDER & LOCATION
          */}
         <section className="py-16 md:py-20 bg-white">
-          <div className="mx-auto max-w-7xl px-6 lg:px-12">
+          <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
 
             <div className="text-center mb-16">
               <Reveal>
@@ -556,7 +556,7 @@ export default function StatisticsPage() {
             SECTION 5  TRAINING GAP
          */}
         <section className="py-16 md:py-20 bg-[#F9F9FC]">
-          <div className="mx-auto max-w-7xl px-6 lg:px-12">
+          <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
 
               {/* Left: copy */}
@@ -657,7 +657,7 @@ export default function StatisticsPage() {
             CTA  WHY TRAINING MATTERS
          */}
         <section
-          className="relative py-12 md:py-16 overflow-hidden"
+          className="relative py-20 overflow-hidden"
           style={{ background: "linear-gradient(135deg, #F9F9FC 0%, #F0F0F6 100%)" }}
         >
           <div className="absolute -top-24 -right-24 w-[500px] h-[500px] rounded-full bg-[#CB154E]/5 blur-3xl pointer-events-none" />

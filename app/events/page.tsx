@@ -48,7 +48,7 @@ export default function EventsPage() {
             style={{ backgroundImage: "radial-gradient(circle, #ffffff 1px, transparent 1px)", backgroundSize: "30px 30px" }}
           />
 
-          <div className="relative mx-auto max-w-7xl px-6 lg:px-12">
+          <div className="relative mx-auto max-w-[1200px] px-6 lg:px-12">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
               {/* Left  Text + CTA */}
@@ -120,8 +120,8 @@ export default function EventsPage() {
         </section>
 
         {/*  Overview  alternating (image right)  */}
-        <section id="event-services" className="py-12 md:py-16 bg-white relative">
-          <div className="mx-auto max-w-7xl px-6 lg:px-12">
+        <section id="event-services" className="py-20 bg-white relative">
+          <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
             <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
               <Reveal>
               <div className="space-y-8">
@@ -186,8 +186,8 @@ export default function EventsPage() {
         </section>
 
         {/*  Types of Events  */}
-        <section id="types" className="py-12 md:py-16 bg-[#F5F5F5] overflow-hidden">
-          <div className="mx-auto max-w-7xl px-6 lg:px-12">
+        <section id="types" className="py-20 bg-[#F5F5F5] overflow-hidden">
+          <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
             <Reveal>
             <div className="text-center mb-12">
               <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-[#3B3969]/8 text-[#3B3969] text-sm font-semibold mb-5">
@@ -210,8 +210,8 @@ export default function EventsPage() {
         </section>
 
         {/*  Why Professional Event Medics  */}
-        <section className="py-12 md:py-16 bg-white">
-          <div className="mx-auto max-w-7xl px-6 lg:px-12">
+        <section className="py-20 bg-white">
+          <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
             <Reveal>
             <div className="text-center mb-16">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#3B3969]/8 text-[#3B3969] text-sm font-bold tracking-wide uppercase">

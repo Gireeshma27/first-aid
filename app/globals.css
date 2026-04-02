@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+﻿@import 'tailwindcss';
 @import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
@@ -789,4 +789,204 @@ img {
 
 .fade-in-reveal.visible {
   opacity: 1;
+}/* ===== PREMIUM BADGE (ILLUMINATION & GLOW) ===== */
+/* ===== IMAGE BADGE (INSIDE IMAGES - HIGHLIGHTED) ===== */
+.image-badge {
+  background: #FFFFFF;
+  color: #3B3969;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  padding: 0.5rem 0.875rem;
+  font-size: 0.8125rem;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  z-index: 20;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  transform: translateY(-4px);
+}
+
+.image-badge:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.premium-badge {
+  background: #FFFFFF;
+  color: #3B3969;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  padding: 0.5rem 0.875rem;
+  font-size: 0.8125rem;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  z-index: 20;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.premium-badge:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== COURSE BADGE (PREMIUM STYLING) ===== */
+.course-badge {
+  background: #FFFFFF;
+  color: #3B3969;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  padding: 0.5rem 0.875rem;
+  font-size: 0.8125rem;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  z-index: 10;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.course-badge:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== NATIONALLY-RECOGNISED BADGE (PREMIUM STYLING) ===== */
+.national-badge {
+  background: #FFFFFF;
+  color: #3B3969;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  padding: 0.5rem 0.875rem;
+  font-size: 0.8125rem;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  z-index: 10;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.national-badge:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== TRUST BADGE (INLINE - PREMIUM STYLING) ===== */
+.trust-badge {
+  background: #FFFFFF;
+  color: #3B3969;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  padding: 0.5rem 0.875rem;
+  font-size: 0.8125rem;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  z-index: 10;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.trust-badge:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== SECTION HEADER BADGE (PREMIUM STYLING) ===== */
+.section-header-badge {
+  background: #FFFFFF;
+  color: #3B3969;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  padding: 0.5rem 0.875rem;
+  font-size: 0.8125rem;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  z-index: 10;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.section-header-badge:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.section-header-badge::before {
+  content: '';
+  display: inline-block;
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: 50%;
+  background-color: #CB154E;
+  flex-shrink: 0;
+}
+
+/* ===== RTO NOTICE BADGES (PREMIUM STYLING) ===== */
+.rto-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.5rem 0.875rem;
+  border-radius: 999px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.rto-badge--primary {
+  background: #FFFFFF;
+  color: #3B3969;
+}
+
+.rto-badge--primary:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.rto-badge--accent {
+  background: #FFFFFF;
+  color: #CB154E;
+}
+
+.rto-badge--accent:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.rto-badge--success {
+  background: #FFFFFF;
+  color: rgb(22, 163, 74);
+}
+
+.rto-badge--success:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.rto-badge__dot {
+  display: inline-block;
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: 50%;
+  flex-shrink: 0;
 }

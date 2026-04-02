@@ -191,19 +191,38 @@ export function Hero() {
 
         /* ── Floating badge cards ── */
         .badge-white {
-          background: #ffffff;
-          border-radius: 16px; padding: 13px 16px;
-          display: flex; align-items: center; gap: 11px;
-          box-shadow: 0 16px 40px rgba(0,0,0,0.22), 0 0 0 1px rgba(0,0,0,0.05);
+          background: #FFFFFF;
+          color: #3B3969;
+          border: 1px solid rgba(0, 0, 0, 0.08);
+          border-radius: 16px;
+          padding: 0.5rem 1rem;
+          display: flex;
+          align-items: center;
+          gap: 11px;
+          box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
           min-width: 186px;
+          transition: all 0.3s ease;
+        }
+        .badge-white:hover {
+          transform: translateY(-4px) scale(1.05);
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
         }
         .badge-dark {
-          background: linear-gradient(135deg, #3B3969 0%, #2d2b58 100%);
-          border: 1px solid rgba(255,255,255,0.13);
-          border-radius: 16px; padding: 13px 16px;
-          display: flex; align-items: center; gap: 11px;
-          box-shadow: 0 16px 40px rgba(0,0,0,0.35);
+          background: #FFFFFF;
+          color: #3B3969;
+          border: 1px solid rgba(0, 0, 0, 0.08);
+          border-radius: 16px;
+          padding: 0.5rem 1rem;
+          display: flex;
+          align-items: center;
+          gap: 11px;
+          box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
           min-width: 172px;
+          transition: all 0.3s ease;
+        }
+        .badge-dark:hover {
+          transform: translateY(-4px) scale(1.05);
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
         }
         .badge-icon-wrap {
           width: 40px; height: 40px; border-radius: 11px;
@@ -258,7 +277,7 @@ export function Hero() {
         ))}
 
         {/* ── Main grid ── */}
-        <div className="relative mx-auto max-w-7xl px-5 lg:px-10 pt-[28px] pb-[16px] md:pt-[36px] md:pb-[20px]" style={{ zIndex: 3 }}>
+        <div className="relative mx-auto max-w-[1200px] px-5 lg:px-10 pt-[28px] pb-[16px] md:pt-[36px] md:pb-[20px]" style={{ zIndex: 3 }}>
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
             {/* ── LEFT ── */}

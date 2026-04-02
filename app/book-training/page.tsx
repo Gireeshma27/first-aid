@@ -283,7 +283,7 @@ export default function BookTrainingPage() {
           {/* Dot grid overlay */}
           <div className="dot-grid-bg absolute inset-0 opacity-40 pointer-events-none" style={{ zIndex: 2 }} />
 
-          <div className="relative mx-auto max-w-7xl px-6 lg:px-10 pt-16 pb-20 md:pt-20 md:pb-28" style={{ zIndex: 3 }}>
+          <div className="relative mx-auto max-w-[1200px] px-6 lg:px-10 pt-16 pb-20 md:pt-20 md:pb-28" style={{ zIndex: 3 }}>
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
               {/* Left — Hero copy */}

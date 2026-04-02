@@ -34,8 +34,7 @@ export function SectionHeader({ badge, title, description, centered = true }: Se
       className={`max-w-3xl ${centered ? "mx-auto text-center" : ""} mb-8 reveal-section`}
     >
       {badge && (
-        <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-[#3B3969]/10 text-[#3B3969] text-sm font-semibold mb-5 tracking-wide">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#CB154E]" />
+        <span className="section-header-badge">
           {badge}
         </span>
       )}

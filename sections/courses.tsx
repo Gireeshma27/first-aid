@@ -113,7 +113,7 @@ export function CoursesSection() {
 
   return (
     <section className="py-[60px] md:py-[80px] bg-[#F5F5F7]">
-      <div className="mx-auto max-w-7xl px-4 lg:px-8">
+      <div className="mx-auto max-w-[1200px] px-4 lg:px-8">
 
         {/* Section heading */}
         <div ref={headingRef} className="reveal-section mb-12">
