@@ -66,7 +66,7 @@ function CourseCard({ course, index }: { course: typeof courses[number]; index: 
         </span>
 
         {/* Title */}
-        <h3 className="text-lg font-bold text-[#1a1a2e] leading-snug mb-3">
+        <h3 className="text-base md:text-lg font-bold text-[#1a1a2e] leading-snug mb-3 whitespace-nowrap overflow-hidden text-ellipsis">
           {course.title}
         </h3>
 

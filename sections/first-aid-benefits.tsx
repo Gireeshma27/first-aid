@@ -51,7 +51,7 @@ function BenefitCard({ title, description, icon: Icon, index }: { title: string;
         <Icon className="w-12 h-12 text-[#CB154E] mb-6" />
 
         {/* Title */}
-        <h3 className="text-lg md:text-xl font-semibold text-[#2D2D2D] mb-3">
+        <h3 className="text-base md:text-lg font-semibold text-[#2D2D2D] mb-3 whitespace-nowrap overflow-hidden text-ellipsis">
           {title}
         </h3>
 
