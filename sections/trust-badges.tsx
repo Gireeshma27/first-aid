@@ -107,9 +107,6 @@ export function TrustBadgesStrip() {
           })}
         </div>
       </div>
-
-      {/* Bottom separator */}
-      <div className="h-px bg-[#3b3f69]" />
     </section>
   )
 }

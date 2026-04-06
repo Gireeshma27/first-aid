@@ -26,11 +26,11 @@ export default function MedicineOnsiteSupportPage() {
       <Navbar />
       <main>
         {/* Hero */}
-        <section className="relative min-h-[480px] flex items-center overflow-hidden" style={{ background: "#3b3f69" }}>
+        <section className="relative min-h-[400px] flex items-center overflow-hidden" style={{ background: "#3b3f69" }}>
           <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-[#ca1254]/25 blur-3xl" />
           <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-[#3b3f69]/30 blur-3xl" />
           <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, rgba(59,57,105,0.85) 0%, rgba(30,28,61,0.75) 50%, rgba(203,21,78,0.4) 100%)" }} />
-          <div className="relative mx-auto max-w-[1200px] px-6 lg:px-12 py-20">
+          <div className="relative mx-auto max-w-[1200px] px-6 lg:px-12 py-12 md:py-16">
             <div className="flex flex-col lg:flex-row gap-12 items-center">
               <div className="flex-1 min-w-0">
                 <div className="flex flex-wrap items-center gap-3 mb-6">
@@ -42,7 +42,7 @@ export default function MedicineOnsiteSupportPage() {
                     Professional Care
                   </span>
                 </div>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                <h1 className="text-3xl md:text-4xl lg:text-4xl font-bold text-white mb-6 leading-tight">
                   Medicine &amp; <br />
                   <span className="text-[#ca1254]">On-Site Support</span>
                 </h1>

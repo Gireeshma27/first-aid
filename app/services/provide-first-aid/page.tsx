@@ -43,12 +43,12 @@ export default function ProvideFirstAidPage() {
       <Navbar />
       <main>
         {/* Hero */}
-        <section className="relative min-h-[520px] flex items-center overflow-hidden" style={{ background: "#3b3f69" }}>
-          <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-[#ca1254]/20 blur-3xl animate-blob" />
-          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-[#3b3f69]/30 blur-3xl animate-blob-delay" />
-          <div className="absolute top-1/2 left-1/3 w-[300px] h-[300px] rounded-full bg-white/5 blur-3xl animate-blob-delay-2" />
+        <section className="relative min-h-[400px] flex items-center overflow-hidden" style={{ background: "#3b3f69" }}>
+          <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-transparent blur-3xl animate-blob" />
+          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-transparent blur-3xl animate-blob-delay" />
+          <div className="absolute top-1/2 left-1/3 w-[300px] h-[300px] rounded-full bg-transparent blur-3xl animate-blob-delay-2" />
           <div className="absolute inset-0 bg-black/20" />
-          <div className="relative mx-auto max-w-[1200px] px-6 lg:px-12 py-16 pb-20">
+          <div className="relative mx-auto max-w-[1200px] px-6 lg:px-12 py-12 md:py-16">
             <div className="flex flex-col lg:flex-row gap-12 items-center">
               <div className="flex-1 min-w-0">
                 <div className="flex flex-wrap items-center gap-3 mb-6">
@@ -60,7 +60,7 @@ export default function ProvideFirstAidPage() {
                 <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/10 text-white/70 text-xs font-mono mb-4 border border-white/10">
                   HLTAID011
                 </div>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                <h1 className="text-3xl md:text-4xl lg:text-4xl font-bold text-white mb-6 leading-tight">
                   Provide First Aid<br />
                   <span className="text-[#ca1254]">Including CPR</span>
                 </h1>
@@ -217,8 +217,8 @@ export default function ProvideFirstAidPage() {
                   <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#ca1254]/10 text-[#ca1254] text-sm font-semibold mb-5 border border-[#ca1254]/20">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#ca1254]" />Delivery Method
                   </span>
-                  <h2 className="text-2xl md:text-3xl font-bold text-[#1a1a2e] mb-4">How This Training Is Delivered</h2>
-                  <p className="text-[#64648c] text-base leading-relaxed mb-8">We deliver HLTAID011 in formats that work for your situation, whether you need a full day at your workplace or the flexibility of online theory with in-person assessment.</p>
+                  <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">How This Training Is Delivered</h2>
+                  <p className="text-white/80 text-base leading-relaxed mb-8">We deliver HLTAID011 in formats that work for your situation, whether you need a full day at your workplace or the flexibility of online theory with in-person assessment.</p>
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div className="bg-white rounded-2xl p-6 border border-gray-200 hover:shadow-lg hover:border-[#ca1254]/40 transition-all duration-300">
                       <div className="w-8 h-8 rounded-lg bg-[#3b3f69] flex items-center justify-center mb-4 hover:bg-[#ca1254] transition-colors duration-300">

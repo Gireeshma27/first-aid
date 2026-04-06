@@ -29,12 +29,12 @@ export default function CommunityClinicalAwarenessPage() {
       <Navbar />
       <main>
         {/* Hero */}
-        <section className="relative min-h-[520px] flex items-center overflow-hidden" style={{ background: "#3b3f69" }}>
-          <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-[#ca1254]/20 blur-3xl animate-blob" />
-          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-[#3b3f69]/30 blur-3xl animate-blob-delay" />
-          <div className="absolute top-1/2 left-1/3 w-[300px] h-[300px] rounded-full bg-white/5 blur-3xl animate-blob-delay-2" />
+        <section className="relative min-h-[400px] flex items-center overflow-hidden" style={{ background: "#3b3f69" }}>
+          <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-transparent blur-3xl animate-blob" />
+          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-transparent blur-3xl animate-blob-delay" />
+          <div className="absolute top-1/2 left-1/3 w-[300px] h-[300px] rounded-full bg-transparent blur-3xl animate-blob-delay-2" />
           <div className="absolute inset-0 bg-black/20" />
-          <div className="relative mx-auto max-w-[1200px] px-6 lg:px-12 py-20 pb-24">
+          <div className="relative mx-auto max-w-[1200px] px-6 lg:px-12 py-12 md:py-16">
             <div className="flex flex-col lg:flex-row gap-12 items-center">
               <div className="flex-1 min-w-0">
                 <div className="flex flex-wrap items-center gap-3 mb-6">
@@ -46,7 +46,7 @@ export default function CommunityClinicalAwarenessPage() {
                     NDIS &amp; Community Support Workers
                   </span>
                 </div>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                <h1 className="text-3xl md:text-4xl lg:text-4xl font-bold text-white mb-6 leading-tight">
                   Community Clinical<br />
                   <span className="text-[#ca1254]">Awareness Training</span>
                 </h1>
@@ -167,14 +167,14 @@ export default function CommunityClinicalAwarenessPage() {
                     <Users className="w-4 h-4 text-white" />
                   </div>
                   <h3 className="text-white font-semibold mb-2">Face-to-face</h3>
-                  <p className="text-white/60 text-sm leading-relaxed">Delivered at your organisation or care facility with hands-on practical components.</p>
+                  <p className="text-white/80 text-sm leading-relaxed">Delivered at your organisation or care facility with hands-on practical components.</p>
                 </div>
                 <div className="bg-white/[0.07] rounded-2xl p-6 border border-white/10">
                   <div className="w-8 h-8 rounded-lg bg-[#ca1254] flex items-center justify-center mb-4">
                     <BookOpen className="w-4 h-4 text-white" />
                   </div>
                   <h3 className="text-white font-semibold mb-2">Group Training</h3>
-                  <p className="text-white/60 text-sm leading-relaxed">Tailored sessions for teams of community workers, support staff, and carers.</p>
+                  <p className="text-white/80 text-sm leading-relaxed">Tailored sessions for teams of community workers, support staff, and carers.</p>
                 </div>
               </div>
             </Reveal>
