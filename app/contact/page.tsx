@@ -77,14 +77,14 @@ export default function ContactPage() {
         <div className="flex flex-col lg:flex-row min-h-[90vh]">
           
           {/* LEFT  Deep Blue Panel */}
-          <div className="lg:w-1/2 bg-[#3B3969] text-white px-6 py-20 lg:p-24 xl:p-32 flex flex-col justify-center relative overflow-hidden">
+          <div className="lg:w-1/2 bg-[#3b3f69] text-white px-6 py-20 lg:p-24 xl:p-32 flex flex-col justify-center relative overflow-hidden">
             {/* Background elements */}
             <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-white/[0.03] blur-3xl pointer-events-none" />
-            <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] rounded-full bg-[#CB154E]/10 blur-3xl pointer-events-none" />
+            <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] rounded-full bg-[#ca1254]/10 blur-3xl pointer-events-none" />
             
             <div className="relative z-10 max-w-lg mx-auto lg:mx-0 w-full lg:ml-auto">
               <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/10 backdrop-blur-sm text-white/90 text-sm font-semibold mb-8 border border-white/5">
-                <span className="w-2 h-2 rounded-full bg-[#CB154E]" />
+                <span className="w-2 h-2 rounded-full bg-[#ca1254]" />
                 Get in Touch
               </span>
               <h1 className="text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-semibold text-white leading-tight tracking-tight mb-4">
@@ -97,7 +97,7 @@ export default function ContactPage() {
               <div className="space-y-10">
                 {contactMethods.map((method, idx) => (
                   <div key={method.title} className="flex items-start gap-6 group stagger-item" style={{ animationDelay: `${idx * 100}ms` }}>
-                    <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center flex-shrink-0 group-hover:bg-[#CB154E] group-hover:scale-110 transition-all duration-500 border border-white/10 icon-bounce">
+                    <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center flex-shrink-0 group-hover:bg-[#ca1254] group-hover:scale-110 transition-all duration-500 border border-white/10 icon-bounce">
                       <method.icon className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -117,20 +117,20 @@ export default function ContactPage() {
             <div
               className="absolute inset-0 opacity-[0.03] pointer-events-none"
               style={{
-                backgroundImage: "radial-gradient(circle, #3B3969 1px, transparent 1px)",
+                backgroundImage: "transparent",
                 backgroundSize: "32px 32px",
               }}
             />
             {/* Decorative gradient blob */}
-            <div className="absolute -top-20 -right-20 w-[400px] h-[400px] rounded-full bg-[#CB154E]/[0.04] blur-3xl pointer-events-none" />
-            <div className="absolute -bottom-20 -left-20 w-[300px] h-[300px] rounded-full bg-[#3B3969]/[0.04] blur-3xl pointer-events-none" />
+            <div className="absolute -top-20 -right-20 w-[400px] h-[400px] rounded-full bg-[#ca1254]/[0.04] blur-3xl pointer-events-none" />
+            <div className="absolute -bottom-20 -left-20 w-[300px] h-[300px] rounded-full bg-[#3b3f69]/[0.04] blur-3xl pointer-events-none" />
 
             <div className="max-w-xl mx-auto lg:mx-0 w-full lg:mr-auto relative z-10">
               {/* Header with accent line */}
               <div className="mb-10">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-1 rounded-full bg-[#CB154E]" />
-                  <span className="text-sm font-bold text-[#CB154E] uppercase tracking-widest">Enquire Now</span>
+                  <div className="w-10 h-1 rounded-full bg-[#ca1254]" />
+                  <span className="text-sm font-bold text-[#ca1254] uppercase tracking-widest">Enquire Now</span>
                 </div>
                 <h2 className="text-3xl lg:text-4xl font-bold text-[#333333] mb-3 tracking-tight">
                   Request Consultation
@@ -148,7 +148,7 @@ export default function ContactPage() {
               {/* What to Include card */}
               <div className="mt-8 bg-white rounded-3xl p-7 border border-gray-100/80 shadow-sm">
                 <div className="flex items-center gap-3 mb-5">
-                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#3B3969] to-[#4a4880] flex items-center justify-center shadow-sm">
+                  <div className="w-10 h-10 rounded-xl bg-[#3b3f69] flex items-center justify-center shadow-sm">
                     <MessageSquare className="w-5 h-5 text-white" />
                   </div>
                   <h4 className="font-bold text-[#333333] text-base">What to Include</h4>
@@ -160,8 +160,8 @@ export default function ContactPage() {
                     "Preferred dates and location",
                   ].map((item) => (
                     <li key={item} className="flex items-center gap-3">
-                      <div className="w-6 h-6 rounded-full bg-[#CB154E]/10 flex items-center justify-center flex-shrink-0">
-                        <svg className="w-3.5 h-3.5 text-[#CB154E]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                      <div className="w-6 h-6 rounded-full bg-[#ca1254]/10 flex items-center justify-center flex-shrink-0">
+                        <svg className="w-3.5 h-3.5 text-[#ca1254]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
                           <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                         </svg>
                       </div>
@@ -179,7 +179,7 @@ export default function ContactPage() {
                   { icon: MessageSquare, label: "Free Quote" },
                 ].map((badge) => (
                   <div key={badge.label} className="flex flex-col items-center gap-2 py-4 px-3 bg-white rounded-2xl border border-gray-100/80 shadow-sm">
-                    <badge.icon className="w-5 h-5 text-[#3B3969]" />
+                    <badge.icon className="w-5 h-5 text-[#3b3f69]" />
                     <span className="text-xs font-semibold text-[#555555] text-center">{badge.label}</span>
                   </div>
                 ))}
@@ -193,8 +193,8 @@ export default function ContactPage() {
           <div className="mx-auto max-w-3xl px-6 lg:px-12">
             <Reveal>
             <div className="text-center mb-12">
-              <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-[#3B3969]/8 text-[#3B3969] text-sm font-semibold mb-5">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#CB154E]" />
+              <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-[#3b3f69]/8 text-[#3b3f69] text-sm font-semibold mb-5">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#ca1254]" />
                 FAQs
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-[#333333] leading-tight">
@@ -214,7 +214,7 @@ export default function ContactPage() {
                   className="border border-gray-100 rounded-2xl px-6 bg-white shadow-sm data-[state=open]:shadow-md transition-shadow stagger-item card-shimmer"
                   style={{ animationDelay: `${index * 80}ms` }}
                 >
-                  <AccordionTrigger className="text-left font-semibold text-[#333333] hover:text-[#3B3969] py-5 text-base [&[data-state=open]>svg]:rotate-180 cursor-pointer">
+                  <AccordionTrigger className="text-left font-semibold text-[#333333] hover:text-[#3b3f69] py-5 text-base [&[data-state=open]>svg]:rotate-180 cursor-pointer">
                     {faq.question}
                   </AccordionTrigger>
                   <AccordionContent className="text-[#666666] leading-relaxed pb-5">

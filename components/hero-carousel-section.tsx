@@ -47,20 +47,20 @@ export function HeroCarouselSection() {
   const currentSlide = slides[currentIndex]
 
   return (
-    <section className="w-full bg-[#3B3969] py-16 md:py-20 overflow-hidden">
+    <section className="w-full bg-[#3b3f69] py-16 md:py-20 overflow-hidden">
       <div className="mx-auto max-w-6xl px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center min-h-[400px]">
           {/* LEFT SIDE - Content */}
           <div className="text-white">
             {/* Label */}
-            <p className="text-sm font-semibold text-[#CB154E] mb-3 uppercase tracking-wide">
+            <p className="text-sm font-semibold text-[#ca1254] mb-3 uppercase tracking-wide">
               First Aid Training Services
             </p>
 
             {/* Heading */}
             <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-4">
               Professional First Aid Training for{" "}
-              <span className="text-[#CB154E]">Real-Life Emergencies</span>
+              <span className="text-[#ca1254]">Real-Life Emergencies</span>
             </h1>
 
             {/* Description */}
@@ -81,7 +81,7 @@ export function HeroCarouselSection() {
                 style={{ left: "-20px", top: "50%", transform: "translateY(-50%)" }}
                 aria-label="Previous slide"
               >
-                <ChevronLeft className="w-5 h-5 text-[#3B3969]" />
+                <ChevronLeft className="w-5 h-5 text-[#3b3f69]" />
               </button>
 
               {/* Card Container — gives explicit height so absolutes work */}
@@ -109,7 +109,7 @@ export function HeroCarouselSection() {
                       <ul className="space-y-2.5">
                         {slide.points.map((point, idx) => (
                           <li key={idx} className="flex items-center gap-2.5">
-                            <span className="w-2 h-2 rounded-full bg-[#CB154E] flex-shrink-0" />
+                            <span className="w-2 h-2 rounded-full bg-[#ca1254] flex-shrink-0" />
                             <span className="text-sm text-gray-700">{point}</span>
                           </li>
                         ))}
@@ -126,7 +126,7 @@ export function HeroCarouselSection() {
                 style={{ right: "-20px", top: "50%", transform: "translateY(-50%)" }}
                 aria-label="Next slide"
               >
-                <ChevronRight className="w-5 h-5 text-[#3B3969]" />
+                <ChevronRight className="w-5 h-5 text-[#3b3f69]" />
               </button>
             </div>
 
@@ -137,7 +137,7 @@ export function HeroCarouselSection() {
                   key={index}
                   onClick={() => goToSlide(index)}
                   className={`h-2 rounded-full transition-all duration-300 ${
-                    index === currentIndex ? "bg-[#CB154E] w-8" : "bg-gray-400/50 w-2"
+                    index === currentIndex ? "bg-[#ca1254] w-8" : "bg-gray-400/50 w-2"
                   }`}
                   aria-label={`Go to slide ${index + 1}`}
                 />

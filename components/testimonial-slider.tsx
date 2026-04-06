@@ -62,7 +62,7 @@ export function TestimonialSlider({ testimonials }: TestimonialSliderProps) {
     <div className="relative max-w-6xl mx-auto">
       {/* Background large quote watermark */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-8 md:-translate-y-16 opacity-[0.03] pointer-events-none">
-        <Quote className="w-40 h-40 md:w-64 md:h-64 text-[#3B3969] fill-[#3B3969]" />
+        <Quote className="w-40 h-40 md:w-64 md:h-64 text-[#3b3f69] fill-[#3b3f69]" />
       </div>
 
       {/* Cards container */}
@@ -90,7 +90,7 @@ export function TestimonialSlider({ testimonials }: TestimonialSliderProps) {
 
                 {/* Author info */}
                 <div className="flex flex-col items-center gap-4 pt-4">
-                  <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-gradient-to-br from-[#3B3969] to-[#CB154E] flex items-center justify-center text-white font-bold text-xl md:text-2xl shadow-lg ring-4 ring-white">
+                  <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-[#3b3f69] flex items-center justify-center text-white font-bold text-xl md:text-2xl shadow-lg ring-4 ring-white">
                     {testimonial.author.charAt(0)}
                   </div>
                   <div>
@@ -98,7 +98,7 @@ export function TestimonialSlider({ testimonials }: TestimonialSliderProps) {
                     <p className="text-sm md:text-base text-[#666666] font-medium">
                       {testimonial.role}
                       {testimonial.organisation && (
-                        <span className="text-[#CB154E]"> · {testimonial.organisation}</span>
+                        <span className="text-[#ca1254]"> · {testimonial.organisation}</span>
                       )}
                     </p>
                   </div>
@@ -113,7 +113,7 @@ export function TestimonialSlider({ testimonials }: TestimonialSliderProps) {
       <div className="flex items-center justify-center gap-6 mt-4 md:mt-8 relative z-20">
         <button
           onClick={goToPrevious}
-          className="w-12 h-12 rounded-full border border-gray-200 bg-white flex items-center justify-center text-[#333333] hover:border-[#3B3969] hover:bg-[#3B3969] hover:text-white transition-all duration-300 shadow-sm"
+          className="w-12 h-12 rounded-full border border-gray-200 bg-white flex items-center justify-center text-[#333333] hover:border-[#3b3f69] hover:bg-[#3b3f69] hover:text-white transition-all duration-300 shadow-sm"
           aria-label="Previous testimonial"
         >
           <ChevronLeft className="w-5 h-5" />
@@ -127,7 +127,7 @@ export function TestimonialSlider({ testimonials }: TestimonialSliderProps) {
               onClick={() => goToSlide(index)}
               className={`rounded-full transition-all duration-500 ${
                 index === currentIndex
-                  ? "bg-[#CB154E] w-10 h-2.5"
+                  ? "bg-[#ca1254] w-10 h-2.5"
                   : "bg-gray-200 hover:bg-gray-300 w-2.5 h-2.5"
               }`}
               aria-label={`Go to testimonial ${index + 1}`}
@@ -137,7 +137,7 @@ export function TestimonialSlider({ testimonials }: TestimonialSliderProps) {
 
         <button
           onClick={goToNext}
-          className="w-12 h-12 rounded-full border border-gray-200 bg-white flex items-center justify-center text-[#333333] hover:border-[#3B3969] hover:bg-[#3B3969] hover:text-white transition-all duration-300 shadow-sm"
+          className="w-12 h-12 rounded-full border border-gray-200 bg-white flex items-center justify-center text-[#333333] hover:border-[#3b3f69] hover:bg-[#3b3f69] hover:text-white transition-all duration-300 shadow-sm"
           aria-label="Next testimonial"
         >
           <ChevronRight className="w-5 h-5" />

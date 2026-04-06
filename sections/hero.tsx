@@ -74,7 +74,7 @@ export function Hero() {
         /* ── Ping dot ── */
         .ping-dot::after {
           content:''; position:absolute; inset:0; border-radius:9999px;
-          background:#CB154E;
+          background:#ca1254;
           animation: ping 1.5s cubic-bezier(0,0,.2,1) infinite;
         }
 
@@ -88,7 +88,7 @@ export function Hero() {
 
         /* ── Dot grid ── */
         .dot-grid {
-          background-image: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+          background-image: transparent 1px, transparent 1px);
           background-size: 28px 28px;
         }
 
@@ -105,12 +105,12 @@ export function Hero() {
         /* ── Buttons ── */
         .btn-cta {
           position: relative; overflow: hidden;
-          background: linear-gradient(135deg, #CB154E 0%, #e02460 100%);
+          background: #ca1254;
           color: white; border: none; border-radius: 12px;
           padding: 15px 30px; font-size: 0.94rem; font-weight: 700;
           display: inline-flex; align-items: center; gap: 9px;
           cursor: pointer; letter-spacing: 0.02em; text-decoration: none;
-          box-shadow: 0 6px 20px rgba(203,21,78,0.4), inset 0 1px 0 rgba(255,255,255,0.18);
+          box-shadow: 0 6px 20px rgba(202,18,84,0.4), inset 0 1px 0 rgba(255,255,255,0.18);
           transition: transform 0.22s ease, box-shadow 0.22s ease;
         }
         .btn-cta::after {
@@ -119,7 +119,7 @@ export function Hero() {
           transform: translateX(-100%);
           transition: transform 0s;
         }
-        .btn-cta:hover { transform:translateY(-2px); box-shadow: 0 12px 28px rgba(203,21,78,0.5), inset 0 1px 0 rgba(255,255,255,0.18); }
+        .btn-cta:hover { transform:translateY(-2px); box-shadow: 0 12px 28px rgba(202,18,84,0.5), inset 0 1px 0 rgba(255,255,255,0.18); }
         .btn-cta:hover::after { transform:translateX(100%); transition:transform 0.55s ease; }
 
         .btn-ghost {
@@ -176,7 +176,7 @@ export function Hero() {
           position: relative;
           border-radius: 24px;
           padding: 2px;
-          background: linear-gradient(150deg, rgba(203,21,78,0.55) 0%, rgba(59,57,105,0.25) 50%, rgba(255,255,255,0.08) 100%);
+          background: linear-gradient(150deg, rgba(202,18,84,0.55) 0%, rgba(59,63,105,0.25) 50%, rgba(255,255,255,0.08) 100%);
         }
         .img-frame-inner {
           border-radius: 22px;
@@ -185,14 +185,14 @@ export function Hero() {
         }
         .img-glow-bg {
           position: absolute; inset: -30px; z-index: 0; pointer-events: none;
-          background: radial-gradient(ellipse at 60% 50%, rgba(203,21,78,0.2) 0%, transparent 65%);
+          background: transparent 0%, transparent 65%);
           filter: blur(20px);
         }
 
         /* ── Floating badge cards ── */
         .badge-white {
           background: #FFFFFF;
-          color: #3B3969;
+          color: #3b3f69;
           border: 1px solid rgba(0, 0, 0, 0.08);
           border-radius: 16px;
           padding: 0.5rem 1rem;
@@ -209,7 +209,7 @@ export function Hero() {
         }
         .badge-dark {
           background: #FFFFFF;
-          color: #3B3969;
+          color: #3b3f69;
           border: 1px solid rgba(0, 0, 0, 0.08);
           border-radius: 16px;
           padding: 0.5rem 1rem;
@@ -233,7 +233,7 @@ export function Hero() {
         /* ── Heading underline accent ── */
         .h-accent {
           display: block; width: 48px; height: 3px; border-radius: 99px;
-          background: linear-gradient(90deg, #CB154E, rgba(203,21,78,0.25));
+          background: #ca1254;
           margin-bottom: 18px;
         }
 
@@ -253,14 +253,14 @@ export function Hero() {
         className="hero-wrap hero-noise relative overflow-hidden"
         style={{
           minHeight: "calc(100vh - 70px)",
-          background: "linear-gradient(145deg, #3B3969 0%, #2e2c5c 35%, #231f4b 65%, #1e1c3d 100%)",
+          background: "#3b3f69",
         }}
       >
         {/* Ambient colour blobs */}
         <div className="absolute top-[-60px] right-[-60px] w-[640px] h-[640px] rounded-full pointer-events-none"
-          style={{ background: "radial-gradient(circle, rgba(203,21,78,0.13) 0%, transparent 65%)", filter: "blur(8px)" }} />
+          style={{ background: "transparent 0%, transparent 65%)", filter: "blur(8px)" }} />
         <div className="absolute bottom-[-80px] left-[-80px] w-[480px] h-[480px] rounded-full pointer-events-none"
-          style={{ background: "radial-gradient(circle, rgba(59,57,105,0.45) 0%, transparent 70%)", filter: "blur(8px)" }} />
+          style={{ background: "transparent 0%, transparent 70%)", filter: "blur(8px)" }} />
 
         {/* Dot grid — top right only */}
         <div className="dot-grid absolute top-0 right-0 w-80 h-80 opacity-30 pointer-events-none" style={{ zIndex: 2 }} />
@@ -286,14 +286,9 @@ export function Hero() {
               {/* Heading */}
               <div className="anim-up d1">
                 <span className="h-accent" />
-                <h1 className="text-4xl md:text-5xl lg:text-5xl font-semibold text-white leading-[1.1] tracking-tight">
+                <h1 className="text-3xl md:text-4xl lg:text-4xl font-semibold text-white leading-[1.1] tracking-tight">
                   First Aid{" "}
-                  <span style={{
-                    background: "linear-gradient(130deg, #CB154E 20%, #f7395e 100%)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                    backgroundClip: "text",
-                  }}>
+                  <span style={{ color: "#ca1254" }}>
                     Network
                   </span>
                 </h1>
@@ -311,10 +306,6 @@ export function Hero() {
               <div className="anim-up d3 flex flex-wrap gap-3 items-center">
                 <Link href="/book-training" className="btn-cta">
                   Book Training <ArrowRight className="w-4 h-4" />
-                </Link>
-                <Link href="/services" className="btn-ghost">
-                  <PlayCircle className="w-4 h-4" style={{ color: "#CB154E" }} />
-                  Explore Services
                 </Link>
               </div>
 
@@ -356,12 +347,12 @@ export function Hero() {
                     />
                     {/* Bottom fade overlay */}
                     <div className="absolute inset-0"
-                      style={{ background: "linear-gradient(to top, rgba(25,22,55,0.65) 0%, rgba(25,22,55,0.1) 45%, transparent 100%)" }} />
+                      style={{ background: "linear-gradient(to top, rgba(34,37,68,0.65) 0%, rgba(34,37,68,0.1) 45%, transparent 100%)" }} />
 
                     {/* "Live" label inside image */}
                     <div className="absolute bottom-4 left-4">
                       <div className="img-label">
-                        <span className="ping-dot relative inline-flex h-1.5 w-1.5 rounded-full bg-[#CB154E]" />
+                        <span className="ping-dot relative inline-flex h-1.5 w-1.5 rounded-full bg-[#ca1254]" />
                         <span className="text-white/75 text-[10px] font-semibold uppercase tracking-widest">
                           Live Training Sessions
                         </span>
@@ -389,12 +380,12 @@ export function Hero() {
                 style={{ animationDelay: "1s", animationDuration: "5.5s", zIndex: 10 }}
               >
                 <div className="badge-icon-wrap" style={{ background: "rgba(203,21,78,0.1)" }}>
-                  <svg className="w-5 h-5" fill="none" stroke="#CB154E" strokeWidth={2.5} viewBox="0 0 24 24">
+                  <svg className="w-5 h-5" fill="none" stroke="#ca1254" strokeWidth={2.5} viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
                 <div>
-                  <p style={{ fontWeight: 700, fontSize: "0.83rem", color: "#1e1c3d", lineHeight: 1.3 }}>Accredited Training</p>
+                  <p style={{ fontWeight: 700, fontSize: "0.83rem", color: "#222544", lineHeight: 1.3 }}>Accredited Training</p>
                   <p style={{ fontSize: "0.68rem", color: "#aaa", marginTop: 3, fontWeight: 500 }}>RTO Certified Programs</p>
                 </div>
               </div>
@@ -417,7 +408,7 @@ export function Hero() {
                 }}
               >
                 <div className="badge-icon-wrap" style={{ background: "rgba(203,21,78,0.1)" }}>
-                  <svg style={{ width: 16, height: 16 }} fill="none" stroke="#CB154E" strokeWidth={2.5} viewBox="0 0 24 24">
+                  <svg style={{ width: 16, height: 16 }} fill="none" stroke="#ca1254" strokeWidth={2.5} viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>

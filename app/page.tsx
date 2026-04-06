@@ -17,8 +17,8 @@ export default function HomePage() {
         <Hero />
         <TrustBadgesStrip />
 
-        <ServicesSection />
         <FirstAidBenefitsSection />
+        <ServicesSection />
         <StatisticsSection />
         <HeroCarouselSection />
         <EventsSection />

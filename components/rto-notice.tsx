@@ -14,15 +14,15 @@ export function RTONotice({ courseCode, courseTitle, className = "" }: RTONotice
   return (
     <section className={`py-10 md:py-12 bg-[#F5F5F5] ${className}`}>
       <div className="mx-auto max-w-4xl px-6 lg:px-12">
-        <div className="flex flex-col sm:flex-row items-start gap-5 rounded-2xl bg-white border border-[#3B3969]/15 border-l-4 border-l-[#3B3969] shadow-sm px-6 py-6 md:px-8 md:py-7">
+        <div className="flex flex-col sm:flex-row items-start gap-5 rounded-2xl bg-white border border-[#3b3f69]/15 border-l-4 border-l-[#3b3f69] shadow-sm px-6 py-6 md:px-8 md:py-7">
           {/* Icon */}
-          <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-[#3B3969]/10 flex items-center justify-center mt-0.5">
-            <ShieldCheck className="w-6 h-6 text-[#3B3969]" />
+          <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-[#3b3f69]/10 flex items-center justify-center mt-0.5">
+            <ShieldCheck className="w-6 h-6 text-[#3b3f69]" />
           </div>
 
           {/* Text */}
           <div className="flex-1 min-w-0">
-            <p className="text-xs font-bold uppercase tracking-widest text-[#3B3969] mb-1.5">
+            <p className="text-xs font-bold uppercase tracking-widest text-[#3b3f69] mb-1.5">
               Nationally Recognised Training
             </p>
             <p className="text-sm text-[#444] leading-relaxed">
@@ -45,11 +45,11 @@ export function RTONotice({ courseCode, courseTitle, className = "" }: RTONotice
             {/* Trust badges */}
             <div className="flex flex-wrap gap-2 mt-4">
               <span className="rto-badge rto-badge--primary">
-                <span className="rto-badge__dot bg-[#3B3969]" />
+                <span className="rto-badge__dot bg-[#3b3f69]" />
                 RTO 91222 Accredited
               </span>
               <span className="rto-badge rto-badge--accent">
-                <span className="rto-badge__dot bg-[#CB154E]" />
+                <span className="rto-badge__dot bg-[#ca1254]" />
                 ASQA Approved
               </span>
               <span className="rto-badge rto-badge--success">

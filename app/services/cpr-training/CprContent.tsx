@@ -78,13 +78,13 @@ function Reveal({
    Data
  */
 const drsabcd: { letter: string; icon: IconType; accent: string; label: string; desc: string }[] = [
-  { letter: "D", icon: FiAlertOctagon, accent: "#CB154E", label: "Danger", desc: "Ensure the scene is safe for you, bystanders and the casualty before approaching" },
-  { letter: "R", icon: FiUser, accent: "#3B3969", label: "Response", desc: "Check consciousness, call their name and squeeze their shoulders firmly" },
-  { letter: "S", icon: FiPhoneCall, accent: "#CB154E", label: "Send Help", desc: "Call 000 or ask a bystander to call. Confirm the ambulance is dispatched" },
-  { letter: "A", icon: FiWind, accent: "#3B3969", label: "Airway", desc: "Head-tilt chin-lift to open the airway. Remove any visible obstructions" },
-  { letter: "B", icon: FiActivity, accent: "#CB154E", label: "Breathing", desc: "Look, listen and feel for normal breathing, assess for no more than 10 seconds" },
-  { letter: "C", icon: FiHeart, accent: "#3B3969", label: "CPR", desc: "30 compressions then 2 rescue breaths. Push hard & fast at 100120 per minute" },
-  { letter: "D", icon: FiZap, accent: "#CB154E", label: "Defib", desc: "Attach an AED as soon as possible and follow the voice and visual prompts" },
+  { letter: "D", icon: FiAlertOctagon, accent: "#ca1254", label: "Danger", desc: "Ensure the scene is safe for you, bystanders and the casualty before approaching" },
+  { letter: "R", icon: FiUser, accent: "#3b3f69", label: "Response", desc: "Check consciousness, call their name and squeeze their shoulders firmly" },
+  { letter: "S", icon: FiPhoneCall, accent: "#ca1254", label: "Send Help", desc: "Call 000 or ask a bystander to call. Confirm the ambulance is dispatched" },
+  { letter: "A", icon: FiWind, accent: "#3b3f69", label: "Airway", desc: "Head-tilt chin-lift to open the airway. Remove any visible obstructions" },
+  { letter: "B", icon: FiActivity, accent: "#ca1254", label: "Breathing", desc: "Look, listen and feel for normal breathing, assess for no more than 10 seconds" },
+  { letter: "C", icon: FiHeart, accent: "#3b3f69", label: "CPR", desc: "30 compressions then 2 rescue breaths. Push hard & fast at 100120 per minute" },
+  { letter: "D", icon: FiZap, accent: "#ca1254", label: "Defib", desc: "Attach an AED as soon as possible and follow the voice and visual prompts" },
 ]
 
 const cprSkills: { icon: IconType; text: string }[] = [
@@ -121,7 +121,7 @@ export default function CprContent() {
   return (
     <>
       {/*  HERO  */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#3B3969] to-[#2d2b5e] py-20">
+      <section className="relative overflow-hidden bg-[#3b3f69] py-20">
         <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-white/10 blur-3xl animate-blob" />
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-black/10 blur-3xl animate-blob-delay" />
         
@@ -130,10 +130,10 @@ export default function CprContent() {
             <div className="flex-1">
               <div className="max-w-2xl pt-4 md:pt-8 mb-12 lg:mb-0">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white/90 text-sm font-semibold mb-6 border border-white/10 backdrop-blur-sm">
-                <span className="w-2 h-2 rounded-full bg-[#CB154E]" />
+                <span className="w-2 h-2 rounded-full bg-[#ca1254]" />
                 HLTAID009 Provide cardiopulmonary resuscitation
               </span>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white leading-tight mb-6">
+              <h1 className="text-3xl md:text-4xl lg:text-4xl font-semibold text-white leading-tight mb-6">
                 Master Lifesaving CPR Skills
               </h1>
               <p className="text-lg md:text-xl text-white/80 leading-relaxed mb-10 max-w-xl font-medium">
@@ -150,7 +150,7 @@ export default function CprContent() {
                     key={label}
                     className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white text-sm font-medium"
                   >
-                    <Icon className="w-4 h-4 text-[#CB154E]" />
+                    <Icon className="w-4 h-4 text-[#ca1254]" />
                     {label}
                   </div>
                 ))}
@@ -158,7 +158,7 @@ export default function CprContent() {
               <div className="flex flex-wrap gap-4">
                 <Button
                   asChild
-                  className="bg-[#CB154E] hover:bg-[#CB154E]/90 text-white font-semibold px-8 py-3 rounded-lg shadow-lg shadow-[#CB154E]/30"
+                  className="bg-[#ca1254] hover:bg-[#ca1254]/90 text-white font-semibold px-8 py-3 rounded-lg shadow-lg shadow-[#ca1254]/30"
                 >
                   <Link href="/book-training">
                     Book This Training <ArrowRight className="w-4 h-4 ml-2" />
@@ -186,9 +186,9 @@ export default function CprContent() {
                   sizes="(max-width: 1024px) 100vw, 420px"
                   className="object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-black/20" />
                 <div className="absolute top-[12px] left-[12px] image-badge">
-                    <Activity className="w-4 h-4 text-[#CB154E]" />
+                    <Activity className="w-4 h-4 text-[#ca1254]" />
                     Life-Saving Skills
                   </div>
               </div>
@@ -201,12 +201,12 @@ export default function CprContent() {
       <section className="py-20 bg-white relative overflow-hidden">
         <div
           className="absolute inset-0 pointer-events-none"
-          style={{ backgroundImage: "linear-gradient(180deg, transparent 0%, rgba(203,21,78,0.02) 100%)" }}
+          style={{ backgroundImage: "transparent" }}
         />
         <div className="relative mx-auto max-w-[1200px] px-6 lg:px-12">
           <Reveal className="text-center mb-10">
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#CB154E]/[0.07] text-[#CB154E] text-sm font-semibold mb-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#CB154E]" />
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#ca1254]/[0.07] text-[#ca1254] text-sm font-semibold mb-4">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#ca1254]" />
               Emergency Framework
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-[#1a1a2e]">The DRSABCD Action Plan</h2>
@@ -218,7 +218,7 @@ export default function CprContent() {
           <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-3">
             {drsabcd.map(({ letter, icon: Icon, accent, label, desc }, i) => (
               <Reveal key={label} delay={i * 55}>
-                <div className="group flex flex-col items-center text-center p-4 rounded-2xl bg-[#F7F7FA] border border-[#E8E8F0] hover:border-[#CB154E]/30 hover:bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300 h-full cursor-default select-none">
+                <div className="group flex flex-col items-center text-center p-4 rounded-2xl bg-[#F7F7FA] border border-[#E8E8F0] hover:border-[#ca1254]/30 hover:bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300 h-full cursor-default select-none">
                   <div className="relative mb-3 mt-1">
                     <div
                       className="w-12 h-12 rounded-xl flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300"
@@ -228,7 +228,7 @@ export default function CprContent() {
                     </div>
                     <span
                       className="absolute -top-2 -right-2 w-5 h-5 rounded-full text-white text-[10px] font-bold flex items-center justify-center border-2 border-white shadow-sm"
-                      style={{ backgroundColor: accent === "#CB154E" ? "#3B3969" : "#CB154E" }}
+                      style={{ backgroundColor: accent === "#ca1254" ? "#3b3f69" : "#ca1254" }}
                     >
                       {letter}
                     </span>
@@ -246,8 +246,8 @@ export default function CprContent() {
       <section className="py-20 bg-[#F7F7FA]">
         <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
           <Reveal className="mb-8">
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#3B3969]/[0.07] text-[#3B3969] text-sm font-semibold mb-3">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#3B3969]" />
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#3b3f69]/[0.07] text-[#3b3f69] text-sm font-semibold mb-3">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#3b3f69]" />
               Key Learning Outcomes
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-[#1a1a2e]">What You Will Learn</h2>
@@ -256,9 +256,9 @@ export default function CprContent() {
           <div className="grid md:grid-cols-2 gap-6 items-stretch">
             {/* Left card: CPR Techniques */}
             <Reveal delay={0} className="h-full">
-              <div className="group bg-white rounded-2xl p-7 border border-[#E8E8F0] border-l-4 border-l-[#3B3969] hover:-translate-y-1 hover:shadow-xl transition-all duration-300 h-full">
+              <div className="group bg-white rounded-2xl p-7 border border-[#E8E8F0] border-l-4 border-l-[#3b3f69] hover:-translate-y-1 hover:shadow-xl transition-all duration-300 h-full">
                 <div className="flex items-center gap-3 mb-5">
-                  <div className="w-10 h-10 rounded-xl bg-[#3B3969] flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-10 h-10 rounded-xl bg-[#3b3f69] flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <Heart className="w-5 h-5 text-white" />
                   </div>
                   <h3 className="text-lg font-bold text-[#1a1a2e]">CPR Techniques</h3>
@@ -266,8 +266,8 @@ export default function CprContent() {
                 <ul className="space-y-3">
                   {cprSkills.map(({ icon: Icon, text }) => (
                     <li key={text} className="flex items-start gap-3">
-                      <span className="flex-shrink-0 mt-0.5 w-5 h-5 rounded-full bg-[#3B3969]/10 flex items-center justify-center">
-                        <Icon className="w-2.5 h-2.5 text-[#3B3969]" />
+                      <span className="flex-shrink-0 mt-0.5 w-5 h-5 rounded-full bg-[#3b3f69]/10 flex items-center justify-center">
+                        <Icon className="w-2.5 h-2.5 text-[#3b3f69]" />
                       </span>
                       <span className="text-[#64648c] text-sm leading-relaxed">{text}</span>
                     </li>
@@ -278,9 +278,9 @@ export default function CprContent() {
 
             {/* Right card: Emergency Response */}
             <Reveal delay={80} className="h-full">
-              <div className="group bg-white rounded-2xl p-7 border border-[#E8E8F0] border-l-4 border-l-[#CB154E] hover:-translate-y-1 hover:shadow-xl transition-all duration-300 h-full">
+              <div className="group bg-white rounded-2xl p-7 border border-[#E8E8F0] border-l-4 border-l-[#ca1254] hover:-translate-y-1 hover:shadow-xl transition-all duration-300 h-full">
                 <div className="flex items-center gap-3 mb-5">
-                  <div className="w-10 h-10 rounded-xl bg-[#CB154E] flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-10 h-10 rounded-xl bg-[#ca1254] flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <Zap className="w-5 h-5 text-white" />
                   </div>
                   <h3 className="text-lg font-bold text-[#1a1a2e]">Emergency Response</h3>
@@ -288,8 +288,8 @@ export default function CprContent() {
                 <ul className="space-y-3">
                   {emergencySkills.map(({ icon: Icon, text }) => (
                     <li key={text} className="flex items-start gap-3">
-                      <span className="flex-shrink-0 mt-0.5 w-5 h-5 rounded-full bg-[#CB154E]/10 flex items-center justify-center">
-                        <Icon className="w-2.5 h-2.5 text-[#CB154E]" />
+                      <span className="flex-shrink-0 mt-0.5 w-5 h-5 rounded-full bg-[#ca1254]/10 flex items-center justify-center">
+                        <Icon className="w-2.5 h-2.5 text-[#ca1254]" />
                       </span>
                       <span className="text-[#64648c] text-sm leading-relaxed">{text}</span>
                     </li>
@@ -303,12 +303,12 @@ export default function CprContent() {
 
       {/*  DELIVERY METHOD  */}
       <section className="py-20 bg-white relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-80 h-80 rounded-full bg-[#CB154E]/4 blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#3B3969]/4 blur-3xl pointer-events-none" />
+        <div className="absolute top-0 right-0 w-80 h-80 rounded-full bg-[#ca1254]/4 blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#3b3f69]/4 blur-3xl pointer-events-none" />
         <div className="relative mx-auto max-w-[1200px] px-6 lg:px-12">
           <Reveal className="mb-10">
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#CB154E]/10 text-[#CB154E] text-sm font-semibold mb-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#CB154E]" />
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#ca1254]/10 text-[#ca1254] text-sm font-semibold mb-4">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#ca1254]" />
               Delivery Options
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-[#1a1a2e]">How Training Is Delivered</h2>
@@ -322,13 +322,13 @@ export default function CprContent() {
             <Reveal className="p-8 border-b md:border-b-0 md:border-r border-[#E8E8F0] hover:bg-[#F7F7FA] transition-colors duration-300">
               <div
                 className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 shadow-md"
-                style={{ backgroundColor: "#3B3969", boxShadow: "0 4px 14px rgba(59,57,105,0.25)" }}
+                style={{ backgroundColor: "#3b3f69", boxShadow: "0 4px 14px rgba(59,57,105,0.25)" }}
               >
                 <Users className="w-7 h-7 text-white" />
               </div>
               <div className="flex items-center gap-3 mb-3">
                 <h3 className="text-xl font-bold text-[#1a1a2e]">Face-to-Face Training</h3>
-                <span className="px-2.5 py-1 rounded-full bg-[#3B3969]/10 text-[#3B3969] text-xs font-semibold">~4 hours</span>
+                <span className="px-2.5 py-1 rounded-full bg-[#3b3f69]/10 text-[#3b3f69] text-xs font-semibold">~4 hours</span>
               </div>
               <p className="text-[#64648c] text-sm leading-relaxed mb-6">
                 Full practical training delivered at your workplace or our training facility. Best for teams who want
@@ -343,7 +343,7 @@ export default function CprContent() {
                   "Ideal for groups of 624 participants",
                 ].map((item) => (
                   <li key={item} className="flex items-center gap-2.5 text-sm text-[#333333]">
-                    <CheckCircle2 className="w-4 h-4 text-[#3B3969] flex-shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-[#3b3f69] flex-shrink-0" />
                     {item}
                   </li>
                 ))}
@@ -354,13 +354,13 @@ export default function CprContent() {
             <Reveal delay={60} className="p-8 hover:bg-[#F7F7FA] transition-colors duration-300">
               <div
                 className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 shadow-md"
-                style={{ backgroundColor: "#CB154E", boxShadow: "0 4px 14px rgba(203,21,78,0.25)" }}
+                style={{ backgroundColor: "#ca1254", boxShadow: "0 4px 14px rgba(203,21,78,0.25)" }}
               >
                 <Monitor className="w-7 h-7 text-white" />
               </div>
               <div className="flex items-center gap-3 mb-3">
                 <h3 className="text-xl font-bold text-[#1a1a2e]">Blended Learning</h3>
-                <span className="px-2.5 py-1 rounded-full bg-[#CB154E]/10 text-[#CB154E] text-xs font-semibold">Flexible</span>
+                <span className="px-2.5 py-1 rounded-full bg-[#ca1254]/10 text-[#ca1254] text-xs font-semibold">Flexible</span>
               </div>
               <p className="text-[#64648c] text-sm leading-relaxed mb-6">
                 Complete the theory component online at your own pace, then attend a shorter face-to-face practical
@@ -375,7 +375,7 @@ export default function CprContent() {
                   "Available at locations across the region",
                 ].map((item) => (
                   <li key={item} className="flex items-center gap-2.5 text-sm text-[#333333]">
-                    <CheckCircle2 className="w-4 h-4 text-[#CB154E] flex-shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-[#ca1254] flex-shrink-0" />
                     {item}
                   </li>
                 ))}
@@ -391,8 +391,8 @@ export default function CprContent() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left: content */}
             <Reveal>
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#3B3969]/[0.07] text-[#3B3969] text-sm font-semibold mb-5">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#3B3969]" />
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#3b3f69]/[0.07] text-[#3b3f69] text-sm font-semibold mb-5">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#3b3f69]" />
                 Who Should Attend
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-[#1a1a2e] mb-4">Who Needs CPR Training?</h2>
@@ -404,11 +404,11 @@ export default function CprContent() {
                 {whoAttends.map(({ icon: Icon, label }, i) => (
                   <div
                     key={label}
-                    className="flex items-center gap-3 p-3.5 rounded-xl bg-white border border-[#E8E8F0] hover:border-[#3B3969]/25 hover:shadow-sm transition-all duration-200"
+                    className="flex items-center gap-3 p-3.5 rounded-xl bg-white border border-[#E8E8F0] hover:border-[#3b3f69]/25 hover:shadow-sm transition-all duration-200"
                     style={{ transitionDelay: `${i * 30}ms` }}
                   >
-                    <span className="w-8 h-8 rounded-lg bg-[#3B3969]/[0.07] flex items-center justify-center flex-shrink-0">
-                      <Icon className="w-4 h-4 text-[#3B3969]" />
+                    <span className="w-8 h-8 rounded-lg bg-[#3b3f69]/[0.07] flex items-center justify-center flex-shrink-0">
+                      <Icon className="w-4 h-4 text-[#3b3f69]" />
                     </span>
                     <span className="text-[#333333] text-sm font-medium">{label}</span>
                   </div>
@@ -427,10 +427,10 @@ export default function CprContent() {
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a2e]/30 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-black/20" />
               </div>
-              <div className="bg-[#CB154E]/10 rounded-2xl p-6 border border-[#CB154E]/20 text-center">
-                <p className="text-2xl font-semibold text-[#CB154E]">ARC</p>
+              <div className="bg-[#ca1254]/10 rounded-2xl p-6 border border-[#ca1254]/20 text-center">
+                <p className="text-2xl font-semibold text-[#ca1254]">ARC</p>
                 <p className="text-sm font-medium mt-1">Guidelines Met</p>
               </div>
             </Reveal>
@@ -439,10 +439,10 @@ export default function CprContent() {
       </section>
 
       {/*  CTA  */}
-      <section className="py-20 bg-gradient-to-r from-[#CB154E] to-[#a01040] relative overflow-hidden">
+      <section className="py-20 bg-[#ca1254] relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-20 pointer-events-none"
-          style={{ backgroundImage: "radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1), transparent)" }}
+          style={{ backgroundImage: "transparent, transparent)" }}
         />
         <div className="relative z-10 mx-auto max-w-4xl text-center">
           <h2 className="text-3xl md:text-4xl font-semibold text-white mb-4">Ready to Book CPR Training?</h2>
@@ -453,13 +453,13 @@ export default function CprContent() {
           <div className="flex flex-wrap gap-4 justify-center">
             <Button
               asChild
-              className="bg-white text-[#CB154E] hover:bg-white/90 font-bold px-10 py-3 rounded-lg shadow-lg text-base"
+              className="bg-white text-[#ca1254] hover:bg-white/90 font-bold px-10 py-3 rounded-lg shadow-lg text-base"
             >
               <Link href="/book-training">Book This Training</Link>
             </Button>
             <Button
               asChild
-              className="inline-flex items-center justify-center gap-2 border border-white/50 bg-[#3B3969] text-white hover:bg-[#CB154E] hover:text-white font-semibold px-8 py-3 rounded-lg text-base transition-colors duration-200"
+              className="inline-flex items-center justify-center gap-2 border border-white/50 bg-[#3b3f69] text-white hover:bg-[#ca1254] hover:text-white font-semibold px-8 py-3 rounded-lg text-base transition-colors duration-200"
             >
               <Link href="/contact">
                 <Phone className="w-4 h-4 mr-2" />

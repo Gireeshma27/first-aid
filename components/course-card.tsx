@@ -55,7 +55,7 @@ export function CourseCard({
       <div className="p-7">
         {/* Icon & Badge */}
         <div className="flex items-start justify-between mb-6">
-          <div className={`w-14 h-14 rounded-xl ${color}/10 flex items-center justify-center`} style={{ backgroundColor: `${color === 'bg-[#CB154E]' ? 'rgba(203,21,78,0.1)' : color === 'bg-[#3B3969]' ? 'rgba(59,57,105,0.1)' : 'rgba(59,57,105,0.1)'}` }}>
+          <div className={`w-14 h-14 rounded-xl ${color}/10 flex items-center justify-center`} style={{ backgroundColor: `${color === 'bg-[#ca1254]' ? 'rgba(203,21,78,0.1)' : color === 'bg-[#3b3f69]' ? 'rgba(59,57,105,0.1)' : 'rgba(59,57,105,0.1)'}` }}>
             {icon}
           </div>
           <span className="course-badge">
@@ -65,7 +65,7 @@ export function CourseCard({
         </div>
 
         {/* Content */}
-        <h3 className="text-xl font-bold text-[#333333] mb-3 group-hover:text-[#3B3969] transition-colors leading-snug">
+        <h3 className="text-xl font-bold text-[#333333] mb-3 group-hover:text-[#3b3f69] transition-colors leading-snug">
           {title}
         </h3>
         <p className="text-[#666666] text-sm leading-relaxed mb-6">
@@ -77,13 +77,13 @@ export function CourseCard({
           <div className="flex items-center gap-5 mb-6 pb-6 border-b border-gray-100">
             {duration && (
               <div className="flex items-center gap-2 text-sm text-[#666666]">
-                <Clock className="w-4 h-4 text-[#CB154E]" />
+                <Clock className="w-4 h-4 text-[#ca1254]" />
                 <span>{duration}</span>
               </div>
             )}
             {participants && (
               <div className="flex items-center gap-2 text-sm text-[#666666]">
-                <Users className="w-4 h-4 text-[#CB154E]" />
+                <Users className="w-4 h-4 text-[#ca1254]" />
                 <span>{participants}</span>
               </div>
             )}
@@ -93,7 +93,7 @@ export function CourseCard({
         {/* CTA */}
         <Link
           href={href}
-          className="inline-flex items-center gap-2 text-sm font-semibold text-[#3B3969] hover:text-[#CB154E] transition-colors group/link"
+          className="inline-flex items-center gap-2 text-sm font-semibold text-[#3b3f69] hover:text-[#ca1254] transition-colors group/link"
         >
           Learn More
           <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />

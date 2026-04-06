@@ -126,14 +126,14 @@ export default function MedicinesTrainingPage() {
       <Navbar />
       <main>
         {/* Hero */}
-        <section className="relative bg-gradient-to-br from-[#3B3969] via-[#2d2b52] to-[#1e1c3d] py-16 md:py-24 overflow-hidden">
+        <section className="relative bg-[#3b3f69] py-16 md:py-24 overflow-hidden">
           <div className="absolute inset-0">
-            <div className="absolute top-20 right-20 w-72 h-72 rounded-full bg-[#CB154E]/[0.06] blur-3xl" />
-            <div className="absolute bottom-10 left-10 w-96 h-96 rounded-full bg-[#3B3969]/30 blur-3xl" />
+            <div className="absolute top-20 right-20 w-72 h-72 rounded-full bg-[#ca1254]/[0.06] blur-3xl" />
+            <div className="absolute bottom-10 left-10 w-96 h-96 rounded-full bg-[#3b3f69]/30 blur-3xl" />
           </div>
           <div className="mx-auto max-w-[1200px] px-6 lg:px-12 relative">
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.06] text-white text-sm font-semibold mb-6">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#CB154E]" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#ca1254]" />
               Specialised Training
             </span>
             <h1 className="text-3xl md:text-5xl font-semibold text-white mb-4 leading-tight">Medicines and Clinical Training Programs</h1>
@@ -148,8 +148,8 @@ export default function MedicinesTrainingPage() {
           <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
             <Reveal>
             <div className="max-w-3xl mx-auto text-center space-y-6">
-              <div className="w-16 h-16 rounded-full bg-[#CB154E]/[0.06] flex items-center justify-center mx-auto">
-                <AlertTriangle className="w-8 h-8 text-[#CB154E]" />
+              <div className="w-16 h-16 rounded-full bg-[#ca1254]/[0.06] flex items-center justify-center mx-auto">
+                <AlertTriangle className="w-8 h-8 text-[#ca1254]" />
               </div>
               <h2 className="text-2xl md:text-3xl font-semibold text-[#1a1a2e]">
                 Beyond Basic First Aid
@@ -172,8 +172,8 @@ export default function MedicinesTrainingPage() {
               <Reveal>
               <div className="grid lg:grid-cols-2 gap-12 items-start">
                 <div className={`space-y-6 ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
-                  <div className="w-16 h-16 rounded-xl bg-[#3B3969]/[0.07] flex items-center justify-center">
-                    <program.icon className="w-8 h-8 text-[#3B3969]" />
+                  <div className="w-16 h-16 rounded-xl bg-[#3b3f69]/[0.07] flex items-center justify-center">
+                    <program.icon className="w-8 h-8 text-[#3b3f69]" />
                   </div>
                   <h2 className="text-3xl font-semibold text-[#1a1a2e]">{program.title}</h2>
                   <p className="text-lg text-[#64648c] leading-relaxed">{program.description}</p>
@@ -183,7 +183,7 @@ export default function MedicinesTrainingPage() {
                     <p className="text-[#64648c] leading-relaxed">{program.purpose}</p>
                   </div>
 
-                  <Button asChild className="bg-[#CB154E] hover:bg-[#CB154E]/90 text-white">
+                  <Button asChild className="bg-[#ca1254] hover:bg-[#ca1254]/90 text-white">
                     <Link href="/contact">Enquire About This Training</Link>
                   </Button>
                 </div>
@@ -194,7 +194,7 @@ export default function MedicinesTrainingPage() {
                     <ul className="space-y-2">
                       {program.skills.map((skill) => (
                         <li key={skill} className="flex items-start gap-2 text-[#64648c]">
-                          <CheckCircle2 className="w-4 h-4 text-[#CB154E] mt-0.5 shrink-0" />
+                          <CheckCircle2 className="w-4 h-4 text-[#ca1254] mt-0.5 shrink-0" />
                           <span>{skill}</span>
                         </li>
                       ))}
@@ -206,7 +206,7 @@ export default function MedicinesTrainingPage() {
                     <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                       {program.participants.map((participant) => (
                         <li key={participant} className="flex items-start gap-2 text-sm text-[#64648c]">
-                          <CheckCircle2 className="w-4 h-4 text-[#3B3969] mt-0.5 shrink-0" />
+                          <CheckCircle2 className="w-4 h-4 text-[#3b3f69] mt-0.5 shrink-0" />
                           <span>{participant}</span>
                         </li>
                       ))}

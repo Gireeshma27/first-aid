@@ -12,90 +12,90 @@ const servicesData = [
     description: "This course covers the essential skills needed to perform CPR in line with Australian Resuscitation Council guidelines. Participants will learn to respond to cardiac emergencies, perform chest compressions and rescue breaths, and use an automated external defibrillator (AED).",
     image: "/images/course-cpr.png",
     link: "/services/cpr-training",
-    overlayColor: "bg-[#3B3969]/90",
-    buttonTextColor: "text-[#3B3969]",
+    overlayColor: "bg-[#3b3f69]/90",
+    buttonTextColor: "text-[#3b3f69]",
     icon: HeartPulse,
-    accent: "#CB154E",
+    accent: "#ca1254",
   },
   {
     title: "HLTAID011 Provide First Aid (Including CPR)",
     description: "This comprehensive course includes all elements of HLTAID009 plus additional first aid skills. Participants will learn to manage a range of common emergencies including bleeding, burns, fractures, and medical conditions like asthma or anaphylaxis.",
     image: "/images/compensive first aid.png",
     link: "/services/provide-first-aid",
-    overlayColor: "bg-[#CB154E]/90",
-    buttonTextColor: "text-[#CB154E]",
+    overlayColor: "bg-[#ca1254]/90",
+    buttonTextColor: "text-[#ca1254]",
     icon: ShieldPlus,
-    accent: "#3B3969",
+    accent: "#3b3f69",
   },
   {
     title: "HLTAID012 Provide First Aid in an Education and Care Setting",
     description: "This course is tailored for those working in childcare, early education, and school settings. It covers first aid response to infants and children, including asthma, anaphylaxis, and other childhood-specific emergencies.",
     image: "/images/education.png",
     link: "/services/first-aid-education-care",
-    overlayColor: "bg-[#3B3969]/90",
-    buttonTextColor: "text-[#3B3969]",
+    overlayColor: "bg-[#3b3f69]/90",
+    buttonTextColor: "text-[#3b3f69]",
     icon: Baby,
-    accent: "#CB154E",
+    accent: "#ca1254",
   },
   {
     title: "Anaphylaxis and Asthma Management Training",
     description: "This training focuses on the prevention, recognition, and emergency management of anaphylaxis and asthma incidents. It is particularly useful for schools and childcare settings to ensure staff are equipped to respond to allergic and asthmatic emergencies.",
     image: "/images/anaphylaxis.png",
     link: "/services/anaphylaxis-asthma-training",
-    overlayColor: "bg-[#CB154E]/90",
-    buttonTextColor: "text-[#CB154E]",
+    overlayColor: "bg-[#ca1254]/90",
+    buttonTextColor: "text-[#ca1254]",
     icon: Wind,
-    accent: "#3B3969",
+    accent: "#3b3f69",
   },
   {
     title: "RAMOAP Training for NSW Teachers",
     description: "A specialised course designed for New South Wales school teachers. It focuses on recognizing and managing medical emergencies in a school environment, ensuring staff can respond effectively to student health crises.",
     image: "/images/infection.png",
     link: "/services/ramoap-training",
-    overlayColor: "bg-[#3B3969]/90",
-    buttonTextColor: "text-[#3B3969]",
+    overlayColor: "bg-[#3b3f69]/90",
+    buttonTextColor: "text-[#3b3f69]",
     icon: GraduationCap,
-    accent: "#CB154E",
+    accent: "#ca1254",
   },
   {
     title: "Community Clinical Awareness Training",
     description: "A non-accredited course aimed at community support workers. It includes training on recognizing clinical signs of conditions like stroke, heart attack, sepsis, and diabetes-related complications. It also covers practical skills like checking blood pressure and blood glucose levels.",
     image: "/images/community.png",
     link: "/services/community-clinical-awareness",
-    overlayColor: "bg-[#CB154E]/90",
-    buttonTextColor: "text-[#CB154E]",
+    overlayColor: "bg-[#ca1254]/90",
+    buttonTextColor: "text-[#ca1254]",
     icon: Stethoscope,
-    accent: "#3B3969",
+    accent: "#3b3f69",
   },
   {
     title: "Drug and Alcohol Testing",
     description: "We offer on-site saliva-based drug and alcohol testing to help organisations maintain a safe workplace. This service can be integrated into training schedules as we move through different regions.",
     image: "/images/drug.png",
     link: "/services/drug-alcohol-testing",
-    overlayColor: "bg-[#3B3969]/90",
-    buttonTextColor: "text-[#3B3969]",
+    overlayColor: "bg-[#3b3f69]/90",
+    buttonTextColor: "text-[#3b3f69]",
     icon: FlaskConical,
-    accent: "#CB154E",
+    accent: "#ca1254",
   },
   {
     title: "Event Medics and On-Site Medical Support",
     description: "In addition to training, we provide qualified medics for events such as school carnivals, excursions, corporate functions, and community gatherings. Our event medics are equipped to handle on-site medical situations and ensure participant safety.",
     image: "/images/event medical services.png",
     link: "/services/event-medics",
-    overlayColor: "bg-[#CB154E]/90",
-    buttonTextColor: "text-[#CB154E]",
+    overlayColor: "bg-[#ca1254]/90",
+    buttonTextColor: "text-[#ca1254]",
     icon: Ambulance,
-    accent: "#3B3969",
+    accent: "#3b3f69",
   },
   {
     title: "Custom and Tailored Training Solutions",
     description: "We understand that every organisation has unique needs. Therefore, we offer the flexibility to create tailored training modules, including non-accredited mental health strategies, additional infection control topics, or any other area of focus your team requires.",
     image: "/images/custom and tailored.png",
     link: "/services/custom-training",
-    overlayColor: "bg-[#3B3969]/90",
-    buttonTextColor: "text-[#3B3969]",
+    overlayColor: "bg-[#3b3f69]/90",
+    buttonTextColor: "text-[#3b3f69]",
     icon: Settings,
-    accent: "#CB154E",
+    accent: "#ca1254",
   }
 ]
 
@@ -140,8 +140,7 @@ function ServiceCard({ title, image, link, overlayColor, buttonTextColor, descri
           loading="eager"
           className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#1e1c3d]/60 via-transparent to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#1e1c3d]/20 to-transparent h-1/4" />
+        <div className="absolute inset-0 bg-black/10" />
 
         {/* Icon badge */}
         <div
@@ -371,21 +370,21 @@ export function ServicesSection() {
     <section
       className="pt-10 pb-16 md:pt-14 md:pb-20 relative overflow-hidden"
       style={{
-        background: "linear-gradient(145deg, #3B3969 0%, #2e2c5c 35%, #231f4b 65%, #1e1c3d 100%)",
+        background: "#3b3f69",
       }}
     >
       {/* Ambient glows */}
       <div className="absolute top-[-100px] right-[-100px] w-[600px] h-[600px] rounded-full pointer-events-none"
-        style={{ background: "radial-gradient(circle, rgba(203,21,78,0.12) 0%, transparent 60%)", filter: "blur(60px)" }} />
+        style={{ background: "transparent 0%, transparent 60%)", filter: "blur(60px)" }} />
       <div className="absolute bottom-[-80px] left-[-80px] w-[500px] h-[500px] rounded-full pointer-events-none"
-        style={{ background: "radial-gradient(circle, rgba(59,57,105,0.35) 0%, transparent 65%)", filter: "blur(50px)" }} />
+        style={{ background: "transparent 0%, transparent 65%)", filter: "blur(50px)" }} />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] rounded-full pointer-events-none"
-        style={{ background: "radial-gradient(ellipse, rgba(203,21,78,0.06) 0%, transparent 70%)", filter: "blur(40px)" }} />
+        style={{ background: "transparent 0%, transparent 70%)", filter: "blur(40px)" }} />
 
       {/* Dot grid */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.04]"
         style={{
-          backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.8) 1px, transparent 1px)",
+          backgroundImage: "transparent 1px, transparent 1px)",
           backgroundSize: "30px 30px",
         }}
       />
@@ -398,11 +397,11 @@ export function ServicesSection() {
               className="inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-semibold mb-6 tracking-wide"
               style={{
                 background: "rgba(203,21,78,0.15)",
-                color: "#f7395e",
+                color: "#e5196a",
                 border: "1px solid rgba(203,21,78,0.2)",
               }}
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-[#CB154E]" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#ca1254]" />
               What We Offer
             </span>
             <h2 className="text-3xl md:text-4xl font-semibold text-white leading-tight tracking-tight mb-4">
@@ -448,9 +447,9 @@ export function ServicesSection() {
 
         {/* Edge fade overlays */}
         <div className="absolute left-0 top-0 bottom-0 w-16 md:w-24 z-10 pointer-events-none"
-          style={{ background: "linear-gradient(to right, #2a2750, transparent)" }} />
+          style={{ background: "linear-gradient(to right, #3b3f69, transparent)" }} />
         <div className="absolute right-0 top-0 bottom-0 w-16 md:w-24 z-10 pointer-events-none"
-          style={{ background: "linear-gradient(to left, #1e1c3d, transparent)" }} />
+          style={{ background: "linear-gradient(to left, #3b3f69, transparent)" }} />
 
         <div className="flex flex-col gap-7">
           <ScrollingRow ref={row1Ref} items={allData} direction="left" />

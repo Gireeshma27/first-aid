@@ -59,7 +59,7 @@ export function TestimonialsSection() {
     <section className="py-20 bg-[#F5F5F5] relative overflow-hidden">
       {/* Subtle animated background elements */}
       <div className="absolute inset-0 pointer-events-none" style={{
-        background: 'radial-gradient(circle at 15% 80%, rgba(203,21,78,0.04) 0%, transparent 50%), radial-gradient(circle at 85% 20%, rgba(59,57,105,0.04) 0%, transparent 50%)',
+        background: 'transparent 0%, transparent 50%), transparent 0%, transparent 50%)',
         animation: 'subtleFloat 9s ease-in-out infinite'
       }} />
       <div className="mx-auto max-w-[1200px] px-4 lg:px-8 relative z-10">
@@ -84,15 +84,15 @@ export function TestimonialsSection() {
                   onClick={() => setActiveIndex(i)}
                   className={`group w-full flex items-center gap-4 p-4 rounded-2xl text-left transition-all duration-300 stagger-item card-shimmer ${
                     isActive
-                      ? "bg-[#3B3969] shadow-lg"
-                      : "bg-white border border-gray-100 hover:border-[#CB154E]/40 hover:shadow-md"
+                      ? "bg-[#3b3f69] shadow-lg"
+                      : "bg-white border border-gray-100 hover:border-[#ca1254]/40 hover:shadow-md"
                   }`}
                   style={{ animationDelay: `${i * 100}ms` }}
                 >
                   {/* Avatar */}
                   <div
                     className={`w-12 h-12 rounded-full flex items-center justify-center font-bold text-base shrink-0 transition-colors duration-300 ${
-                      isActive ? "bg-[#CB154E] text-white" : "bg-[#3B3969]/10 text-[#3B3969]"
+                      isActive ? "bg-[#ca1254] text-white" : "bg-[#3b3f69]/10 text-[#3b3f69]"
                     }`}
                   >
                     {t.author.charAt(0)}
@@ -111,7 +111,7 @@ export function TestimonialsSection() {
                   {/* Arrow indicator */}
                   <ChevronRight
                     className={`w-4 h-4 shrink-0 transition-all duration-300 ${
-                      isActive ? "text-[#CB154E]" : "text-gray-300 group-hover:text-[#CB154E]"
+                      isActive ? "text-[#ca1254]" : "text-gray-300 group-hover:text-[#ca1254]"
                     }`}
                   />
                 </button>
@@ -120,9 +120,9 @@ export function TestimonialsSection() {
           </div>
 
           {/* ── Right: active testimonial display ── */}
-          <div className="lg:col-span-2 bg-[#3B3969] rounded-3xl p-8 md:p-10 flex flex-col justify-between min-h-[340px]">
+          <div className="lg:col-span-2 bg-[#3b3f69] rounded-3xl p-8 md:p-10 flex flex-col justify-between min-h-[340px]">
             <div>
-              <Quote className="w-10 h-10 text-[#CB154E] fill-[#CB154E] mb-6" />
+              <Quote className="w-10 h-10 text-[#ca1254] fill-[#ca1254] mb-6" />
               <p
                 key={activeIndex}
                 className="text-white text-lg md:text-xl leading-relaxed font-medium animate-fade-in-up"
@@ -134,7 +134,7 @@ export function TestimonialsSection() {
 
             <div className="mt-8 pt-6 border-t border-white/15 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
               <div className="flex items-center gap-3">
-                <div className="w-11 h-11 rounded-full bg-[#CB154E] flex items-center justify-center text-white font-bold text-sm shrink-0">
+                <div className="w-11 h-11 rounded-full bg-[#ca1254] flex items-center justify-center text-white font-bold text-sm shrink-0">
                   {active.author.charAt(0)}
                 </div>
                 <div>

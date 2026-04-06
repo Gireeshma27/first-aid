@@ -48,7 +48,7 @@ function BenefitCard({ title, description, icon: Icon, index }: { title: string;
     >
       <div className="flex flex-col h-full">
         {/* Icon */}
-        <Icon className="w-12 h-12 text-[#CB154E] mb-6" />
+        <Icon className="w-12 h-12 text-[#ca1254] mb-6" />
 
         {/* Title */}
         <h3 className="text-base md:text-lg font-semibold text-[#2D2D2D] mb-3 whitespace-nowrap overflow-hidden text-ellipsis">
@@ -92,7 +92,7 @@ export function FirstAidBenefitsSection() {
         {/* Section Heading */}
         <div ref={headingRef} className="reveal-section mb-12 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-[#1a1a2e] leading-tight mb-4">
-            Why Choose First Aid <span className="text-[#CB154E]">Training?</span>
+            Why Choose First Aid <span className="text-[#ca1254]">Training?</span>
           </h2>
           <p className="text-[#666666] max-w-2xl leading-relaxed mx-auto">
             Discover the key benefits of investing in professional first aid training for yourself or your team.
@@ -115,7 +115,7 @@ export function FirstAidBenefitsSection() {
         {/* CTA Banner */}
         <div
           ref={ctaRef}
-          className="reveal-section mt-10 py-6 px-4 rounded-xl bg-[#CB154E] text-white text-center text-sm md:text-base font-medium"
+          className="reveal-section mt-10 py-6 px-4 rounded-xl bg-[#ca1254] text-white text-center text-sm md:text-base font-medium"
         >
           This is life-saving training. Be ready when it matters most.
         </div>

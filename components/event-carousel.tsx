@@ -91,21 +91,21 @@ export function EventCarousel({ events }: EventCarouselProps) {
       <button
         onClick={() => scroll(-1)}
         aria-label="Scroll left"
-        className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/90 backdrop-blur-sm shadow-lg border border-gray-200 flex items-center justify-center text-[#3B3969] hover:bg-white hover:scale-110 transition-all duration-200 opacity-0 group-hover/carousel:opacity-100"
+        className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/90 backdrop-blur-sm shadow-lg border border-gray-200 flex items-center justify-center text-[#3b3f69] hover:bg-white hover:scale-110 transition-all duration-200 opacity-0 group-hover/carousel:opacity-100"
       >
         <ChevronLeft className="w-5 h-5" />
       </button>
       <button
         onClick={() => scroll(1)}
         aria-label="Scroll right"
-        className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/90 backdrop-blur-sm shadow-lg border border-gray-200 flex items-center justify-center text-[#3B3969] hover:bg-white hover:scale-110 transition-all duration-200 opacity-0 group-hover/carousel:opacity-100"
+        className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/90 backdrop-blur-sm shadow-lg border border-gray-200 flex items-center justify-center text-[#3b3f69] hover:bg-white hover:scale-110 transition-all duration-200 opacity-0 group-hover/carousel:opacity-100"
       >
         <ChevronRight className="w-5 h-5" />
       </button>
 
       {/* Edge fades */}
-      <div className="absolute left-0 top-0 bottom-0 w-8 md:w-16 bg-gradient-to-r from-[#F5F5F5] to-transparent z-[5] pointer-events-none" />
-      <div className="absolute right-0 top-0 bottom-0 w-8 md:w-16 bg-gradient-to-l from-[#F5F5F5] to-transparent z-[5] pointer-events-none" />
+      <div className="absolute left-0 top-0 bottom-0 w-8 md:w-16 bg-[#3b3f69] z-[5] pointer-events-none" />
+      <div className="absolute right-0 top-0 bottom-0 w-8 md:w-16 bg-[#3b3f69] z-[5] pointer-events-none" />
 
       {/* Scrollable track */}
       <div
@@ -133,7 +133,7 @@ export function EventCarousel({ events }: EventCarouselProps) {
                 draggable={false}
               />
               {/* Gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1e1c3d]/95 via-[#1e1c3d]/40 to-transparent" />
+              <div className="absolute inset-0 bg-[#222544]/60" />
 
               {/* Top icon */}
               <div className="absolute top-4 left-4">

@@ -19,11 +19,11 @@ export default function AnaphylaxisAsthmaTrainingPage() {
       <Navbar />
       <main>
         {/* Hero */}
-        <section className="relative min-h-[520px] flex items-center overflow-hidden" style={{ background: "linear-gradient(135deg, #3B3969 0%, #2d2b5e 50%, #1a1a2e 100%)" }}>
-          <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-[#CB154E]/20 blur-3xl animate-blob" />
-          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-[#3B3969]/30 blur-3xl animate-blob-delay" />
+        <section className="relative min-h-[520px] flex items-center overflow-hidden" style={{ background: "#3b3f69" }}>
+          <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-[#ca1254]/20 blur-3xl animate-blob" />
+          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-[#3b3f69]/30 blur-3xl animate-blob-delay" />
           <div className="absolute top-1/2 left-1/3 w-[300px] h-[300px] rounded-full bg-white/5 blur-3xl animate-blob-delay-2" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#3B3969]/70 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-black/20" />
           <div className="relative mx-auto max-w-[1200px] px-6 lg:px-12 py-20 pb-24">
             <div className="flex flex-col lg:flex-row gap-12 items-center">
               <div className="flex-1 min-w-0">
@@ -32,19 +32,19 @@ export default function AnaphylaxisAsthmaTrainingPage() {
                     <AlertTriangle className="w-4 h-4" />
                     Specialist Training
                   </span>
-                  <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#CB154E]/20 text-white/90 text-sm font-medium border border-[#CB154E]/30">
+                  <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#ca1254]/20 text-white/90 text-sm font-medium border border-[#ca1254]/30">
                     Schools &amp; Childcare Settings
                   </span>
                 </div>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
                   Anaphylaxis &amp; Asthma<br />
-                  <span className="text-[#CB154E]">Management Training</span>
+                  <span className="text-[#ca1254]">Management Training</span>
                 </h1>
                 <p className="text-white/75 text-lg md:text-xl leading-relaxed mb-8 max-w-xl">
                   Training for the prevention, recognition, and emergency management of anaphylaxis and asthma incidents. Essential for schools and childcare settings.
                 </p>
                 <div className="flex flex-wrap gap-4">
-                  <Button asChild className="bg-[#CB154E] hover:bg-[#CB154E]/90 text-white font-semibold px-8 py-3 h-auto rounded-xl shadow-lg shadow-[#CB154E]/20">
+                  <Button asChild className="bg-[#ca1254] hover:bg-[#ca1254]/90 text-white font-semibold px-8 py-3 h-auto rounded-xl shadow-lg shadow-[#ca1254]/20">
                     <Link href="/book-training">Book Training <ArrowRight className="w-4 h-4 ml-2" /></Link>
                   </Button>
                   <Button asChild className="inline-flex items-center justify-center gap-2 border border-white/30 bg-transparent text-white hover:bg-white/10 hover:text-white font-semibold px-8 py-3 h-auto rounded-xl transition-colors duration-200">
@@ -55,9 +55,9 @@ export default function AnaphylaxisAsthmaTrainingPage() {
               <div className="flex-shrink-0 w-full lg:w-[420px]">
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-black/40 aspect-[4/3]">
                   <Image src="/images/anaphylaxis.png" alt="Anaphylaxis and asthma training" fill priority sizes="(max-width: 1024px) 100vw, 420px" className="object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#3B3969]/70 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-black/20" />
                   <div className="absolute top-[12px] left-[12px] image-badge">
-                    <AlertTriangle className="w-4 h-4 text-[#CB154E]" />
+                    <AlertTriangle className="w-4 h-4 text-[#ca1254]" />
                     Schools &amp; Childcare
                   </div>
                 </div>
@@ -78,15 +78,15 @@ export default function AnaphylaxisAsthmaTrainingPage() {
           <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
             <Reveal>
               <div className="text-center mb-12">
-                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#CB154E]/[0.06] text-[#CB154E] text-sm font-semibold mb-4">
+                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#ca1254]/[0.06] text-[#ca1254] text-sm font-semibold mb-4">
                   <AlertTriangle className="w-4 h-4" />Dual-Condition Training
                 </span>
                 <h2 className="text-2xl md:text-3xl font-bold text-[#1a1a2e]">Two Critical Conditions, One Course</h2>
               </div>
               <div className="grid md:grid-cols-2 gap-6">
                 {/* Anaphylaxis column */}
-                <div className="rounded-2xl overflow-hidden border border-[#CB154E]/20 shadow-sm">
-                  <div className="bg-gradient-to-br from-[#CB154E] to-[#a01040] px-7 py-6">
+                <div className="rounded-2xl overflow-hidden border border-[#ca1254]/20 shadow-sm">
+                  <div className="bg-[#3b3f69] px-7 py-6">
                     <div className="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center mb-4">
                       <Syringe className="w-5 h-5 text-white" />
                     </div>
@@ -97,7 +97,7 @@ export default function AnaphylaxisAsthmaTrainingPage() {
                     <ul className="space-y-3">
                       {["Recognise early signs of anaphylaxis", "Respond to life-threatening allergic reactions", "Administer adrenaline using EpiPens or Anapen", "Develop and implement an anaphylaxis action plan", "Understand allergy triggers and prevention strategies"].map((item) => (
                         <li key={item} className="flex items-start gap-2.5">
-                          <CheckCircle2 className="w-4 h-4 text-[#CB154E] flex-shrink-0 mt-0.5" />
+                          <CheckCircle2 className="w-4 h-4 text-[#ca1254] flex-shrink-0 mt-0.5" />
                           <span className="text-[#64648c] text-sm leading-relaxed">{item}</span>
                         </li>
                       ))}
@@ -105,8 +105,8 @@ export default function AnaphylaxisAsthmaTrainingPage() {
                   </div>
                 </div>
                 {/* Asthma column */}
-                <div className="rounded-2xl overflow-hidden border border-[#3B3969]/20 shadow-sm">
-                  <div className="bg-gradient-to-br from-[#3B3969] to-[#2d2b5e] px-7 py-6">
+                <div className="rounded-2xl overflow-hidden border border-[#3b3f69]/20 shadow-sm">
+                  <div className="bg-[#3b3f69] px-7 py-6">
                     <div className="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center mb-4">
                       <Wind className="w-5 h-5 text-white" />
                     </div>
@@ -117,7 +117,7 @@ export default function AnaphylaxisAsthmaTrainingPage() {
                     <ul className="space-y-3">
                       {["Recognise asthma symptoms and triggers", "Identify and avoid asthma triggers", "Assist someone experiencing an asthma attack", "Use asthma inhalers and spacer devices correctly", "Implement asthma management plans"].map((item) => (
                         <li key={item} className="flex items-start gap-2.5">
-                          <CheckCircle2 className="w-4 h-4 text-[#3B3969] flex-shrink-0 mt-0.5" />
+                          <CheckCircle2 className="w-4 h-4 text-[#3b3f69] flex-shrink-0 mt-0.5" />
                           <span className="text-[#64648c] text-sm leading-relaxed">{item}</span>
                         </li>
                       ))}
@@ -133,17 +133,17 @@ export default function AnaphylaxisAsthmaTrainingPage() {
         <section className="py-20 bg-[#F7F7FA]">
           <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
             <Reveal>
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#3B3969]/[0.07] text-[#3B3969] text-sm font-semibold mb-5">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#3B3969]" />Delivery Method
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#3b3f69]/[0.07] text-[#3b3f69] text-sm font-semibold mb-5">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#3b3f69]" />Delivery Method
               </span>
               <h2 className="text-2xl md:text-3xl font-bold text-[#1a1a2e] mb-8">How This Training Is Delivered</h2>
               <div className="grid md:grid-cols-2 gap-6">
-                <div className="relative bg-gradient-to-br from-[#3B3969] to-[#1e1c3d] rounded-2xl p-8 text-white overflow-hidden">
+                <div className="relative bg-[#3b3f69] rounded-2xl p-8 text-white overflow-hidden">
                   <div className="absolute top-0 right-0 w-32 h-32 rounded-full bg-white/[0.03] blur-2xl" />
                   <h3 className="text-xl font-semibold mb-3 relative">Face-to-face</h3>
                   <p className="text-white/70 leading-relaxed relative">Hands-on practical training delivered at your school or childcare centre by experienced trainers.</p>
                 </div>
-                <div className="relative bg-gradient-to-br from-[#CB154E] to-[#a01040] rounded-2xl p-8 text-white overflow-hidden">
+                <div className="relative bg-[#3b3f69] rounded-2xl p-8 text-white overflow-hidden">
                   <div className="absolute top-0 right-0 w-32 h-32 rounded-full bg-white/[0.03] blur-2xl" />
                   <h3 className="text-xl font-semibold mb-3 relative">Blended Learning</h3>
                   <p className="text-white/70 leading-relaxed relative">Online theory combined with a practical component for flexibility around school schedules.</p>
@@ -157,14 +157,14 @@ export default function AnaphylaxisAsthmaTrainingPage() {
         <section className="py-20 bg-white">
           <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
             <Reveal>
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#3B3969]/[0.07] text-[#3B3969] text-sm font-semibold mb-5">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#3B3969]" />Who Should Attend
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#3b3f69]/[0.07] text-[#3b3f69] text-sm font-semibold mb-5">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#3b3f69]" />Who Should Attend
               </span>
               <h2 className="text-2xl md:text-3xl font-bold text-[#1a1a2e] mb-8">Who Is This Training For?</h2>
               <div className="flex flex-wrap gap-2.5">
                 {["Teachers and school staff", "Childcare educators", "Early childhood workers", "Education support workers", "School canteen staff", "Sports coaches in schools", "After-school care staff", "Any staff with duty of care for children"].map((item) => (
-                  <span key={item} className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-[#F7F7FA] border border-[#E8E8F0] text-[#333333] font-medium text-sm hover:bg-[#CB154E]/[0.04] hover:border-[#CB154E]/30 transition-colors">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#CB154E] flex-shrink-0" />
+                  <span key={item} className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-[#F7F7FA] border border-[#E8E8F0] text-[#333333] font-medium text-sm hover:bg-[#ca1254]/[0.04] hover:border-[#ca1254]/30 transition-colors">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#ca1254] flex-shrink-0" />
                     {item}
                   </span>
                 ))}
@@ -174,13 +174,13 @@ export default function AnaphylaxisAsthmaTrainingPage() {
         </section>
 
         {/* CTA */}
-        <section className="py-20" style={{ background: "linear-gradient(135deg, #3B3969 0%, #CB154E 70%, #a01040 100%)" }}>
+        <section className="py-20" style={{ background: "#3b3f69" }}>
           <div className="mx-auto max-w-[1200px] px-6 lg:px-12 text-center">
             <Reveal>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Book Anaphylaxis &amp; Asthma Training</h2>
               <p className="text-white/70 text-lg mb-8 max-w-2xl mx-auto">Ensure your school or care centre team is prepared to respond to allergic and asthmatic emergencies.</p>
               <div className="flex flex-wrap gap-4 justify-center">
-                <Button asChild className="bg-[#CB154E] hover:bg-[#CB154E]/90 text-white font-semibold px-8 py-3 h-auto rounded-xl shadow-lg">
+                <Button asChild className="bg-[#ca1254] hover:bg-[#ca1254]/90 text-white font-semibold px-8 py-3 h-auto rounded-xl shadow-lg">
                   <Link href="/book-training">Book Training <ArrowRight className="w-4 h-4 ml-2" /></Link>
                 </Button>
                 <Button asChild className="inline-flex items-center justify-center gap-2 border border-white/30 bg-transparent text-white hover:bg-white/10 hover:text-white font-semibold px-8 py-3 h-auto rounded-xl transition-colors duration-200">

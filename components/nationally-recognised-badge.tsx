@@ -20,7 +20,7 @@ export function NationallyRecognisedBadge({
         height={22}
         className="w-[22px] h-[22px] object-contain"
       />
-      <span className="text-[#3B3969]">{text}</span>
+      <span className="text-[#3b3f69]">{text}</span>
     </span>
   )
 }

@@ -9,21 +9,21 @@ const badges = [
     icon: ShieldCheck,
     label: "ASQA Regulated",
     sublabel: "Quality Assured Training",
-    color: "#3B3969",
+    color: "#3b3f69",
   },
   {
     type: "icon" as const,
     icon: Award,
     label: "In Partnership",
     sublabel: "Healthcorp RTO 91222",
-    color: "#3B3969",
+    color: "#3b3f69",
   },
   {
     type: "image" as const,
     icon: null,
     label: "Nationally Recognised Training",
     sublabel: "Government Recognised Provider",
-    color: "#CB154E",
+    color: "#ca1254",
   },
 ]
 
@@ -32,34 +32,34 @@ export function TrustBadgesStrip() {
     <section className="relative bg-white overflow-hidden">
       {/* Subtle background pattern */}
       <div className="absolute inset-0 opacity-[0.02]" style={{
-        backgroundImage: "radial-gradient(circle, #3B3969 1px, transparent 1px)",
+        backgroundImage: "transparent",
         backgroundSize: "24px 24px",
       }} />
 
       <div className="relative mx-auto max-w-5xl px-5 lg:px-10 py-8 md:py-10">
         <div className="flex items-center justify-center gap-3 mb-8">
-          <div className="h-px w-12 bg-gradient-to-r from-transparent to-[#CB154E]/30" />
-          <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#3B3969]">
+          <div className="h-px w-12 bg-[#3b3f69]" />
+          <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#3b3f69]">
             Trusted &amp; Accredited
           </p>
-          <div className="h-px w-12 bg-gradient-to-l from-transparent to-[#CB154E]/30" />
+          <div className="h-px w-12 bg-[#3b3f69]" />
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 md:gap-6 max-w-3xl mx-auto">
           {badges.map((badge, i) => {
-            const isPink = badge.color === "#CB154E"
+            const isPink = badge.color === "#ca1254"
             return (
               <div
                 key={i}
                 className={`group relative flex flex-col items-center gap-4 py-7 px-5 rounded-2xl border transition-all duration-300 hover:-translate-y-0.5 cursor-default ${
                   isPink
-                    ? "bg-gradient-to-b from-[#CB154E]/[0.03] to-[#CB154E]/[0.07] border-[#CB154E]/20 shadow-[0_2px_16px_rgba(203,21,78,0.06)] hover:shadow-[0_8px_30px_rgba(203,21,78,0.12)] hover:border-[#CB154E]/30"
-                    : "bg-gradient-to-b from-[#3B3969]/[0.02] to-[#3B3969]/[0.05] border-[#3B3969]/12 shadow-[0_2px_12px_rgba(59,57,105,0.04)] hover:shadow-[0_8px_30px_rgba(59,57,105,0.1)] hover:border-[#3B3969]/20"
+                    ? "bg-[#ca1254]/[0.05] border-[#ca1254]/20 shadow-[0_2px_16px_rgba(202,18,84,0.06)] hover:shadow-[0_8px_30px_rgba(202,18,84,0.12)] hover:border-[#ca1254]/30"
+                    : "bg-[#3b3f69]/[0.04] border-[#3b3f69]/12 shadow-[0_2px_12px_rgba(59,63,105,0.04)] hover:shadow-[0_8px_30px_rgba(59,63,105,0.1)] hover:border-[#3b3f69]/20"
                 }`}
               >
               {/* Verified tick */}
               <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <CheckCircle2 className={`w-4 h-4 ${isPink ? "text-[#CB154E]" : "text-[#3B3969]"}`} />
+                <CheckCircle2 className={`w-4 h-4 ${isPink ? "text-[#ca1254]" : "text-[#3b3f69]"}`} />
               </div>
 
               {/* Icon container */}
@@ -67,11 +67,11 @@ export function TrustBadgesStrip() {
                 className="relative w-[72px] h-[72px] rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-105"
                 style={{
                   background: isPink
-                    ? "linear-gradient(135deg, rgba(203,21,78,0.08), rgba(203,21,78,0.15))"
-                    : "linear-gradient(135deg, rgba(59,57,105,0.06), rgba(59,57,105,0.12))",
+                    ? "rgba(202,18,84,0.1)"
+                    : "rgba(59,63,105,0.08)",
                   border: isPink
-                    ? "1.5px solid rgba(203,21,78,0.2)"
-                    : "1.5px solid rgba(59,57,105,0.12)",
+                    ? "1.5px solid rgba(202,18,84,0.2)"
+                    : "1.5px solid rgba(59,63,105,0.12)",
                 }}
               >
                 {badge.type === "image" ? (
@@ -89,7 +89,7 @@ export function TrustBadgesStrip() {
 
               {/* Text */}
               <div className="text-center">
-                <p className={`text-sm font-bold leading-snug ${isPink ? "text-[#CB154E]" : "text-[#3B3969]"}`}>
+                <p className={`text-sm font-bold leading-snug ${isPink ? "text-[#ca1254]" : "text-[#3b3f69]"}`}>
                   {badge.label}
                 </p>
                 <p className="text-[13px] font-medium text-[#777] mt-1.5 leading-relaxed">
@@ -109,7 +109,7 @@ export function TrustBadgesStrip() {
       </div>
 
       {/* Bottom separator */}
-      <div className="h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent" />
+      <div className="h-px bg-[#3b3f69]" />
     </section>
   )
 }

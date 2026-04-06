@@ -12,11 +12,11 @@ export function PageHeader({ title, description, breadcrumbs }: PageHeaderProps)
     <section
       className="relative overflow-hidden py-16 md:py-20"
       style={{
-        background: "linear-gradient(135deg, #3B3969 0%, #2a2850 40%, #1e1c3d 100%)",
+        background: "#3b3f69",
       }}
     >
       {/* Decorative elements */}
-      <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#CB154E]/10 blur-3xl" />
+      <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#ca1254]/10 blur-3xl" />
       <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-white/5 blur-3xl" />
 
       <div className="relative mx-auto max-w-[1200px] px-4 lg:px-8">
