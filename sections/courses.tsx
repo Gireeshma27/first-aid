@@ -51,17 +51,17 @@ function CourseCard({ course, index }: { course: typeof courses[number]; index: 
   return (
     <div
       ref={ref}
-      className="reveal-section group flex flex-col bg-white rounded-2xl border border-gray-200 hover:border-[#CB154E]/30 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 overflow-hidden"
+      className="reveal-section group flex flex-col bg-white rounded-2xl border border-gray-200 hover:border-[#ca1254]/30 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 overflow-hidden"
       style={{ animationDelay: `${index * 120}ms` }}
     >
       <div className="p-7 flex flex-col flex-1">
         {/* Icon */}
-        <div className="w-14 h-14 rounded-xl bg-[#CB154E]/10 flex items-center justify-center mb-6 group-hover:bg-[#CB154E]/15 transition-colors duration-300">
-          <Icon className="w-7 h-7 text-[#CB154E] stroke-[1.6]" />
+        <div className="w-14 h-14 rounded-xl bg-[#ca1254]/10 flex items-center justify-center mb-6 group-hover:bg-[#ca1254]/15 transition-colors duration-300">
+          <Icon className="w-7 h-7 text-[#ca1254] stroke-[1.6]" />
         </div>
 
         {/* Code badge */}
-        <span className="inline-block px-2.5 py-0.5 rounded-full bg-[#3B3969]/10 text-[#3B3969] text-[10px] font-bold tracking-widest uppercase mb-3">
+        <span className="inline-block px-2.5 py-0.5 rounded-full bg-[#3b3f69]/10 text-[#3b3f69] text-[10px] font-bold tracking-widest uppercase mb-3">
           {course.code}
         </span>
 
@@ -86,7 +86,7 @@ function CourseCard({ course, index }: { course: typeof courses[number]; index: 
         {/* CTA */}
         <Link
           href={course.href}
-          className="inline-flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-[#3B3969] text-white text-sm font-semibold hover:bg-[#CB154E] transition-colors duration-300"
+          className="inline-flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-[#3b3f69] text-white text-sm font-semibold hover:bg-[#ca1254] transition-colors duration-300"
         >
           Learn More <ArrowRight className="w-4 h-4" />
         </Link>
@@ -118,7 +118,7 @@ export function CoursesSection() {
         {/* Section heading */}
         <div ref={headingRef} className="reveal-section mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-[#1a1a2e] leading-tight mb-4">
-            Our <span className="text-[#CB154E]">Courses</span> &amp; Training Programs
+            Our <span className="text-[#ca1254]">Courses</span> &amp; Training Programs
           </h2>
           <p className="text-[#666666] max-w-2xl leading-relaxed">
             In partnership with Healthcorp (RTO 91222), our accredited training programs equip you with the knowledge and practical skills to respond confidently in emergency situations.

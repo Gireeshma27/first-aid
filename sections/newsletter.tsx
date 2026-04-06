@@ -21,8 +21,8 @@ export function NewsletterSection({ lightTheme = true }: { lightTheme?: boolean 
   return (
     <section className="py-16 md:py-20 relative overflow-hidden bg-[#F7F7FB]">
       {/* Decorative blurs */}
-      <div className="absolute top-0 right-0 w-80 h-80 rounded-full bg-[#3B3969]/5 blur-3xl" />
-      <div className="absolute bottom-0 left-0 w-72 h-72 rounded-full bg-[#CB154E]/5 blur-3xl" />
+      <div className="absolute top-0 right-0 w-80 h-80 rounded-full bg-[#3b3f69]/5 blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-72 h-72 rounded-full bg-[#ca1254]/5 blur-3xl" />
 
       <div className="relative z-10 mx-auto max-w-[1200px] px-5 lg:px-8">
         <Reveal>
@@ -42,7 +42,7 @@ export function NewsletterSection({ lightTheme = true }: { lightTheme?: boolean 
             <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
               {/* Left — Content */}
               <div>
-                <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#3B3969]/10 text-[#3B3969] text-xs font-semibold mb-5 tracking-wide">
+                <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#3b3f69]/10 text-[#3b3f69] text-xs font-semibold mb-5 tracking-wide">
                   <Bell className="w-3.5 h-3.5" />
                   Stay in the Loop
                 </span>
@@ -57,11 +57,11 @@ export function NewsletterSection({ lightTheme = true }: { lightTheme?: boolean 
 
                 <div className="flex items-center gap-6 text-sm text-gray-400">
                   <span className="flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#CB154E]" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#ca1254]" />
                     No spam
                   </span>
                   <span className="flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#CB154E]" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#ca1254]" />
                     Unsubscribe anytime
                   </span>
                 </div>
@@ -70,8 +70,8 @@ export function NewsletterSection({ lightTheme = true }: { lightTheme?: boolean 
               {/* Right — Form card */}
               <div className="rounded-2xl bg-white border border-gray-200 shadow-lg p-6 md:p-8">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-10 h-10 rounded-xl bg-[#CB154E]/10 flex items-center justify-center">
-                    <Mail className="w-5 h-5 text-[#CB154E]" />
+                  <div className="w-10 h-10 rounded-xl bg-[#ca1254]/10 flex items-center justify-center">
+                    <Mail className="w-5 h-5 text-[#ca1254]" />
                   </div>
                   <div>
                     <p className="text-sm font-semibold text-[#1a1a2e]">Subscribe to Newsletter</p>
@@ -86,14 +86,14 @@ export function NewsletterSection({ lightTheme = true }: { lightTheme?: boolean 
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Enter your email address"
                     required
-                    className="w-full px-4 py-3.5 rounded-xl bg-[#F5F5F8] border border-gray-200 text-sm text-[#1a1a2e] placeholder:text-gray-400 outline-none focus:border-[#CB154E]/50 focus:ring-1 focus:ring-[#CB154E]/30 focus:bg-white transition-all duration-200"
+                    className="w-full px-4 py-3.5 rounded-xl bg-[#F5F5F8] border border-gray-200 text-sm text-[#1a1a2e] placeholder:text-gray-400 outline-none focus:border-[#ca1254]/50 focus:ring-1 focus:ring-[#ca1254]/30 focus:bg-white transition-all duration-200"
                   />
                   <button
                     type="submit"
                     disabled={isSubmitting}
                     className="w-full px-6 py-3.5 rounded-xl text-sm font-semibold text-white flex items-center justify-center gap-2 transition-all duration-300 hover:brightness-110 hover:-translate-y-0.5 disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer"
                     style={{
-                      background: "linear-gradient(135deg, #CB154E 0%, #e02460 100%)",
+                      background: "#ca1254",
                       boxShadow: "0 4px 14px rgba(203,21,78,0.35)",
                     }}
                   >

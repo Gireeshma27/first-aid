@@ -101,7 +101,7 @@ export function StatisticsSection() {
     <section className="relative py-20 md:py-28 bg-[#F5F5F5] overflow-hidden -mt-px">
       {/* Subtle animated background elements */}
       <div className="absolute inset-0 pointer-events-none" style={{
-        background: 'radial-gradient(circle at 20% 50%, rgba(203,21,78,0.04) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(59,57,105,0.04) 0%, transparent 50%)',
+        background: 'transparent 0%, transparent 50%), transparent 0%, transparent 50%)',
         animation: 'subtleFloat 8s ease-in-out infinite'
       }} />
       <div className="relative mx-auto max-w-[1200px] px-5 lg:px-8">
@@ -109,11 +109,11 @@ export function StatisticsSection() {
         {/* Section Header */}
         <Reveal>
           <div className="text-center mb-20 max-w-3xl mx-auto">
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#CB154E]/8 text-[#CB154E] text-xs font-bold uppercase tracking-widest mb-6 md:mb-8">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#CB154E]" />
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#ca1254]/8 text-[#ca1254] text-xs font-bold uppercase tracking-widest mb-6 md:mb-8">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#ca1254]" />
               The Importance of First Aid
             </span>
-            <h2 className="text-4xl md:text-5xl font-bold text-[#3B3969] mb-6 md:mb-8 tracking-tight leading-tight">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#3b3f69] mb-6 md:mb-8 tracking-tight leading-tight">
               The Importance of First Aid Training
             </h2>
             <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto">
@@ -131,11 +131,11 @@ export function StatisticsSection() {
                 key={index}
                 className="bg-white rounded-3xl p-7 md:p-8 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_10px_35px_-4px_rgba(0,0,0,0.12)] transition-all duration-300 hover:-translate-y-1.5 flex flex-col items-center text-center h-full"
               >
-                <div className="w-14 h-14 rounded-full bg-[#CB154E]/10 flex items-center justify-center mb-6">
-                  <Icon className="w-7 h-7 text-[#CB154E]" />
+                <div className="w-14 h-14 rounded-full bg-[#ca1254]/10 flex items-center justify-center mb-6">
+                  <Icon className="w-7 h-7 text-[#ca1254]" />
                 </div>
                 <div className="mb-4">
-                  <p className="text-[2.5rem] md:text-[2.75rem] text-[#3B3969] tracking-tight leading-none" style={{ fontWeight: 900 }}>
+                  <p className="text-[2.5rem] md:text-[2.75rem] text-[#3b3f69] tracking-tight leading-none" style={{ fontWeight: 900 }}>
                     <AnimatedCounter target={stat.numericValue} suffix={stat.suffix} prefix={stat.prefix} />
                   </p>
                 </div>
@@ -152,7 +152,7 @@ export function StatisticsSection() {
           <div className="flex justify-center mt-20 md:mt-24">
             <a
               href="/statistics"
-              className="inline-flex items-center gap-2 px-9 py-4 rounded-xl bg-[#CB154E] hover:bg-[#a50f3d] text-white font-semibold transition-all duration-300 hover:shadow-lg hover:-translate-y-1 shadow-md"
+              className="inline-flex items-center gap-2 px-9 py-4 rounded-xl bg-[#ca1254] hover:bg-[#a50f42] text-white font-semibold transition-all duration-300 hover:shadow-lg hover:-translate-y-1 shadow-md"
             >
               View Statistics
               <ArrowRight className="w-5 h-5" />

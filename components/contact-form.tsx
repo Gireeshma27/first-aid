@@ -67,7 +67,7 @@ export function ContactForm() {
             name="fullName"
             placeholder="Full Name *"
             required
-            className="w-full bg-transparent border-b border-gray-200 py-3 placeholder:text-[#999999] text-[#333333] font-medium focus:outline-none focus:border-[#CB154E] transition-colors rounded-none"
+            className="w-full bg-transparent border-b border-gray-200 py-3 placeholder:text-[#999999] text-[#333333] font-medium focus:outline-none focus:border-[#ca1254] transition-colors rounded-none"
           />
         </div>
         <div>
@@ -75,7 +75,7 @@ export function ContactForm() {
             id="organisation"
             name="organisation"
             placeholder="Organisation"
-            className="w-full bg-transparent border-b border-gray-200 py-3 placeholder:text-[#999999] text-[#333333] font-medium focus:outline-none focus:border-[#CB154E] transition-colors rounded-none"
+            className="w-full bg-transparent border-b border-gray-200 py-3 placeholder:text-[#999999] text-[#333333] font-medium focus:outline-none focus:border-[#ca1254] transition-colors rounded-none"
           />
         </div>
       </div>
@@ -87,7 +87,7 @@ export function ContactForm() {
             type="email"
             placeholder="Email Address *"
             required
-            className="w-full bg-transparent border-b border-gray-200 py-3 placeholder:text-[#999999] text-[#333333] font-medium focus:outline-none focus:border-[#CB154E] transition-colors rounded-none"
+            className="w-full bg-transparent border-b border-gray-200 py-3 placeholder:text-[#999999] text-[#333333] font-medium focus:outline-none focus:border-[#ca1254] transition-colors rounded-none"
           />
         </div>
         <div>
@@ -96,7 +96,7 @@ export function ContactForm() {
             name="phone"
             type="tel"
             placeholder="Phone Number"
-            className="w-full bg-transparent border-b border-gray-200 py-3 placeholder:text-[#999999] text-[#333333] font-medium focus:outline-none focus:border-[#CB154E] transition-colors rounded-none"
+            className="w-full bg-transparent border-b border-gray-200 py-3 placeholder:text-[#999999] text-[#333333] font-medium focus:outline-none focus:border-[#ca1254] transition-colors rounded-none"
           />
         </div>
       </div>
@@ -107,7 +107,7 @@ export function ContactForm() {
           placeholder="Tell us about your training requirements... *"
           rows={4}
           required
-          className="w-full bg-transparent border-b border-gray-200 py-3 placeholder:text-[#999999] text-[#333333] font-medium focus:outline-none focus:border-[#CB154E] transition-colors rounded-none resize-none"
+          className="w-full bg-transparent border-b border-gray-200 py-3 placeholder:text-[#999999] text-[#333333] font-medium focus:outline-none focus:border-[#ca1254] transition-colors rounded-none resize-none"
         />
       </div>
       {error && (
@@ -116,7 +116,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="group inline-flex items-center justify-center gap-2 py-4 px-8 rounded-full bg-[#CB154E] text-white font-semibold text-base hover:bg-[#a50f3d] transition-colors duration-200 disabled:opacity-70 disabled:cursor-not-allowed mt-4"
+        className="group inline-flex items-center justify-center gap-2 py-4 px-8 rounded-full bg-[#ca1254] text-white font-semibold text-base hover:bg-[#a50f42] transition-colors duration-200 disabled:opacity-70 disabled:cursor-not-allowed mt-4"
       >
         {isSubmitting ? (
           <>

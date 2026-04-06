@@ -48,7 +48,7 @@ const benefits = [
     icon: MapPin,
     title: "We Come to You",
     desc: "On-site training at your workplace, school, or venue.",
-    color: "#CB154E",
+    color: "#ca1254",
   },
   {
     icon: Users,
@@ -199,7 +199,7 @@ export default function BookTrainingPage() {
 
         /* Gradient text */
         .gradient-text {
-          background: linear-gradient(135deg, #CB154E 0%, #f7395e 100%);
+          background: #ca1254;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
@@ -218,7 +218,7 @@ export default function BookTrainingPage() {
 
         /* Dot grid */
         .dot-grid-bg {
-          background-image: radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px);
+          background-image: transparent 1px, transparent 1px);
           background-size: 30px 30px;
         }
 
@@ -257,7 +257,7 @@ export default function BookTrainingPage() {
           left: 44px;
           width: calc(100% - 44px);
           height: 2px;
-          background: linear-gradient(90deg, #CB154E, rgba(203, 21, 78, 0.1));
+          background: #ca1254;
         }
         @media (max-width: 767px) {
           .step-connector::after { display: none; }
@@ -271,14 +271,14 @@ export default function BookTrainingPage() {
             HERO — Full-width immersive section
         ══════════════════════════════════════════════════════════════ */}
         <section className="noise-bg relative overflow-hidden" style={{
-          background: "linear-gradient(150deg, #3B3969 0%, #2e2c5c 30%, #241f4d 60%, #1c1a3a 100%)",
+          background: "#3b3f69",
           minHeight: "520px",
         }}>
           {/* Decorative blobs */}
           <div className="absolute -top-40 -right-40 w-[700px] h-[700px] rounded-full pointer-events-none"
-            style={{ background: "radial-gradient(circle, rgba(203,21,78,0.15) 0%, transparent 60%)", filter: "blur(12px)" }} />
+            style={{ background: "transparent", filter: "blur(12px)" }} />
           <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] rounded-full pointer-events-none"
-            style={{ background: "radial-gradient(circle, rgba(99,102,241,0.15) 0%, transparent 60%)", filter: "blur(12px)" }} />
+            style={{ background: "transparent", filter: "blur(12px)" }} />
 
           {/* Dot grid overlay */}
           <div className="dot-grid-bg absolute inset-0 opacity-40 pointer-events-none" style={{ zIndex: 2 }} />
@@ -290,7 +290,7 @@ export default function BookTrainingPage() {
               <div className="flex flex-col gap-6">
                 <div className="anim-up d1">
                   <div className="inline-flex items-center gap-2 bg-white/8 border border-white/15 text-white/90 text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full backdrop-blur-sm">
-                    <HeartPulse className="w-3.5 h-3.5 text-[#CB154E]" />
+                    <HeartPulse className="w-3.5 h-3.5 text-[#ca1254]" />
                     Training Enquiry
                   </div>
                 </div>
@@ -313,7 +313,7 @@ export default function BookTrainingPage() {
                 <div className="anim-up d4 grid grid-cols-2 sm:grid-cols-4 gap-3 mt-2">
                   {stats.map((s) => (
                     <div key={s.label} className="bg-white/5 border border-white/8 backdrop-blur-sm rounded-2xl px-4 py-4 text-center hover:bg-white/8 transition-colors">
-                      <s.icon className="w-4 h-4 text-[#CB154E] mx-auto mb-2" />
+                      <s.icon className="w-4 h-4 text-[#ca1254] mx-auto mb-2" />
                       <p className="text-xl md:text-2xl font-extrabold text-white leading-none">{s.value}</p>
                       <p className="text-[0.65rem] text-white/40 mt-1 font-medium uppercase tracking-wider">{s.label}</p>
                     </div>
@@ -324,13 +324,13 @@ export default function BookTrainingPage() {
                 <div className="anim-up d5 flex flex-wrap gap-5 items-center mt-1">
                   <a href="tel:0296272659" className="flex items-center gap-2.5 text-white/50 hover:text-white/80 transition-colors text-sm">
                     <div className="w-8 h-8 rounded-lg bg-white/8 flex items-center justify-center">
-                      <Phone className="w-3.5 h-3.5 text-[#CB154E]" />
+                      <Phone className="w-3.5 h-3.5 text-[#ca1254]" />
                     </div>
                     (02) 9627 2659
                   </a>
                   <a href="mailto:info@firstaidnetworkaustralia.com.au" className="flex items-center gap-2.5 text-white/50 hover:text-white/80 transition-colors text-sm">
                     <div className="w-8 h-8 rounded-lg bg-white/8 flex items-center justify-center">
-                      <Mail className="w-3.5 h-3.5 text-[#CB154E]" />
+                      <Mail className="w-3.5 h-3.5 text-[#ca1254]" />
                     </div>
                     info@firstaidnetwork...
                   </a>
@@ -344,7 +344,7 @@ export default function BookTrainingPage() {
                     <div className="w-20 h-20 rounded-full bg-[#10b981]/10 flex items-center justify-center mx-auto mb-6">
                       <CheckCircle2 className="w-10 h-10 text-[#10b981]" />
                     </div>
-                    <h2 className="text-2xl font-bold text-[#3B3969] mb-3">Request Submitted!</h2>
+                    <h2 className="text-2xl font-bold text-[#3b3f69] mb-3">Request Submitted!</h2>
                     <p className="text-[#666666] leading-relaxed text-sm max-w-xs mx-auto">
                       Thank you! Your training request has been received. Our team will be in touch shortly.
                     </p>
@@ -358,10 +358,10 @@ export default function BookTrainingPage() {
                     {/* Form header */}
                     <div className="px-8 pt-8 pb-5">
                       <div className="flex items-center gap-3 mb-1">
-                        <div className="w-9 h-9 rounded-xl bg-[#3B3969] flex items-center justify-center">
+                        <div className="w-9 h-9 rounded-xl bg-[#3b3f69] flex items-center justify-center">
                           <Sparkles className="w-4 h-4 text-white" />
                         </div>
-                        <h2 className="text-xl font-bold text-[#1e1c3d]">Training Request</h2>
+                        <h2 className="text-xl font-bold text-[#222544]">Training Request</h2>
                       </div>
                       <p className="text-sm text-[#999] mt-1 ml-12">Fill in your details and we&apos;ll handle the rest.</p>
                     </div>
@@ -377,8 +377,8 @@ export default function BookTrainingPage() {
                         {/* Row 1: Full Name + Organisation */}
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                           <div>
-                            <label htmlFor="fullName" className="block text-[11px] font-bold text-[#3B3969] uppercase tracking-wider mb-1.5">
-                              Full Name <span className="text-[#CB154E]">*</span>
+                            <label htmlFor="fullName" className="block text-[11px] font-bold text-[#3b3f69] uppercase tracking-wider mb-1.5">
+                              Full Name <span className="text-[#ca1254]">*</span>
                             </label>
                             <div className="relative">
                               <User className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#bbb]" />
@@ -389,7 +389,7 @@ export default function BookTrainingPage() {
                                 value={form.fullName}
                                 onChange={handleChange}
                                 placeholder="Jane Smith"
-                                className={`form-input w-full pl-9 pr-4 py-3 rounded-xl border text-sm text-[#333] placeholder:text-[#ccc] focus:outline-none focus:border-[#3B3969] bg-[#f8f8fb] ${
+                                className={`form-input w-full pl-9 pr-4 py-3 rounded-xl border text-sm text-[#333] placeholder:text-[#ccc] focus:outline-none focus:border-[#3b3f69] bg-[#f8f8fb] ${
                                   errors.fullName ? "border-red-400 bg-red-50" : "border-gray-200"
                                 }`}
                               />
@@ -400,7 +400,7 @@ export default function BookTrainingPage() {
                           </div>
 
                           <div>
-                            <label htmlFor="organisation" className="block text-[11px] font-bold text-[#3B3969] uppercase tracking-wider mb-1.5">
+                            <label htmlFor="organisation" className="block text-[11px] font-bold text-[#3b3f69] uppercase tracking-wider mb-1.5">
                               Organisation
                             </label>
                             <div className="relative">
@@ -412,7 +412,7 @@ export default function BookTrainingPage() {
                                 value={form.organisation}
                                 onChange={handleChange}
                                 placeholder="Company / School"
-                                className="form-input w-full pl-9 pr-4 py-3 rounded-xl border border-gray-200 bg-[#f8f8fb] text-sm text-[#333] placeholder:text-[#ccc] focus:outline-none focus:border-[#3B3969]"
+                                className="form-input w-full pl-9 pr-4 py-3 rounded-xl border border-gray-200 bg-[#f8f8fb] text-sm text-[#333] placeholder:text-[#ccc] focus:outline-none focus:border-[#3b3f69]"
                               />
                             </div>
                           </div>
@@ -420,7 +420,7 @@ export default function BookTrainingPage() {
 
                         {/* Number of Participants */}
                         <div>
-                          <label htmlFor="participants" className="block text-[11px] font-bold text-[#3B3969] uppercase tracking-wider mb-1.5">
+                          <label htmlFor="participants" className="block text-[11px] font-bold text-[#3b3f69] uppercase tracking-wider mb-1.5">
                             Number of Participants
                           </label>
                           <div className="relative">
@@ -433,7 +433,7 @@ export default function BookTrainingPage() {
                               value={form.participants}
                               onChange={handleChange}
                               placeholder="e.g. 15"
-                              className="form-input w-full pl-9 pr-4 py-3 rounded-xl border border-gray-200 bg-[#f8f8fb] text-sm text-[#333] placeholder:text-[#ccc] focus:outline-none focus:border-[#3B3969]"
+                              className="form-input w-full pl-9 pr-4 py-3 rounded-xl border border-gray-200 bg-[#f8f8fb] text-sm text-[#333] placeholder:text-[#ccc] focus:outline-none focus:border-[#3b3f69]"
                             />
                           </div>
                         </div>
@@ -441,8 +441,8 @@ export default function BookTrainingPage() {
                         {/* Phone + Email */}
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                           <div>
-                            <label htmlFor="phone" className="block text-[11px] font-bold text-[#3B3969] uppercase tracking-wider mb-1.5">
-                              Phone <span className="text-[#CB154E]">*</span>
+                            <label htmlFor="phone" className="block text-[11px] font-bold text-[#3b3f69] uppercase tracking-wider mb-1.5">
+                              Phone <span className="text-[#ca1254]">*</span>
                             </label>
                             <div className="relative">
                               <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#bbb]" />
@@ -453,7 +453,7 @@ export default function BookTrainingPage() {
                                 value={form.phone}
                                 onChange={handleChange}
                                 placeholder="0400 000 000"
-                                className={`form-input w-full pl-9 pr-4 py-3 rounded-xl border text-sm text-[#333] placeholder:text-[#ccc] focus:outline-none focus:border-[#3B3969] bg-[#f8f8fb] ${
+                                className={`form-input w-full pl-9 pr-4 py-3 rounded-xl border text-sm text-[#333] placeholder:text-[#ccc] focus:outline-none focus:border-[#3b3f69] bg-[#f8f8fb] ${
                                   errors.phone ? "border-red-400 bg-red-50" : "border-gray-200"
                                 }`}
                               />
@@ -464,8 +464,8 @@ export default function BookTrainingPage() {
                           </div>
 
                           <div>
-                            <label htmlFor="email" className="block text-[11px] font-bold text-[#3B3969] uppercase tracking-wider mb-1.5">
-                              Email <span className="text-[#CB154E]">*</span>
+                            <label htmlFor="email" className="block text-[11px] font-bold text-[#3b3f69] uppercase tracking-wider mb-1.5">
+                              Email <span className="text-[#ca1254]">*</span>
                             </label>
                             <div className="relative">
                               <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#bbb]" />
@@ -476,7 +476,7 @@ export default function BookTrainingPage() {
                                 value={form.email}
                                 onChange={handleChange}
                                 placeholder="you@example.com"
-                                className={`form-input w-full pl-9 pr-4 py-3 rounded-xl border text-sm text-[#333] placeholder:text-[#ccc] focus:outline-none focus:border-[#3B3969] bg-[#f8f8fb] ${
+                                className={`form-input w-full pl-9 pr-4 py-3 rounded-xl border text-sm text-[#333] placeholder:text-[#ccc] focus:outline-none focus:border-[#3b3f69] bg-[#f8f8fb] ${
                                   errors.email ? "border-red-400 bg-red-50" : "border-gray-200"
                                 }`}
                               />
@@ -489,7 +489,7 @@ export default function BookTrainingPage() {
 
                         {/* Message */}
                         <div>
-                          <label htmlFor="message" className="block text-[11px] font-bold text-[#3B3969] uppercase tracking-wider mb-1.5">
+                          <label htmlFor="message" className="block text-[11px] font-bold text-[#3b3f69] uppercase tracking-wider mb-1.5">
                             Message
                           </label>
                           <div className="relative">
@@ -501,7 +501,7 @@ export default function BookTrainingPage() {
                               value={form.message}
                               onChange={handleChange}
                               placeholder="Tell us about your training requirements, preferred dates, location..."
-                              className="form-input w-full pl-9 pr-4 py-3 rounded-xl border border-gray-200 bg-[#f8f8fb] text-sm text-[#333] placeholder:text-[#ccc] focus:outline-none focus:border-[#3B3969] resize-none"
+                              className="form-input w-full pl-9 pr-4 py-3 rounded-xl border border-gray-200 bg-[#f8f8fb] text-sm text-[#333] placeholder:text-[#ccc] focus:outline-none focus:border-[#3b3f69] resize-none"
                             />
                           </div>
                         </div>
@@ -512,7 +512,7 @@ export default function BookTrainingPage() {
                           disabled={isSubmitting}
                           className="btn-submit group w-full inline-flex items-center justify-center gap-2.5 py-3.5 px-8 rounded-xl text-white font-bold text-sm hover:-translate-y-0.5 transition-all duration-200 disabled:opacity-70 disabled:cursor-not-allowed"
                           style={{
-                            background: "linear-gradient(135deg, #CB154E 0%, #e02460 100%)",
+                            background: "#ca1254",
                             boxShadow: "0 8px 24px rgba(203,21,78,0.35), inset 0 1px 0 rgba(255,255,255,0.15)",
                           }}
                         >
@@ -539,12 +539,12 @@ export default function BookTrainingPage() {
                       </span>
                       <span className="w-px h-3 bg-gray-200" />
                       <span className="flex items-center gap-1.5">
-                        <Clock className="w-3.5 h-3.5 text-[#3B3969]" />
+                        <Clock className="w-3.5 h-3.5 text-[#3b3f69]" />
                         Reply within 1 day
                       </span>
                       <span className="w-px h-3 bg-gray-200" />
                       <span className="flex items-center gap-1.5">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-[#CB154E]" />
+                        <CheckCircle2 className="w-3.5 h-3.5 text-[#ca1254]" />
                         No spam, ever
                       </span>
                     </div>
@@ -569,10 +569,10 @@ export default function BookTrainingPage() {
         <section className="bg-[#FAFAFA] py-16 lg:py-20 px-6">
           <div className="mx-auto max-w-5xl">
             <div className="text-center mb-12">
-              <span className="text-[11px] font-bold tracking-[0.15em] uppercase text-[#CB154E] mb-2 block">
+              <span className="text-[11px] font-bold tracking-[0.15em] uppercase text-[#ca1254] mb-2 block">
                 Simple Process
               </span>
-              <h2 className="text-2xl md:text-3xl font-bold text-[#1e1c3d]">
+              <h2 className="text-2xl md:text-3xl font-bold text-[#222544]">
                 How It Works
               </h2>
             </div>
@@ -583,13 +583,13 @@ export default function BookTrainingPage() {
                   {/* Connector line between steps */}
                   {idx < steps.length - 1 && (
                     <div className="hidden md:block absolute top-5 left-[calc(50%+24px)] w-[calc(100%-48px)] h-0.5"
-                      style={{ background: "linear-gradient(90deg, #CB154E, rgba(203,21,78,0.1))" }} />
+                      style={{ background: "#ca1254" }} />
                   )}
                   <div className="relative w-11 h-11 rounded-full flex items-center justify-center text-sm font-extrabold text-white mb-4"
-                    style={{ background: "linear-gradient(135deg, #CB154E 0%, #e02460 100%)", boxShadow: "0 6px 16px rgba(203,21,78,0.3)" }}>
+                    style={{ background: "#ca1254", boxShadow: "0 6px 16px rgba(203,21,78,0.3)" }}>
                     {step.num}
                   </div>
-                  <h3 className="text-base font-bold text-[#1e1c3d] mb-1.5">{step.title}</h3>
+                  <h3 className="text-base font-bold text-[#222544] mb-1.5">{step.title}</h3>
                   <p className="text-sm text-[#888] leading-relaxed max-w-[220px]">{step.desc}</p>
                 </div>
               ))}
@@ -603,10 +603,10 @@ export default function BookTrainingPage() {
         <section className="bg-white py-16 lg:py-20 px-6">
           <div className="mx-auto max-w-6xl">
             <div className="text-center mb-12">
-              <span className="text-[11px] font-bold tracking-[0.15em] uppercase text-[#CB154E] mb-2 block">
+              <span className="text-[11px] font-bold tracking-[0.15em] uppercase text-[#ca1254] mb-2 block">
                 Why Choose Us
               </span>
-              <h2 className="text-2xl md:text-3xl font-bold text-[#1e1c3d] mb-3">
+              <h2 className="text-2xl md:text-3xl font-bold text-[#222544] mb-3">
                 Everything you need, nothing you don&apos;t.
               </h2>
               <p className="text-sm text-[#888] max-w-lg mx-auto">
@@ -626,7 +626,7 @@ export default function BookTrainingPage() {
                   >
                     <Icon className="w-5 h-5" style={{ color }} />
                   </div>
-                  <h3 className="text-sm font-bold text-[#1e1c3d] mb-1">{title}</h3>
+                  <h3 className="text-sm font-bold text-[#222544] mb-1">{title}</h3>
                   <p className="text-sm text-[#888] leading-relaxed">{desc}</p>
                 </div>
               ))}
@@ -639,9 +639,9 @@ export default function BookTrainingPage() {
         ══════════════════════════════════════════════════════════════ */}
         <section className="bg-[#FAFAFA] py-16 lg:py-20 px-6">
           <div className="mx-auto max-w-4xl">
-            <div className="relative bg-gradient-to-br from-[#3B3969] to-[#2a2854] rounded-3xl p-10 lg:p-14 overflow-hidden">
+            <div className="relative bg-[#3b3f69] rounded-3xl p-10 lg:p-14 overflow-hidden">
               {/* Decorative glow */}
-              <div className="absolute top-0 right-0 w-60 h-60 rounded-full bg-[#CB154E]/15 blur-3xl pointer-events-none" />
+              <div className="absolute top-0 right-0 w-60 h-60 rounded-full bg-[#ca1254]/15 blur-3xl pointer-events-none" />
               <div className="absolute bottom-0 left-0 w-40 h-40 rounded-full bg-indigo-500/10 blur-3xl pointer-events-none" />
 
               <div className="relative grid md:grid-cols-2 gap-10 items-center">
@@ -677,14 +677,14 @@ export default function BookTrainingPage() {
                       href="tel:0296272659"
                       className="inline-flex items-center justify-center gap-2 bg-white/10 border border-white/15 text-white rounded-xl px-5 py-3 text-sm font-semibold hover:bg-white/15 transition-all backdrop-blur-sm"
                     >
-                      <Phone className="w-4 h-4 text-[#CB154E]" />
+                      <Phone className="w-4 h-4 text-[#ca1254]" />
                       (02) 9627 2659
                     </a>
                     <a
                       href="mailto:info@firstaidnetworkaustralia.com.au"
                       className="inline-flex items-center justify-center gap-2 bg-white/10 border border-white/15 text-white rounded-xl px-5 py-3 text-sm font-semibold hover:bg-white/15 transition-all backdrop-blur-sm"
                     >
-                      <Mail className="w-4 h-4 text-[#CB154E]" />
+                      <Mail className="w-4 h-4 text-[#ca1254]" />
                       Email Us
                     </a>
                   </div>

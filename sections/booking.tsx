@@ -29,17 +29,17 @@ export function BookingSection() {
       ref={ref}
       className="py-[60px] md:py-[80px] relative overflow-hidden reveal-section"
       style={{
-        background: "linear-gradient(135deg, #3B3969 0%, #2a2850 60%, #1e1c3d 100%)",
+        background: "#3b3f69",
       }}
     >
       {/* Decorative elements */}
-      <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#CB154E]/10 blur-3xl" />
+      <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#ca1254]/10 blur-3xl" />
       <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-white/5 blur-3xl" />
 
       <div className="relative mx-auto max-w-[1200px] px-4 lg:px-8">
         <div className="text-center mb-14">
           <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-sm text-white/90 text-sm font-semibold mb-5 tracking-wide">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#CB154E]" />
+            <span className="w-1.5 h-1.5 rounded-full bg-[#ca1254]" />
             Get Started
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-white leading-tight tracking-tight">
@@ -54,7 +54,7 @@ export function BookingSection() {
           {/* Contact info */}
           <div className="lg:col-span-2 space-y-8">
             <div className="flex items-start gap-4 group">
-              <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#CB154E] transition-colors duration-300">
+              <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#ca1254] transition-colors duration-300">
                 <Phone className="w-5 h-5 text-white" />
               </div>
               <div>
@@ -63,7 +63,7 @@ export function BookingSection() {
               </div>
             </div>
             <div className="flex items-start gap-4 group">
-              <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#CB154E] transition-colors duration-300">
+              <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#ca1254] transition-colors duration-300">
                 <Mail className="w-5 h-5 text-white" />
               </div>
               <div>
@@ -72,7 +72,7 @@ export function BookingSection() {
               </div>
             </div>
             <div className="flex items-start gap-4 group">
-              <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#CB154E] transition-colors duration-300">
+              <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#ca1254] transition-colors duration-300">
                 <Clock className="w-5 h-5 text-white" />
               </div>
               <div>
@@ -81,7 +81,7 @@ export function BookingSection() {
               </div>
             </div>
             <div className="flex items-start gap-4 group">
-              <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#CB154E] transition-colors duration-300">
+              <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#ca1254] transition-colors duration-300">
                 <MapPin className="w-5 h-5 text-white" />
               </div>
               <div>

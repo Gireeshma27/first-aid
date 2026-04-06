@@ -37,15 +37,15 @@ export default function EventsPage() {
         {/*  Hero  */}
         <section
           className="relative py-16 md:py-20 overflow-hidden"
-          style={{ background: "linear-gradient(135deg, #1e1c3d 0%, #3B3969 60%, #4A4880 100%)" }}
+          style={{ background: "#3b3f69" }}
         >
           {/* Decorative blobs */}
-          <div className="absolute -top-24 -right-24 w-[600px] h-[600px] rounded-full bg-[#CB154E]/10 blur-3xl pointer-events-none" />
+          <div className="absolute -top-24 -right-24 w-[600px] h-[600px] rounded-full bg-[#ca1254]/10 blur-3xl pointer-events-none" />
           <div className="absolute bottom-0 -left-20 w-[500px] h-[500px] rounded-full bg-white/[0.02] blur-3xl pointer-events-none" />
           {/* Dot grid */}
           <div
             className="absolute inset-0 opacity-[0.04]"
-            style={{ backgroundImage: "radial-gradient(circle, #ffffff 1px, transparent 1px)", backgroundSize: "30px 30px" }}
+            style={{ backgroundImage: "transparent", backgroundSize: "30px 30px" }}
           />
 
           <div className="relative mx-auto max-w-[1200px] px-6 lg:px-12">
@@ -54,12 +54,12 @@ export default function EventsPage() {
               {/* Left  Text + CTA */}
               <div className="space-y-8">
                 <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 text-white/90 text-sm font-semibold border border-white/20">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#CB154E]" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#ca1254]" />
                   Event Medical Services
                 </span>
                 <h1 className="text-3xl md:text-[42px] lg:text-[52px] font-bold leading-[1.15] tracking-tight text-white">
                   Event Medical Support for{" "}
-                  <span className="text-[#CB154E]">
+                  <span className="text-[#ca1254]">
                     Schools, Sports and Community Events
                   </span>
                 </h1>
@@ -69,7 +69,7 @@ export default function EventsPage() {
                 <div className="flex flex-wrap gap-4">
                   <a
                     href="#event-services"
-                    className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#CB154E] text-white font-semibold text-base hover:bg-[#a81040] transition-colors duration-300 shadow-lg shadow-[#CB154E]/40"
+                    className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#ca1254] text-white font-semibold text-base hover:bg-[#a81040] transition-colors duration-300 shadow-lg shadow-[#ca1254]/40"
                   >
                     Explore Event Services
                     <ArrowRight className="w-5 h-5" />
@@ -107,9 +107,9 @@ export default function EventsPage() {
                     sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1e1c3d]/40 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-black/20" />
                 </div>
-                <div className="absolute -bottom-5 right-6 bg-[#CB154E] text-white rounded-2xl px-6 py-4 shadow-xl shadow-[#CB154E]/40 hidden sm:block">
+                <div className="absolute -bottom-5 right-6 bg-[#ca1254] text-white rounded-2xl px-6 py-4 shadow-xl shadow-[#ca1254]/40 hidden sm:block">
                   <p className="text-xl font-bold">Nationally</p>
                   <p className="text-sm font-medium text-white/80">Qualified Medics</p>
                 </div>
@@ -125,11 +125,11 @@ export default function EventsPage() {
             <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
               <Reveal>
               <div className="space-y-8">
-                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#CB154E]/8 text-[#CB154E] text-sm font-bold tracking-wide uppercase">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#CB154E]" />
+                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#ca1254]/8 text-[#ca1254] text-sm font-bold tracking-wide uppercase">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#ca1254]" />
                   Overview
                 </span>
-                <h2 className="text-4xl md:text-5xl font-bold text-[#333333] leading-tight tracking-tight">
+                <h2 className="text-4xl md:text-3xl md:text-4xl font-bold text-[#333333] leading-tight tracking-tight">
                   Dedicated Event Medical Support
                 </h2>
                 <div className="space-y-4 text-lg text-[#666666] leading-relaxed">
@@ -148,8 +148,8 @@ export default function EventsPage() {
                     { icon: Stethoscope,value: "Rapid", label: "Response" },
                   ].map(({ icon: Icon, value, label }) => (
                     <div key={label} className="bg-white rounded-2xl p-6 text-center shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-gray-100 hover:-translate-y-1 transition-transform duration-300">
-                      <div className="w-12 h-12 mx-auto bg-[#CB154E]/10 rounded-xl flex items-center justify-center mb-4">
-                        <Icon className="w-6 h-6 text-[#CB154E]" />
+                      <div className="w-12 h-12 mx-auto bg-[#ca1254]/10 rounded-xl flex items-center justify-center mb-4">
+                        <Icon className="w-6 h-6 text-[#ca1254]" />
                       </div>
                       <p className="text-2xl font-bold text-[#333333]">{value}</p>
                       <p className="text-sm font-medium text-[#666666] mt-1">{label}</p>
@@ -169,11 +169,11 @@ export default function EventsPage() {
                     sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-tr from-[#3B3969]/30 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-black/20" />
                 </div>
                 {/* Overlapping badge */}
                 <div className="absolute -left-6 md:-left-12 top-1/2 -translate-y-1/2 bg-white rounded-2xl p-6 shadow-xl border border-gray-100 hidden sm:flex items-center gap-4">
-                  <div className="w-14 h-14 bg-[#CB154E] rounded-full flex items-center justify-center shadow-lg shadow-[#CB154E]/30">
+                  <div className="w-14 h-14 bg-[#ca1254] rounded-full flex items-center justify-center shadow-lg shadow-[#ca1254]/30">
                     <Shield className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -190,11 +190,11 @@ export default function EventsPage() {
           <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
             <Reveal>
             <div className="text-center mb-12">
-              <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-[#3B3969]/8 text-[#3B3969] text-sm font-semibold mb-5">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#3B3969]" />
+              <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-[#3b3f69]/8 text-[#3b3f69] text-sm font-semibold mb-5">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#3b3f69]" />
                 Types of Events
               </span>
-              <h2 className="text-4xl md:text-5xl font-bold text-[#333333] leading-tight tracking-tight">
+              <h2 className="text-4xl md:text-3xl md:text-4xl font-bold text-[#333333] leading-tight tracking-tight">
                 Types of Events Supported
               </h2>
               <p className="mt-6 text-xl text-[#666666] max-w-2xl mx-auto">
@@ -214,11 +214,11 @@ export default function EventsPage() {
           <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
             <Reveal>
             <div className="text-center mb-16">
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#3B3969]/8 text-[#3B3969] text-sm font-bold tracking-wide uppercase">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#3B3969]" />
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#3b3f69]/8 text-[#3b3f69] text-sm font-bold tracking-wide uppercase">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#3b3f69]" />
                 Why It Matters
               </span>
-              <h2 className="mt-5 text-4xl md:text-5xl font-bold text-[#333333] leading-tight tracking-tight">
+              <h2 className="mt-5 text-4xl md:text-3xl md:text-4xl font-bold text-[#333333] leading-tight tracking-tight">
                 Why Professional Event Medics Are Important
               </h2>
               <p className="mt-6 text-xl text-[#666666] max-w-3xl mx-auto leading-relaxed">
@@ -236,11 +236,11 @@ export default function EventsPage() {
                 >
                   <div
                     className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-5 ${
-                      i % 2 === 0 ? "bg-[#CB154E]/10" : "bg-[#3B3969]/8"
+                      i % 2 === 0 ? "bg-[#ca1254]/10" : "bg-[#3b3f69]/8"
                     }`}
                   >
                     <card.icon
-                      className={`w-7 h-7 ${i % 2 === 0 ? "text-[#CB154E]" : "text-[#3B3969]"}`}
+                      className={`w-7 h-7 ${i % 2 === 0 ? "text-[#ca1254]" : "text-[#3b3f69]"}`}
                     />
                   </div>
                   <p className="text-base font-medium text-[#333333] leading-relaxed">{card.text}</p>

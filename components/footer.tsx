@@ -34,22 +34,22 @@ export function Footer() {
     <footer
       className="text-white relative overflow-hidden"
       style={{
-        background: "linear-gradient(145deg, #3B3969 0%, #2e2c5c 35%, #231f4b 65%, #1e1c3d 100%)",
+        background: "#3b3f69",
       }}
     >
       {/* Subtle ambient glow */}
       <div
         className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full pointer-events-none"
         style={{
-          background: "radial-gradient(circle, rgba(203,21,78,0.08) 0%, transparent 65%)",
-          filter: "blur(60px)",
+          
+          
         }}
       />
       <div
         className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full pointer-events-none"
         style={{
-          background: "radial-gradient(circle, rgba(59,57,105,0.3) 0%, transparent 70%)",
-          filter: "blur(40px)",
+          
+          
         }}
       />
 
@@ -71,12 +71,12 @@ export function Footer() {
                 <span className="text-xl font-bold text-white leading-tight">
                   First Aid Network
                 </span>
-                <span className="text-xs font-semibold text-[#CB154E] tracking-[0.2em]">
+                <span className="text-xs font-semibold text-[#ca1254] tracking-[0.2em]">
                   AUSTRALIA
                 </span>
               </div>
             </Link>
-            <p className="text-sm text-white/55 leading-relaxed max-w-[280px]">
+            <p className="text-sm text-white leading-relaxed max-w-[280px]">
               Delivering high-quality health and safety training across workplaces, schools, and communities throughout Australia.
             </p>
             <div className="flex gap-2.5">
@@ -84,7 +84,7 @@ export function Footer() {
                 <a
                   key={name}
                   href={href}
-                  className="w-10 h-10 rounded-full bg-white/[0.07] border border-white/[0.08] flex items-center justify-center text-white/50 hover:bg-[#CB154E] hover:border-[#CB154E] hover:text-white transition-all duration-300"
+                  className="w-10 h-10 rounded-full bg-white/[0.07] border border-white/[0.08] flex items-center justify-center text-white hover:bg-[#ca1254] hover:border-[#ca1254] hover:text-white transition-all duration-300"
                   aria-label={name}
                 >
                   <Icon className="w-4 h-4" />
@@ -103,7 +103,7 @@ export function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-sm text-white/50 hover:text-[#CB154E] hover:translate-x-1 inline-block transition-all duration-200"
+                    className="text-sm text-white hover:text-[#ca1254] hover:translate-x-1 inline-block transition-all duration-200"
                   >
                     {link.name}
                   </Link>
@@ -119,25 +119,25 @@ export function Footer() {
             </h3>
             <ul className="space-y-5">
               <li className="flex items-start gap-3">
-                <span className="text-[#CB154E] font-bold text-xs mt-0.5 w-4 shrink-0">A:</span>
-                <span className="text-sm text-white/55 leading-relaxed">
+                <span className="text-[#ca1254] font-bold text-xs mt-0.5 w-4 shrink-0">A:</span>
+                <span className="text-sm text-white leading-relaxed">
                   Suite 226, 2–8 Brookhollow Avenue, Norwest NSW 2153
                 </span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-[#CB154E] font-bold text-xs mt-0.5 w-4 shrink-0">P:</span>
+                <span className="text-[#ca1254] font-bold text-xs mt-0.5 w-4 shrink-0">P:</span>
                 <a
                   href="tel:0296272659"
-                  className="text-sm text-white/55 hover:text-white transition-colors duration-200"
+                  className="text-sm text-white hover:text-white transition-colors duration-200"
                 >
                   (02) 9627 2659
                 </a>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-[#CB154E] font-bold text-xs mt-0.5 w-4 shrink-0">E:</span>
+                <span className="text-[#ca1254] font-bold text-xs mt-0.5 w-4 shrink-0">E:</span>
                 <a
                   href="mailto:info@firstaidnetworkaustralia.com.au"
-                  className="text-sm text-white/55 hover:text-white transition-colors duration-200 break-all"
+                  className="text-sm text-white hover:text-white transition-colors duration-200 break-all"
                 >
                   info@firstaidnetworkaustralia.com.au
                 </a>
@@ -150,7 +150,7 @@ export function Footer() {
             <h3 className="text-sm font-bold text-white mb-6 uppercase tracking-wider">
               Stay in the Loop
             </h3>
-            <p className="text-sm text-white/50 leading-relaxed mb-5">
+            <p className="text-sm text-white leading-relaxed mb-5">
               Subscribe to our newsletter for the latest training updates and health &amp; safety tips.
             </p>
             <form
@@ -166,14 +166,14 @@ export function Footer() {
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
                 required
-                className="w-full px-4 py-3 rounded-xl bg-white/[0.07] border border-white/[0.12] text-sm text-white placeholder:text-white/30 outline-none focus:border-[#CB154E]/50 focus:ring-1 focus:ring-[#CB154E]/30 transition-all duration-200"
+                className="w-full px-4 py-3 rounded-xl bg-white/[0.07] border border-white/[0.12] text-sm text-white placeholder:text-white outline-none focus:border-[#ca1254]/50 focus:ring-1 focus:ring-[#ca1254]/30 transition-all duration-200"
               />
               <button
                 type="submit"
                 className="w-full px-4 py-3 rounded-xl text-sm font-semibold text-white flex items-center justify-center gap-2 transition-all duration-300 hover:brightness-110 hover:-translate-y-0.5 cursor-pointer"
                 style={{
-                  background: "linear-gradient(135deg, #CB154E 0%, #e02460 100%)",
-                  boxShadow: "0 4px 14px rgba(203,21,78,0.35)",
+                  background: "#ca1254",
+                  boxShadow: "0 4px 14px rgba(202,18,84,0.35)",
                 }}
               >
                 Subscribe <ArrowRight className="w-3.5 h-3.5" />
@@ -187,12 +187,12 @@ export function Footer() {
       <div className="relative z-10 border-t border-white/[0.08]">
         <div className="mx-auto max-w-[1200px] px-5 py-6 lg:px-10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-xs text-white/35">
+            <p className="text-xs text-white">
               © {new Date().getFullYear()} First Aid Network Australia. All rights reserved.
             </p>
-            <p className="text-xs text-white/35">
+            <p className="text-xs text-white">
               Training delivered in partnership with{" "}
-              <span className="text-[#CB154E] font-medium">Healthcorp RTO</span>
+              <span className="text-[#ca1254] font-medium">Healthcorp RTO</span>
             </p>
           </div>
         </div>

@@ -44,7 +44,7 @@ function CoursesDropdown({ isOpen }: { isOpen: boolean }) {
             <Link
               key={name}
               href={href}
-              className="block px-3 py-2.5 rounded-xl text-sm text-[#333333] hover:bg-[#3B3969]/5 hover:text-[#3B3969] transition-all duration-200 font-semibold leading-relaxed"
+              className="block px-3 py-2.5 rounded-xl text-sm text-[#333333] hover:bg-[#3b3f69]/5 hover:text-[#3b3f69] transition-all duration-200 font-semibold leading-relaxed"
             >
               {name}
             </Link>
@@ -61,7 +61,7 @@ function CoursesDropdown({ isOpen }: { isOpen: boolean }) {
             href="/services/community-clinical-awareness"
             className="block py-2 rounded-xl group"
           >
-            <div className="text-sm text-[#333333] group-hover:text-[#3B3969] transition-colors font-semibold leading-relaxed">
+            <div className="text-sm text-[#333333] group-hover:text-[#3b3f69] transition-colors font-semibold leading-relaxed">
               Community Clinical Awareness
             </div>
             <div className="text-[12.5px] text-gray-400 mt-0.5 font-medium">
@@ -85,7 +85,7 @@ function ServicesDropdown({ isOpen }: { isOpen: boolean }) {
             <Link
               key={name}
               href={href}
-              className="block px-4 py-3 rounded-xl text-sm text-[#333333] hover:bg-[#3B3969]/5 hover:text-[#3B3969] transition-all duration-200 font-semibold leading-relaxed"
+              className="block px-4 py-3 rounded-xl text-sm text-[#333333] hover:bg-[#3b3f69]/5 hover:text-[#3b3f69] transition-all duration-200 font-semibold leading-relaxed"
             >
               {name}
             </Link>
@@ -103,7 +103,7 @@ function MobileCoursesDropdown({ closeMenu }: { closeMenu: () => void }) {
         <Link
           key={subItem.name}
           href={subItem.href}
-          className="block rounded-lg px-4 py-2.5 text-sm text-[#666666] hover:bg-[#F5F5F5] hover:text-[#3B3969] transition-colors"
+          className="block rounded-lg px-4 py-2.5 text-sm text-[#666666] hover:bg-[#F5F5F5] hover:text-[#3b3f69] transition-colors"
           onClick={closeMenu}
         >
           {subItem.name}
@@ -119,7 +119,7 @@ function MobileCoursesDropdown({ closeMenu }: { closeMenu: () => void }) {
           className="block py-2 rounded-lg group"
           onClick={closeMenu}
         >
-          <div className="text-sm text-[#666666] group-hover:text-[#3B3969] transition-colors">
+          <div className="text-sm text-[#666666] group-hover:text-[#3b3f69] transition-colors">
             Community Clinical Awareness
           </div>
           <div className="text-[12px] text-gray-400 mt-0.5">
@@ -138,7 +138,7 @@ function MobileServicesDropdown({ closeMenu }: { closeMenu: () => void }) {
         <Link
           key={subItem.name}
           href={subItem.href}
-          className="block rounded-lg px-4 py-2.5 text-sm text-[#666666] hover:bg-[#F5F5F5] hover:text-[#3B3969] transition-colors"
+          className="block rounded-lg px-4 py-2.5 text-sm text-[#666666] hover:bg-[#F5F5F5] hover:text-[#3b3f69] transition-colors"
           onClick={closeMenu}
         >
           {subItem.name}
@@ -205,7 +205,7 @@ export function Navbar() {
               priority
             />
             <span className="font-bold text-sm sm:text-base lg:text-lg leading-tight tracking-tight">
-              <span className="text-[#3B3969]">First Aid </span><span className="text-[#CB154E]">Network</span>
+              <span className="text-[#3b3f69]">First Aid </span><span className="text-[#ca1254]">Network</span>
             </span>
           </Link>
         </div>
@@ -214,7 +214,7 @@ export function Navbar() {
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-full p-2.5 text-[#333333] hover:bg-[#3B3969]/5 transition-colors"
+            className="-m-2.5 inline-flex items-center justify-center rounded-full p-2.5 text-[#333333] hover:bg-[#3b3f69]/5 transition-colors"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             <span className="sr-only">Open main menu</span>
@@ -237,8 +237,8 @@ export function Navbar() {
                   <button
                     onClick={() => setActiveDropdown(prev => (prev === item.name ? null : item.name))}
                     className={`inline-flex items-center gap-1.5 px-5 py-2.5 text-sm font-semibold rounded-full transition-all duration-200 ${isOpen
-                        ? "text-[#3B3969] bg-[#3B3969]/5"
-                        : "text-[#333333] hover:text-[#3B3969] hover:bg-[#3B3969]/5"
+                        ? "text-[#3b3f69] bg-[#3b3f69]/5"
+                        : "text-[#333333] hover:text-[#3b3f69] hover:bg-[#3b3f69]/5"
                       }`}
                   >
                     {item.name}
@@ -247,7 +247,7 @@ export function Navbar() {
                 ) : (
                   <Link
                     href={item.href}
-                    className="inline-flex items-center gap-1.5 px-5 py-2.5 text-sm font-semibold rounded-full transition-all duration-200 text-[#333333] hover:text-[#3B3969] hover:bg-[#3B3969]/5"
+                    className="inline-flex items-center gap-1.5 px-5 py-2.5 text-sm font-semibold rounded-full transition-all duration-200 text-[#333333] hover:text-[#3b3f69] hover:bg-[#3b3f69]/5"
                   >
                     {item.name}
                   </Link>
@@ -264,7 +264,7 @@ export function Navbar() {
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <Button
             asChild
-            className="bg-[#CB154E] hover:bg-[#a50f3d] text-white font-semibold rounded-full shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 px-7 h-11 text-sm"
+            className="bg-[#ca1254] hover:bg-[#a50f42] text-white font-semibold rounded-full shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 px-7 h-11 text-sm"
           >
             <Link href="/book-training">Book Training</Link>
           </Button>
@@ -321,7 +321,7 @@ export function Navbar() {
                     ) : (
                       <Link
                         href={item.href}
-                        className="block rounded-lg px-4 py-3 text-base font-medium text-[#333333] hover:bg-[#F5F5F5] hover:text-[#3B3969] transition-colors"
+                        className="block rounded-lg px-4 py-3 text-base font-medium text-[#333333] hover:bg-[#F5F5F5] hover:text-[#3b3f69] transition-colors"
                         onClick={() => setMobileMenuOpen(false)}
                       >
                         {item.name}
@@ -331,7 +331,7 @@ export function Navbar() {
                 )})}
               </div>
               <div className="mt-8 pt-6 border-t border-gray-200">
-                <Button asChild className="w-full bg-[#CB154E] hover:bg-[#a50f3d] text-white font-semibold rounded-full py-6 text-base">
+                <Button asChild className="w-full bg-[#ca1254] hover:bg-[#a50f42] text-white font-semibold rounded-full py-6 text-base">
                   <Link href="/book-training" onClick={() => setMobileMenuOpen(false)}>Book Training</Link>
                 </Button>
               </div>

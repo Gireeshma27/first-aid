@@ -60,7 +60,7 @@ export function TrainersSection() {
         className="absolute inset-0 opacity-[0.015] pointer-events-none"
         style={{
           backgroundImage:
-            "radial-gradient(circle, #3B3969 1px, transparent 1px)",
+            "transparent",
           backgroundSize: "40px 40px",
         }}
       />
@@ -72,8 +72,8 @@ export function TrainersSection() {
         {/* Section Header */}
         <div className="text-center mb-12 md:mb-16">
           <Reveal>
-            <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#3B3969]/8 text-[#3B3969] text-sm font-semibold mb-4">
-              <span className="w-2 h-2 rounded-full bg-[#3B3969]" />
+            <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#3b3f69]/8 text-[#3b3f69] text-sm font-semibold mb-4">
+              <span className="w-2 h-2 rounded-full bg-[#3b3f69]" />
               Online Learning
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-[#333333] leading-tight tracking-tight">
@@ -94,31 +94,30 @@ export function TrainersSection() {
             <div
               className="md:col-span-6 lg:col-span-5 lg:row-span-2 rounded-3xl p-8 md:p-10 relative overflow-hidden group cursor-default"
               style={{
-                background:
-                  "linear-gradient(145deg, #1e1c3d 0%, #3B3969 60%, #4a4880 100%)",
+                background: "#3b3f69",
               }}
             >
               {/* Decorative elements */}
-              <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-[#CB154E]/15 blur-3xl pointer-events-none" />
+              <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-[#ca1254]/15 blur-3xl pointer-events-none" />
               <div className="absolute bottom-0 left-0 w-48 h-48 rounded-full bg-white/5 blur-3xl pointer-events-none" />
               <div
                 className="absolute inset-0 opacity-[0.04] pointer-events-none"
                 style={{
                   backgroundImage:
-                    "radial-gradient(circle, #ffffff 1px, transparent 1px)",
+                    "transparent",
                   backgroundSize: "24px 24px",
                 }}
               />
 
               <div className="relative z-10 h-full flex flex-col justify-between">
                 <div>
-                  <div className="w-14 h-14 rounded-2xl bg-white/10 border border-white/15 flex items-center justify-center mb-6 group-hover:bg-[#CB154E]/20 transition-colors duration-500">
-                    <Sparkles className="w-7 h-7 text-[#CB154E]" />
+                  <div className="w-14 h-14 rounded-2xl bg-white/10 border border-white/15 flex items-center justify-center mb-6 group-hover:bg-[#ca1254]/20 transition-colors duration-500">
+                    <Sparkles className="w-7 h-7 text-[#ca1254]" />
                   </div>
                   <h3 className="text-2xl md:text-3xl font-bold text-white leading-snug mb-4">
                     Blended Learning
                     <br />
-                    <span className="text-[#CB154E]">Model</span>
+                    <span className="text-[#ca1254]">Model</span>
                   </h3>
                   <p className="text-white/70 leading-relaxed text-base md:text-lg mb-8 max-w-sm">
                     Our unique approach combines flexible online theory with
@@ -152,10 +151,10 @@ export function TrainersSection() {
 
             {/* ── Card: Self-Paced Online Theory ── */}
             <div className="md:col-span-3 lg:col-span-4 group bg-[#F7F7FA] rounded-3xl p-7 border border-gray-100 hover:bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-400 cursor-default">
-              <div className="w-12 h-12 rounded-xl bg-[#3B3969]/10 flex items-center justify-center mb-5 group-hover:bg-[#3B3969] transition-colors duration-300">
-                <Monitor className="w-6 h-6 text-[#3B3969] group-hover:text-white transition-colors duration-300" />
+              <div className="w-12 h-12 rounded-xl bg-[#3b3f69]/10 flex items-center justify-center mb-5 group-hover:bg-[#3b3f69] transition-colors duration-300">
+                <Monitor className="w-6 h-6 text-[#3b3f69] group-hover:text-white transition-colors duration-300" />
               </div>
-              <h3 className="text-lg font-bold text-[#333333] mb-2 group-hover:text-[#3B3969] transition-colors">
+              <h3 className="text-lg font-bold text-[#333333] mb-2 group-hover:text-[#3b3f69] transition-colors">
                 Self-Paced Online Theory
               </h3>
               <p className="text-sm text-[#666666] leading-relaxed">
@@ -166,10 +165,10 @@ export function TrainersSection() {
 
             {/* ── Card: Nationally Recognised ── */}
             <div className="md:col-span-3 lg:col-span-3 group bg-[#F7F7FA] rounded-3xl p-7 border border-gray-100 hover:bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-400 cursor-default">
-              <div className="w-12 h-12 rounded-xl bg-[#CB154E]/10 flex items-center justify-center mb-5 group-hover:bg-[#CB154E] transition-colors duration-300">
-                <GraduationCap className="w-6 h-6 text-[#CB154E] group-hover:text-white transition-colors duration-300" />
+              <div className="w-12 h-12 rounded-xl bg-[#ca1254]/10 flex items-center justify-center mb-5 group-hover:bg-[#ca1254] transition-colors duration-300">
+                <GraduationCap className="w-6 h-6 text-[#ca1254] group-hover:text-white transition-colors duration-300" />
               </div>
-              <h3 className="text-lg font-bold text-[#333333] mb-2 group-hover:text-[#CB154E] transition-colors">
+              <h3 className="text-lg font-bold text-[#333333] mb-2 group-hover:text-[#ca1254] transition-colors">
                 Nationally Recognised
               </h3>
               <p className="text-sm text-[#666666] leading-relaxed">
@@ -180,10 +179,10 @@ export function TrainersSection() {
 
             {/* ── Card: Practical Sessions ── */}
             <div className="md:col-span-3 lg:col-span-3 group bg-[#F7F7FA] rounded-3xl p-7 border border-gray-100 hover:bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-400 cursor-default">
-              <div className="w-12 h-12 rounded-xl bg-[#3B3969]/10 flex items-center justify-center mb-5 group-hover:bg-[#3B3969] transition-colors duration-300">
-                <BookOpen className="w-6 h-6 text-[#3B3969] group-hover:text-white transition-colors duration-300" />
+              <div className="w-12 h-12 rounded-xl bg-[#3b3f69]/10 flex items-center justify-center mb-5 group-hover:bg-[#3b3f69] transition-colors duration-300">
+                <BookOpen className="w-6 h-6 text-[#3b3f69] group-hover:text-white transition-colors duration-300" />
               </div>
-              <h3 className="text-lg font-bold text-[#333333] mb-2 group-hover:text-[#3B3969] transition-colors">
+              <h3 className="text-lg font-bold text-[#333333] mb-2 group-hover:text-[#3b3f69] transition-colors">
                 Practical Sessions
               </h3>
               <p className="text-sm text-[#666666] leading-relaxed">
@@ -194,10 +193,10 @@ export function TrainersSection() {
 
             {/* ── Card: Compliance & Assessment ── */}
             <div className="md:col-span-3 lg:col-span-4 group bg-[#F7F7FA] rounded-3xl p-7 border border-gray-100 hover:bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-400 cursor-default">
-              <div className="w-12 h-12 rounded-xl bg-[#CB154E]/10 flex items-center justify-center mb-5 group-hover:bg-[#CB154E] transition-colors duration-300">
-                <ClipboardCheck className="w-6 h-6 text-[#CB154E] group-hover:text-white transition-colors duration-300" />
+              <div className="w-12 h-12 rounded-xl bg-[#ca1254]/10 flex items-center justify-center mb-5 group-hover:bg-[#ca1254] transition-colors duration-300">
+                <ClipboardCheck className="w-6 h-6 text-[#ca1254] group-hover:text-white transition-colors duration-300" />
               </div>
-              <h3 className="text-lg font-bold text-[#333333] mb-2 group-hover:text-[#CB154E] transition-colors">
+              <h3 className="text-lg font-bold text-[#333333] mb-2 group-hover:text-[#ca1254] transition-colors">
                 Blended Assessment
               </h3>
               <p className="text-sm text-[#666666] leading-relaxed">
@@ -221,13 +220,13 @@ export function TrainersSection() {
                   <div
                     className={`w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 transition-colors duration-300 ${
                       i % 2 === 0
-                        ? "bg-[#3B3969]/10 group-hover:bg-[#3B3969]"
-                        : "bg-[#CB154E]/10 group-hover:bg-[#CB154E]"
+                        ? "bg-[#3b3f69]/10 group-hover:bg-[#3b3f69]"
+                        : "bg-[#ca1254]/10 group-hover:bg-[#ca1254]"
                     }`}
                   >
                     <Icon
                       className={`w-5 h-5 group-hover:text-white transition-colors duration-300 ${
-                        i % 2 === 0 ? "text-[#3B3969]" : "text-[#CB154E]"
+                        i % 2 === 0 ? "text-[#3b3f69]" : "text-[#ca1254]"
                       }`}
                     />
                   </div>

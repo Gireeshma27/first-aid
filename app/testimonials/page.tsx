@@ -84,14 +84,14 @@ export default function TestimonialsPage() {
       <Navbar />
       <main>
         {/* Hero */}
-        <section className="relative bg-gradient-to-br from-[#3B3969] via-[#2d2b52] to-[#1e1c3d] py-16 md:py-24 overflow-hidden">
+        <section className="relative bg-[#3b3f69] py-16 md:py-24 overflow-hidden">
           <div className="absolute inset-0">
-            <div className="absolute top-20 right-20 w-72 h-72 rounded-full bg-[#CB154E]/[0.06] blur-3xl" />
-            <div className="absolute bottom-10 left-10 w-96 h-96 rounded-full bg-[#3B3969]/30 blur-3xl" />
+            <div className="absolute top-20 right-20 w-72 h-72 rounded-full bg-[#ca1254]/[0.06] blur-3xl" />
+            <div className="absolute bottom-10 left-10 w-96 h-96 rounded-full bg-[#3b3f69]/30 blur-3xl" />
           </div>
           <div className="mx-auto max-w-[1200px] px-6 lg:px-12 relative">
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.06] text-white text-sm font-semibold mb-6">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#CB154E]" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#ca1254]" />
               Testimonials
             </span>
             <h1 className="text-3xl md:text-5xl font-semibold text-white mb-4 leading-tight">What Our Clients Say</h1>
@@ -117,10 +117,10 @@ export default function TestimonialsPage() {
               {testimonials.map((testimonial, index) => (
                 <Reveal key={index} delay={index * 80}>
                 <div className="bg-white rounded-xl p-7 shadow-sm hover:shadow-lg transition-all duration-300 border border-[#E8E8F0] group flex flex-col h-full">
-                  <Quote className="w-10 h-10 text-[#CB154E]/20 mb-4 group-hover:text-[#CB154E]/40 transition-colors shrink-0" />
+                  <Quote className="w-10 h-10 text-[#ca1254]/20 mb-4 group-hover:text-[#ca1254]/40 transition-colors shrink-0" />
                   <div className="flex gap-1 mb-4">
                     {Array.from({ length: testimonial.rating }).map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-[#CB154E] text-[#CB154E]" />
+                      <Star key={i} className="w-4 h-4 fill-[#ca1254] text-[#ca1254]" />
                     ))}
                   </div>
                   <blockquote className="text-[#64648c] leading-relaxed mb-6 flex-1">
@@ -140,7 +140,7 @@ export default function TestimonialsPage() {
         </section>
 
         {/* CTA */}
-        <section className="py-16 md:py-24 bg-gradient-to-br from-[#3B3969] to-[#1e1c3d] text-white">
+        <section className="py-16 md:py-24 bg-[#3b3f69] text-white">
           <div className="mx-auto max-w-[1200px] px-6 lg:px-12 text-center">
             <Reveal>
             <h2 className="text-3xl font-semibold mb-4">Join Our Growing Community</h2>

@@ -18,11 +18,11 @@ export default function DrugAlcoholPage() {
       <Navbar />
       <main>
         {/* Hero */}
-        <section className="relative min-h-[480px] flex items-center overflow-hidden" style={{ background: "linear-gradient(135deg, #3B3969 0%, #2d2b5e 50%, #1a1a2e 100%)" }}>
-          <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-[#CB154E]/20 blur-3xl animate-blob" />
-          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-[#3B3969]/30 blur-3xl animate-blob-delay" />
+        <section className="relative min-h-[480px] flex items-center overflow-hidden" style={{ background: "#3b3f69" }}>
+          <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-[#ca1254]/20 blur-3xl animate-blob" />
+          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-[#3b3f69]/30 blur-3xl animate-blob-delay" />
           <div className="absolute top-1/2 left-1/3 w-[300px] h-[300px] rounded-full bg-white/5 blur-3xl animate-blob-delay-2" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#3B3969]/80 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-black/20" />
           <div className="relative mx-auto max-w-[1200px] px-6 lg:px-12 py-20">
             <div className="flex flex-col lg:flex-row gap-12 items-center">
               <div className="flex-1 min-w-0">
@@ -31,19 +31,19 @@ export default function DrugAlcoholPage() {
                     <Shield className="w-4 h-4" />
                     Workplace Compliance
                   </span>
-                  <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#CB154E]/20 text-white/90 text-sm font-medium border border-[#CB154E]/30">
+                  <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#ca1254]/20 text-white/90 text-sm font-medium border border-[#ca1254]/30">
                     Approved Saliva Testing Devices
                   </span>
                 </div>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
                   Drug and Alcohol<br />
-                  <span className="text-[#CB154E]">Testing Services</span>
+                  <span className="text-[#ca1254]">Testing Services</span>
                 </h1>
                 <p className="text-white/75 text-lg md:text-xl leading-relaxed mb-8 max-w-xl">
                   On-site workplace drug and alcohol testing services using approved saliva testing devices. Helping organisations maintain workplace safety and meet compliance obligations.
                 </p>
                 <div className="flex flex-wrap gap-4">
-                  <Button asChild className="bg-[#CB154E] hover:bg-[#CB154E]/90 text-white font-semibold px-8 py-3 h-auto rounded-xl shadow-lg shadow-[#CB154E]/20">
+                  <Button asChild className="bg-[#ca1254] hover:bg-[#ca1254]/90 text-white font-semibold px-8 py-3 h-auto rounded-xl shadow-lg shadow-[#ca1254]/20">
                     <Link href="/book-training">Book a Testing Visit <ArrowRight className="w-4 h-4 ml-2" /></Link>
                   </Button>
                   <Button asChild className="inline-flex items-center justify-center gap-2 border border-white/30 bg-transparent text-white hover:bg-white/10 hover:text-white font-semibold px-8 py-3 h-auto rounded-xl transition-colors duration-200">
@@ -54,9 +54,9 @@ export default function DrugAlcoholPage() {
               <div className="flex-shrink-0 w-full lg:w-[420px]">
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-black/40 aspect-[4/3]">
                   <Image src="/images/drug.png" alt="Drug and alcohol testing services" fill priority sizes="(max-width: 1024px) 100vw, 420px" className="object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#3B3969]/70 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-black/20" />
                   <div className="absolute top-[12px] left-[12px] image-badge">
-                    <Shield className="w-4 h-4 text-[#CB154E]" />
+                    <Shield className="w-4 h-4 text-[#ca1254]" />
                     Workplace Compliance
                   </div>
                 </div>
@@ -71,8 +71,8 @@ export default function DrugAlcoholPage() {
             <Reveal>
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div>
-                  <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#3B3969]/[0.07] text-[#3B3969] text-sm font-semibold mb-5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#3B3969]" />Service Overview
+                  <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#3b3f69]/[0.07] text-[#3b3f69] text-sm font-semibold mb-5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#3b3f69]" />Service Overview
                   </span>
                   <h2 className="text-2xl md:text-3xl font-bold text-[#1a1a2e] mb-4">Workplace Drug &amp; Alcohol Testing</h2>
                   <p className="text-[#64648c] leading-relaxed text-base mb-6">
@@ -86,7 +86,7 @@ export default function DrugAlcoholPage() {
                       { icon: <Shield className="w-5 h-5" />, label: "Events", sub: "On-site medical and safety events" },
                     ].map((item) => (
                       <div key={item.label} className="flex items-start gap-3 p-4 rounded-2xl bg-[#F7F7FA] border border-[#E8E8F0]">
-                        <div className="w-8 h-8 rounded-lg bg-[#3B3969]/10 flex items-center justify-center text-[#3B3969] flex-shrink-0 mt-0.5">
+                        <div className="w-8 h-8 rounded-lg bg-[#3b3f69]/10 flex items-center justify-center text-[#3b3f69] flex-shrink-0 mt-0.5">
                           {item.icon}
                         </div>
                         <div>
@@ -99,7 +99,7 @@ export default function DrugAlcoholPage() {
                 </div>
                 <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
                   <Image src="/images/drug1.png" alt="Drug and alcohol testing services" fill loading="eager" sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#3B3969]/40 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-black/20" />
                 </div>
               </div>
             </Reveal>
@@ -110,8 +110,8 @@ export default function DrugAlcoholPage() {
         <section className="py-20 bg-[#F5F5F5] relative overflow-hidden mb-[60px]">
           <div className="relative mx-auto max-w-[1200px] px-6 lg:px-12">
             <Reveal>
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#3B3969]/10 text-[#3B3969] text-sm font-semibold mb-5">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#3B3969]" />Why Drug &amp; Alcohol Testing Matters
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#3b3f69]/10 text-[#3b3f69] text-sm font-semibold mb-5">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#3b3f69]" />Why Drug &amp; Alcohol Testing Matters
               </span>
               <h2 className="text-2xl md:text-3xl font-bold text-[#1a1a2e] mb-10">This Service Helps Organisations Maintain</h2>
               <div className="grid md:grid-cols-3 gap-6">
@@ -121,7 +121,7 @@ export default function DrugAlcoholPage() {
                   { icon: <Building className="w-6 h-6" />, title: "Risk Reduction", desc: "Implement effective risk reduction strategies to protect your organisation from liability and workplace hazards." },
                 ].map((b) => (
                   <div key={b.title} className="bg-white rounded-2xl p-7 border border-[#E8E8F0] shadow-sm">
-                    <div className="w-12 h-12 rounded-2xl bg-[#CB154E]/10 flex items-center justify-center text-[#CB154E] mb-5">
+                    <div className="w-12 h-12 rounded-2xl bg-[#ca1254]/10 flex items-center justify-center text-[#ca1254] mb-5">
                       {b.icon}
                     </div>
                     <h3 className="text-[#1a1a2e] font-bold text-lg mb-3">{b.title}</h3>
@@ -134,13 +134,13 @@ export default function DrugAlcoholPage() {
         </section>
 
         {/* CTA */}
-        <section className="py-20" style={{ background: "linear-gradient(135deg, #3B3969 0%, #2d2b5e 60%, #1a1a2e 100%)" }}>
+        <section className="py-20" style={{ background: "#3b3f69" }}>
           <div className="mx-auto max-w-[1200px] px-6 lg:px-12 text-center">
             <Reveal>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Book Drug &amp; Alcohol Testing</h2>
               <p className="text-white/70 text-lg mb-8 max-w-2xl mx-auto">Maintain a safe and compliant workplace. Contact us to arrange on-site testing for your organisation.</p>
               <div className="flex flex-wrap gap-4 justify-center">
-                <Button asChild className="bg-[#CB154E] hover:bg-[#CB154E]/90 text-white font-semibold px-8 py-3 h-auto rounded-xl shadow-lg">
+                <Button asChild className="bg-[#ca1254] hover:bg-[#ca1254]/90 text-white font-semibold px-8 py-3 h-auto rounded-xl shadow-lg">
                   <Link href="/book-training">Book Testing <ArrowRight className="w-4 h-4 ml-2" /></Link>
                 </Button>
                 <Button asChild className="inline-flex items-center justify-center gap-2 border border-white/30 bg-transparent text-white hover:bg-white/10 hover:text-white font-semibold px-8 py-3 h-auto rounded-xl transition-colors duration-200">
