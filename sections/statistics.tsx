@@ -98,7 +98,7 @@ export function StatisticsSection() {
   }, [])
 
   return (
-    <section className="relative py-20 md:py-28 bg-[#F5F5F5] overflow-hidden -mt-px">
+    <section className="relative py-12 md:py-16 bg-[#F5F5F5] overflow-hidden -mt-px">
       {/* Subtle animated background elements */}
       <div className="absolute inset-0 pointer-events-none" style={{
         background: 'transparent 0%, transparent 50%), transparent 0%, transparent 50%)',
@@ -108,12 +108,12 @@ export function StatisticsSection() {
 
         {/* Section Header */}
         <Reveal>
-          <div className="text-center mb-20 max-w-3xl mx-auto">
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#ca1254]/8 text-[#ca1254] text-xs font-bold uppercase tracking-widest mb-6 md:mb-8">
+          <div className="text-center mb-12 md:mb-14 max-w-3xl mx-auto">
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#ca1254]/8 text-[#ca1254] text-xs font-bold uppercase tracking-widest mb-4 md:mb-5">
               <span className="w-1.5 h-1.5 rounded-full bg-[#ca1254]" />
               The Importance of First Aid
             </span>
-            <h2 className="text-4xl md:text-5xl font-bold text-[#3b3f69] mb-6 md:mb-8 tracking-tight leading-tight">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#3b3f69] mb-4 md:mb-5 tracking-tight leading-tight">
               The Importance of First Aid Training
             </h2>
             <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto">
@@ -123,7 +123,7 @@ export function StatisticsSection() {
         </Reveal>
 
         {/* Stats Cards Grid */}
-        <div ref={ref} className="reveal-section grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-16 md:mb-20">
+        <div ref={ref} className="reveal-section grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-10 md:mb-14">
           {statistics.map((stat, index) => {
             const Icon = stat.icon
             return (
@@ -149,7 +149,7 @@ export function StatisticsSection() {
 
         {/* View Statistics Button */}
         <Reveal delay={100}>
-          <div className="flex justify-center mt-20 md:mt-24">
+          <div className="flex justify-center mt-12 md:mt-16">
             <a
               href="/statistics"
               className="inline-flex items-center gap-2 px-9 py-4 rounded-xl bg-[#ca1254] hover:bg-[#a50f42] text-white font-semibold transition-all duration-300 hover:shadow-lg hover:-translate-y-1 shadow-md"
