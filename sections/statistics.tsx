@@ -135,7 +135,7 @@ export function StatisticsSection() {
                   <Icon className="w-7 h-7 text-[#ca1254]" />
                 </div>
                 <div className="mb-4">
-                  <p className="text-[2.5rem] md:text-[2.75rem] text-[#3b3f69] tracking-tight leading-none" style={{ fontWeight: 900 }}>
+                  <p className="text-[1.75rem] md:text-[2rem] text-[#3b3f69] tracking-tight leading-none" style={{ fontWeight: 900 }}>
                     <AnimatedCounter target={stat.numericValue} suffix={stat.suffix} prefix={stat.prefix} />
                   </p>
                 </div>

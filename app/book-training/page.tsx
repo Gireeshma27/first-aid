@@ -641,8 +641,8 @@ export default function BookTrainingPage() {
           <div className="mx-auto max-w-4xl">
             <div className="relative bg-[#3b3f69] rounded-3xl p-10 lg:p-14 overflow-hidden">
               {/* Decorative glow */}
-              <div className="absolute top-0 right-0 w-60 h-60 rounded-full bg-[#ca1254]/15 blur-3xl pointer-events-none" />
-              <div className="absolute bottom-0 left-0 w-40 h-40 rounded-full bg-indigo-500/10 blur-3xl pointer-events-none" />
+              <div className="absolute top-0 right-0 w-60 h-60 rounded-full bg-transparent blur-3xl pointer-events-none" />
+              <div className="absolute bottom-0 left-0 w-40 h-40 rounded-full bg-transparent blur-3xl pointer-events-none" />
 
               <div className="relative grid md:grid-cols-2 gap-10 items-center">
                 {/* Testimonial */}

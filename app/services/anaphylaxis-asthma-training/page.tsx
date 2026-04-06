@@ -19,12 +19,12 @@ export default function AnaphylaxisAsthmaTrainingPage() {
       <Navbar />
       <main>
         {/* Hero */}
-        <section className="relative min-h-[520px] flex items-center overflow-hidden" style={{ background: "#3b3f69" }}>
-          <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-[#ca1254]/20 blur-3xl animate-blob" />
-          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-[#3b3f69]/30 blur-3xl animate-blob-delay" />
-          <div className="absolute top-1/2 left-1/3 w-[300px] h-[300px] rounded-full bg-white/5 blur-3xl animate-blob-delay-2" />
+        <section className="relative min-h-[400px] flex items-center overflow-hidden" style={{ background: "#3b3f69" }}>
+          <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-transparent blur-3xl animate-blob" />
+          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-transparent blur-3xl animate-blob-delay" />
+          <div className="absolute top-1/2 left-1/3 w-[300px] h-[300px] rounded-full bg-transparent blur-3xl animate-blob-delay-2" />
           <div className="absolute inset-0 bg-black/20" />
-          <div className="relative mx-auto max-w-[1200px] px-6 lg:px-12 py-20 pb-24">
+          <div className="relative mx-auto max-w-[1200px] px-6 lg:px-12 py-12 md:py-16">
             <div className="flex flex-col lg:flex-row gap-12 items-center">
               <div className="flex-1 min-w-0">
                 <div className="flex flex-wrap items-center gap-3 mb-6">
@@ -36,7 +36,7 @@ export default function AnaphylaxisAsthmaTrainingPage() {
                     Schools &amp; Childcare Settings
                   </span>
                 </div>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                <h1 className="text-3xl md:text-4xl lg:text-4xl font-bold text-white mb-6 leading-tight">
                   Anaphylaxis &amp; Asthma<br />
                   <span className="text-[#ca1254]">Management Training</span>
                 </h1>
@@ -141,12 +141,12 @@ export default function AnaphylaxisAsthmaTrainingPage() {
                 <div className="relative bg-[#3b3f69] rounded-2xl p-8 text-white overflow-hidden">
                   <div className="absolute top-0 right-0 w-32 h-32 rounded-full bg-white/[0.03] blur-2xl" />
                   <h3 className="text-xl font-semibold mb-3 relative">Face-to-face</h3>
-                  <p className="text-white/70 leading-relaxed relative">Hands-on practical training delivered at your school or childcare centre by experienced trainers.</p>
+                  <p className="text-white/85 leading-relaxed relative">Hands-on practical training delivered at your school or childcare centre by experienced trainers.</p>
                 </div>
                 <div className="relative bg-[#3b3f69] rounded-2xl p-8 text-white overflow-hidden">
                   <div className="absolute top-0 right-0 w-32 h-32 rounded-full bg-white/[0.03] blur-2xl" />
                   <h3 className="text-xl font-semibold mb-3 relative">Blended Learning</h3>
-                  <p className="text-white/70 leading-relaxed relative">Online theory combined with a practical component for flexibility around school schedules.</p>
+                  <p className="text-white/85 leading-relaxed relative">Online theory combined with a practical component for flexibility around school schedules.</p>
                 </div>
               </div>
             </Reveal>

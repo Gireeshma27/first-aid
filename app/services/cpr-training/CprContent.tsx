@@ -121,14 +121,14 @@ export default function CprContent() {
   return (
     <>
       {/*  HERO  */}
-      <section className="relative overflow-hidden bg-[#3b3f69] py-20">
+      <section className="relative overflow-hidden bg-[#3b3f69] py-12 md:py-16">
         <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-white/10 blur-3xl animate-blob" />
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-black/10 blur-3xl animate-blob-delay" />
         
         <div className="relative mx-auto max-w-[1200px] px-6 lg:px-12">
           <div className="flex flex-col lg:flex-row gap-12 items-center">
             <div className="flex-1">
-              <div className="max-w-2xl pt-4 md:pt-8 mb-12 lg:mb-0">
+              <div className="max-w-2xl mb-12 lg:mb-0">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white/90 text-sm font-semibold mb-6 border border-white/10 backdrop-blur-sm">
                 <span className="w-2 h-2 rounded-full bg-[#ca1254]" />
                 HLTAID009 Provide cardiopulmonary resuscitation
