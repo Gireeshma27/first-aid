@@ -56,7 +56,7 @@ export function TrustBadgesStrip() {
   }, [animate])
 
   return (
-    <section className="relative overflow-hidden bg-white border-y border-gray-100">
+    <section className="relative overflow-hidden bg-white border-b border-gray-100">
       {/* Left fade */}
       <div className="absolute left-0 top-0 bottom-0 w-24 md:w-40 z-10 pointer-events-none bg-gradient-to-r from-white to-transparent" />
       {/* Right fade */}

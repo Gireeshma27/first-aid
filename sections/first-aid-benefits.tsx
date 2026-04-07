@@ -1,7 +1,7 @@
 "use client"
 
 import { useRef, useEffect, useState } from "react"
-import { Stethoscope, HandHeart, Home, ArrowRight, CheckCheck } from "lucide-react"
+import { Stethoscope, HandHeart, Home } from "lucide-react"
 
 const benefits = [
   {
@@ -38,154 +38,71 @@ export function FirstAidBenefitsSection() {
           observer.disconnect()
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.08 }
     )
     observer.observe(el)
     return () => observer.disconnect()
   }, [])
 
   return (
-    <section ref={sectionRef} className="relative py-20 md:py-28 bg-white overflow-hidden">
-      {/* Decorative large watermark number */}
-      <div className="absolute -right-16 top-8 text-[280px] md:text-[400px] font-black text-[#3b3f69]/[0.02] leading-none select-none pointer-events-none">
-        ?
-      </div>
-
+    <section
+      ref={sectionRef}
+      className="bg-white pt-10 pb-20 md:pt-12 md:pb-28"
+    >
       <div className="mx-auto max-w-6xl px-5 lg:px-8">
-        {/* ─── Top: Heading ─── */}
-        <div
-          className={`mb-16 md:mb-20 max-w-2xl transition-all duration-700 ease-out ${
-            visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+        
+        {/* Header Section */}
+        <div 
+          className={`flex flex-col items-center text-center mb-12 lg:mb-16 transition-all duration-700 ease-out ${
+            visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <p className="text-[#ca1254] font-bold text-xs uppercase tracking-[0.2em] mb-4">
-            Why Choose Us
-          </p>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-[#1a1a2e] leading-[1.1] mb-5">
+          <h2 className="text-3xl md:text-4xl lg:text-[40px] font-extrabold text-[#1a1a2e] mb-5">
             Why Choose First Aid{" "}
             <span className="text-[#ca1254]">Training?</span>
           </h2>
-          <p className="text-gray-500 text-base md:text-lg leading-relaxed">
-            Discover the key benefits of investing in professional first aid
-            training for yourself or your team.
+          <p className="text-gray-500 text-[15px] md:text-[17px] max-w-[650px] mx-auto leading-relaxed">
+            Discover the key benefits of investing in professional first aid training for yourself or your team.
           </p>
         </div>
 
-        {/* ─── Main: 2-column split ─── */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
-          {/* LEFT — Featured big card */}
-          <div
-            className={`transition-all duration-700 ease-out delay-100 ${
-              visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-            }`}
-          >
-            <div className="relative rounded-3xl overflow-hidden bg-[#3b3f69] p-10 md:p-12 min-h-[380px] flex flex-col justify-between">
-              {/* Pattern */}
+        {/* Benefits Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-6 lg:mb-8">
+          {benefits.map((benefit, index) => {
+            const Icon = benefit.icon
+            return (
               <div
-                className="absolute inset-0 opacity-[0.05] pointer-events-none"
-                style={{
-                  backgroundImage:
-                    "radial-gradient(circle, rgba(255,255,255,0.6) 1px, transparent 1px)",
-                  backgroundSize: "28px 28px",
-                }}
-              />
-              {/* Glow */}
-              <div className="absolute -bottom-10 -right-10 w-60 h-60 rounded-full bg-[#ca1254]/20 blur-[80px] pointer-events-none" />
-
-              <div className="relative z-10">
-                <div className="w-16 h-16 rounded-2xl bg-white/10 border border-white/10 flex items-center justify-center mb-8">
-                  <CheckCheck className="w-8 h-8 text-white" />
+                key={benefit.title}
+                className={`bg-[#f9f9f9] rounded-2xl p-8 lg:p-10 flex flex-col transition-all duration-700 ease-out ${
+                  visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+                }`}
+                style={{ transitionDelay: `${100 + index * 100}ms` }}
+              >
+                <div className="mb-6">
+                  <Icon className="w-[34px] h-[34px] text-[#ca1254]" strokeWidth={2.5} />
                 </div>
-                <h3 className="text-2xl md:text-3xl font-bold text-white leading-snug mb-4">
-                  Life-saving training.<br />Be ready when it matters most.
+                <h3 className="text-lg lg:text-[19px] font-bold text-[#1a1a2e] mb-3 leading-snug">
+                  {benefit.title}
                 </h3>
-                <p className="text-white/60 text-[15px] leading-relaxed mb-8 max-w-sm">
-                  Our nationally accredited programs are designed to give you real skills for real emergencies — delivered by registered nurses.
+                <p className="text-[15px] lg:text-[16px] text-gray-500 leading-relaxed font-medium">
+                  {benefit.description}
                 </p>
               </div>
-
-              <div className="relative z-10">
-                <a
-                  href="/book-training"
-                  className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-[#ca1254] text-white text-sm font-bold hover:bg-[#e91e63] transition-colors duration-300 shadow-lg shadow-[#ca1254]/30"
-                >
-                  Book Training
-                  <ArrowRight className="w-4 h-4" />
-                </a>
-              </div>
-            </div>
-          </div>
-
-          {/* RIGHT — Numbered benefit list */}
-          <div className="flex flex-col gap-0">
-            {benefits.map((benefit, index) => {
-              const Icon = benefit.icon
-              return (
-                <div
-                  key={benefit.title}
-                  className={`group transition-all duration-700 ease-out ${
-                    visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-                  }`}
-                  style={{ transitionDelay: `${200 + index * 150}ms` }}
-                >
-                  <div className="flex gap-5 md:gap-6 py-7 border-b border-gray-100 last:border-b-0">
-                    {/* Number */}
-                    <div className="flex-shrink-0">
-                      <span className="text-4xl md:text-5xl font-extrabold text-[#3b3f69]/[0.08] leading-none select-none">
-                        0{index + 1}
-                      </span>
-                    </div>
-
-                    {/* Content */}
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-3 mb-2">
-                        <div
-                          className="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0 transition-all duration-300 group-hover:scale-110"
-                          style={{
-                            background:
-                              index === 1
-                                ? "rgba(202,18,84,0.08)"
-                                : "rgba(59,63,105,0.06)",
-                          }}
-                        >
-                          <Icon
-                            className="w-[18px] h-[18px]"
-                            style={{
-                              color:
-                                index === 1 ? "#ca1254" : "#3b3f69",
-                            }}
-                          />
-                        </div>
-                        <h3 className="text-base md:text-lg font-bold text-[#1a1a2e] leading-tight">
-                          {benefit.title}
-                        </h3>
-                      </div>
-                      <p className="text-[14px] md:text-[15px] text-gray-500 leading-relaxed pl-12">
-                        {benefit.description}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              )
-            })}
-
-            {/* Bottom link */}
-            <div
-              className={`pt-6 transition-all duration-700 ease-out ${
-                visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-              }`}
-              style={{ transitionDelay: "700ms" }}
-            >
-              <a
-                href="/services"
-                className="inline-flex items-center gap-2 text-sm font-bold text-[#ca1254] hover:gap-3 transition-all duration-300"
-              >
-                Explore all our courses
-                <ArrowRight className="w-4 h-4" />
-              </a>
-            </div>
-          </div>
+            )
+          })}
         </div>
+
+        {/* Bottom Banner */}
+        <div 
+          className={`bg-[#ca1254] rounded-2xl p-5 md:p-6 text-center transition-all duration-700 ease-out delay-400 ${
+            visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+        >
+          <p className="text-white text-[15px] md:text-[17px]">
+            <span className="font-bold">This is life-saving training.</span> Be ready when it matters most.
+          </p>
+        </div>
+
       </div>
     </section>
   )

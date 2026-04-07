@@ -107,13 +107,12 @@ function ServiceCard({
   accent: string
 }) {
   return (
-    <div className="group relative flex-shrink-0 w-[300px] sm:w-[330px] md:w-[350px]">
+    <div className="group relative flex-shrink-0 w-[300px] sm:w-[330px] md:w-[350px] self-stretch">
       <div
-        className="relative h-full rounded-3xl overflow-hidden transition-all duration-500 hover:-translate-y-2"
+        className="relative h-full flex flex-col rounded-3xl overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)]"
         style={{
           background: "#fff",
-          boxShadow: "0 4px 20px rgba(0,0,0,0.06)",
-          border: "1px solid rgba(0,0,0,0.06)",
+          border: "1px solid rgba(0,0,0,0.04)",
         }}
       >
         {/* Image area */}
@@ -150,22 +149,24 @@ function ServiceCard({
         </div>
 
         {/* Content area */}
-        <div className="p-6 md:p-7">
+        <div className="p-6 md:p-7 flex flex-col flex-1">
           <h3 className="text-[15px] md:text-base font-bold text-[#1a1a2e] leading-snug mb-2.5 line-clamp-2">
             {title}
           </h3>
-          <p className="text-[13px] text-gray-500 leading-relaxed line-clamp-3 mb-5">
+          <p className="text-[13px] text-gray-500 leading-relaxed line-clamp-3">
             {description}
           </p>
 
-          <Link
-            href={link}
-            className="inline-flex items-center gap-2 text-sm font-bold transition-all duration-300 group-hover:gap-3"
-            style={{ color: accent }}
-          >
-            Learn More
-            <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-          </Link>
+          <div className="mt-auto pt-5">
+            <Link
+              href={link}
+              className="inline-flex items-center gap-2 text-sm font-bold transition-all duration-300 group-hover:gap-3"
+              style={{ color: accent }}
+            >
+              Learn More
+              <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+            </Link>
+          </div>
         </div>
 
         {/* Bottom accent strip */}
@@ -336,7 +337,7 @@ const ScrollingRow = forwardRef<ScrollingRowHandle, { items: typeof servicesData
         onTouchMove={onTouchMove}
         onTouchEnd={onTouchEnd}
       >
-        <div ref={trackRef} className="flex gap-7 will-change-transform" style={{ width: "max-content" }}>
+        <div ref={trackRef} className="flex items-stretch gap-7 will-change-transform" style={{ width: "max-content" }}>
           {duplicated.map((service, i) => (
             <ServiceCard key={`${service.title}-${i}`} {...service} />
           ))}
@@ -356,14 +357,10 @@ export function ServicesSection() {
 
   return (
     <section
-      className="py-16 md:py-24 relative overflow-hidden"
-      style={{
-        background: "linear-gradient(180deg, #ffffff 0%, #f8f9fc 100%)",
-      }}
+      className="pt-8 pb-16 md:pt-10 md:pb-24 relative overflow-hidden bg-white"
     >
-      {/* Subtle geometric decoration */}
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#3b3f69]/10 to-transparent" />
-      <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#ca1254]/10 to-transparent" />
+      {/* Subtle top separator */}
+      <div className="absolute top-0 left-0 w-full h-px bg-gray-100" />
 
       {/* Header */}
       <div className="relative z-10 mx-auto max-w-[1200px] px-4 lg:px-8 mb-14">
@@ -416,7 +413,7 @@ export function ServicesSection() {
         />
         <div
           className="absolute right-0 top-0 bottom-0 w-20 md:w-32 z-10 pointer-events-none"
-          style={{ background: "linear-gradient(to left, #f8f9fc, transparent)" }}
+          style={{ background: "linear-gradient(to left, #ffffff, transparent)" }}
         />
 
         <ScrollingRow ref={row1Ref} items={servicesData} direction="left" />

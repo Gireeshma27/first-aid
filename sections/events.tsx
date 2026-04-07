@@ -54,7 +54,6 @@ export function EventsSection() {
                 loading="eager"
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-[#222544]/60" />
             </div>
             {/* 24/7 badge */}
             <div className="absolute -bottom-5 -right-5 bg-[#ca1254] text-white rounded-2xl p-5 shadow-xl hidden md:block">
