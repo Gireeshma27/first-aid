@@ -73,15 +73,15 @@ export function FirstAidBenefitsSection() {
             return (
               <div
                 key={benefit.title}
-                className={`bg-[#f9f9f9] rounded-2xl p-8 lg:p-10 flex flex-col transition-all duration-700 ease-out ${
+                className={`bg-[#f9f9f9] rounded-2xl p-7 lg:p-8 flex flex-col transition-all duration-700 ease-out ${
                   visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                 }`}
                 style={{ transitionDelay: `${100 + index * 100}ms` }}
               >
-                <div className="mb-6">
+                <div className="mb-5">
                   <Icon className="w-[34px] h-[34px] text-[#ca1254]" strokeWidth={2.5} />
                 </div>
-                <h3 className="text-lg lg:text-[19px] font-bold text-[#1a1a2e] mb-3 leading-snug">
+                <h3 className="text-[17px] lg:text-[18px] font-bold text-[#1a1a2e] mb-3 leading-snug tracking-tight lg:whitespace-nowrap">
                   {benefit.title}
                 </h3>
                 <p className="text-[15px] lg:text-[16px] text-gray-500 leading-relaxed font-medium">

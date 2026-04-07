@@ -71,7 +71,7 @@ export function BookingSection() {
               </div>
               <div>
                 <h4 className="font-semibold text-white mb-1">Email Us</h4>
-                <p className="text-white/60">info@firstaidnetworkaustralia.com.au</p>
+                <p className="text-white/60">admin@firstaidnetworkaustralia.com.au</p>
               </div>
             </div>
             <div className="flex items-start gap-4 group">

@@ -22,7 +22,7 @@ const contactMethods = [
     icon: Mail,
     title: "Email",
     description: "Send us a message anytime",
-    value: "info@firstaidnetworkaustralia.com.au",
+    value: "admin@firstaidnetworkaustralia.com.au",
     subtext: "We'll respond within 24 hours",
   },
   {
@@ -44,7 +44,7 @@ const contactMethods = [
 const faqs = [
   {
     question: "How do I book a training course?",
-    answer: "You can book training by filling out the contact form below, calling us on (02) 9627 2659, or emailing info@firstaidnetworkaustralia.com.au. We'll discuss your requirements and arrange a suitable date and location.",
+    answer: "You can book training by filling out the contact form below, calling us on (02) 9627 2659, or emailing admin@firstaidnetworkaustralia.com.au. We'll discuss your requirements and arrange a suitable date and location.",
   },
   {
     question: "Do you offer on-site training?",

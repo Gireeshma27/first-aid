@@ -277,8 +277,8 @@ export function Hero() {
         ))}
 
         {/* ── Main grid ── */}
-        <div className="relative mx-auto max-w-[1200px] px-5 lg:px-10 pt-[28px] pb-[16px] md:pt-[36px] md:pb-[20px]" style={{ zIndex: 3 }}>
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="relative mx-auto max-w-[1240px] px-5 lg:px-10 pt-[28px] pb-[16px] md:pt-[36px] md:pb-[20px]" style={{ zIndex: 3 }}>
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-10 items-center">
 
             {/* ── LEFT ── */}
             <div className="flex flex-col gap-6">
@@ -335,7 +335,7 @@ export function Hero() {
               <div className="img-glow-bg" />
 
               {/* Gradient-border frame */}
-              <div className="img-frame w-full max-w-[560px]" style={{ position: "relative", zIndex: 1 }}>
+              <div className="img-frame w-full max-w-[620px]" style={{ position: "relative", zIndex: 1 }}>
                 <div className="img-frame-inner">
                   <div className="relative aspect-[4/3]">
                     <Image

@@ -113,13 +113,13 @@ export async function POST(req: NextRequest) {
               <tr>
                 <td style="padding: 10px 12px; vertical-align: top; width: 50%;">
                   <div style="background: #ffffff; border: 1px solid #e5e5e5; border-radius: 8px; padding: 14px 16px;">
-                    <p style="margin: 0 0 4px; font-size: 13px; font-weight: 700; color: #333333;">🧪 Drug &amp; Alcohol Testing</p>
+                    <p style="margin: 0 0 4px; font-size: 13px; font-weight: 700; color: #333333;">🔍 Drug &amp; Alcohol Testing</p>
                     <p style="margin: 0; font-size: 12px; color: #666666; line-height: 1.5;">Workplace drug and alcohol testing services compliant with Australian standards.</p>
                   </div>
                 </td>
                 <td style="padding: 10px 12px; vertical-align: top; width: 50%;">
                   <div style="background: #ffffff; border: 1px solid #e5e5e5; border-radius: 8px; padding: 14px 16px;">
-                    <p style="margin: 0 0 4px; font-size: 13px; font-weight: 700; color: #333333;">🚑 Event Medical Services</p>
+                    <p style="margin: 0 0 4px; font-size: 13px; font-weight: 700; color: #333333;">🏥 Event Medical Services</p>
                     <p style="margin: 0; font-size: 12px; color: #666666; line-height: 1.5;">Professional event medical coverage for events of all sizes.</p>
                   </div>
                 </td>
@@ -127,20 +127,20 @@ export async function POST(req: NextRequest) {
               <tr>
                 <td style="padding: 10px 12px; vertical-align: top; width: 50%;">
                   <div style="background: #ffffff; border: 1px solid #e5e5e5; border-radius: 8px; padding: 14px 16px;">
-                    <p style="margin: 0 0 4px; font-size: 13px; font-weight: 700; color: #333333;">💊 Medicine &amp; Onsite Support</p>
+                    <p style="margin: 0 0 4px; font-size: 13px; font-weight: 700; color: #333333;">🩺 Medicine &amp; Onsite Support</p>
                     <p style="margin: 0; font-size: 12px; color: #666666; line-height: 1.5;">Onsite medical support and medicine management for your workplace.</p>
                   </div>
                 </td>
                 <td style="padding: 10px 12px; vertical-align: top; width: 50%;">
                   <div style="background: #ffffff; border: 1px solid #e5e5e5; border-radius: 8px; padding: 14px 16px;">
-                    <p style="margin: 0 0 4px; font-size: 13px; font-weight: 700; color: #333333;">🎯 Custom &amp; Tailored Training</p>
+                    <p style="margin: 0 0 4px; font-size: 13px; font-weight: 700; color: #333333;">🎓 Custom &amp; Tailored Training</p>
                     <p style="margin: 0; font-size: 12px; color: #666666; line-height: 1.5;">Bespoke training programs designed around your team's specific needs.</p>
                   </div>
                 </td>
               </tr>
             </table>
             <p style="margin: 12px 0 0; text-align: center;">
-              <a href="https://firstaidnetworkaustralia.com.au/services" style="color: #ca1254; font-size: 13px; font-weight: 600; text-decoration: none;">View all services →</a>
+              <a href="https://firstaidnetworkaustralia.com.au/" style="color: #ca1254; font-size: 13px; font-weight: 600; text-decoration: none;">For more details →</a>
             </p>
           </div>
           <p style="color: #333333; font-size: 15px; line-height: 1.6; margin-bottom: 8px;">
@@ -148,7 +148,7 @@ export async function POST(req: NextRequest) {
           </p>
           <p style="color: #333333; font-size: 14px; line-height: 1.8; margin-bottom: 24px;">
             📞 <a href="tel:0296272659" style="color: #ca1254; text-decoration: none;">(02) 9627 2659</a><br/>
-            ✉️ <a href="mailto:info@firstaidnetworkaustralia.com.au" style="color: #ca1254; text-decoration: none;">info@firstaidnetworkaustralia.com.au</a>
+            ✉️ <a href="mailto:admin@firstaidnetworkaustralia.com.au" style="color: #ca1254; text-decoration: none;">admin@firstaidnetworkaustralia.com.au</a>
           </p>
           <p style="color: #333333; font-size: 15px; line-height: 1.6;">
             Warm regards,<br/>

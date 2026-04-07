@@ -121,12 +121,6 @@ export function Footer() {
             </h3>
             <ul className="space-y-5">
               <li className="flex items-start gap-3">
-                <span className="text-[#ca1254] font-bold text-xs mt-0.5 w-4 shrink-0">A:</span>
-                <span className="text-sm text-white leading-relaxed">
-                  Suite 226, 2–8 Brookhollow Avenue, Norwest NSW 2153
-                </span>
-              </li>
-              <li className="flex items-start gap-3">
                 <span className="text-[#ca1254] font-bold text-xs mt-0.5 w-4 shrink-0">P:</span>
                 <a
                   href="tel:0296272659"
@@ -138,10 +132,10 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <span className="text-[#ca1254] font-bold text-xs mt-0.5 w-4 shrink-0">E:</span>
                 <a
-                  href="mailto:info@firstaidnetworkaustralia.com.au"
+                  href="mailto:admin@firstaidnetworkaustralia.com.au"
                   className="text-sm text-white hover:text-white transition-colors duration-200 break-all"
                 >
-                  info@firstaidnetworkaustralia.com.au
+                  admin@firstaidnetworkaustralia.com.au
                 </a>
               </li>
             </ul>
