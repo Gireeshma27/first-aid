@@ -349,65 +349,39 @@ export function Hero() {
                     <div className="absolute inset-0"
                       style={{ background: "linear-gradient(to top, rgba(34,37,68,0.65) 0%, rgba(34,37,68,0.1) 45%, transparent 100%)" }} />
 
-                    {/* "Live" label inside image */}
-                    <div className="absolute bottom-4 left-4">
-                      <div className="img-label">
-                        <span className="ping-dot relative inline-flex h-1.5 w-1.5 rounded-full bg-[#ca1254]" />
-                        <span className="text-white/75 text-[10px] font-semibold uppercase tracking-widest">
-                          Live Training Sessions
-                        </span>
-                      </div>
-                    </div>
-
-                    {/* Rating chip inside image — top right */}
-                    <div className="absolute top-4 right-4">
-                      <div className="img-label gap-1.5">
-                        {[...Array(5)].map((_, i) => (
-                          <svg key={i} className="w-3 h-3" fill="#f59e0b" viewBox="0 0 20 20">
-                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                          </svg>
-                        ))}
-                        <span className="text-white/70 text-[10px] font-semibold ml-0.5">5.0</span>
-                      </div>
-                    </div>
-
-                    {/* Badge — Flexible (top-left of image) */}
-                    <div className="absolute top-3 left-3 lg:top-4 lg:left-4">
+                    {/* Badge — Flexible Delivery (top-right) */}
+                    <div className="absolute top-3 right-3 lg:top-4 lg:right-4 z-10">
                       <div
                         style={{
                           background: "#F5F5F5",
                           borderRadius: "14px",
-                          padding: "8px 10px",
-                          display: "flex",
-                          alignItems: "center",
-                          gap: "8px",
                           boxShadow: "0 10px 30px rgba(0,0,0,0.15), 0 0 0 1px rgba(0,0,0,0.04)",
                         }}
-                        className="lg:!p-[10px_14px] lg:!gap-[10px]"
+                        className="flex items-center gap-[6px] p-[6px_8px] lg:gap-[10px] lg:p-[10px_14px]"
                       >
                         <div className="badge-icon-wrap" style={{ background: "rgba(203,21,78,0.1)" }}>
-                          <svg style={{ width: 16, height: 16 }} fill="none" stroke="#ca1254" strokeWidth={2.5} viewBox="0 0 24 24">
+                          <svg className="w-3 h-3 lg:w-4 lg:h-4" fill="none" stroke="#ca1254" strokeWidth={2.5} viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                           </svg>
                         </div>
                         <div>
-                          <p className="text-[0.68rem] lg:text-[0.78rem]" style={{ fontWeight: 700, color: "#333", lineHeight: 1.3 }}>Flexible Delivery</p>
-                          <p className="text-[0.58rem] lg:text-[0.64rem]" style={{ color: "#999", marginTop: 2, fontWeight: 500 }}>On-site & Online</p>
+                          <p className="text-[0.6rem] lg:text-[0.78rem]" style={{ fontWeight: 700, color: "#333", lineHeight: 1.3 }}>Flexible Delivery</p>
+                          <p className="text-[0.5rem] lg:text-[0.64rem]" style={{ color: "#999", marginTop: 2, fontWeight: 500 }}>On-site & Online</p>
                         </div>
                       </div>
                     </div>
 
-                    {/* Badge — Accredited (bottom-right of image) */}
-                    <div className="absolute bottom-3 right-3 lg:bottom-4 lg:right-4">
-                      <div className="badge-white">
+                    {/* Badge — Accredited (bottom-left) */}
+                    <div className="absolute bottom-3 left-3 lg:bottom-4 lg:left-4 z-10">
+                      <div className="badge-white !p-[6px_10px] !gap-[6px] lg:!p-4 lg:!gap-3">
                         <div className="badge-icon-wrap" style={{ background: "rgba(203,21,78,0.1)" }}>
-                          <svg className="w-4 h-4 lg:w-5 lg:h-5" fill="none" stroke="#ca1254" strokeWidth={2.5} viewBox="0 0 24 24">
+                          <svg className="w-3 h-3 lg:w-5 lg:h-5" fill="none" stroke="#ca1254" strokeWidth={2.5} viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                           </svg>
                         </div>
                         <div>
-                          <p className="text-[0.72rem] lg:text-[0.83rem]" style={{ fontWeight: 700, color: "#222544", lineHeight: 1.3 }}>Accredited Training</p>
-                          <p className="text-[0.58rem] lg:text-[0.68rem]" style={{ color: "#aaa", marginTop: 3, fontWeight: 500 }}>RTO Certified Programs</p>
+                          <p className="text-[0.6rem] lg:text-[0.83rem]" style={{ fontWeight: 700, color: "#222544", lineHeight: 1.3 }}>Accredited Training</p>
+                          <p className="text-[0.5rem] lg:text-[0.68rem]" style={{ color: "#aaa", marginTop: 2, fontWeight: 500 }}>RTO Certified Programs</p>
                         </div>
                       </div>
                     </div>
