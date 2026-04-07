@@ -1,110 +1,110 @@
 "use client"
 
+import { useRef, useEffect, useCallback } from "react"
 import Image from "next/image"
-import { ShieldCheck, Award, CheckCircle2 } from "lucide-react"
+import { ShieldCheck, Award, CheckCircle } from "lucide-react"
 
-const badges = [
+/**
+ * Infinite scrolling ticker showing trust credentials.
+ * Each "tile" is a horizontal chip with icon + text,
+ * all flowing left continuously in a marquee.
+ */
+
+const items = [
   {
     type: "icon" as const,
     icon: ShieldCheck,
     label: "ASQA Regulated",
     sublabel: "Quality Assured Training",
-    color: "#3b3f69",
   },
   {
     type: "icon" as const,
     icon: Award,
     label: "In Partnership",
     sublabel: "Healthcorp RTO 91222",
-    color: "#3b3f69",
   },
   {
     type: "image" as const,
     icon: null,
     label: "Nationally Recognised Training",
     sublabel: "Government Recognised Provider",
-    color: "#ca1254",
   },
 ]
 
+// Repeat enough times so the strip is always wider than the viewport
+const repeated = [...items, ...items, ...items, ...items, ...items, ...items]
+
 export function TrustBadgesStrip() {
+  const trackRef = useRef<HTMLDivElement>(null)
+  const posRef = useRef(0)
+  const animRef = useRef<number>(0)
+  const speed = 0.6
+
+  const animate = useCallback(() => {
+    const track = trackRef.current
+    if (!track) return
+    posRef.current -= speed
+    const setW = track.scrollWidth / 2
+    if (Math.abs(posRef.current) >= setW) posRef.current += setW
+    track.style.transform = `translate3d(${posRef.current}px, 0, 0)`
+    animRef.current = requestAnimationFrame(animate)
+  }, [])
+
+  useEffect(() => {
+    animRef.current = requestAnimationFrame(animate)
+    return () => cancelAnimationFrame(animRef.current)
+  }, [animate])
+
   return (
-    <section className="relative bg-white overflow-hidden">
-      {/* Subtle background pattern */}
-      <div className="absolute inset-0 opacity-[0.02]" style={{
-        backgroundImage: "transparent",
-        backgroundSize: "24px 24px",
-      }} />
+    <section className="relative overflow-hidden bg-white border-b border-gray-100">
+      {/* Left fade */}
+      <div className="absolute left-0 top-0 bottom-0 w-24 md:w-40 z-10 pointer-events-none bg-gradient-to-r from-white to-transparent" />
+      {/* Right fade */}
+      <div className="absolute right-0 top-0 bottom-0 w-24 md:w-40 z-10 pointer-events-none bg-gradient-to-l from-white to-transparent" />
 
-      <div className="relative mx-auto max-w-5xl px-5 lg:px-10 py-8 md:py-10">
-        <div className="flex items-center justify-center gap-3 mb-8">
-          <div className="h-px w-12 bg-[#3b3f69]" />
-          <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#3b3f69]">
-            Trusted &amp; Accredited
-          </p>
-          <div className="h-px w-12 bg-[#3b3f69]" />
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 md:gap-6 max-w-3xl mx-auto">
-          {badges.map((badge, i) => {
-            const isPink = badge.color === "#ca1254"
-            return (
-              <div
-                key={i}
-                className={`group relative flex flex-col items-center gap-4 py-7 px-5 rounded-2xl border transition-all duration-300 hover:-translate-y-0.5 cursor-default ${
-                  isPink
-                    ? "bg-[#ca1254]/[0.05] border-[#ca1254]/20 shadow-[0_2px_16px_rgba(202,18,84,0.06)] hover:shadow-[0_8px_30px_rgba(202,18,84,0.12)] hover:border-[#ca1254]/30"
-                    : "bg-[#3b3f69]/[0.04] border-[#3b3f69]/12 shadow-[0_2px_12px_rgba(59,63,105,0.04)] hover:shadow-[0_8px_30px_rgba(59,63,105,0.1)] hover:border-[#3b3f69]/20"
-                }`}
-              >
-              {/* Verified tick */}
-              <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <CheckCircle2 className={`w-4 h-4 ${isPink ? "text-[#ca1254]" : "text-[#3b3f69]"}`} />
-              </div>
-
-              {/* Icon container */}
-              <div
-                className="relative w-[72px] h-[72px] rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-105"
-                style={{
-                  background: isPink
-                    ? "rgba(202,18,84,0.1)"
-                    : "rgba(59,63,105,0.08)",
-                  border: isPink
-                    ? "1.5px solid rgba(202,18,84,0.2)"
-                    : "1.5px solid rgba(59,63,105,0.12)",
-                }}
-              >
-                {badge.type === "image" ? (
+      <div className="py-5 md:py-6">
+        <div
+          ref={trackRef}
+          className="flex items-center gap-10 md:gap-14 will-change-transform"
+          style={{ width: "max-content" }}
+        >
+          {repeated.map((item, i) => (
+            <div
+              key={i}
+              className="flex items-center gap-3 flex-shrink-0 select-none"
+            >
+              {/* Icon / image */}
+              <div className="w-10 h-10 rounded-lg bg-[#3b3f69]/[0.07] flex items-center justify-center flex-shrink-0">
+                {item.type === "image" ? (
                   <Image
                     src="/images/nationally-recognised.svg"
-                    alt="Nationally Recognised Training"
-                    width={38}
-                    height={38}
+                    alt="NRT"
+                    width={22}
+                    height={22}
                     className="object-contain"
                   />
-                ) : badge.icon ? (
-                  <badge.icon className="w-7 h-7 stroke-[1.6]" style={{ color: badge.color }} />
+                ) : item.icon ? (
+                  <item.icon className="w-5 h-5 text-[#3b3f69]" />
                 ) : null}
               </div>
 
               {/* Text */}
-              <div className="text-center">
-                <p className={`text-sm font-bold leading-snug ${isPink ? "text-[#ca1254]" : "text-[#3b3f69]"}`}>
-                  {badge.label}
-                </p>
-                <p className="text-[13px] font-medium text-[#777] mt-1.5 leading-relaxed">
-                  {badge.sublabel}
-                </p>
+              <div className="flex flex-col leading-none">
+                <span className="text-[13px] font-bold text-[#1a1a2e] whitespace-nowrap">
+                  {item.label}
+                </span>
+                <span className="text-[11px] text-gray-400 font-medium whitespace-nowrap mt-0.5">
+                  {item.sublabel}
+                </span>
               </div>
 
-              {/* Bottom accent line — always visible */}
-              <div
-                className="absolute bottom-0 left-1/2 -translate-x-1/2 h-[2.5px] rounded-full transition-all duration-300 w-10 group-hover:w-16"
-                style={{ background: badge.color }}
-              />
+              {/* Verified tick */}
+              <CheckCircle className="w-4 h-4 text-[#ca1254] flex-shrink-0 opacity-60" />
+
+              {/* Separator dot */}
+              <span className="w-1 h-1 rounded-full bg-gray-300 flex-shrink-0 ml-4" />
             </div>
-            )
-          })}
+          ))}
         </div>
       </div>
     </section>

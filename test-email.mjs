@@ -1,10 +1,10 @@
 /**
- * Test script — Gmail API booking email
+ * Test script — SendGrid booking email
  * Run: node test-email.mjs
  */
 
 import { readFileSync } from "fs"
-import { google } from "googleapis"
+import sgMail from "@sendgrid/mail"
 
 // Manually parse .env.local
 const envLines = readFileSync(".env.local", "utf-8").split("\n")
@@ -19,56 +19,71 @@ for (const line of envLines) {
   env[key] = value
 }
 
-const { GMAIL_USER, GMAIL_CLIENT_ID, GMAIL_CLIENT_SECRET, GMAIL_REFRESH_TOKEN } = env
+const { SENDGRID_API_KEY } = env
 
-if (!GMAIL_USER || !GMAIL_CLIENT_ID || !GMAIL_CLIENT_SECRET || !GMAIL_REFRESH_TOKEN) {
-  console.error("❌  One or more Gmail API credentials are missing in .env.local.")
+if (!SENDGRID_API_KEY) {
+  console.error("❌  SENDGRID_API_KEY is missing in .env.local.")
   process.exit(1)
 }
 
-console.log(`\n📧  Sending test email via Gmail API from: ${GMAIL_USER}\n`)
+sgMail.setApiKey(SENDGRID_API_KEY)
 
-const auth = new google.auth.OAuth2(GMAIL_CLIENT_ID, GMAIL_CLIENT_SECRET)
-auth.setCredentials({ refresh_token: GMAIL_REFRESH_TOKEN })
-const gmail = google.gmail({ version: "v1", auth })
+console.log(`\n📧  Sending test email via SendGrid to: Admin@firstaidnetworkaustralia.com.au\n`)
 
-const rawLines = [
-  `From: "First Aid Network Australia" <${GMAIL_USER}>`,
-  `To: admin@firstaidnetworkaustralia.com.au`,
-  `Subject: ✅ Test — Gmail API Email Working`,
-  `MIME-Version: 1.0`,
-  `Content-Type: text/plain; charset=UTF-8`,
-  ``,
-  `This is a test email from the First Aid Network Australia booking system.`,
-  ``,
-  `If you received this, the Gmail API configuration is working correctly.`,
-  ``,
-  `Name: Test User`,
-  `Organisation: Test Org`,
-  `Phone: 0400 000 000`,
-  `Email: test@example.com`,
-  `Message: This is a test submission.`,
-]
+const msg = {
+  to: "Admin@firstaidnetworkaustralia.com.au",
+  from: "Admin@firstaidnetworkaustralia.com.au", // Must be a verified sender in SendGrid
+  subject: "✅ Test — SendGrid Email Working",
+  text: `This is a test email from the First Aid Network Australia booking system.
 
-const raw = Buffer.from(rawLines.join("\r\n"))
-  .toString("base64")
-  .replace(/\+/g, "-")
-  .replace(/\//g, "_")
-  .replace(/=+$/, "")
+If you received this, the SendGrid configuration is working correctly.
+
+Name: Test User
+Organisation: Test Org
+Phone: 0400 000 000
+Email: test@example.com
+Message: This is a test submission.`,
+  html: `
+    <div style="font-family: Inter, Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 32px; background: #ffffff; border: 1px solid #e5e5e5; border-radius: 12px;">
+      <div style="background: #3B3969; padding: 24px 32px; border-radius: 8px; margin-bottom: 32px;">
+        <h1 style="color: #ffffff; margin: 0; font-size: 22px; font-weight: 700;">✅ Test Email - SendGrid Working</h1>
+        <p style="color: rgba(255,255,255,0.75); margin: 8px 0 0; font-size: 14px;">Submitted via firstaidnetworkaustralia.com.au</p>
+      </div>
+      <p style="color: #333333; font-size: 14px;">This is a test email from the First Aid Network Australia booking system.</p>
+      <p style="color: #333333; font-size: 14px;">If you received this, the SendGrid configuration is working correctly.</p>
+      <table style="width: 100%; border-collapse: collapse; margin-top: 24px;">
+        <tr>
+          <td style="padding: 12px 0; border-bottom: 1px solid #f0f0f0; color: #666666; font-size: 14px; width: 40%; font-weight: 600;">Name</td>
+          <td style="padding: 12px 0; border-bottom: 1px solid #f0f0f0; color: #333333; font-size: 14px;">Test User</td>
+        </tr>
+        <tr>
+          <td style="padding: 12px 0; border-bottom: 1px solid #f0f0f0; color: #666666; font-size: 14px; font-weight: 600;">Organisation</td>
+          <td style="padding: 12px 0; border-bottom: 1px solid #f0f0f0; color: #333333; font-size: 14px;">Test Org</td>
+        </tr>
+        <tr>
+          <td style="padding: 12px 0; border-bottom: 1px solid #f0f0f0; color: #666666; font-size: 14px; font-weight: 600;">Phone</td>
+          <td style="padding: 12px 0; border-bottom: 1px solid #f0f0f0; color: #333333; font-size: 14px;">0400 000 000</td>
+        </tr>
+        <tr>
+          <td style="padding: 12px 0; color: #666666; font-size: 14px; font-weight: 600;">Email</td>
+          <td style="padding: 12px 0; color: #333333; font-size: 14px;">test@example.com</td>
+        </tr>
+      </table>
+      <div style="margin-top: 32px; padding: 16px; background: #f9f9f9; border-radius: 8px; text-align: center;">
+        <p style="margin: 0; color: #999999; font-size: 12px;">First Aid Network Australia | Test Email</p>
+      </div>
+    </div>
+  `,
+}
 
 try {
-  const res = await gmail.users.messages.send({
-    userId: "me",
-    requestBody: { raw },
-  })
-  console.log("✅  Email sent successfully via Gmail API!")
-  console.log(`   Message ID: ${res.data.id}`)
+  const response = await sgMail.send(msg)
+  console.log("✅  Email sent successfully via SendGrid!")
+  console.log(`   Status Code: ${response[0].statusCode}`)
 } catch (err) {
   console.error("❌  Failed to send email:")
   console.error(err.message)
-  if (err.message.includes("invalid_grant")) {
-    console.error("\n⚠️   The refresh token is expired or revoked.")
-    console.error("    Regenerate it at: https://developers.google.com/oauthplayground")
-    console.error("    Scope needed: https://www.googleapis.com/auth/gmail.send")
+  if (err.response) {
+    console.error("   Response body:", err.response.body)
   }
 }

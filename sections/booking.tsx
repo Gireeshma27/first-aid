@@ -5,10 +5,13 @@ import { SectionHeader } from "@/components/section-header"
 import { ContactForm } from "@/components/contact-form"
 import { Phone, Mail, Clock, MapPin } from "lucide-react"
 
+
+
+
 export function BookingSection() {
   const ref = useRef<HTMLElement>(null)
 
-  useEffect(() => {
+  useEffect(() => {   
     const el = ref.current
     if (!el) return
     const observer = new IntersectionObserver(
