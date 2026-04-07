@@ -29,6 +29,8 @@ const socialLinks = [
 
 export function Footer() {
   const [email, setEmail] = useState("")
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubscribed, setIsSubscribed] = useState(false)
 
   return (
     <footer
@@ -154,30 +156,56 @@ export function Footer() {
               Subscribe to our newsletter for the latest training updates and health &amp; safety tips.
             </p>
             <form
-              onSubmit={(e) => {
+              onSubmit={async (e) => {
                 e.preventDefault()
-                setEmail("")
+                if (!email) return
+                setIsSubmitting(true)
+                try {
+                  const res = await fetch("/api/subscribe", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ email }),
+                  })
+                  if (!res.ok) {
+                    const data = await res.json().catch(() => ({}))
+                    throw new Error(data.error || "Subscription failed")
+                  }
+                  setIsSubscribed(true)
+                  setEmail("")
+                } catch (err) {
+                  console.error("Subscribe error:", err)
+                  alert("Failed to subscribe. Please try again.")
+                } finally {
+                  setIsSubmitting(false)
+                }
               }}
               className="flex flex-col gap-3"
             >
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your email"
-                required
-                className="w-full px-4 py-3 rounded-xl bg-white/[0.07] border border-white/[0.12] text-sm text-white placeholder:text-white outline-none focus:border-[#ca1254]/50 focus:ring-1 focus:ring-[#ca1254]/30 transition-all duration-200"
-              />
-              <button
-                type="submit"
-                className="w-full px-4 py-3 rounded-xl text-sm font-semibold text-white flex items-center justify-center gap-2 transition-all duration-300 hover:brightness-110 hover:-translate-y-0.5 cursor-pointer"
-                style={{
-                  background: "#ca1254",
-                  boxShadow: "0 4px 14px rgba(202,18,84,0.35)",
-                }}
-              >
-                Subscribe <ArrowRight className="w-3.5 h-3.5" />
-              </button>
+              {isSubscribed ? (
+                <p className="text-sm text-green-400 font-semibold py-3">✓ Thank you for subscribing!</p>
+              ) : (
+                <>
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="Enter your email"
+                    required
+                    className="w-full px-4 py-3 rounded-xl bg-white/[0.07] border border-white/[0.12] text-sm text-white placeholder:text-white outline-none focus:border-[#ca1254]/50 focus:ring-1 focus:ring-[#ca1254]/30 transition-all duration-200"
+                  />
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full px-4 py-3 rounded-xl text-sm font-semibold text-white flex items-center justify-center gap-2 transition-all duration-300 hover:brightness-110 hover:-translate-y-0.5 cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
+                    style={{
+                      background: "#ca1254",
+                      boxShadow: "0 4px 14px rgba(202,18,84,0.35)",
+                    }}
+                  >
+                    {isSubmitting ? "Subscribing..." : (<>Subscribe <ArrowRight className="w-3.5 h-3.5" /></>)}
+                  </button>
+                </>
+              )}
             </form>
           </div>
         </div>

@@ -13,9 +13,23 @@ export function NewsletterSection({ lightTheme = true }: { lightTheme?: boolean 
     e.preventDefault()
     if (!email) return
     setIsSubmitting(true)
-    await new Promise((resolve) => setTimeout(resolve, 800))
-    setIsSubmitting(false)
-    setIsSubmitted(true)
+    try {
+      const res = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      })
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}))
+        throw new Error(data.error || "Subscription failed")
+      }
+      setIsSubmitted(true)
+    } catch (err) {
+      console.error("Subscribe error:", err)
+      alert("Failed to subscribe. Please try again.")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
