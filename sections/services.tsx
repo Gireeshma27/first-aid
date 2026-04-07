@@ -150,10 +150,10 @@ function ServiceCard({
 
         {/* Content area */}
         <div className="p-6 md:p-7 flex flex-col flex-1">
-          <h3 className="text-[15px] md:text-base font-bold text-[#1a1a2e] leading-snug mb-2.5 line-clamp-2">
+          <h3 className="text-base md:text-[17px] font-bold text-[#1a1a2e] leading-snug mb-3 min-h-[44px] md:min-h-[48px] line-clamp-2">
             {title}
           </h3>
-          <p className="text-[13px] text-gray-500 leading-relaxed line-clamp-3">
+          <p className="text-[14px] md:text-[15px] text-gray-500 leading-relaxed line-clamp-3">
             {description}
           </p>
 
@@ -380,7 +380,7 @@ export function ServicesSection() {
             <h2 className="text-3xl md:text-[2.75rem] font-extrabold text-[#1a1a2e] leading-tight tracking-tight mb-4">
               Our Services
             </h2>
-            <p className="text-[15px] md:text-base text-gray-500 leading-relaxed font-medium max-w-2xl mx-auto">
+            <p className="text-base md:text-[18px] text-gray-500 leading-relaxed font-medium max-w-3xl mx-auto">
               Training is delivered by qualified and experienced registered nurses. Upon successful completion, participants will receive a nationally recognised certification.
             </p>
           </div>

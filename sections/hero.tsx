@@ -180,7 +180,7 @@ export function Hero() {
         }
         .img-frame-inner {
           border-radius: 22px;
-          overflow: hidden;
+          overflow: visible;
           position: relative;
         }
         .img-glow-bg {
@@ -277,8 +277,8 @@ export function Hero() {
         ))}
 
         {/* ── Main grid ── */}
-        <div className="relative mx-auto max-w-[1200px] px-5 lg:px-10 pt-[28px] pb-[16px] md:pt-[36px] md:pb-[20px]" style={{ zIndex: 3 }}>
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="relative mx-auto max-w-[1240px] px-5 lg:px-10 pt-[28px] pb-[16px] md:pt-[36px] md:pb-[20px]" style={{ zIndex: 3 }}>
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-10 items-center">
 
             {/* ── LEFT ── */}
             <div className="flex flex-col gap-6">
@@ -329,15 +329,15 @@ export function Hero() {
             </div>
 
             {/* ── RIGHT: Image ── */}
-            <div className="anim-right d3 relative flex justify-center lg:justify-end">
+            <div className="anim-right d3 relative flex justify-center lg:justify-end pb-8 pt-8 lg:pb-12 lg:pt-12">
 
               {/* Glow behind image */}
               <div className="img-glow-bg" />
 
               {/* Gradient-border frame */}
-              <div className="img-frame w-full max-w-[560px]" style={{ position: "relative", zIndex: 1 }}>
+              <div className="img-frame w-full max-w-[620px]" style={{ position: "relative", zIndex: 1 }}>
                 <div className="img-frame-inner">
-                  <div className="relative aspect-[4/3]">
+                  <div className="relative aspect-[4/3] overflow-hidden rounded-[20px]">
                     <Image
                       src="/images/hero aid.png"
                       alt="CPR training session with first aid instructor teaching students"
@@ -349,72 +349,43 @@ export function Hero() {
                     <div className="absolute inset-0"
                       style={{ background: "linear-gradient(to top, rgba(34,37,68,0.65) 0%, rgba(34,37,68,0.1) 45%, transparent 100%)" }} />
 
-                    {/* "Live" label inside image */}
-                    <div className="absolute bottom-4 left-4">
-                      <div className="img-label">
-                        <span className="ping-dot relative inline-flex h-1.5 w-1.5 rounded-full bg-[#ca1254]" />
-                        <span className="text-white/75 text-[10px] font-semibold uppercase tracking-widest">
-                          Live Training Sessions
-                        </span>
+                    {/* Badge — Flexible Delivery (top-right) */}
+                    <div className="absolute top-3 right-3 lg:top-4 lg:right-4 z-10">
+                      <div
+                        style={{
+                          background: "#F5F5F5",
+                          borderRadius: "14px",
+                          boxShadow: "0 10px 30px rgba(0,0,0,0.15), 0 0 0 1px rgba(0,0,0,0.04)",
+                        }}
+                        className="flex items-center gap-[6px] p-[6px_8px] lg:gap-[10px] lg:p-[10px_14px]"
+                      >
+                        <div className="badge-icon-wrap" style={{ background: "rgba(203,21,78,0.1)" }}>
+                          <svg className="w-3 h-3 lg:w-4 lg:h-4" fill="none" stroke="#ca1254" strokeWidth={2.5} viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          </svg>
+                        </div>
+                        <div>
+                          <p className="text-[0.6rem] lg:text-[0.78rem]" style={{ fontWeight: 700, color: "#333", lineHeight: 1.3 }}>Flexible Delivery</p>
+                          <p className="text-[0.5rem] lg:text-[0.64rem]" style={{ color: "#999", marginTop: 2, fontWeight: 500 }}>On-site & Online</p>
+                        </div>
                       </div>
                     </div>
 
-                    {/* Rating chip inside image — top right */}
-                    <div className="absolute top-4 right-4">
-                      <div className="img-label gap-1.5">
-                        {[...Array(5)].map((_, i) => (
-                          <svg key={i} className="w-3 h-3" fill="#f59e0b" viewBox="0 0 20 20">
-                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    {/* Badge — Accredited (bottom-left) */}
+                    <div className="absolute bottom-3 left-3 lg:bottom-4 lg:left-4 z-10">
+                      <div className="badge-white !p-[6px_10px] !gap-[6px] lg:!p-4 lg:!gap-3">
+                        <div className="badge-icon-wrap" style={{ background: "rgba(203,21,78,0.1)" }}>
+                          <svg className="w-3 h-3 lg:w-5 lg:h-5" fill="none" stroke="#ca1254" strokeWidth={2.5} viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                           </svg>
-                        ))}
-                        <span className="text-white/70 text-[10px] font-semibold ml-0.5">5.0</span>
+                        </div>
+                        <div>
+                          <p className="text-[0.6rem] lg:text-[0.83rem]" style={{ fontWeight: 700, color: "#222544", lineHeight: 1.3 }}>Accredited Training</p>
+                          <p className="text-[0.5rem] lg:text-[0.68rem]" style={{ color: "#aaa", marginTop: 2, fontWeight: 500 }}>RTO Certified Programs</p>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-
-              {/* Badge — Accredited (bottom-left) */}
-              <div
-                className="badge-white absolute -bottom-5 -left-4 hidden md:flex anim-float"
-                style={{ animationDelay: "1s", animationDuration: "5.5s", zIndex: 10 }}
-              >
-                <div className="badge-icon-wrap" style={{ background: "rgba(203,21,78,0.1)" }}>
-                  <svg className="w-5 h-5" fill="none" stroke="#ca1254" strokeWidth={2.5} viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <div>
-                  <p style={{ fontWeight: 700, fontSize: "0.83rem", color: "#222544", lineHeight: 1.3 }}>Accredited Training</p>
-                  <p style={{ fontSize: "0.68rem", color: "#aaa", marginTop: 3, fontWeight: 500 }}>RTO Certified Programs</p>
-                </div>
-              </div>
-
-              {/* Badge — Flexible (top-right) */}
-              <div
-                className="absolute -top-4 -right-4 hidden md:flex anim-float"
-                style={{
-                  animationDelay: "2s",
-                  animationDuration: "6s",
-                  zIndex: 10,
-                  background: "#F5F5F5",
-                  borderRadius: "14px",
-                  padding: "10px 14px",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "10px",
-                  boxShadow: "0 10px 30px rgba(0,0,0,0.15), 0 0 0 1px rgba(0,0,0,0.04)",
-                  minWidth: "160px",
-                }}
-              >
-                <div className="badge-icon-wrap" style={{ background: "rgba(203,21,78,0.1)" }}>
-                  <svg style={{ width: 16, height: 16 }} fill="none" stroke="#ca1254" strokeWidth={2.5} viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <div>
-                  <p style={{ fontWeight: 700, fontSize: "0.78rem", color: "#333", lineHeight: 1.3 }}>Flexible Delivery</p>
-                  <p style={{ fontSize: "0.64rem", color: "#999", marginTop: 2, fontWeight: 500 }}>On-site & Online</p>
                 </div>
               </div>
             </div>

@@ -17,13 +17,12 @@ export function ContactForm() {
     const data = new FormData(form)
 
     try {
-      const res = await fetch("/api/send-booking", {
+      const res = await fetch("/api/send-contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           fullName: data.get("fullName"),
           organisation: data.get("organisation"),
-          participants: data.get("participants"),
           phone: data.get("phone"),
           email: data.get("email"),
           message: data.get("message"),
