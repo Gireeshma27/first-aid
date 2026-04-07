@@ -12,7 +12,7 @@ export default function ServicesPage() {
   return (
     <>
       <Navbar />
-      <main className="bg-[#F5F5F5]">
+      <main className="bg-white">
         <div className="pt-8 md:pt-12">
           <ServicesSection />
         </div>

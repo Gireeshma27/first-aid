@@ -116,10 +116,10 @@ function ServiceCard({ title, image, link, overlayColor, buttonTextColor, descri
     <div
       className="group relative rounded-[24px] overflow-hidden flex flex-col flex-shrink-0 w-[320px] sm:w-[360px] md:w-[390px] transition-all duration-500 ease-out hover:-translate-y-3 active:scale-[0.97]"
       style={{
-        background: "rgba(255,255,255,0.08)",
-        border: "1px solid rgba(255,255,255,0.13)",
-        backdropFilter: "blur(12px)",
-        boxShadow: "0 12px 40px -8px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.1)",
+        background: "#f8f8f8",
+        border: "1px solid #e0e0e0",
+        backdropFilter: "none",
+        boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
       }}
     >
       {/* Hover glow border */}
@@ -178,7 +178,7 @@ function ServiceCard({ title, image, link, overlayColor, buttonTextColor, descri
           className="absolute left-0 top-4 bottom-4 w-[3px] rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500"
           style={{ background: accent }}
         />
-        <h3 className="text-[0.97rem] md:text-[1.06rem] font-bold text-white/90 leading-snug tracking-tight group-hover:text-white transition-colors duration-300">
+        <h3 className="text-[0.97rem] md:text-[1.06rem] font-bold text-gray-900 leading-snug tracking-tight group-hover:text-gray-900 transition-colors duration-300">
           {title}
         </h3>
       </div>
@@ -368,9 +368,9 @@ export function ServicesSection() {
 
   return (
     <section
-      className="pt-10 pb-16 md:pt-14 md:pb-20 relative overflow-hidden"
+      className="pt-2 pb-16 md:pt-4 md:pb-20 relative overflow-hidden"
       style={{
-        background: "#3b3f69",
+        background: "#ffffff",
       }}
     >
       {/* Ambient glows */}
@@ -404,10 +404,10 @@ export function ServicesSection() {
               <span className="w-1.5 h-1.5 rounded-full bg-[#ca1254]" />
               What We Offer
             </span>
-            <h2 className="text-3xl md:text-4xl font-semibold text-white leading-tight tracking-tight mb-4">
+            <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 leading-tight tracking-tight mb-4">
               Our Services
             </h2>
-            <p className="text-[1.05rem] text-white/65 leading-relaxed font-medium">
+            <p className="text-[1.05rem] text-gray-600 leading-relaxed font-medium">
               Training is delivered by qualified and experienced registered nurses. Upon successful completion, participants will receive a nationally recognised certification.
             </p>
           </div>
@@ -421,35 +421,35 @@ export function ServicesSection() {
           onClick={() => handleArrow("right")}
           className="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 cursor-pointer"
           style={{
-            background: "rgba(255,255,255,0.08)",
-            border: "1px solid rgba(255,255,255,0.15)",
+            background: "rgba(59,63,105,0.08)",
+            border: "1px solid rgba(59,63,105,0.15)",
             backdropFilter: "blur(12px)",
             boxShadow: "0 8px 32px rgba(0,0,0,0.2)",
           }}
           aria-label="Scroll left"
         >
-          <ChevronLeft className="w-6 h-6 text-white/80" />
+          <ChevronLeft className="w-6 h-6 text-gray-700" />
         </button>
 
         <button
           onClick={() => handleArrow("left")}
           className="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 cursor-pointer"
           style={{
-            background: "rgba(255,255,255,0.08)",
-            border: "1px solid rgba(255,255,255,0.15)",
+            background: "rgba(59,63,105,0.08)",
+            border: "1px solid rgba(59,63,105,0.15)",
             backdropFilter: "blur(12px)",
             boxShadow: "0 8px 32px rgba(0,0,0,0.2)",
           }}
           aria-label="Scroll right"
         >
-          <ChevronRight className="w-6 h-6 text-white/80" />
+          <ChevronRight className="w-6 h-6 text-gray-700" />
         </button>
 
         {/* Edge fade overlays */}
         <div className="absolute left-0 top-0 bottom-0 w-16 md:w-24 z-10 pointer-events-none"
-          style={{ background: "linear-gradient(to right, #3b3f69, transparent)" }} />
+          style={{ background: "linear-gradient(to right, #ffffff, transparent)" }} />
         <div className="absolute right-0 top-0 bottom-0 w-16 md:w-24 z-10 pointer-events-none"
-          style={{ background: "linear-gradient(to left, #3b3f69, transparent)" }} />
+          style={{ background: "linear-gradient(to left, #ffffff, transparent)" }} />
 
         <div className="flex flex-col gap-7">
           <ScrollingRow ref={row1Ref} items={allData} direction="left" />
