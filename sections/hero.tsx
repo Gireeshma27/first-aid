@@ -372,18 +372,18 @@ export function Hero() {
                     </div>
 
                     {/* Badge — Flexible (top-left of image) */}
-                    <div className="absolute top-4 left-4 hidden lg:block">
+                    <div className="absolute top-3 left-3 lg:top-4 lg:left-4">
                       <div
                         style={{
                           background: "#F5F5F5",
                           borderRadius: "14px",
-                          padding: "10px 14px",
+                          padding: "8px 10px",
                           display: "flex",
                           alignItems: "center",
-                          gap: "10px",
+                          gap: "8px",
                           boxShadow: "0 10px 30px rgba(0,0,0,0.15), 0 0 0 1px rgba(0,0,0,0.04)",
-                          minWidth: "160px",
                         }}
+                        className="lg:!p-[10px_14px] lg:!gap-[10px]"
                       >
                         <div className="badge-icon-wrap" style={{ background: "rgba(203,21,78,0.1)" }}>
                           <svg style={{ width: 16, height: 16 }} fill="none" stroke="#ca1254" strokeWidth={2.5} viewBox="0 0 24 24">
@@ -391,23 +391,23 @@ export function Hero() {
                           </svg>
                         </div>
                         <div>
-                          <p style={{ fontWeight: 700, fontSize: "0.78rem", color: "#333", lineHeight: 1.3 }}>Flexible Delivery</p>
-                          <p style={{ fontSize: "0.64rem", color: "#999", marginTop: 2, fontWeight: 500 }}>On-site & Online</p>
+                          <p className="text-[0.68rem] lg:text-[0.78rem]" style={{ fontWeight: 700, color: "#333", lineHeight: 1.3 }}>Flexible Delivery</p>
+                          <p className="text-[0.58rem] lg:text-[0.64rem]" style={{ color: "#999", marginTop: 2, fontWeight: 500 }}>On-site & Online</p>
                         </div>
                       </div>
                     </div>
 
                     {/* Badge — Accredited (bottom-right of image) */}
-                    <div className="absolute bottom-4 right-4 hidden lg:block">
+                    <div className="absolute bottom-3 right-3 lg:bottom-4 lg:right-4">
                       <div className="badge-white">
                         <div className="badge-icon-wrap" style={{ background: "rgba(203,21,78,0.1)" }}>
-                          <svg className="w-5 h-5" fill="none" stroke="#ca1254" strokeWidth={2.5} viewBox="0 0 24 24">
+                          <svg className="w-4 h-4 lg:w-5 lg:h-5" fill="none" stroke="#ca1254" strokeWidth={2.5} viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                           </svg>
                         </div>
                         <div>
-                          <p style={{ fontWeight: 700, fontSize: "0.83rem", color: "#222544", lineHeight: 1.3 }}>Accredited Training</p>
-                          <p style={{ fontSize: "0.68rem", color: "#aaa", marginTop: 3, fontWeight: 500 }}>RTO Certified Programs</p>
+                          <p className="text-[0.72rem] lg:text-[0.83rem]" style={{ fontWeight: 700, color: "#222544", lineHeight: 1.3 }}>Accredited Training</p>
+                          <p className="text-[0.58rem] lg:text-[0.68rem]" style={{ color: "#aaa", marginTop: 3, fontWeight: 500 }}>RTO Certified Programs</p>
                         </div>
                       </div>
                     </div>
