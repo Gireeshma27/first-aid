@@ -1,32 +1,8 @@
 import { NextRequest, NextResponse } from "next/server"
-import { google } from "googleapis"
+import sgMail from "@sendgrid/mail"
 
-function buildRawEmail({
-  from,
-  to,
-  subject,
-  html,
-}: {
-  from: string
-  to: string
-  subject: string
-  html: string
-}) {
-  const lines = [
-    `From: ${from}`,
-    `To: ${to}`,
-    `Subject: ${subject}`,
-    `MIME-Version: 1.0`,
-    `Content-Type: text/html; charset=UTF-8`,
-    ``,
-    html,
-  ]
-  return Buffer.from(lines.join("\r\n"))
-    .toString("base64")
-    .replace(/\+/g, "-")
-    .replace(/\//g, "_")
-    .replace(/=+$/, "")
-}
+// Initialize SendGrid with API key
+sgMail.setApiKey(process.env.SENDGRID_API_KEY as string)
 
 export async function POST(req: NextRequest) {
   try {
@@ -40,17 +16,9 @@ export async function POST(req: NextRequest) {
       )
     }
 
-    const auth = new google.auth.OAuth2(
-      process.env.GMAIL_CLIENT_ID,
-      process.env.GMAIL_CLIENT_SECRET
-    )
-    auth.setCredentials({ refresh_token: process.env.GMAIL_REFRESH_TOKEN })
-
-    const gmail = google.gmail({ version: "v1", auth })
-
-    const raw = buildRawEmail({
-      from: `"First Aid Network Australia" <${process.env.GMAIL_USER}>`,
-      to: "gireeshma053@gmail.com",
+    const msg = {
+      to: "Admin@firstaidnetworkaustralia.com.au",
+      from: "Admin@firstaidnetworkaustralia.com.au", // Must be a verified sender in SendGrid
       subject: "New Training Booking Request",
       html: `
         <div style="font-family: Inter, Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 32px; background: #ffffff; border: 1px solid #e5e5e5; border-radius: 12px;">
@@ -89,16 +57,17 @@ export async function POST(req: NextRequest) {
           </div>
         </div>
       `,
-    })
+      replyTo: email, // Allow direct reply to the customer
+    }
 
-    await gmail.users.messages.send({
-      userId: "me",
-      requestBody: { raw },
-    })
+    await sgMail.send(msg)
 
     return NextResponse.json({ success: true })
-  } catch (error) {
+  } catch (error: any) {
     console.error("Booking email error:", error)
+    if (error.response) {
+      console.error("SendGrid error body:", error.response.body)
+    }
     return NextResponse.json(
       { error: "Failed to send booking request. Please try again." },
       { status: 500 }
