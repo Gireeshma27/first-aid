@@ -376,8 +376,8 @@ export function Hero() {
 
               {/* Badge — Accredited (bottom-left) */}
               <div
-                className="badge-white absolute hidden lg:flex lg:anim-float"
-                style={{ bottom: '-1.25rem', left: '-1rem', animationDelay: "1s", animationDuration: "5.5s", zIndex: 10 }}
+                className="badge-white absolute hidden lg:flex"
+                style={{ bottom: '0.5rem', left: '0.5rem', zIndex: 10 }}
               >
                 <div className="badge-icon-wrap" style={{ background: "rgba(203,21,78,0.1)" }}>
                   <svg className="w-5 h-5" fill="none" stroke="#ca1254" strokeWidth={2.5} viewBox="0 0 24 24">
@@ -392,10 +392,10 @@ export function Hero() {
 
               {/* Badge — Flexible (top-right) */}
               <div
-                className="absolute hidden lg:flex lg:anim-float"
+                className="absolute hidden lg:flex"
                 style={{
-                  top: '-1rem',
-                  right: '-1rem',
+                  top: '0.5rem',
+                  right: '0.5rem',
                   animationDelay: "2s",
                   animationDuration: "6s",
                   zIndex: 10,
