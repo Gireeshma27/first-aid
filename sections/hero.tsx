@@ -180,7 +180,7 @@ export function Hero() {
         }
         .img-frame-inner {
           border-radius: 22px;
-          overflow: hidden;
+          overflow: visible;
           position: relative;
         }
         .img-glow-bg {
@@ -329,7 +329,7 @@ export function Hero() {
             </div>
 
             {/* ── RIGHT: Image ── */}
-            <div className="anim-right d3 relative flex justify-center lg:justify-end">
+            <div className="anim-right d3 relative flex justify-center lg:justify-end pb-8 pt-8 lg:pb-12 lg:pt-12">
 
               {/* Glow behind image */}
               <div className="img-glow-bg" />
@@ -337,7 +337,7 @@ export function Hero() {
               {/* Gradient-border frame */}
               <div className="img-frame w-full max-w-[620px]" style={{ position: "relative", zIndex: 1 }}>
                 <div className="img-frame-inner">
-                  <div className="relative aspect-[4/3]">
+                  <div className="relative aspect-[4/3] overflow-hidden rounded-[20px]">
                     <Image
                       src="/images/hero aid.png"
                       alt="CPR training session with first aid instructor teaching students"
@@ -376,7 +376,7 @@ export function Hero() {
 
               {/* Badge — Accredited (bottom-left) */}
               <div
-                className="badge-white absolute -bottom-5 -left-4 hidden md:flex anim-float"
+                className="badge-white absolute bottom-2 left-2 lg:-bottom-5 lg:-left-4 hidden lg:flex lg:anim-float"
                 style={{ animationDelay: "1s", animationDuration: "5.5s", zIndex: 10 }}
               >
                 <div className="badge-icon-wrap" style={{ background: "rgba(203,21,78,0.1)" }}>
@@ -392,7 +392,7 @@ export function Hero() {
 
               {/* Badge — Flexible (top-right) */}
               <div
-                className="absolute -top-4 -right-4 hidden md:flex anim-float"
+                className="absolute top-2 right-2 lg:-top-4 lg:-right-4 hidden lg:flex lg:anim-float"
                 style={{
                   animationDelay: "2s",
                   animationDuration: "6s",
