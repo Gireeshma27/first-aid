@@ -370,53 +370,48 @@ export function Hero() {
                         <span className="text-white/70 text-[10px] font-semibold ml-0.5">5.0</span>
                       </div>
                     </div>
+
+                    {/* Badge — Flexible (top-left of image) */}
+                    <div className="absolute top-4 left-4 hidden lg:block">
+                      <div
+                        style={{
+                          background: "#F5F5F5",
+                          borderRadius: "14px",
+                          padding: "10px 14px",
+                          display: "flex",
+                          alignItems: "center",
+                          gap: "10px",
+                          boxShadow: "0 10px 30px rgba(0,0,0,0.15), 0 0 0 1px rgba(0,0,0,0.04)",
+                          minWidth: "160px",
+                        }}
+                      >
+                        <div className="badge-icon-wrap" style={{ background: "rgba(203,21,78,0.1)" }}>
+                          <svg style={{ width: 16, height: 16 }} fill="none" stroke="#ca1254" strokeWidth={2.5} viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          </svg>
+                        </div>
+                        <div>
+                          <p style={{ fontWeight: 700, fontSize: "0.78rem", color: "#333", lineHeight: 1.3 }}>Flexible Delivery</p>
+                          <p style={{ fontSize: "0.64rem", color: "#999", marginTop: 2, fontWeight: 500 }}>On-site & Online</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Badge — Accredited (bottom-right of image) */}
+                    <div className="absolute bottom-4 right-4 hidden lg:block">
+                      <div className="badge-white">
+                        <div className="badge-icon-wrap" style={{ background: "rgba(203,21,78,0.1)" }}>
+                          <svg className="w-5 h-5" fill="none" stroke="#ca1254" strokeWidth={2.5} viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          </svg>
+                        </div>
+                        <div>
+                          <p style={{ fontWeight: 700, fontSize: "0.83rem", color: "#222544", lineHeight: 1.3 }}>Accredited Training</p>
+                          <p style={{ fontSize: "0.68rem", color: "#aaa", marginTop: 3, fontWeight: 500 }}>RTO Certified Programs</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-
-              {/* Badge — Accredited (bottom-left) */}
-              <div
-                className="badge-white absolute hidden lg:flex"
-                style={{ bottom: '0.5rem', left: '0.5rem', zIndex: 10 }}
-              >
-                <div className="badge-icon-wrap" style={{ background: "rgba(203,21,78,0.1)" }}>
-                  <svg className="w-5 h-5" fill="none" stroke="#ca1254" strokeWidth={2.5} viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <div>
-                  <p style={{ fontWeight: 700, fontSize: "0.83rem", color: "#222544", lineHeight: 1.3 }}>Accredited Training</p>
-                  <p style={{ fontSize: "0.68rem", color: "#aaa", marginTop: 3, fontWeight: 500 }}>RTO Certified Programs</p>
-                </div>
-              </div>
-
-              {/* Badge — Flexible (top-right) */}
-              <div
-                className="absolute hidden lg:flex"
-                style={{
-                  top: '0.5rem',
-                  right: '0.5rem',
-                  animationDelay: "2s",
-                  animationDuration: "6s",
-                  zIndex: 10,
-                  background: "#F5F5F5",
-                  borderRadius: "14px",
-                  padding: "10px 14px",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "10px",
-                  boxShadow: "0 10px 30px rgba(0,0,0,0.15), 0 0 0 1px rgba(0,0,0,0.04)",
-                  minWidth: "160px",
-                }}
-              >
-                <div className="badge-icon-wrap" style={{ background: "rgba(203,21,78,0.1)" }}>
-                  <svg style={{ width: 16, height: 16 }} fill="none" stroke="#ca1254" strokeWidth={2.5} viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <div>
-                  <p style={{ fontWeight: 700, fontSize: "0.78rem", color: "#333", lineHeight: 1.3 }}>Flexible Delivery</p>
-                  <p style={{ fontSize: "0.64rem", color: "#999", marginTop: 2, fontWeight: 500 }}>On-site & Online</p>
                 </div>
               </div>
             </div>
