@@ -191,11 +191,11 @@ export function Navbar() {
     >
       <nav
         ref={navRef}
-        className="mx-auto flex h-20 max-w-[1200px] items-center justify-between px-6 lg:px-8"
+        className="mx-auto flex h-20 max-w-[1400px] items-center justify-between px-4 lg:px-8"
       >
         {/* Logo */}
         <div className="flex lg:flex-1">
-          <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-3">
+          <Link href="/" className="flex items-center gap-3">
             <Image
               src={logo}
               alt="First Aid Network Australia"
@@ -204,8 +204,8 @@ export function Navbar() {
               height={70}
               priority
             />
-            <span className="font-bold text-sm sm:text-base lg:text-lg leading-tight tracking-tight">
-              <span className="text-[#3b3f69]">First Aid </span><span className="text-[#ca1254]">Network</span>
+            <span className="font-bold text-sm flex items-center gap-1 sm:text-base lg:text-lg leading-tight tracking-tight whitespace-nowrap">
+              <span className="text-[#3b3f69]">First Aid</span><span className="text-[#ca1254]">Network</span>
             </span>
           </Link>
         </div>
@@ -236,7 +236,7 @@ export function Navbar() {
                 {hasDropdown ? (
                   <button
                     onClick={() => setActiveDropdown(prev => (prev === item.name ? null : item.name))}
-                    className={`inline-flex items-center gap-1.5 px-5 py-2.5 text-sm font-semibold rounded-full transition-all duration-200 ${isOpen
+                    className={`inline-flex items-center gap-1.5 px-4 py-2 text-sm font-semibold rounded-full transition-all duration-200 ${isOpen
                         ? "text-[#3b3f69] bg-[#3b3f69]/5"
                         : "text-[#333333] hover:text-[#3b3f69] hover:bg-[#3b3f69]/5"
                       }`}
@@ -247,7 +247,7 @@ export function Navbar() {
                 ) : (
                   <Link
                     href={item.href}
-                    className="inline-flex items-center gap-1.5 px-5 py-2.5 text-sm font-semibold rounded-full transition-all duration-200 text-[#333333] hover:text-[#3b3f69] hover:bg-[#3b3f69]/5"
+                    className="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-semibold rounded-full transition-all duration-200 text-[#333333] hover:text-[#3b3f69] hover:bg-[#3b3f69]/5"
                   >
                     {item.name}
                   </Link>
@@ -264,7 +264,7 @@ export function Navbar() {
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <Button
             asChild
-            className="bg-[#ca1254] hover:bg-[#a50f42] text-white font-semibold rounded-full shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 px-7 h-11 text-sm"
+            className="bg-[#ca1254] hover:bg-[#a50f42] text-white font-semibold rounded-full shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 px-6 h-10 text-sm"
           >
             <Link href="/book-training">Book Training</Link>
           </Button>
