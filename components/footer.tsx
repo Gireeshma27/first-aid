@@ -56,7 +56,7 @@ export function Footer() {
       />
 
       {/* Main footer content */}
-      <div className="relative z-10 mx-auto max-w-[1200px] px-5 pt-16 pb-10 lg:px-10 lg:pt-20 lg:pb-12">
+      <div className="relative z-10 mx-auto max-w-[1200px] px-5 pt-10 pb-8 lg:px-10 lg:pt-14 lg:pb-8">
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4">
 
           {/* Column 1: Branding */}
@@ -207,7 +207,7 @@ export function Footer() {
 
       {/* Bottom bar */}
       <div className="relative z-10 border-t border-white/[0.08]">
-        <div className="mx-auto max-w-[1200px] px-5 py-6 lg:px-10">
+        <div className="mx-auto max-w-[1200px] px-5 py-4 lg:px-10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-xs text-white">
               © {new Date().getFullYear()} First Aid Network Australia. All rights reserved.
